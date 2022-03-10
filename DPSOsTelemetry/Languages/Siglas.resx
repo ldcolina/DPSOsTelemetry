@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Amperios" xml:space="preserve">
+    <value>A</value>
+    <comment>Intensidad eléctrica: Amperios</comment>
+  </data>
+  <data name="Anio" xml:space="preserve">
+    <value>year</value>
+    <comment>Tiempo: año</comment>
+  </data>
+  <data name="Atmosfera" xml:space="preserve">
+    <value>atm</value>
+    <comment>Presión: atmósfera</comment>
+  </data>
+  <data name="Bar" xml:space="preserve">
+    <value>bar</value>
+    <comment>Presión: bar</comment>
+  </data>
+  <data name="BarrilesAceite" xml:space="preserve">
+    <value>bo</value>
+    <comment>barriles (aceite)</comment>
+  </data>
+  <data name="BarrilesAceitePorAnio" xml:space="preserve">
+    <value>bopy</value>
+    <comment>Flujo volumétrico de líquido: barriles (aceite) por año</comment>
+  </data>
+  <data name="BarrilesAceitePorDia" xml:space="preserve">
+    <value>bopd</value>
+    <comment>Flujo volumétrico de líquido: barriles (aceite) por día</comment>
+  </data>
+  <data name="BarrilesAceitePorHora" xml:space="preserve">
+    <value>boph</value>
+    <comment>Flujo volumétrico de líquido: barriles (aceite) por hora</comment>
+  </data>
+  <data name="BarrilesAceitePorMinuto" xml:space="preserve">
+    <value>bopm</value>
+    <comment>Flujo volumétrico de líquido: barriles (aceite) por minuto</comment>
+  </data>
+  <data name="BarrilesAceitePorSegundo" xml:space="preserve">
+    <value>bops</value>
+    <comment>Flujo volumétrico de líquido: barriles (aceite) por segundo</comment>
+  </data>
+  <data name="BarrilesLiquido" xml:space="preserve">
+    <value>bbl</value>
+    <comment>barriles (petróleo)</comment>
+  </data>
+  <data name="BarrilesPetroleoPorAnio" xml:space="preserve">
+    <value>bpy</value>
+    <comment>Flujo volumétrico de líquido: barriles (petróleo) por año</comment>
+  </data>
+  <data name="BarrilesPetroleoPorDia" xml:space="preserve">
+    <value>bpd</value>
+    <comment>Flujo volumétrico de líquido: barriles (petróleo) por día</comment>
+  </data>
+  <data name="BarrilesPetroleoPorHora" xml:space="preserve">
+    <value>bph</value>
+    <comment>Flujo volumétrico de líquido: barriles (petróleo) por hora</comment>
+  </data>
+  <data name="BarrilesPetroleoPorMinuto" xml:space="preserve">
+    <value>bpm</value>
+    <comment>Flujo volumétrico de líquido: barriles (petróleo) por minuto</comment>
+  </data>
+  <data name="BarrilesPetroleoPorSegundo" xml:space="preserve">
+    <value>bps</value>
+    <comment>Flujo volumétrico de líquido: barriles (petróleo) por segundo</comment>
+  </data>
+  <data name="BarrilPetroleoPorBarrilTanqueExistencias" xml:space="preserve">
+  <value>BBL/STB</value>
+  <comment>Relaciones de Volumen: barril de petróleo por barril de tanque de existencias</comment>
+ </data>
+  <data name="BarrilTanqueReservaPorPieCubicoEstandar" xml:space="preserve">
+    <value>STB/SCF</value>
+    <comment>Relaciones de Volumen: Barril de tanque de reserva por pie cúbico estándar</comment>
+  </data>
+  <data name="Caballo" xml:space="preserve">
+    <value>hp</value>
+    <comment>Potencia: caballo</comment>
+  </data>
+  <data name="CaballoUk" xml:space="preserve">
+    <value>hp (UK)</value>
+    <comment>Potencia: caballo (UK)</comment>
+  </data>
+  <data name="Celsius" xml:space="preserve">
+    <value>°C</value>
+    <comment>Temperatura: Celsius</comment>
+  </data>
+  <data name="Centimetro" xml:space="preserve">
+    <value>cm</value>
+    <comment>Longitud: centímetro</comment>
+  </data>
+  <data name="CentimetroElevadoDos" xml:space="preserve">
+    <value>cm²</value>
+    <comment>Área: centímetro cuadrado</comment>
+  </data>
+  <data name="CentimetroElevadoTresPorAnio" xml:space="preserve">
+    <value>cm³/year</value>
+    <comment>Flujo volumétrico de gas: centímetro cúbico por año</comment>
+  </data>
+  <data name="CentimetroElevadoTresPorDia" xml:space="preserve">
+    <value>cm³/day</value>
+    <comment>Flujo volumétrico de gas: centímetro cúbico por día</comment>
+  </data>
+  <data name="CentimetroElevadoTresPorHora" xml:space="preserve">
+    <value>cm³/hour</value>
+    <comment>Flujo volumétrico de gas: centímetro cúbico por hora</comment>
+  </data>
+  <data name="CentimetroElevadoTresPorMinuto" xml:space="preserve">
+    <value>cm³/min</value>
+    <comment>Flujo volumétrico de gas: centímetro cúbico por minuto</comment>
+  </data>
+  <data name="CentimetroElevadoTresPorSegundo" xml:space="preserve">
+    <value>cm³/sec</value>
+    <comment>Flujo volumétrico de gas: centímetro cúbico por segundo</comment>
+  </data>
+  <data name="Ciclo_Segundo" xml:space="preserve">
+    <value>ciclo/sec</value>
+    <comment>Frecuencia, Longitud de onda: ciclo/segundo</comment>
+  </data>
+  <data name="CulombiosPorSegundo" xml:space="preserve">
+    <value>C/sec</value>
+    <comment>Intensidad eléctrica: Culombios por segundo</comment>
+  </data>
+  <data name="Dia" xml:space="preserve">
+    <value>day</value>
+    <comment>Tiempo: día</comment>
+  </data>
+  <data name="Dina" xml:space="preserve">
+    <value>dyn</value>
+    <comment>Fuerza: dina</comment>
+  </data>
+  <data name="EmboladaPorMinuto" xml:space="preserve">
+  <value>SPM</value>
+  </data>
+  <data name="Fahrenheit" xml:space="preserve">
+    <value>°F</value>
+    <comment>Temperatura: Fahrenheit</comment>
+  </data>
+  <data name="Fraccion" xml:space="preserve">
+    <value>-</value>
+    <comment>Porcentaje / Fracción: Fracción</comment>
+  </data>
+  <data name="Gigahercio" xml:space="preserve">
+    <value>GHz</value>
+    <comment>Frecuencia, Longitud de onda: gigahercio</comment>
+  </data>
+  <data name="Grado" xml:space="preserve">
+    <value>°</value>
+    <comment>Ángulo: Grado</comment>
+  </data>
+  <data name="GradosApi" xml:space="preserve">
+    <value>°API</value>
+    <comment>Densidad: Grados API</comment>
+  </data>
+  <data name="Gramo" xml:space="preserve">
+    <value>g</value>
+    <comment>Masa: gramo</comment>
+  </data>
+  <data name="GramoFuerza" xml:space="preserve">
+    <value>gf</value>
+    <comment>Fuerza: gramo fuerza</comment>
+  </data>
+  <data name="GravedadEspecifica" xml:space="preserve">
+    <value>SG</value>
+    <comment>Densidad: Gravedad Específica</comment>
+  </data>
+  <data name="Hercio" xml:space="preserve">
+    <value>Hz</value>
+    <comment>Frecuencia, Longitud de onda: hercio</comment>
+  </data>
+  <data name="Hora" xml:space="preserve">
+    <value>hour</value>
+    <comment>Tiempo: hora</comment>
+  </data>
+  <data name="Julio_Hora" xml:space="preserve">
+    <value>J/hour</value>
+    <comment>Potencia: julio/hora</comment>
+  </data>
+  <data name="Kelvin" xml:space="preserve">
+    <value>°K</value>
+    <comment>Temperatura: Kelvin</comment>
+  </data>
+  <data name="Kiloamperios" xml:space="preserve">
+    <value>kA</value>
+    <comment>Intensidad eléctrica: Kiloamperios</comment>
+  </data>
+  <data name="Kilogramo" xml:space="preserve">
+    <value>kg</value>
+    <comment>Masa: kilogramo</comment>
+  </data>
+  <data name="KilogramoFuerza" xml:space="preserve">
+    <value>kgf</value>
+    <comment>Fuerza: kilogramo fuerza</comment>
+  </data>
+  <data name="KilogramoFuerza_CentimetroElevadoDos" xml:space="preserve">
+    <value>kgf/cm²</value>
+    <comment>Presión: kilogramo/centímetro cuadrado</comment>
+  </data>
+  <data name="Kilogramo_CentimetroElevadoTres" xml:space="preserve">
+    <value>kg/cm³</value>
+    <comment>Densidad: kilogramo/centímetro cúbico</comment>
+  </data>
+  <data name="Kilohercio" xml:space="preserve">
+    <value>kHz</value>
+    <comment>Frecuencia, Longitud de onda: kilohercio</comment>
+  </data>
+  <data name="Kilojulio_Hora" xml:space="preserve">
+    <value>kJ/hour</value>
+    <comment>Potencia: kilojulio/hora</comment>
+  </data>
+  <data name="Kilolibra" xml:space="preserve">
+    <value>klb</value>
+    <comment>Masa: Kilolibra</comment>
+  </data>
+  <data name="KilolibraFuerza" xml:space="preserve">
+    <value>klbf</value>
+    <comment>Fuerza: kilolibra fuerza</comment>
+  </data>
+  <data name="Kilometro" xml:space="preserve">
+    <value>km</value>
+    <comment>Longitud: kilómetro</comment>
+  </data>
+  <data name="Kilonewton" xml:space="preserve">
+    <value>kN</value>
+    <comment>Fuerza: kilonewton</comment>
+  </data>
+  <data name="Kilopascal" xml:space="preserve">
+    <value>kPa</value>
+    <comment>Presión: kilopascal</comment>
+  </data>
+  <data name="Kilovatio" xml:space="preserve">
+    <value>kW</value>
+    <comment>Potencia: kilovatio</comment>
+  </data>
+  <data name="Kpsi" xml:space="preserve">
+    <value>kPsi</value>
+    <comment>Presión: Kpsi</comment>
+  </data>
+  <data name="Libra" xml:space="preserve">
+    <value>lb</value>
+    <comment>Masa: libra</comment>
+  </data>
+  <data name="LibraFuerza" xml:space="preserve">
+    <value>lbf</value>
+    <comment>Fuerza: libra fuerza</comment>
+  </data>
+	<data name="Libra_PieElevadoTres" xml:space="preserve">
+    <value>lb/cfs</value>
+    <comment>Densidad: libra/pie cúbico</comment>
+  </data>
+  <data name="LibraFuerza_PulgadaElevadoDos" xml:space="preserve">
+    <value>lbf/in²</value>
+    <comment>Presión: libra/pulgada²</comment>
+  </data>
+  <data name="Libra_PulgadaElevadoTres" xml:space="preserve">
+    <value>lb/in³</value>
+    <comment>Densidad: libra/pulgada³</comment>
+  </data>
+  <data name="Megahercio" xml:space="preserve">
+    <value>MHz</value>
+    <comment>Frecuencia, Longitud de onda: megahercio</comment>
+  </data>
+  <data name="Megapascal" xml:space="preserve">
+    <value>MPa</value>
+    <comment>Presión: megapascal</comment>
+  </data>
+  <data name="Mes" xml:space="preserve">
+    <value>month</value>
+    <comment>Tiempo: mes</comment>
+  </data>
+  <data name="Metro" xml:space="preserve">
+    <value>m</value>
+    <comment>Longitud: metro</comment>
+  </data>
+  <data name="MetroCubicoPorAnio" xml:space="preserve">
+    <value>m³/year</value>
+    <comment>Flujo volumétrico de líquido: metro cúbico por año</comment>
+  </data>
+  <data name="MetroCubicoPorDia" xml:space="preserve">
+    <value>m³/day</value>
+    <comment>Flujo volumétrico de líquido: metro cúbico por día</comment>
+  </data>
+  <data name="MetroCubicoPorHora" xml:space="preserve">
+    <value>m³/hour</value>
+    <comment>Flujo volumétrico de líquido: metro cúbico por hora</comment>
+  </data>
+  <data name="MetroCubicoPorMetroCubico" xml:space="preserve">
+    <value>m³/m³</value>
+    <comment>Relaciones de Volumen: Metro cúbico por metro cúbico</comment>
+  </data>
+  <data name="MetroCubicoPorMinuto" xml:space="preserve">
+    <value>m³/min</value>
+    <comment>Flujo volumétrico de líquido: metro cúbico por minuto</comment>
+  </data>
+  <data name="MetroCubicoPorSegundo" xml:space="preserve">
+    <value>m³/sec</value>
+    <comment>Flujo volumétrico de líquido: metro cúbico por segundo</comment>
+  </data>
+  <data name="MetroElevadoDos" xml:space="preserve">
+    <value>m²</value>
+    <comment>Área: metro cuadrado</comment>
+  </data>
+  <data name="MetroElevadoTresPorAnio" xml:space="preserve">
+    <value>m³/year</value>
+    <comment>Flujo volumétrico de gas: metro cúbico por año</comment>
+  </data>
+  <data name="MetroElevadoTresPorDia" xml:space="preserve">
+    <value>m³/day</value>
+    <comment>Flujo volumétrico de gas: metro cúbico por día</comment>
+  </data>
+  <data name="MetroElevadoTresPorHora" xml:space="preserve">
+    <value>m³/hour</value>
+    <comment>Flujo volumétrico de gas: metro cúbico por hora</comment>
+  </data>
+  <data name="MetroElevadoTresPorMinuto" xml:space="preserve">
+    <value>m³/min</value>
+    <comment>Flujo volumétrico de gas: metro cúbico por minuto</comment>
+  </data>
+  <data name="MetroElevadoTresPorSegundo" xml:space="preserve">
+    <value>m³/sec</value>
+    <comment>Flujo volumétrico de gas: metro cúbico por segundo</comment>
+  </data>
+  <data name="MilesMetroElevadoTresPorAnio" xml:space="preserve">
+    <value>Mm³/year</value>
+    <comment>Flujo volumétrico de gas: miles de metro cúbico por año</comment>
+  </data>
+  <data name="MilesMetroElevadoTresPorDia" xml:space="preserve">
+    <value>Mm³/day</value>
+    <comment>Flujo volumétrico de gas: miles de metro cúbico por día</comment>
+  </data>
+  <data name="MilesMetroElevadoTresPorHora" xml:space="preserve">
+    <value>Mm³/hour</value>
+    <comment>Flujo volumétrico de gas: miles de metro cúbico por hora</comment>
+  </data>
+  <data name="MilesMetroElevadoTresPorMinuto" xml:space="preserve">
+    <value>Mm³/min</value>
+    <comment>Flujo volumétrico de gas: miles de metro cúbico por minuto</comment>
+  </data>
+  <data name="MilesMetroElevadoTresPorSegundo" xml:space="preserve">
+    <value>Mm³/sec</value>
+    <comment>Flujo volumétrico de gas: miles de metro cúbico por segundo</comment>
+  </data>
+  <data name="MilesPieElevadoTresPorAnio" xml:space="preserve">
+    <value>Mcfs/year</value>
+    <comment>Flujo volumétrico de gas: miles de pie cúbico por año</comment>
+  </data>
+  <data name="MilesPieElevadoTresPorDia" xml:space="preserve">
+    <value>Mcfd</value>
+    <comment>Flujo volumétrico de gas: miles de pie cúbico por día</comment>
+  </data>
+  <data name="MilesPieElevadoTresPorHora" xml:space="preserve">
+    <value>Mcfs/hour</value>
+    <comment>Flujo volumétrico de gas: miles de pie cúbico por hora</comment>
+  </data>
+  <data name="MilesPieElevadoTresPorMinuto" xml:space="preserve">
+    <value>Mcfs/min</value>
+    <comment>Flujo volumétrico de gas: miles de pie cúbico por minuto</comment>
+  </data>
+  <data name="MilesPieElevadoTresPorSegundo" xml:space="preserve">
+    <value>Mcfs/sec</value>
+    <comment>Flujo volumétrico de gas: miles de pie cúbico por segundo</comment>
+  </data>
+  <data name="Miliamperios" xml:space="preserve">
+    <value>mA</value>
+    <comment>Intensidad eléctrica: Miliamperios</comment>
+  </data>
+  <data name="Milimetro" xml:space="preserve">
+    <value>mm</value>
+    <comment>Longitud: milímetro</comment>
+  </data>
+  <data name="MillaUs" xml:space="preserve">
+    <value>mi</value>
+    <comment>Longitud: milla (US)</comment>
+  </data>
+  <data name="MillonesMetroElevadoTresPorAnio" xml:space="preserve">
+    <value>MMm³/year</value>
+    <comment>Flujo volumétrico de gas: millones de metro cúbico por año</comment>
+  </data>
+  <data name="MillonesMetroElevadoTresPorDia" xml:space="preserve">
+    <value>MMm³/day</value>
+    <comment>Flujo volumétrico de gas: millones de metro cúbico por día</comment>
+  </data>
+  <data name="MillonesMetroElevadoTresPorHora" xml:space="preserve">
+    <value>MMm³/hour</value>
+    <comment>Flujo volumétrico de gas: millones de metro cúbico por hora</comment>
+  </data>
+  <data name="MillonesMetroElevadoTresPorMinuto" xml:space="preserve">
+    <value>MMm³/min</value>
+    <comment>Flujo volumétrico de gas: millones de metro cúbico por minuto</comment>
+  </data>
+  <data name="MillonesMetroElevadoTresPorSegundo" xml:space="preserve">
+    <value>MMm³/sec</value>
+    <comment>Flujo volumétrico de gas: millones de metro cúbico por segundo</comment>
+  </data>
+  <data name="MillonesPieElevadoTresPorAnio" xml:space="preserve">
+    <value>MMcfs/year</value>
+    <comment>Flujo volumétrico de gas: millones de pie cúbico por año</comment>
+  </data>
+  <data name="MillonesPieElevadoTresPorDia" xml:space="preserve">
+    <value>MMcfd</value>
+    <comment>Flujo volumétrico de gas: millones de pie cúbico por día</comment>
+  </data>
+  <data name="MillonesPieElevadoTresPorHora" xml:space="preserve">
+    <value>MMcfs/hour</value>
+    <comment>Flujo volumétrico de gas: millones de pie cúbico por hora</comment>
+  </data>
+  <data name="MillonesPieElevadoTresPorMinuto" xml:space="preserve">
+    <value>MMcfs/min</value>
+    <comment>Flujo volumétrico de gas: millones de pie cúbico por minuto</comment>
+  </data>
+  <data name="MillonesPieElevadoTresPorSegundo" xml:space="preserve">
+    <value>MMcfs/sec</value>
+    <comment>Flujo volumétrico de gas: millones de pie cúbico por segundo</comment>
+  </data>
+  <data name="Minuto" xml:space="preserve">
+    <value>min</value>
+    <comment>Tiempo: minuto</comment>
+  </data>
+  <data name="Newton" xml:space="preserve">
+    <value>N</value>
+    <comment>Fuerza: newton</comment>
+  </data>
+  <data name="Newton_MetroElevadoDos" xml:space="preserve">
+    <value>N/m²</value>
+    <comment>Presión: newton/metro cuadrado</comment>
+  </data>
+  <data name="Onza" xml:space="preserve">
+    <value>oz</value>
+    <comment>Masa: onza</comment>
+  </data>
+  <data name="OnzaFuerza" xml:space="preserve">
+    <value>ozf</value>
+    <comment>Fuerza: onza fuerza</comment>
+  </data>
+  <data name="Pascal" xml:space="preserve">
+    <value>Pa</value>
+    <comment>Presión: pascal</comment>
+  </data>
+  <data name="Pie" xml:space="preserve">
+    <value>ft</value>
+    <comment>Longitud: pie</comment>
+  </data>
+  <data name="PieElevadoDos" xml:space="preserve">
+    <value>ft²</value>
+    <comment>Área: pie cuadrado</comment>
+  </data>
+  <data name="PieElevadoTresPorAnio" xml:space="preserve">
+    <value>cfs/year</value>
+    <comment>Flujo volumétrico de gas: pie cúbico por año</comment>
+  </data>
+  <data name="PieElevadoTresPorDia" xml:space="preserve">
+    <value>cfd</value>
+    <comment>Flujo volumétrico de gas: pie cúbico por día</comment>
+  </data>
+  <data name="PieElevadoTresPorHora" xml:space="preserve">
+    <value>cfs/hour</value>
+    <comment>Flujo volumétrico de gas: pie cúbico por hora</comment>
+  </data>
+  <data name="PieElevadoTresPorMinuto" xml:space="preserve">
+    <value>cfs/min</value>
+    <comment>Flujo volumétrico de gas: pie cúbico por minuto</comment>
+  </data>
+  <data name="PieElevadoTresPorSegundo" xml:space="preserve">
+    <value>cfs/sec</value>
+    <comment>Flujo volumétrico de gas: pie cúbico por segundo</comment>
+  </data>
+  <data name="PiesCubicosPorAnio" xml:space="preserve">
+    <value>cfs/year</value>
+    <comment>Flujo volumétrico de líquido: pies cúbicos por año</comment>
+  </data>
+  <data name="PiesCubicosPorDia" xml:space="preserve">
+    <value>cfd</value>
+    <comment>Flujo volumétrico de líquido: pies cúbicos por día</comment>
+  </data>
+  <data name="PiesCubicosPorHora" xml:space="preserve">
+    <value>cfs/hour</value>
+    <comment>Flujo volumétrico de líquido: pies cúbicos por hora</comment>
+  </data>
+  <data name="PiesCubicosPorMinuto" xml:space="preserve">
+    <value>cfs/min</value>
+    <comment>Flujo volumétrico de líquido: pies cúbicos por minuto</comment>
+  </data>
+  <data name="PiesCubicosPorSegundo" xml:space="preserve">
+    <value>cfs/sec</value>
+    <comment>Flujo volumétrico de líquido: pies cúbicos por segundo</comment>
+  </data>
+	<data name="PieCubicoEstandarPorBarrilTanqueReserva" xml:space="preserve">
+    <value>SCF/STB</value>
+    <comment>Relaciones de Volumen: Pie cúbico estándar por barril de tanque de reserva</comment>
+  </data>
+  <data name="Porcentaje" xml:space="preserve">
+    <value>%</value>
+    <comment>Porcentaje / Fracción: Porcentaje</comment>
+  </data>
+  <data name="Poundal" xml:space="preserve">
+    <value>pdl</value>
+    <comment>Fuerza: poundal</comment>
+  </data>
+  <data name="Psi" xml:space="preserve">
+    <value>Psi</value>
+    <comment>Presión: psi</comment>
+  </data>
+  <data name="Pulgada" xml:space="preserve">
+    <value>in</value>
+    <comment>Longitud: pulgada</comment>
+  </data>
+  <data name="PulgadaAgua60GradosF" xml:space="preserve">
+    <value>inH₂O</value>
+    <comment>Presión: pulgada agua (60°F)</comment>
+  </data>
+  <data name="PulgadaElevadoDos" xml:space="preserve">
+    <value>in²</value>
+    <comment>Área: pulgada²</comment>
+  </data>
+  <data name="PulgadaElevadoTresPorAnio" xml:space="preserve">
+    <value>in³/year</value>
+    <comment>Flujo volumétrico de gas: pulgada³ por año</comment>
+  </data>
+  <data name="PulgadaElevadoTresPorDia" xml:space="preserve">
+    <value>in³/day</value>
+    <comment>Flujo volumétrico de gas: pulgada³ por día</comment>
+  </data>
+  <data name="PulgadaElevadoTresPorHora" xml:space="preserve">
+    <value>in³/hour</value>
+    <comment>Flujo volumétrico de gas: pulgada³ por hora</comment>
+  </data>
+  <data name="PulgadaElevadoTresPorMinuto" xml:space="preserve">
+    <value>in³/min</value>
+    <comment>Flujo volumétrico de gas: pulgada³ por minuto</comment>
+  </data>
+  <data name="PulgadaElevadoTresPorSegundo" xml:space="preserve">
+    <value>in³/sec</value>
+    <comment>Flujo volumétrico de gas: pulgada³ por segundo</comment>
+  </data>
+  <data name="Radian" xml:space="preserve">
+    <value>rad</value>
+    <comment>Ángulo: Radián</comment>
+  </data>
+  <data name="Rankine" xml:space="preserve">
+    <value>°R</value>
+    <comment>Temperatura: Rankine</comment>
+  </data>
+  <data name="Revolucion" xml:space="preserve">
+    <value>rev</value>
+    <comment>Ángulo: Revolución</comment>
+  </data>
+  <data name="Revolucion_Dia" xml:space="preserve">
+    <value>rev/day</value>
+    <comment>Velocidad angular: revolución/día</comment>
+  </data>
+  <data name="Revolucion_Hora" xml:space="preserve">
+    <value>rev/hour</value>
+    <comment>Velocidad angular: revolución/hora</comment>
+  </data>
+  <data name="Revolucion_Minuto" xml:space="preserve">
+    <value>RPM</value>
+    <comment>Velocidad angular: revolución/minuto</comment>
+  </data>
+  <data name="Revolucion_Segundo" xml:space="preserve">
+    <value>rev/sec</value>
+    <comment>Velocidad angular: revolución/segundo</comment>
+  </data>
+  <data name="Segundo" xml:space="preserve">
+    <value>sec</value>
+    <comment>Tiempo: segundo</comment>
+  </data>
+  <data name="Ton" xml:space="preserve">
+    <value>tn, st</value>
+    <comment>Masa: ton</comment>
+  </data>
+  <data name="Torr" xml:space="preserve">
+    <value>Torr</value>
+    <comment>Presión: torr</comment>
+  </data>
+  <data name="Vatio" xml:space="preserve">
+    <value>W</value>
+    <comment>Potencia: vatio</comment>
+  </data>
+  <data name="Yarda" xml:space="preserve">
+    <value>yd</value>
+    <comment>Longitud: yarda</comment>
+  </data>
+</root>

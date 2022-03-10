@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+ <!-- 
+  Microsoft ResX Schema 
+  
+  Version 2.0
+  
+  The primary goals of this format is to allow a simple XML format 
+  that is mostly human readable. The generation and parsing of the 
+  various data types are done through the TypeConverter classes 
+  associated with the data types.
+  
+  Example:
+  
+  ... ado.net/XML headers & schema ...
+  <resheader name="resmimetype">text/microsoft-resx</resheader>
+  <resheader name="version">2.0</resheader>
+  <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+  <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+  <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+  <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+  <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>[base64 mime encoded serialized .NET Framework object]</value>
+  </data>
+  <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+    <comment>This is a comment</comment>
+  </data>
+        
+  There are any number of "resheader" rows that contain simple 
+  name/value pairs.
+  
+  Each data row contains a name, and value. The row also contains a 
+  type or mimetype. Type corresponds to a .NET class that support 
+  text/value conversion through the TypeConverter architecture. 
+  Classes that don't support this are serialized and stored with the 
+  mimetype set.
+  
+  The mimetype is used for serialized objects, and tells the 
+  ResXResourceReader how to depersist the object. This is currently not 
+  extensible. For a given mimetype the value must be set accordingly:
+  
+  Note - application/x-microsoft.net.object.binary.base64 is the format 
+  that the ResXResourceWriter will generate, however the reader can 
+  read any of the formats listed below.
+  
+  mimetype: application/x-microsoft.net.object.binary.base64
+  value  : The object must be serialized with 
+      : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+      : and then encoded with base64 encoding.
+  
+  mimetype: application/x-microsoft.net.object.soap.base64
+  value  : The object must be serialized with 
+      : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+      : and then encoded with base64 encoding.
+
+  mimetype: application/x-microsoft.net.object.bytearray.base64
+  value  : The object must be serialized into a byte array 
+      : using a System.ComponentModel.TypeConverter
+      : and then encoded with base64 encoding.
+  -->
+ <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:element name="root" msdata:IsDataSet="true">
+   <xsd:complexType>
+    <xsd:choice maxOccurs="unbounded">
+     <xsd:element name="metadata">
+      <xsd:complexType>
+       <xsd:sequence>
+        <xsd:element name="value" type="xsd:string" minOccurs="0" />
+       </xsd:sequence>
+       <xsd:attribute name="name" use="required" type="xsd:string" />
+       <xsd:attribute name="type" type="xsd:string" />
+       <xsd:attribute name="mimetype" type="xsd:string" />
+       <xsd:attribute ref="xml:space" />
+      </xsd:complexType>
+     </xsd:element>
+     <xsd:element name="assembly">
+      <xsd:complexType>
+       <xsd:attribute name="alias" type="xsd:string" />
+       <xsd:attribute name="name" type="xsd:string" />
+      </xsd:complexType>
+     </xsd:element>
+     <xsd:element name="data">
+      <xsd:complexType>
+       <xsd:sequence>
+        <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+        <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+       </xsd:sequence>
+       <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+       <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+       <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+       <xsd:attribute ref="xml:space" />
+      </xsd:complexType>
+     </xsd:element>
+     <xsd:element name="resheader">
+      <xsd:complexType>
+       <xsd:sequence>
+        <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+       </xsd:sequence>
+       <xsd:attribute name="name" type="xsd:string" use="required" />
+      </xsd:complexType>
+     </xsd:element>
+    </xsd:choice>
+   </xsd:complexType>
+  </xsd:element>
+ </xsd:schema>
+ <resheader name="resmimetype">
+  <value>text/microsoft-resx</value>
+ </resheader>
+ <resheader name="version">
+  <value>2.0</value>
+ </resheader>
+ <resheader name="reader">
+  <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+ </resheader>
+ <resheader name="writer">
+  <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+ </resheader>
+ <data name="AfluenciaPozo" xml:space="preserve">
+  <value>Afluencia</value>
+ </data>
+ <data name="Axis_Capacidad" xml:space="preserve">
+  <value>Capacidad</value>
+ </data>
+ <data name="Axis_Carga" xml:space="preserve">
+  <value>Carga</value>
+ </data>
+ <data name="Axis_Caudal" xml:space="preserve">
+  <value>Caudal</value>
+ </data>
+ <data name="Axis_Desplazamiento" xml:space="preserve">
+  <value>Desplazamiento</value>
+ </data>
+ <data name="Axis_Porcentaje" xml:space="preserve">
+  <value>Porcentaje</value>
+ </data>
+ <data name="Axis_Presion" xml:space="preserve">
+  <value>Presión</value>
+ </data>
+ <data name="Axis_Profundidad" xml:space="preserve">
+  <value>Profundidad</value>
+ </data>
+ <data name="Axis_Temperatura" xml:space="preserve">
+  <value>Temperatura</value>
+ </data>
+ <data name="BEP" xml:space="preserve">
+  <value>BEP</value>
+ </data>
+ <data name="BHP" xml:space="preserve">
+  <value>BHP</value>
+ </data>
+ <data name="Bomba" xml:space="preserve">
+  <value>Bomba</value>
+ </data>
+ <data name="DesplazamientoBomba" xml:space="preserve">
+  <value>Desplazamiento</value>
+ </data>
+ <data name="DesviacionEste" xml:space="preserve">
+  <value>Desviación Este</value>
+ </data>
+ <data name="DesviacionHorizontal" xml:space="preserve">
+  <value>Desviación Horizontal</value>
+ </data>
+ <data name="DesviacionHorizontal_ProfundidadVertical" xml:space="preserve">
+  <value>Desviación Horizontal vs Profundidad Vertical</value>
+ </data>
+ <data name="DesviacionNorte" xml:space="preserve">
+  <value>Desviación Norte</value>
+ </data>
+ <data name="DinamometricaArea" xml:space="preserve">
+  <value>Área</value>
+ </data>
+ <data name="DinamometricaFondo" xml:space="preserve">
+  <value>Carta dinamométrica en fondo</value>
+ </data>
+ <data name="DinamometricaSuperficie" xml:space="preserve">
+  <value>Carta dinamométrica en superficie</value>
+ </data>
+ <data name="Eficiencia" xml:space="preserve">
+  <value>Eficiencia</value>
+ </data>
+ <data name="Falla" xml:space="preserve">
+  <value>Falla</value>
+ </data>
+ <data name="FoMax" xml:space="preserve">
+  <value>Fo Max</value>
+ </data>
+ <data name="Formacion" xml:space="preserve">
+  <value>Formación</value>
+ </data>
+ <data name="General" xml:space="preserve">
+  <value>General</value>
+ </data>
+ <data name="Goodman" xml:space="preserve">
+  <value>Goodman</value>
+ </data>
+ <data name="GradienteGas" xml:space="preserve">
+  <value>Gradiente de gas</value>
+ </data>
+ <data name="GradientePresion" xml:space="preserve">
+  <value>Gradiente dinámico</value>
+ </data>
+ <data name="GradienteTemperatura" xml:space="preserve">
+  <value>Gradiente de Temperatura</value>
+ </data>
+ <data name="H45" xml:space="preserve">
+  <value>45 Hz</value>
+ </data>
+ <data name="H50" xml:space="preserve">
+  <value>50 Hz</value>
+ </data>
+ <data name="H55" xml:space="preserve">
+  <value>55 Hz</value>
+ </data>
+ <data name="H60" xml:space="preserve">
+  <value>60 Hz</value>
+ </data>
+ <data name="H65" xml:space="preserve">
+  <value>65 Hz</value>
+ </data>
+ <data name="H70" xml:space="preserve">
+  <value>70 Hz</value>
+ </data>
+ <data name="H75" xml:space="preserve">
+  <value>75 Hz</value>
+ </data>
+ <data name="H80" xml:space="preserve">
+  <value>80 Hz</value>
+ </data>
+ <data name="Inyeccion" xml:space="preserve">
+  <value>Inyección</value>
+ </data>
+ <data name="Ipr" xml:space="preserve">
+  <value>IPR.</value>
+ </data>
+ <data name="Ite" xml:space="preserve">
+  <value>Prod.</value>
+ </data>
+ <data name="Max" xml:space="preserve">
+  <value>Máximo</value>
+ </data>
+ <data name="MaxEfford" xml:space="preserve">
+  <value>Esfuerzo máximo</value>
+ </data>
+ <data name="Min" xml:space="preserve">
+  <value>Mínimo</value>
+ </data>
+ <data name="MinTension" xml:space="preserve">
+  <value>Tensión mínima</value>
+ </data>
+ <data name="Model" xml:space="preserve">
+  <value>Modelo</value>
+ </data>
+ <data name="NivelDinamico" xml:space="preserve">
+  <value>Nivel Dinámico</value>
+ </data>
+ <data name="Optimo" xml:space="preserve">
+  <value>Óptimo</value>
+ </data>
+ <data name="PerfilPresion1" xml:space="preserve">
+  <value>Profundidad VOP</value>
+ </data>
+ <data name="PerfilPresion2" xml:space="preserve">
+  <value>Gradiente de Presión en TP</value>
+ </data>
+ <data name="PerfilPresion3" xml:space="preserve">
+  <value>Gradiente de Presión en TR</value>
+ </data>
+ <data name="PIP" xml:space="preserve">
+  <value>PIP</value>
+ </data>
+ <data name="Pipe" xml:space="preserve">
+  <value>Tubería</value>
+ </data>
+ <data name="PKC" xml:space="preserve">
+  <value>PKC</value>
+ </data>
+ <data name="PKO" xml:space="preserve">
+  <value>PKO</value>
+ </data>
+ <data name="Presion" xml:space="preserve">
+  <value>PWF</value>
+ </data>
+ <data name="ProfundidadMedida" xml:space="preserve">
+  <value>Profundidad Medida</value>
+ </data>
+ <data name="ProfundidadPerforacion" xml:space="preserve">
+  <value>Profundidad de perforación</value>
+ </data>
+ <data name="ProfundidadVertical" xml:space="preserve">
+  <value>Profundidad Vertical</value>
+ </data>
+ <data name="PtoOperacion" xml:space="preserve">
+  <value>Punto de Operación</value>
+ </data>
+ <data name="PtoOptimo" xml:space="preserve">
+  <value>Punto optimo de operación</value>
+ </data>
+ <data name="Qgi" xml:space="preserve">
+  <value>Qgi</value>
+ </data>
+ <data name="Sensitivity" xml:space="preserve">
+  <value>Sensibilidad</value>
+ </data>
+ <data name="SeveridadDogleg" xml:space="preserve">
+  <value>Severidad Dogleg</value>
+ </data>
+ <data name="Sobredimencionado" xml:space="preserve">
+  <value>Sobredimencionado</value>
+ </data>
+ <data name="Subdimencionado" xml:space="preserve">
+  <value>Subdimencionado</value>
+ </data>
+ <data name="Subsuperficial" xml:space="preserve">
+  <value>Subsuperficial</value>
+ </data>
+ <data name="Sumergencia" xml:space="preserve">
+  <value>Sumergencia</value>
+ </data>
+ <data name="Superficial" xml:space="preserve">
+  <value>Superficial</value>
+ </data>
+ <data name="Survey" xml:space="preserve">
+  <value>Survey</value>
+ </data>
+ <data name="TakeInformation" xml:space="preserve">
+  <value>Actual</value>
+ </data>
+ <data name="TamanioTapon1" xml:space="preserve">
+  <value>Bajo Tapón</value>
+ </data>
+ <data name="TamanioTapon2" xml:space="preserve">
+  <value>Tapón</value>
+ </data>
+ <data name="TamanioTapon3" xml:space="preserve">
+  <value>Sobre Tapón</value>
+ </data>
+ <data name="Taped" xml:space="preserve">
+  <value>Varilla</value>
+ </data>
+ <data name="Target" xml:space="preserve">
+  <value>Objetivo</value>
+ </data>
+ <data name="TDH" xml:space="preserve">
+  <value>TDH</value>
+ </data>
+ <data name="TopTaped" xml:space="preserve">
+  <value>Varilla superior</value>
+ </data>
+ <data name="TipoParo" xml:space="preserve">
+  <value>Tipos de paro</value>
+  <comment>Ok</comment>
+ </data>
+ <data name="Valvula" xml:space="preserve">
+  <value>Válvula</value>
+ </data>
+ <data name="ValvulaAbierta" xml:space="preserve">
+  <value>Válvula Abierta - No inyecta</value>
+ </data>
+ <data name="ValvulaCerrada" xml:space="preserve">
+  <value>Válvula Cerrada</value>
+ </data>
+ <data name="ValvulaInyecta" xml:space="preserve">
+  <value>Válvula Abierta - Inyecta</value>
+ </data>
+ <data name="VistaEste" xml:space="preserve">
+  <value>Vista desde el este</value>
+ </data>
+ <data name="VistaNorte" xml:space="preserve">
+  <value>Vista desde el norte</value>
+ </data>
+ <data name="VistaPlanta" xml:space="preserve">
+  <value>Vista de planta</value>
+ </data>
+ <data name="Vlp" xml:space="preserve">
+  <value>Vlp.</value>
+ </data>
+ <data name="Wrf" xml:space="preserve">
+  <value>Wrf</value>
+ </data>
+</root>

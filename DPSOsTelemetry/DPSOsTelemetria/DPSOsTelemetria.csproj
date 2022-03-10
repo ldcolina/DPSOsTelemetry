@@ -1,0 +1,166 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>disable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PackageIcon>antenna-with-signal-lines-symbol_icon-icons.com_56573.ico</PackageIcon>
+    <Copyright>EnTecPro </Copyright>
+    <SignAssembly>False</SignAssembly>
+    <Version>1.0.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Icons\adddatabase_5668.ico" />
+    <None Remove="Icons\Cavidad Progresiva.jpg" />
+    <None Remove="Icons\chat_96641.png" />
+    <None Remove="Icons\configuraciones .png" />
+    <None Remove="Icons\Electrocentrífugo.jpg" />
+    <None Remove="Icons\Fluyente.jpg" />
+    <None Remove="Icons\inventory.png" />
+    <None Remove="Icons\Jet Pump.jpg" />
+    <None Remove="Icons\magnifying-glass.png" />
+    <None Remove="Icons\Mecanico.jpg" />
+    <None Remove="Icons\Neumatico Intermitente.jpg" />
+    <None Remove="Icons\Neumatico.jpg" />
+    <None Remove="Icons\off-button.png" />
+    <None Remove="Icons\oil-platform.png" />
+    <None Remove="Icons\oil_pump_icon_150208.ico" />
+    <None Remove="Icons\on-button.png" />
+    <None Remove="Icons\seo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>9</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>00020813-0000-0000-c000-000000000046</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Icons\adddatabase_5668.ico" />
+    <Content Include="Icons\antenna-with-signal-lines-symbol_icon-icons.com_56573.ico" />
+    <Content Include="Icons\Cavidad Progresiva.jpg" />
+    <Content Include="Icons\chat_96641.png" />
+    <Content Include="Icons\configuraciones .png" />
+    <Content Include="Icons\Electrocentrífugo.jpg" />
+    <Content Include="Icons\Fluyente.jpg" />
+    <Content Include="Icons\inventory.png" />
+    <Content Include="Icons\Jet Pump.jpg" />
+    <Content Include="Icons\magnifying-glass.png" />
+    <Content Include="Icons\Mecanico.jpg" />
+    <Content Include="Icons\Neumatico Intermitente.jpg" />
+    <Content Include="Icons\Neumatico.jpg" />
+    <Content Include="Icons\off-button.png" />
+    <Content Include="Icons\oil-platform.png" />
+    <Content Include="Icons\oil_pump_icon_150208.ico" />
+    <Content Include="Icons\on-button.png" />
+    <Content Include="Icons\seo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.3" />
+    <PackageReference Include="Microsoft.NETCore" Version="5.0.2" />
+    <PackageReference Include="System.Resources.ResourceManager" Version="4.3.0" />
+    <PackageReference Include="System.Windows.Extensions" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Languages\Languages.csproj" />
+    <ProjectReference Include="..\Telemetria\Telemetria.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Administration\Abrir_Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Administration\Administracion_Pozo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="listaTiempo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Pozo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Pozos\PozoBombeoCavidadProgresiva\MonitoreoVirtual.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Pozos\PozoBombeoCavidadProgresiva\TomaInformacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Pozos\PozoBombeoElectroCentrifugo\MonitoreoVirtual.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Pozos\PozoBombeoElectroCentrifugo\TomaInformacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Pozos\PozoBombeoFluyenteGas\MonitoreoVirtual.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Pozos\PozoBombeoFluyenteGas\TomaInformacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Pozos\PozoBombeoFluyente\MonitoreoVirtual.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Pozos\PozoBombeoFluyente\TomaInformacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Pozos\PozoBombeoJetPump\MonitoreoVirtual.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Pozos\PozoBombeoJetPump\TomaInformacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Pozos\PozoBombeoMecanico\MonitoreoVirtual.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Pozos\PozoBombeoMecanico\TomaInformacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Pozos\PozoBombeoNeumaticoIntermitente\MonitoreoVirtual.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Pozos\PozoBombeoNeumaticoIntermitente\TomaInformacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Pozos\PozoBombeoNeumatico\MonitoreoVirtual.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Pozos\PozoBombeoNeumatico\TomaInformacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Icons\antenna-with-signal-lines-symbol_icon-icons.com_56573.ico">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

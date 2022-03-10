@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<NeutralLanguage>en</NeutralLanguage>
+		<Description>Código exclusivo para mensajes y nombres a mostrar al usuario</Description>
+		<AssemblyVersion>2021.04.29.0</AssemblyVersion>
+		<Authors>Liz Colina</Authors>
+		<Company>EnTecPro</Company>
+		<PackageReleaseNotes>
+			Creando Files y dependencias de proyectos.
+			Incorporando textos en idioma: Ingles, Español
+		</PackageReleaseNotes>
+		<AssemblyName>Languages</AssemblyName>
+		<RootNamespace>Languages</RootNamespace>
+		<FileVersion>3.0.0.0</FileVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="DPSOs.xlsx" />
+		<None Remove="~%24DPSOs.xlsx" />
+	</ItemGroup>
+
+	<ItemGroup>
+
+		<Compile Update="Administration.Designer.cs">
+		  <DependentUpon>Administration.resx</DependentUpon>
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		</Compile>
+
+		<Compile Update="DPSOsTelemetria.Designer.cs">
+		  <DependentUpon>DPSOsTelemetria.resx</DependentUpon>
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		</Compile>
+
+		<Compile Update="Graphics.Designer.cs">
+		  <DependentUpon>Graphics.resx</DependentUpon>
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		</Compile>
+
+		<Compile Update="listaTiempo.Designer.cs">
+		  <DependentUpon>listaTiempo.resx</DependentUpon>
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		</Compile>
+
+		<Compile Update="Mensaje_Actualizacion.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>Mensaje_Actualizacion.resx</DependentUpon>
+		</Compile>
+
+		<Compile Update="Pozo.Designer.cs">
+		  <DependentUpon>Pozo.resx</DependentUpon>
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		</Compile>
+
+		<Compile Update="Siglas.Designer.cs">
+		  <DependentUpon>Siglas.resx</DependentUpon>
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		</Compile>
+
+		<EmbeddedResource Update="Administration.resx">
+		  <LastGenOutput>Administration.Designer.cs</LastGenOutput>
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+
+		<EmbeddedResource Update="DPSOsTelemetria.es-MX.resx">
+		  <SubType>Designer</SubType>
+		</EmbeddedResource>
+
+		<EmbeddedResource Update="DPSOsTelemetria.resx">
+		  <LastGenOutput>DPSOsTelemetria.Designer.cs</LastGenOutput>
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+
+		<EmbeddedResource Update="Graphics.resx">
+		  <LastGenOutput>Graphics.Designer.cs</LastGenOutput>
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+
+		<EmbeddedResource Update="listaTiempo.resx">
+		  <LastGenOutput>listaTiempo.Designer.cs</LastGenOutput>
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+
+		<EmbeddedResource Update="Mensaje_Actualizacion.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>Mensaje_Actualizacion.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+
+		<EmbeddedResource Update="Pozo.es-MX.resx">
+		  <SubType>Designer</SubType>
+		</EmbeddedResource>
+
+		<EmbeddedResource Update="Pozo.es.resx">
+		  <SubType>Designer</SubType>
+		</EmbeddedResource>
+
+		<EmbeddedResource Update="Pozo.resx">
+		  <SubType>Designer</SubType>
+		  <LastGenOutput>Pozo.Designer.cs</LastGenOutput>
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+
+		<EmbeddedResource Update="Siglas.resx">
+		  <LastGenOutput>Siglas.Designer.cs</LastGenOutput>
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+
+		<Compile Update="General.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>General.resx</DependentUpon>
+		</Compile>
+		<EmbeddedResource Update="General.resx">
+			<Generator>PublicResXFileCodeGenerator</Generator>
+			<LastGenOutput>General.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+
+		<Compile Update="SystemWell.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>SystemWell.resx</DependentUpon>
+		</Compile>
+		<EmbeddedResource Update="SystemWell.resx">
+			<Generator>PublicResXFileCodeGenerator</Generator>
+			<LastGenOutput>SystemWell.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+</Project>

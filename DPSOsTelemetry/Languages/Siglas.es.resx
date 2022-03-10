@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+	<data name="Amperios" xml:space="preserve">
+    <value>A</value>
+  </data>
+	<data name="Anio" xml:space="preserve">
+    <value>año</value>
+  </data>
+	<data name="Atmosfera" xml:space="preserve">
+    <value>atm</value>
+  </data>
+	<data name="Bar" xml:space="preserve">
+    <value>bar</value>
+  </data>
+	<data name="BarrilesAceite" xml:space="preserve">
+    <value>bbo</value>
+  </data>
+	<data name="BarrilesAceitePorAnio" xml:space="preserve">
+    <value>bbo/año</value>
+  </data>
+	<data name="BarrilesAceitePorDia" xml:space="preserve">
+    <value>bbo/día</value>
+  </data>
+	<data name="BarrilesAceitePorHora" xml:space="preserve">
+    <value>bbo/h</value>
+  </data>
+	<data name="BarrilesAceitePorMinuto" xml:space="preserve">
+    <value>bbo/min</value>
+  </data>
+	<data name="BarrilesAceitePorSegundo" xml:space="preserve">
+    <value>bbo/seg</value>
+  </data>
+	<data name="BarrilesLiquido" xml:space="preserve">
+    <value>bbl</value>
+  </data>
+	<data name="BarrilesPetroleoPorAnio" xml:space="preserve">
+    <value>bbl/año</value>
+  </data>
+	<data name="BarrilesPetroleoPorDia" xml:space="preserve">
+    <value>bbl/día</value>
+  </data>
+	<data name="BarrilesPetroleoPorHora" xml:space="preserve">
+    <value>bbl/h</value>
+  </data>
+	<data name="BarrilesPetroleoPorMinuto" xml:space="preserve">
+    <value>bbl/min</value>
+  </data>
+	<data name="BarrilesPetroleoPorSegundo" xml:space="preserve">
+    <value>bbl/seg</value>
+  </data>
+	<data name="BarrilPetroleoPorBarrilTanqueExistencias" xml:space="preserve">
+    <value>BBL/STB</value>
+  </data>
+	<data name="BarrilTanqueReservaPorPieCubicoEstandar" xml:space="preserve">
+    <value>STB/SCF</value>
+  </data>
+	<data name="Caballo" xml:space="preserve">
+    <value>hp</value>
+  </data>
+	<data name="CaballoUk" xml:space="preserve">
+    <value>hp (UK)</value>
+  </data>
+	<data name="Celsius" xml:space="preserve">
+    <value>°C</value>
+  </data>
+	<data name="Centimetro" xml:space="preserve">
+    <value>cm</value>
+  </data>
+	<data name="CentimetroElevadoDos" xml:space="preserve">
+    <value>cm²</value>
+  </data>
+	<data name="CentimetroElevadoTresPorAnio" xml:space="preserve">
+    <value>cm³/año</value>
+  </data>
+	<data name="CentimetroElevadoTresPorDia" xml:space="preserve">
+    <value>cm³/día</value>
+  </data>
+	<data name="CentimetroElevadoTresPorHora" xml:space="preserve">
+    <value>cm³/hora</value>
+  </data>
+	<data name="CentimetroElevadoTresPorMinuto" xml:space="preserve">
+    <value>cm³/min</value>
+  </data>
+	<data name="CentimetroElevadoTresPorSegundo" xml:space="preserve">
+    <value>cm³/seg</value>
+  </data>
+	<data name="Ciclo_Segundo" xml:space="preserve">
+    <value>ciclo/seg</value>
+  </data>
+	<data name="CulombiosPorSegundo" xml:space="preserve">
+    <value>C/seg</value>
+  </data>
+	<data name="Dia" xml:space="preserve">
+    <value>día</value>
+  </data>
+	<data name="Dina" xml:space="preserve">
+    <value>dina</value>
+  </data>
+	<data name="EmboladaPorMinuto" xml:space="preserve">
+    <value>EPM</value>
+  </data>
+	<data name="Fahrenheit" xml:space="preserve">
+    <value>°F</value>
+  </data>
+	<data name="Fraccion" xml:space="preserve">
+    <value>-</value>
+  </data>
+	<data name="Gigahercio" xml:space="preserve">
+    <value>GHz</value>
+  </data>
+	<data name="Grado" xml:space="preserve">
+    <value>°</value>
+  </data>
+	<data name="GradosApi" xml:space="preserve">
+    <value>°API</value>
+  </data>
+	<data name="Gramo" xml:space="preserve">
+    <value>g</value>
+  </data>
+	<data name="GramoFuerza" xml:space="preserve">
+    <value>gf</value>
+  </data>
+	<data name="GravedadEspecifica" xml:space="preserve">
+    <value>SG</value>
+  </data>
+	<data name="Hercio" xml:space="preserve">
+    <value>Hz</value>
+  </data>
+	<data name="Hora" xml:space="preserve">
+    <value>hora</value>
+  </data>
+	<data name="Julio_Hora" xml:space="preserve">
+    <value>J/hora</value>
+  </data>
+	<data name="Kelvin" xml:space="preserve">
+    <value>°K</value>
+  </data>
+	<data name="Kiloamperios" xml:space="preserve">
+    <value>kA</value>
+  </data>
+	<data name="Kilogramo" xml:space="preserve">
+    <value>kg</value>
+  </data>
+	<data name="KilogramoFuerza" xml:space="preserve">
+    <value>kgf</value>
+  </data>
+	<data name="KilogramoFuerza_CentimetroElevadoDos" xml:space="preserve">
+    <value>kgf/cm²</value>
+  </data>
+	<data name="Kilogramo_CentimetroElevadoTres" xml:space="preserve">
+    <value>kg/cm³</value>
+  </data>
+	<data name="Kilohercio" xml:space="preserve">
+    <value>kHz</value>
+  </data>
+	<data name="Kilojulio_Hora" xml:space="preserve">
+    <value>kJ/hora</value>
+  </data>
+	<data name="Kilolibra" xml:space="preserve">
+    <value>klb</value>
+  </data>
+	<data name="KilolibraFuerza" xml:space="preserve">
+    <value>klbf</value>
+  </data>
+	<data name="Kilometro" xml:space="preserve">
+    <value>km</value>
+  </data>
+	<data name="Kilonewton" xml:space="preserve">
+    <value>kN</value>
+  </data>
+	<data name="Kilopascal" xml:space="preserve">
+    <value>kPa</value>
+  </data>
+	<data name="Kilovatio" xml:space="preserve">
+    <value>kW</value>
+  </data>
+	<data name="Kpsi" xml:space="preserve">
+    <value>kPsi</value>
+  </data>
+	<data name="Libra" xml:space="preserve">
+    <value>lb</value>
+  </data>
+	<data name="LibraFuerza" xml:space="preserve">
+    <value>lbf</value>
+  </data>
+	<data name="LibraFuerza_PulgadaElevadoDos" xml:space="preserve">
+    <value>lbf/pulg²</value>
+  </data>
+	<data name="Libra_PieElevadoTres" xml:space="preserve">
+    <value>lb/pcs</value>
+  </data>
+	<data name="Libra_PulgadaElevadoTres" xml:space="preserve">
+    <value>lb/pulg³</value>
+  </data>
+	<data name="Megahercio" xml:space="preserve">
+    <value>MHz</value>
+  </data>
+	<data name="Megapascal" xml:space="preserve">
+    <value>MPa</value>
+  </data>
+	<data name="Mes" xml:space="preserve">
+    <value>mes</value>
+  </data>
+	<data name="Metro" xml:space="preserve">
+    <value>m</value>
+  </data>
+	<data name="MetroCubicoPorAnio" xml:space="preserve">
+    <value>m³/año</value>
+  </data>
+	<data name="MetroCubicoPorDia" xml:space="preserve">
+    <value>m³/día</value>
+  </data>
+	<data name="MetroCubicoPorHora" xml:space="preserve">
+    <value>m³/hora</value>
+  </data>
+	<data name="MetroCubicoPorMetroCubico" xml:space="preserve">
+    <value>m³/m³</value>
+  </data>
+	<data name="MetroCubicoPorMinuto" xml:space="preserve">
+    <value>m³/min</value>
+  </data>
+	<data name="MetroCubicoPorSegundo" xml:space="preserve">
+    <value>m³/seg</value>
+  </data>
+	<data name="MetroElevadoDos" xml:space="preserve">
+    <value>m²</value>
+  </data>
+	<data name="MetroElevadoTresPorAnio" xml:space="preserve">
+    <value>m³/año</value>
+  </data>
+	<data name="MetroElevadoTresPorDia" xml:space="preserve">
+    <value>m³/día</value>
+  </data>
+	<data name="MetroElevadoTresPorHora" xml:space="preserve">
+    <value>m³/hora</value>
+  </data>
+	<data name="MetroElevadoTresPorMinuto" xml:space="preserve">
+    <value>m³/min</value>
+  </data>
+	<data name="MetroElevadoTresPorSegundo" xml:space="preserve">
+    <value>m³/seg</value>
+  </data>
+	<data name="MilesMetroElevadoTresPorAnio" xml:space="preserve">
+    <value>Mm³/año</value>
+  </data>
+	<data name="MilesMetroElevadoTresPorDia" xml:space="preserve">
+    <value>Mm³/día</value>
+  </data>
+	<data name="MilesMetroElevadoTresPorHora" xml:space="preserve">
+    <value>Mm³/hora</value>
+  </data>
+	<data name="MilesMetroElevadoTresPorMinuto" xml:space="preserve">
+    <value>Mm³/min</value>
+  </data>
+	<data name="MilesMetroElevadoTresPorSegundo" xml:space="preserve">
+    <value>Mm³/seg</value>
+  </data>
+	<data name="MilesPieElevadoTresPorAnio" xml:space="preserve">
+    <value>Mpcs/año</value>
+  </data>
+	<data name="MilesPieElevadoTresPorDia" xml:space="preserve">
+    <value>Mpcd</value>
+  </data>
+	<data name="MilesPieElevadoTresPorHora" xml:space="preserve">
+    <value>Mpcs/hora</value>
+  </data>
+	<data name="MilesPieElevadoTresPorMinuto" xml:space="preserve">
+    <value>Mpcs/min</value>
+  </data>
+	<data name="MilesPieElevadoTresPorSegundo" xml:space="preserve">
+    <value>Mpcs/seg</value>
+  </data>
+	<data name="Miliamperios" xml:space="preserve">
+    <value>mA</value>
+  </data>
+	<data name="Milimetro" xml:space="preserve">
+    <value>mm</value>
+  </data>
+	<data name="MillaUs" xml:space="preserve">
+    <value>mi</value>
+  </data>
+	<data name="MillonesMetroElevadoTresPorAnio" xml:space="preserve">
+    <value>MMm³/año</value>
+  </data>
+	<data name="MillonesMetroElevadoTresPorDia" xml:space="preserve">
+    <value>MMm³/día</value>
+  </data>
+	<data name="MillonesMetroElevadoTresPorHora" xml:space="preserve">
+    <value>MMm³/hora</value>
+  </data>
+	<data name="MillonesMetroElevadoTresPorMinuto" xml:space="preserve">
+    <value>MMm³/min</value>
+  </data>
+	<data name="MillonesMetroElevadoTresPorSegundo" xml:space="preserve">
+    <value>MMm³/seg</value>
+  </data>
+	<data name="MillonesPieElevadoTresPorAnio" xml:space="preserve">
+    <value>MMpcs/año</value>
+  </data>
+	<data name="MillonesPieElevadoTresPorDia" xml:space="preserve">
+    <value>MMpcd</value>
+  </data>
+	<data name="MillonesPieElevadoTresPorHora" xml:space="preserve">
+    <value>MMpcs/hora</value>
+  </data>
+	<data name="MillonesPieElevadoTresPorMinuto" xml:space="preserve">
+    <value>MMpcs/min</value>
+  </data>
+	<data name="MillonesPieElevadoTresPorSegundo" xml:space="preserve">
+    <value>MMpcs/seg</value>
+  </data>
+	<data name="Minuto" xml:space="preserve">
+    <value>min</value>
+  </data>
+	<data name="Newton" xml:space="preserve">
+    <value>N</value>
+  </data>
+	<data name="Newton_MetroElevadoDos" xml:space="preserve">
+    <value>N/m²</value>
+  </data>
+	<data name="Onza" xml:space="preserve">
+    <value>oz</value>
+  </data>
+	<data name="OnzaFuerza" xml:space="preserve">
+    <value>ozf</value>
+  </data>
+	<data name="Pascal" xml:space="preserve">
+    <value>Pa</value>
+  </data>
+	<data name="Pie" xml:space="preserve">
+    <value>pie</value>
+  </data>
+	<data name="PieElevadoDos" xml:space="preserve">
+    <value>pie²</value>
+  </data>
+	<data name="PieElevadoTresPorAnio" xml:space="preserve">
+    <value>pcs/año</value>
+  </data>
+	<data name="PieElevadoTresPorDia" xml:space="preserve">
+    <value>pcd</value>
+  </data>
+	<data name="PieElevadoTresPorHora" xml:space="preserve">
+    <value>pcs/hora</value>
+  </data>
+	<data name="PieElevadoTresPorMinuto" xml:space="preserve">
+    <value>pcs/min</value>
+  </data>
+	<data name="PieElevadoTresPorSegundo" xml:space="preserve">
+    <value>pcs/seg</value>
+  </data>
+	<data name="PiesCubicosPorAnio" xml:space="preserve">
+    <value>pcs/año</value>
+  </data>
+	<data name="PiesCubicosPorDia" xml:space="preserve">
+    <value>pcd</value>
+  </data>
+	<data name="PiesCubicosPorHora" xml:space="preserve">
+    <value>pcs/hora</value>
+  </data>
+	<data name="PiesCubicosPorMinuto" xml:space="preserve">
+    <value>pcs/min</value>
+  </data>
+	<data name="PiesCubicosPorSegundo" xml:space="preserve">
+    <value>pcs/seg</value>
+  </data>
+	<data name="PieCubicoEstandarPorBarrilTanqueReserva" xml:space="preserve">
+    <value>SCF/STB</value>
+  </data>
+	<data name="Porcentaje" xml:space="preserve">
+    <value>%</value>
+  </data>
+	<data name="Poundal" xml:space="preserve">
+    <value>pdl</value>
+  </data>
+	<data name="Psi" xml:space="preserve">
+    <value>Psi</value>
+  </data>
+	<data name="Pulgada" xml:space="preserve">
+    <value>pulg</value>
+  </data>
+	<data name="PulgadaAgua60GradosF" xml:space="preserve">
+    <value>pulgH₂O</value>
+  </data>
+	<data name="PulgadaElevadoDos" xml:space="preserve">
+    <value>pulg²</value>
+  </data>
+	<data name="PulgadaElevadoTresPorAnio" xml:space="preserve">
+    <value>pulg³/año</value>
+  </data>
+	<data name="PulgadaElevadoTresPorDia" xml:space="preserve">
+    <value>pulg³/día</value>
+  </data>
+	<data name="PulgadaElevadoTresPorHora" xml:space="preserve">
+    <value>pulg³/hora</value>
+  </data>
+	<data name="PulgadaElevadoTresPorMinuto" xml:space="preserve">
+    <value>pulg³/min</value>
+  </data>
+	<data name="PulgadaElevadoTresPorSegundo" xml:space="preserve">
+    <value>pulg³/seg</value>
+  </data>
+	<data name="Radian" xml:space="preserve">
+    <value>rad</value>
+  </data>
+	<data name="Rankine" xml:space="preserve">
+    <value>°R</value>
+  </data>
+	<data name="Revolucion" xml:space="preserve">
+    <value>rev</value>
+  </data>
+	<data name="Revolucion_Dia" xml:space="preserve">
+    <value>rev/día</value>
+  </data>
+	<data name="Revolucion_Hora" xml:space="preserve">
+    <value>rev/hora</value>
+  </data>
+	<data name="Revolucion_Minuto" xml:space="preserve">
+    <value>RPM</value>
+  </data>
+	<data name="Revolucion_Segundo" xml:space="preserve">
+    <value>rev/seg</value>
+  </data>
+	<data name="Segundo" xml:space="preserve">
+    <value>seg</value>
+  </data>
+	<data name="Ton" xml:space="preserve">
+    <value>ton</value>
+  </data>
+	<data name="Torr" xml:space="preserve">
+    <value>Torr</value>
+  </data>
+	<data name="Vatio" xml:space="preserve">
+    <value>W</value>
+  </data>
+	<data name="Yarda" xml:space="preserve">
+    <value>yd</value>
+  </data>
+</root>
