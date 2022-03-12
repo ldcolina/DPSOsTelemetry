@@ -129,8 +129,8 @@
   <data name="Ventanas" xml:space="preserve">
     <value>Windows</value>
   </data>
-  <data name="AcercaDe" xml:space="preserve">
-    <value>About...</value>
+  <data name="Config" xml:space="preserve">
+    <value>Settings</value>
   </data>
   <data name="Abrir_Eliminar" xml:space="preserve">
     <value>Information board</value>

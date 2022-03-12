@@ -8,7 +8,7 @@ namespace DPSOsTelemetria.Administration
     {
         internal readonly string DataBase;
         public string ID;
-        private static readonly ResourceManager SystemWell = new ResourceManager(typeof(Languages.SystemWell));
+        private static readonly ResourceManager SystemWell = new(typeof(Languages.SystemWell));
 
         public Abrir_Eliminar()
         {
@@ -22,7 +22,7 @@ namespace DPSOsTelemetria.Administration
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            List<ReferenciasII> ControlPozos = new List<ReferenciasII>();
+            List<ReferenciasII> ControlPozos = new();
             Directory.GetFiles(DataBase).ToList().ForEach(val =>
             {
                 ReferenciasII ReferenciasII = JsonConvert.DeserializeObject<ReferenciasII>(File.ReadAllText(val));

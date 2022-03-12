@@ -24,6 +24,12 @@
 
 	<ItemGroup>
 
+		<Compile Update="Actual.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>Actual.resx</DependentUpon>
+		</Compile>
+
 		<Compile Update="Administration.Designer.cs">
 		  <DependentUpon>Administration.resx</DependentUpon>
 		  <DesignTime>True</DesignTime>
@@ -48,12 +54,6 @@
 		  <AutoGen>True</AutoGen>
 		</Compile>
 
-		<Compile Update="Mensaje_Actualizacion.Designer.cs">
-		  <DesignTime>True</DesignTime>
-		  <AutoGen>True</AutoGen>
-		  <DependentUpon>Mensaje_Actualizacion.resx</DependentUpon>
-		</Compile>
-
 		<Compile Update="Pozo.Designer.cs">
 		  <DependentUpon>Pozo.resx</DependentUpon>
 		  <DesignTime>True</DesignTime>
@@ -65,6 +65,11 @@
 		  <DesignTime>True</DesignTime>
 		  <AutoGen>True</AutoGen>
 		</Compile>
+
+		<EmbeddedResource Update="Actual.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>Actual.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
 
 		<EmbeddedResource Update="Administration.resx">
 		  <LastGenOutput>Administration.Designer.cs</LastGenOutput>
@@ -88,11 +93,6 @@
 		<EmbeddedResource Update="listaTiempo.resx">
 		  <LastGenOutput>listaTiempo.Designer.cs</LastGenOutput>
 		  <Generator>PublicResXFileCodeGenerator</Generator>
-		</EmbeddedResource>
-
-		<EmbeddedResource Update="Mensaje_Actualizacion.resx">
-		  <Generator>PublicResXFileCodeGenerator</Generator>
-		  <LastGenOutput>Mensaje_Actualizacion.Designer.cs</LastGenOutput>
 		</EmbeddedResource>
 
 		<EmbeddedResource Update="Pozo.es-MX.resx">

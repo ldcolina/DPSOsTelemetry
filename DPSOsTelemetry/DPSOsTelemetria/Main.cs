@@ -13,6 +13,7 @@ namespace DPSOsTelemetria
         private readonly string file;
 
         private readonly string configuracion;
+        private int decimales;
 
         #endregion Directorio
 
@@ -28,13 +29,13 @@ namespace DPSOsTelemetria
             try
             {
                 string datos = File.ReadAllText(configuracion);
-                Configuracion datas = JsonConvert.DeserializeObject<Configuracion>(datos);
+                Setup datas = JsonConvert.DeserializeObject<Setup>(datos);
                 Idiomas(datas.Idioma);
             }
             catch
             {
-                File.WriteAllText(configuracion, JsonConvert.SerializeObject(new Configuracion(), Formatting.Indented));
-                idiomaToolStripMenuItem_Click(esMxToolStripMenuItem, null);
+                File.WriteAllText(configuracion, JsonConvert.SerializeObject(new Setup(), Formatting.Indented));
+                //idiomaToolStripMenuItem_Click(esMxToolStripMenuItem, null);
             }
         }
 
@@ -46,7 +47,7 @@ namespace DPSOsTelemetria
         {
             get
             {
-                return string.IsNullOrEmpty(instance.txtNumeroDecimales.Text) ? 0 : Convert.ToInt32(instance.txtNumeroDecimales.Text);
+                return instance.decimales;
             }
         }
 
@@ -110,7 +111,7 @@ namespace DPSOsTelemetria
         {
             Enabled = false;
 
-            Administration.Abrir_Eliminar childForm = new Administration.Abrir_Eliminar();
+            Administration.Abrir_Eliminar childForm = new();
             childForm.ShowDialog();
 
             if (childForm.DialogResult == DialogResult.OK)
@@ -184,7 +185,7 @@ namespace DPSOsTelemetria
             while (MdiChildren.Where(val => val.Text == Languages.Administration.Nuevo.Replace("{0}", i.ToString())).ToList().Count > 0)
                 i++;
 
-            Administration.Administracion_Pozo OpenForm = new Administration.Administracion_Pozo(string.Empty)
+            Administration.Administracion_Pozo OpenForm = new(string.Empty)
             {
                 MdiParent = this,
                 Text = Languages.Administration.Nuevo.Replace("{0}", i.ToString())
@@ -237,7 +238,7 @@ namespace DPSOsTelemetria
         private void timer1_Tick(object sender, EventArgs e)
         {
             toolStripStatusLabel1.Text = DateTime.UtcNow.ToLocalTime().ToString("F");
-            List<ReferenciasI> list = new List<ReferenciasI>();
+            List<ReferenciasI> list = new();
             foreach (Form child in MdiChildren.Where(val => val.Name == "Pozo"))
             {
                 Pozo form = (Pozo)child;
@@ -288,34 +289,34 @@ namespace DPSOsTelemetria
 
         #endregion listTiempo
 
-        private void txtNumeroDecimales_KeyPress(object sender, KeyPressEventArgs e)
+        private void Config_Click(object sender, EventArgs e)
         {
-            e.Handled = !char.IsNumber(e.KeyChar) & e.KeyChar != (char)Keys.Escape & e.KeyChar != (char)Keys.Back;
-        }
+            var OpenForm = new Config(configuracion);
+            OpenForm.ShowDialog();
 
-        private void txtNumeroDecimales_TextChanged(object sender, EventArgs e)
-        {
-            string datos = File.ReadAllText(configuracion);
-            Configuracion datas = JsonConvert.DeserializeObject<Configuracion>(datos);
-            datas.Decimales = Decimales;
-            File.WriteAllText(configuracion, JsonConvert.SerializeObject(datas, Formatting.Indented));
-
-            #region MdiChildren
-
-            foreach (Form child in MdiChildren.Where(val => val.Name == "Pozo"))
+            if (OpenForm.DialogResult == DialogResult.OK)
             {
-                Pozo form = (Pozo)child;
-                form.Refrescar();
-            }
+                string datos = File.ReadAllText(configuracion);
+                Setup datas = JsonConvert.DeserializeObject<Setup>(datos);
+                decimales = datas.Decimales;
 
-            #endregion MdiChildren
+                #region MdiChildren
+
+                foreach (Form child in MdiChildren.Where(val => val.Name == "Pozo"))
+                {
+                    Pozo form = (Pozo)child;
+                    form.Refrescar();
+                }
+
+                #endregion MdiChildren
+            }
         }
 
         #endregion Ayuda
 
         #region Idioma
 
-        private static readonly ResourceManager resource = new ResourceManager(typeof(Languages.DPSOsTelemetria));
+        private static readonly ResourceManager resource = new(typeof(Languages.DPSOsTelemetria));
 
         private void idiomaToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -339,7 +340,7 @@ namespace DPSOsTelemetria
                 return;
 
             string datos = File.ReadAllText(configuracion);
-            Configuracion datas = JsonConvert.DeserializeObject<Configuracion>(datos);
+            Setup datas = JsonConvert.DeserializeObject<Setup>(datos);
             datas.Idioma = Language;
             File.WriteAllText(configuracion, JsonConvert.SerializeObject(datas, Formatting.Indented));
 
@@ -358,10 +359,10 @@ namespace DPSOsTelemetria
         {
             #region Main
 
-            Text = $"{Languages.DPSOsTelemetria.DPSOsTelemetry}";
-            esToolStripMenuItem.Text = $"&{Languages.DPSOsTelemetria.Es}";
-            esMxToolStripMenuItem.Text = $"&{Languages.DPSOsTelemetria.EsMx}";
-            enToolStripMenuItem.Text = $"&{Languages.DPSOsTelemetria.En}";
+            //Text = $"{Languages.DPSOsTelemetria.DPSOsTelemetry}";
+            //esToolStripMenuItem.Text = $"&{Languages.DPSOsTelemetria.Es}";
+            //esMxToolStripMenuItem.Text = $"&{Languages.DPSOsTelemetria.EsMx}";
+            //enToolStripMenuItem.Text = $"&{Languages.DPSOsTelemetria.En}";
 
             foreach (ToolStripMenuItem ToolStrip in menuStrip1.Items.OfType<ToolStripMenuItem>())
             {
@@ -421,17 +422,5 @@ namespace DPSOsTelemetria
         }
 
         #endregion Idioma
-
-        internal class Configuracion
-        {
-            public string Idioma { get; set; } = Thread.CurrentThread.CurrentUICulture.ToString();
-            public int Decimales { get; set; } = 4;
-        }
-
-        private void AcercaDe_Click(object sender, EventArgs e)
-        {
-            InfoVersion info = new InfoVersion();
-            info.ShowDialog();
-        }
     }
 }

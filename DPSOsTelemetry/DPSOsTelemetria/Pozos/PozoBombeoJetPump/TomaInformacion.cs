@@ -284,7 +284,7 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoJetPump
 
         internal TomaBasica SaveTomaInformacion()
         {
-            TomaBasica Range = new TomaBasica();
+            TomaBasica Range = new();
 
             #region DatosOperativos
 

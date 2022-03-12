@@ -7,9 +7,9 @@ namespace DPSOsTelemetria
 {
     public partial class listaTiempo : Form
     {
-        private DataTable dt = new DataTable("Pozos");
-        private static readonly ResourceManager SystemWell = new ResourceManager(typeof(Languages.SystemWell));
-        private List<ReferenciasI> Last_Telemetria = new List<ReferenciasI>();
+        private DataTable dt = new("Pozos");
+        private static readonly ResourceManager SystemWell = new(typeof(Languages.SystemWell));
+        private List<ReferenciasI> Last_Telemetria = new();
 
         public listaTiempo()
         {

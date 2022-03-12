@@ -109,7 +109,7 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoNeumatico
 
         internal TomaBasica SaveTomaInformacion()
         {
-            TomaBasica Range = new TomaBasica();
+            TomaBasica Range = new();
 
             #region DatosOperativos
 

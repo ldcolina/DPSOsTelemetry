@@ -97,8 +97,7 @@ namespace Languages {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Copyright © {0} EnTecPro I-Services.
-        ///All rights reserved..
+        ///   Busca una cadena traducida similar a © {0} EnTecPro I-Services..
         /// </summary>
         public static string Copyright {
             get {

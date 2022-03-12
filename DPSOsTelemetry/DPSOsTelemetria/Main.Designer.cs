@@ -49,17 +49,10 @@ namespace DPSOsTelemetria
             this.Ayuda = new System.Windows.Forms.ToolStripMenuItem();
             this.listaTiempo = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.NumeroDecimales = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtNumeroDecimales = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.AcercaDe = new System.Windows.Forms.ToolStripMenuItem();
+            this.Config = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
-            this.esToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.esMxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.enToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
@@ -100,7 +93,7 @@ namespace DPSOsTelemetria
             this.Nuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Nuevo.Name = "Nuevo";
             this.Nuevo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.Nuevo.Size = new System.Drawing.Size(195, 26);
+            this.Nuevo.Size = new System.Drawing.Size(224, 26);
             this.Nuevo.Text = "&Nuevo";
             this.Nuevo.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
@@ -109,33 +102,33 @@ namespace DPSOsTelemetria
             this.Abrir_Eliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Abrir_Eliminar.Name = "Abrir_Eliminar";
             this.Abrir_Eliminar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.Abrir_Eliminar.Size = new System.Drawing.Size(195, 26);
+            this.Abrir_Eliminar.Size = new System.Drawing.Size(224, 26);
             this.Abrir_Eliminar.Text = "&Abrir";
             this.Abrir_Eliminar.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(192, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(221, 6);
             // 
             // GuardarArchivo
             // 
             this.GuardarArchivo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.GuardarArchivo.Name = "GuardarArchivo";
             this.GuardarArchivo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.GuardarArchivo.Size = new System.Drawing.Size(195, 26);
+            this.GuardarArchivo.Size = new System.Drawing.Size(224, 26);
             this.GuardarArchivo.Text = "&Guardar";
             this.GuardarArchivo.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(192, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
             // 
             // Salir
             // 
             this.Salir.Name = "Salir";
-            this.Salir.Size = new System.Drawing.Size(195, 26);
+            this.Salir.Size = new System.Drawing.Size(224, 26);
             this.Salir.Text = "&Salir";
             this.Salir.Click += new System.EventHandler(this.Salir_Click);
             // 
@@ -155,42 +148,42 @@ namespace DPSOsTelemetria
             // ArrangeIcons
             // 
             this.ArrangeIcons.Name = "ArrangeIcons";
-            this.ArrangeIcons.Size = new System.Drawing.Size(186, 26);
+            this.ArrangeIcons.Size = new System.Drawing.Size(224, 26);
             this.ArrangeIcons.Text = "ArrangeIcons";
             this.ArrangeIcons.Click += new System.EventHandler(this.ArrangeIcons_Click);
             // 
             // Cascade
             // 
             this.Cascade.Name = "Cascade";
-            this.Cascade.Size = new System.Drawing.Size(186, 26);
+            this.Cascade.Size = new System.Drawing.Size(224, 26);
             this.Cascade.Text = "Cascade";
             this.Cascade.Click += new System.EventHandler(this.Cascade_Click);
             // 
             // CloseAll
             // 
             this.CloseAll.Name = "CloseAll";
-            this.CloseAll.Size = new System.Drawing.Size(186, 26);
+            this.CloseAll.Size = new System.Drawing.Size(224, 26);
             this.CloseAll.Text = "CloseAll";
             this.CloseAll.Click += new System.EventHandler(this.CloseAll_Click);
             // 
             // TileHorizontal
             // 
             this.TileHorizontal.Name = "TileHorizontal";
-            this.TileHorizontal.Size = new System.Drawing.Size(186, 26);
+            this.TileHorizontal.Size = new System.Drawing.Size(224, 26);
             this.TileHorizontal.Text = "TileHorizontal";
             this.TileHorizontal.Click += new System.EventHandler(this.TileHorizontal_Click);
             // 
             // TileVertical
             // 
             this.TileVertical.Name = "TileVertical";
-            this.TileVertical.Size = new System.Drawing.Size(186, 26);
+            this.TileVertical.Size = new System.Drawing.Size(224, 26);
             this.TileVertical.Text = "TileVertical";
             this.TileVertical.Click += new System.EventHandler(this.TileVertical_Click);
             // 
             // MinimizedAll
             // 
             this.MinimizedAll.Name = "MinimizedAll";
-            this.MinimizedAll.Size = new System.Drawing.Size(186, 26);
+            this.MinimizedAll.Size = new System.Drawing.Size(224, 26);
             this.MinimizedAll.Text = "MinimizedAll";
             this.MinimizedAll.Click += new System.EventHandler(this.MinimizedAll_Click);
             // 
@@ -199,9 +192,7 @@ namespace DPSOsTelemetria
             this.Ayuda.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.listaTiempo,
             this.toolStripSeparator5,
-            this.NumeroDecimales,
-            this.toolStripSeparator2,
-            this.AcercaDe});
+            this.Config});
             this.Ayuda.Name = "Ayuda";
             this.Ayuda.Size = new System.Drawing.Size(65, 24);
             this.Ayuda.Text = "Ay&uda";
@@ -218,34 +209,12 @@ namespace DPSOsTelemetria
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(221, 6);
             // 
-            // NumeroDecimales
+            // Config
             // 
-            this.NumeroDecimales.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.txtNumeroDecimales});
-            this.NumeroDecimales.Name = "NumeroDecimales";
-            this.NumeroDecimales.Size = new System.Drawing.Size(224, 26);
-            this.NumeroDecimales.Text = "Decimales";
-            // 
-            // txtNumeroDecimales
-            // 
-            this.txtNumeroDecimales.Name = "txtNumeroDecimales";
-            this.txtNumeroDecimales.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtNumeroDecimales.Size = new System.Drawing.Size(100, 27);
-            this.txtNumeroDecimales.Text = "4";
-            this.txtNumeroDecimales.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroDecimales_KeyPress);
-            this.txtNumeroDecimales.TextChanged += new System.EventHandler(this.txtNumeroDecimales_TextChanged);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(221, 6);
-            // 
-            // AcercaDe
-            // 
-            this.AcercaDe.Name = "AcercaDe";
-            this.AcercaDe.Size = new System.Drawing.Size(224, 26);
-            this.AcercaDe.Text = "&Acerca de...";
-            this.AcercaDe.Click += new System.EventHandler(this.AcercaDe_Click);
+            this.Config.Name = "Config";
+            this.Config.Size = new System.Drawing.Size(224, 26);
+            this.Config.Text = "&Acerca de...";
+            this.Config.Click += new System.EventHandler(this.Config_Click);
             // 
             // statusStrip1
             // 
@@ -253,8 +222,7 @@ namespace DPSOsTelemetria
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
-            this.toolStripStatusLabel2,
-            this.toolStripSplitButton1});
+            this.toolStripStatusLabel2});
             this.statusStrip1.Location = new System.Drawing.Point(0, 0);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
@@ -271,44 +239,9 @@ namespace DPSOsTelemetria
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(857, 20);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(896, 20);
             this.toolStripStatusLabel2.Spring = true;
             this.toolStripStatusLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // toolStripSplitButton1
-            // 
-            this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.esToolStripMenuItem,
-            this.esMxToolStripMenuItem,
-            this.enToolStripMenuItem});
-            this.toolStripSplitButton1.Image = global::DPSOsTelemetria.Resources.chat_96641;
-            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(39, 24);
-            this.toolStripSplitButton1.Text = "toolStripSplitButton1";
-            this.toolStripSplitButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // esToolStripMenuItem
-            // 
-            this.esToolStripMenuItem.Name = "esToolStripMenuItem";
-            this.esToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.esToolStripMenuItem.Text = "&Es";
-            this.esToolStripMenuItem.Click += new System.EventHandler(this.idiomaToolStripMenuItem_Click);
-            // 
-            // esMxToolStripMenuItem
-            // 
-            this.esMxToolStripMenuItem.Name = "esMxToolStripMenuItem";
-            this.esMxToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.esMxToolStripMenuItem.Text = "&Es(Mx)";
-            this.esMxToolStripMenuItem.Click += new System.EventHandler(this.idiomaToolStripMenuItem_Click);
-            // 
-            // enToolStripMenuItem
-            // 
-            this.enToolStripMenuItem.Name = "enToolStripMenuItem";
-            this.enToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.enToolStripMenuItem.Text = "&En";
-            this.enToolStripMenuItem.Click += new System.EventHandler(this.idiomaToolStripMenuItem_Click);
             // 
             // panel2
             // 
@@ -366,18 +299,11 @@ namespace DPSOsTelemetria
         private System.Windows.Forms.ToolStripMenuItem Ayuda;
         private System.Windows.Forms.ToolStripMenuItem Ventanas;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripMenuItem AcercaDe;
+        private System.Windows.Forms.ToolStripMenuItem Config;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
-        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
-        private System.Windows.Forms.ToolStripMenuItem esToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem esMxToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem enToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem NumeroDecimales;
-        private System.Windows.Forms.ToolStripTextBox txtNumeroDecimales;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem listaTiempo;
         private System.Windows.Forms.ToolStripMenuItem Cascade;

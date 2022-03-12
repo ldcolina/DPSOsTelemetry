@@ -129,8 +129,8 @@
   <data name="Ventanas" xml:space="preserve">
     <value>Ventana</value>
   </data>
-  <data name="AcercaDe" xml:space="preserve">
-    <value>Acerca de...</value>
+  <data name="Config" xml:space="preserve">
+    <value>Configuración</value>
   </data>
   <data name="Abrir_Eliminar" xml:space="preserve">
     <value>Tablero de información</value>

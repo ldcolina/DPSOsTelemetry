@@ -50,27 +50,16 @@
     <Content Include="Icons\Cavidad Progresiva.jpg" />
     <Content Include="Icons\chat_96641.png" />
     <Content Include="Icons\configuraciones .png" />
-    <Content Include="Icons\Electrocentrífugo.jpg" />
-    <Content Include="Icons\Fluyente.jpg" />
     <Content Include="Icons\inventory.png" />
-    <Content Include="Icons\Jet Pump.jpg" />
     <Content Include="Icons\magnifying-glass.png" />
-    <Content Include="Icons\Mecanico.jpg" />
-    <Content Include="Icons\Neumatico Intermitente.jpg" />
-    <Content Include="Icons\Neumatico.jpg" />
     <Content Include="Icons\off-button.png" />
     <Content Include="Icons\oil-platform.png" />
-    <Content Include="Icons\oil_pump_icon_150208.ico" />
     <Content Include="Icons\on-button.png" />
     <Content Include="Icons\seo.png" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.3" />
-    <PackageReference Include="Microsoft.NETCore" Version="5.0.2" />
-    <PackageReference Include="System.Resources.ResourceManager" Version="4.3.0" />
-    <PackageReference Include="System.Windows.Extensions" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>

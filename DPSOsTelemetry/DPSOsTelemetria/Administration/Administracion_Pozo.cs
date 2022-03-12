@@ -6,7 +6,7 @@ namespace DPSOsTelemetria.Administration
 {
     public partial class Administracion_Pozo : Form
     {
-        private static readonly ResourceManager SystemWell = new ResourceManager(typeof(Languages.SystemWell));
+        private static readonly ResourceManager SystemWell = new(typeof(Languages.SystemWell));
         private readonly string file;
         public string ID = string.Empty;
         public int num = 0;
@@ -81,7 +81,7 @@ namespace DPSOsTelemetria.Administration
 
         internal DialogResult Guardar_Info()
         {
-            Referencias newWell = new Referencias()
+            Referencias newWell = new()
             {
                 Name = txtName.Text,
                 Token = txtToken.Text,
@@ -165,7 +165,7 @@ namespace DPSOsTelemetria.Administration
                         List<string> datos = Directory.GetFiles(file).ToList();
 
                         int cases = 0;
-                        Referencias ControlPozos = new Referencias();
+                        Referencias ControlPozos = new();
                         foreach (string val in datos)
                         {
                             Referencias d = JsonConvert.DeserializeObject<Referencias>(File.ReadAllText(val));
@@ -278,10 +278,10 @@ namespace DPSOsTelemetria.Administration
                                 {
                                     Guid Guid = Guid.NewGuid();
                                     ID += Convert.ToBase64String(Guid.ToByteArray());
-                                    string t = new string(ID.Where(c => Char.IsLetterOrDigit(c)).ToArray());
+                                    string t = new(ID.Where(c => Char.IsLetterOrDigit(c)).ToArray());
                                     ID = t;
                                 }
-                                ID = ID.Substring(0, 15);
+                                ID = ID[..15];
                             }
                         }
                         break;
@@ -309,7 +309,7 @@ namespace DPSOsTelemetria.Administration
             {
                 case "FL":
                     {
-                        pictureBox1.Image = Resources.Fluyente;
+                        pictureBox1.Image = Resources.Fluyente1;
                         break;
                     }
 
@@ -321,37 +321,37 @@ namespace DPSOsTelemetria.Administration
 
                 case "BN":
                     {
-                        pictureBox1.Image = Resources.Neumatico;
+                        pictureBox1.Image = Resources.Neumatico1;
                         break;
                     }
 
                 case "BNI":
                     {
-                        pictureBox1.Image = Resources.Neumatico_Intermitente;
+                        pictureBox1.Image = Resources.Neumatico_Intermitente1;
                         break;
                     }
 
                 case "BM":
                     {
-                        pictureBox1.Image = Resources.Mecanico;
+                        pictureBox1.Image = Resources.Mecanico1;
                         break;
                     }
 
                 case "BCP":
                     {
-                        pictureBox1.Image = Resources.Cavidad_Progresiva;
+                        pictureBox1.Image = Resources.Cavidad_Progresiva1;
                         break;
                     }
 
                 case "BEC":
                     {
-                        pictureBox1.Image = Resources.Electrocentrífugo;
+                        pictureBox1.Image = Resources.Electrocentrífugo1;
                         break;
                     }
 
                 case "BJP":
                     {
-                        pictureBox1.Image = Resources.Jet_Pump;
+                        pictureBox1.Image = Resources.Jet_Pump1;
                         break;
                     }
                 default:

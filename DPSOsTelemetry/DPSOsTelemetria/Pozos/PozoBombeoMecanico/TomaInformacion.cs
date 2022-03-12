@@ -9,7 +9,7 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoMecanico
     public partial class TomaInformacion : Form
     {
         private readonly ReferenciasII Referencias;
-        private List<lista> ListCCartaDinagrafica = new List<lista>();
+        private List<lista> ListCCartaDinagrafica = new();
 
         public TomaInformacion()
         {
@@ -314,7 +314,7 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoMecanico
 
         internal TomaBasica SaveTomaInformacion()
         {
-            TomaBasica Range = new TomaBasica();
+            TomaBasica Range = new();
 
             #region DatosOperativos
 
@@ -756,7 +756,7 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoMecanico
         public static List<OCartaDinagrafica.CCartaDinagrafica> LeerJson(string Archivo)
         {
             string datos = File.ReadAllText(Archivo);
-            List<OCartaDinagrafica.CCartaDinagrafica> CartaDinagrafica = new List<OCartaDinagrafica.CCartaDinagrafica>();
+            List<OCartaDinagrafica.CCartaDinagrafica> CartaDinagrafica = new();
 
             if (datos.Contains("SurfaceCardLoad"))
             {
@@ -777,7 +777,7 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoMecanico
             }
             else if (datos.Contains("Distancia"))
             {
-                List<List<oDinamometrica>> Carta = new List<List<oDinamometrica>>();
+                List<List<oDinamometrica>> Carta = new();
                 try
                 {
                     Carta = JsonConvert.DeserializeObject<List<List<oDinamometrica>>>(datos);
@@ -795,7 +795,7 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoMecanico
 
                 Carta.ForEach(val =>
                 {
-                    OCartaDinagrafica.CCartaDinagrafica dinagrafica = new OCartaDinagrafica.CCartaDinagrafica();
+                    OCartaDinagrafica.CCartaDinagrafica dinagrafica = new();
                     val.ForEach(x =>
                     {
                         dinagrafica.SurfaceCardLoad.Add(x.Fuerza);
@@ -816,9 +816,9 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoMecanico
 
         protected static List<OCartaDinagrafica.CCartaDinagrafica> LeerExcel(string Archivo)
         {
-            List<List<oDinamometrica>> Carta = new List<List<oDinamometrica>>();
+            List<List<oDinamometrica>> Carta = new();
 
-            Excel.Application xlApp = new Excel.Application();
+            Excel.Application xlApp = new();
             Excel.Workbook xlWorkBook = xlApp.Workbooks.Open($"{Archivo}", 0, true, 5, "", "", true,
                                                                  Excel.XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
             Excel.Worksheet xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
@@ -871,7 +871,7 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoMecanico
 
                     if (Position >= 0 && Load >= 0 && Position != Load)
                     {
-                        List<oDinamometrica> Dinamometrica1 = new List<oDinamometrica>();
+                        List<oDinamometrica> Dinamometrica1 = new();
                         for (int j = k + 1; j <= rw; j++)
                         {
                             try
@@ -879,7 +879,7 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoMecanico
                                 decimal val1 = (decimal)(range.Cells[j, Position] as Excel.Range).Value2;
                                 decimal val2 = (decimal)(range.Cells[j, Load] as Excel.Range).Value2;
 
-                                oDinamometrica dinamometrica = new oDinamometrica()
+                                oDinamometrica dinamometrica = new()
                                 {
                                     Distancia = val1,
                                     Fuerza = val2,
@@ -912,10 +912,10 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoMecanico
                 releaseObject(xlApp);
             }
 
-            List<OCartaDinagrafica.CCartaDinagrafica> CartaDinagrafica = new List<OCartaDinagrafica.CCartaDinagrafica>();
+            List<OCartaDinagrafica.CCartaDinagrafica> CartaDinagrafica = new();
             Carta.ForEach(val =>
             {
-                OCartaDinagrafica.CCartaDinagrafica dinagrafica = new OCartaDinagrafica.CCartaDinagrafica();
+                OCartaDinagrafica.CCartaDinagrafica dinagrafica = new();
                 val.ForEach(x =>
                   {
                       dinagrafica.SurfaceCardLoad.Add(x.Fuerza);
@@ -948,7 +948,7 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoMecanico
 
         protected List<OCartaDinagrafica.CCartaDinagrafica> SeleccionarArchivo()
         {
-            List<OCartaDinagrafica.CCartaDinagrafica> cartas = new List<OCartaDinagrafica.CCartaDinagrafica>();
+            List<OCartaDinagrafica.CCartaDinagrafica> cartas = new();
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {

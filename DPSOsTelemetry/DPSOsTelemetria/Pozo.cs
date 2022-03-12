@@ -7,11 +7,11 @@ namespace DPSOsTelemetria
 {
     public partial class Pozo : Form
     {
-        public ReferenciasI _Telemetria = new ReferenciasI();
-        public ReferenciasII Referencias = new ReferenciasII();
+        public ReferenciasI _Telemetria = new();
+        public ReferenciasII Referencias = new();
         public string select;
         public bool status;
-        private static readonly ResourceManager SystemWell = new ResourceManager(typeof(Languages.SystemWell));
+        private static readonly ResourceManager SystemWell = new(typeof(Languages.SystemWell));
 
         public Pozo()
         {
@@ -24,7 +24,7 @@ namespace DPSOsTelemetria
             Refrescar();
         }
 
-        internal int Decimales => Main.Decimales;
+        internal static int Decimales => Main.Decimales;
 
         public void Refrescar()
         {
@@ -132,7 +132,7 @@ namespace DPSOsTelemetria
         private void InformationGathering()
         {
             lblOnOff.Text = Languages.DPSOsTelemetria.Off;
-            pictureBox1.Image = Resources.off_button;
+            pictureBox1.Image = Resources.off_button1;
 
             panel2.Controls.Clear();
 
@@ -140,7 +140,7 @@ namespace DPSOsTelemetria
             {
                 case "FL":
                     {
-                        Pozos.PozoBombeoFluyente.TomaInformacion TomaInformacion = new Pozos.PozoBombeoFluyente.TomaInformacion(Referencias) { Dock = DockStyle.Fill };
+                        Pozos.PozoBombeoFluyente.TomaInformacion TomaInformacion = new(Referencias) { Dock = DockStyle.Fill };
 
                         panel2.Controls.Add(TomaInformacion);
                         break;
@@ -148,7 +148,7 @@ namespace DPSOsTelemetria
 
                 case "FLG":
                     {
-                        Pozos.PozoBombeoFluyenteGas.TomaInformacion TomaInformacion = new Pozos.PozoBombeoFluyenteGas.TomaInformacion(Referencias) { Dock = DockStyle.Fill };
+                        Pozos.PozoBombeoFluyenteGas.TomaInformacion TomaInformacion = new(Referencias) { Dock = DockStyle.Fill };
 
                         panel2.Controls.Add(TomaInformacion);
                         break;
@@ -156,7 +156,7 @@ namespace DPSOsTelemetria
 
                 case "BN":
                     {
-                        Pozos.PozoBombeoNeumatico.TomaInformacion TomaInformacion = new Pozos.PozoBombeoNeumatico.TomaInformacion(Referencias) { Dock = DockStyle.Fill };
+                        Pozos.PozoBombeoNeumatico.TomaInformacion TomaInformacion = new(Referencias) { Dock = DockStyle.Fill };
 
                         panel2.Controls.Add(TomaInformacion);
                         break;
@@ -164,7 +164,7 @@ namespace DPSOsTelemetria
 
                 case "BNI":
                     {
-                        Pozos.PozoBombeoNeumaticoIntermitente.TomaInformacion TomaInformacion = new Pozos.PozoBombeoNeumaticoIntermitente.TomaInformacion(Referencias) { Dock = DockStyle.Fill };
+                        Pozos.PozoBombeoNeumaticoIntermitente.TomaInformacion TomaInformacion = new(Referencias) { Dock = DockStyle.Fill };
 
                         panel2.Controls.Add(TomaInformacion);
                         break;
@@ -172,7 +172,7 @@ namespace DPSOsTelemetria
 
                 case "BM":
                     {
-                        Pozos.PozoBombeoMecanico.TomaInformacion TomaInformacion = new Pozos.PozoBombeoMecanico.TomaInformacion(Referencias) { Dock = DockStyle.Fill };
+                        Pozos.PozoBombeoMecanico.TomaInformacion TomaInformacion = new(Referencias) { Dock = DockStyle.Fill };
 
                         panel2.Controls.Add(TomaInformacion);
                         break;
@@ -180,7 +180,7 @@ namespace DPSOsTelemetria
 
                 case "BCP":
                     {
-                        Pozos.PozoBombeoCavidadProgresiva.TomaInformacion TomaInformacion = new Pozos.PozoBombeoCavidadProgresiva.TomaInformacion(Referencias) { Dock = DockStyle.Fill };
+                        Pozos.PozoBombeoCavidadProgresiva.TomaInformacion TomaInformacion = new(Referencias) { Dock = DockStyle.Fill };
 
                         panel2.Controls.Add(TomaInformacion);
                         break;
@@ -188,7 +188,7 @@ namespace DPSOsTelemetria
 
                 case "BEC":
                     {
-                        Pozos.PozoBombeoElectroCentrifugo.TomaInformacion TomaInformacion = new Pozos.PozoBombeoElectroCentrifugo.TomaInformacion(Referencias) { Dock = DockStyle.Fill };
+                        Pozos.PozoBombeoElectroCentrifugo.TomaInformacion TomaInformacion = new(Referencias) { Dock = DockStyle.Fill };
 
                         panel2.Controls.Add(TomaInformacion);
                         break;
@@ -196,7 +196,7 @@ namespace DPSOsTelemetria
 
                 case "BJP":
                     {
-                        Pozos.PozoBombeoJetPump.TomaInformacion TomaInformacion = new Pozos.PozoBombeoJetPump.TomaInformacion(Referencias) { Dock = DockStyle.Fill };
+                        Pozos.PozoBombeoJetPump.TomaInformacion TomaInformacion = new(Referencias) { Dock = DockStyle.Fill };
 
                         panel2.Controls.Add(TomaInformacion);
                         break;
@@ -290,7 +290,7 @@ namespace DPSOsTelemetria
                 DateTime time1 = _Telemetria.Started.AddMilliseconds(_Telemetria.Range.DatosOperativos.TotalMilliseconds * _Telemetria.DatosOperativosSends);
                 if ((_Telemetria.Range.DatosOperativos.TotalMilliseconds != 0) & (time1 <= DateTime.UtcNow))
                 {
-                    OTomaInformacion.CTomaBasica DatosOperativos = new OTomaInformacion.CTomaBasica();
+                    OTomaInformacion.CTomaBasica DatosOperativos = new();
 
                     #region Read
 
@@ -500,7 +500,7 @@ namespace DPSOsTelemetria
                 DateTime time2 = _Telemetria.Started.AddMilliseconds(_Telemetria.Range.CartaDinagrafica.TotalMilliseconds * _Telemetria.DatosOperativosSends);
                 if ((_Telemetria.Range.DatosOperativos.TotalMilliseconds != 0) & (time1 <= DateTime.UtcNow))
                 {
-                    OCartaDinagrafica.CCartaDinagrafica CCartaDinagrafica = new OCartaDinagrafica.CCartaDinagrafica();
+                    OCartaDinagrafica.CCartaDinagrafica CCartaDinagrafica = new();
 
                     #region Read
 
@@ -591,7 +591,7 @@ namespace DPSOsTelemetria
         private void VirtualMonitoring()
         {
             lblOnOff.Text = Languages.DPSOsTelemetria.On;
-            pictureBox1.Image = Resources.on_button;
+            pictureBox1.Image = Resources.on_button1;
 
             _Telemetria = Referencias.Copy<ReferenciasII, ReferenciasI>();
             _Telemetria.Started = DateTime.UtcNow;
@@ -601,7 +601,7 @@ namespace DPSOsTelemetria
             {
                 case "FL":
                     {
-                        Pozos.PozoBombeoFluyente.MonitoreoVirtual MonitoreoVirtual = new Pozos.PozoBombeoFluyente.MonitoreoVirtual() { Dock = DockStyle.Fill };
+                        Pozos.PozoBombeoFluyente.MonitoreoVirtual MonitoreoVirtual = new() { Dock = DockStyle.Fill };
 
                         panel2.Controls.Add(MonitoreoVirtual);
                         MonitoreoVirtual.Recargar(Decimales, _Telemetria);
@@ -610,7 +610,7 @@ namespace DPSOsTelemetria
 
                 case "FLG":
                     {
-                        Pozos.PozoBombeoFluyenteGas.MonitoreoVirtual MonitoreoVirtual = new Pozos.PozoBombeoFluyenteGas.MonitoreoVirtual() { Dock = DockStyle.Fill };
+                        Pozos.PozoBombeoFluyenteGas.MonitoreoVirtual MonitoreoVirtual = new() { Dock = DockStyle.Fill };
 
                         panel2.Controls.Add(MonitoreoVirtual);
                         MonitoreoVirtual.Recargar(Decimales, _Telemetria);
@@ -619,7 +619,7 @@ namespace DPSOsTelemetria
 
                 case "BN":
                     {
-                        Pozos.PozoBombeoNeumatico.MonitoreoVirtual MonitoreoVirtual = new Pozos.PozoBombeoNeumatico.MonitoreoVirtual() { Dock = DockStyle.Fill };
+                        Pozos.PozoBombeoNeumatico.MonitoreoVirtual MonitoreoVirtual = new() { Dock = DockStyle.Fill };
                         panel2.Controls.Add(MonitoreoVirtual);
                         MonitoreoVirtual.Recargar(Decimales, _Telemetria);
                         break;
@@ -627,7 +627,7 @@ namespace DPSOsTelemetria
 
                 case "BNI":
                     {
-                        Pozos.PozoBombeoNeumaticoIntermitente.MonitoreoVirtual MonitoreoVirtual = new Pozos.PozoBombeoNeumaticoIntermitente.MonitoreoVirtual() { Dock = DockStyle.Fill };
+                        Pozos.PozoBombeoNeumaticoIntermitente.MonitoreoVirtual MonitoreoVirtual = new() { Dock = DockStyle.Fill };
 
                         panel2.Controls.Add(MonitoreoVirtual);
                         MonitoreoVirtual.Recargar(Decimales, _Telemetria);
@@ -636,7 +636,7 @@ namespace DPSOsTelemetria
 
                 case "BM":
                     {
-                        Pozos.PozoBombeoMecanico.MonitoreoVirtual MonitoreoVirtual = new Pozos.PozoBombeoMecanico.MonitoreoVirtual() { Dock = DockStyle.Fill };
+                        Pozos.PozoBombeoMecanico.MonitoreoVirtual MonitoreoVirtual = new() { Dock = DockStyle.Fill };
 
                         panel2.Controls.Add(MonitoreoVirtual);
                         MonitoreoVirtual.Recargar(Decimales, _Telemetria);
@@ -645,7 +645,7 @@ namespace DPSOsTelemetria
 
                 case "BCP":
                     {
-                        Pozos.PozoBombeoCavidadProgresiva.MonitoreoVirtual MonitoreoVirtual = new Pozos.PozoBombeoCavidadProgresiva.MonitoreoVirtual() { Dock = DockStyle.Fill };
+                        Pozos.PozoBombeoCavidadProgresiva.MonitoreoVirtual MonitoreoVirtual = new() { Dock = DockStyle.Fill };
 
                         panel2.Controls.Add(MonitoreoVirtual);
                         MonitoreoVirtual.Recargar(Decimales, _Telemetria);
@@ -654,7 +654,7 @@ namespace DPSOsTelemetria
 
                 case "BEC":
                     {
-                        Pozos.PozoBombeoElectroCentrifugo.MonitoreoVirtual MonitoreoVirtual = new Pozos.PozoBombeoElectroCentrifugo.MonitoreoVirtual() { Dock = DockStyle.Fill };
+                        Pozos.PozoBombeoElectroCentrifugo.MonitoreoVirtual MonitoreoVirtual = new() { Dock = DockStyle.Fill };
 
                         panel2.Controls.Add(MonitoreoVirtual);
                         MonitoreoVirtual.Recargar(Decimales, _Telemetria);
@@ -663,7 +663,7 @@ namespace DPSOsTelemetria
 
                 case "BJP":
                     {
-                        Pozos.PozoBombeoJetPump.MonitoreoVirtual MonitoreoVirtual = new Pozos.PozoBombeoJetPump.MonitoreoVirtual() { Dock = DockStyle.Fill };
+                        Pozos.PozoBombeoJetPump.MonitoreoVirtual MonitoreoVirtual = new() { Dock = DockStyle.Fill };
 
                         panel2.Controls.Add(MonitoreoVirtual);
                         MonitoreoVirtual.Recargar(Decimales, _Telemetria);

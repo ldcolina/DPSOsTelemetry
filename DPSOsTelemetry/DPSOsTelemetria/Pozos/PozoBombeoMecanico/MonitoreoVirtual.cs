@@ -104,7 +104,7 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoMecanico
 
             tabPage2.Text = Languages.Pozo.CartaDinagrafica;
             OCartaDinagrafica.CCartaDinagrafica CCartaDinagrafica = _Telemetria.CartaDinagrafica;
-            DataTable dt = new DataTable(Languages.Graphics.DinamometricaFondo);
+            DataTable dt = new(Languages.Graphics.DinamometricaFondo);
             dt.Columns.Add("X", typeof(decimal));
             dt.Columns.Add("Y", typeof(decimal));
             for (int i = 0; i < CCartaDinagrafica.SurfaceCardPosition.Count; i++)

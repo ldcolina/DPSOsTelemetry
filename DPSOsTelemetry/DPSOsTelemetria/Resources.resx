@@ -121,58 +121,121 @@
   <data name="adddatabase_5668" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Icons\adddatabase_5668.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="adddatabase_56681" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Icons\adddatabase_5668.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="antenna_with_signal_lines_symbol_icon_icons_com_56573" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Icons\antenna-with-signal-lines-symbol_icon-icons.com_56573.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="antenna_with_signal_lines_symbol_icon_icons_com_565731" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Icons\antenna-with-signal-lines-symbol_icon-icons.com_56573.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Cavidad_Progresiva" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Icons\Cavidad Progresiva.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cavidad_Progresiva1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Icons\Cavidad Progresiva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="chat_96641" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Icons\chat_96641.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chat_966411" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Icons\chat_96641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="configuraciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Icons\configuraciones .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>Icons\configuraciones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="configuraciones1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Icons\configuraciones.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Electrocentrífugo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Icons\Electrocentrífugo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>Icons\Electrocentrífugo.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Electrocentrífugo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Icons\Electrocentrífugo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fluyente" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Icons\Fluyente.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>Icons\Fluyente.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fluyente1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Icons\Fluyente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="instrucciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Icons\instrucciones.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="instrucciones1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Icons\instrucciones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="inventory" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Icons\inventory.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inventory1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Icons\inventory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Jet_Pump" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Icons\Jet Pump.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>Icons\Jet Pump.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Jet_Pump1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Icons\Jet Pump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="magnifying_glass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Icons\magnifying-glass.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="magnifying_glass1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Icons\magnifying-glass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Mecanico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Icons\Mecanico.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>Icons\Mecanico.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mecanico1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Icons\Mecanico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Neumatico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Icons\Neumatico.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>Icons\Neumatico.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Neumatico1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Icons\Neumatico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Neumatico_Intermitente" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Icons\Neumatico Intermitente.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>Icons\Neumatico Intermitente.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Neumatico_Intermitente1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Icons\Neumatico Intermitente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="off_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Icons\off-button.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="off_button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Icons\off-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="oil_platform" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Icons\oil-platform.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="oil_platform1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Icons\oil-platform.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="oil_pump_icon_150208" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Icons\oil_pump_icon_150208.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="on_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Icons\on-button.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="on_button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Icons\on-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="optimization_timer_icon_187421" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Icons\optimization_timer_icon_187421.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="optimization_timer_icon_1874211" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Icons\optimization_timer_icon_187421.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Icons\refresh.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refresh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Icons\refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="seo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Icons\seo.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="seo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Icons\seo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

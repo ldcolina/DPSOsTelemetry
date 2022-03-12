@@ -70,15 +70,6 @@ namespace Languages {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a About....
-        /// </summary>
-        public static string AcercaDe {
-            get {
-                return ResourceManager.GetString("AcercaDe", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a administrator.
         /// </summary>
         public static string Administrador {
@@ -165,6 +156,15 @@ namespace Languages {
         public static string CloseAll {
             get {
                 return ResourceManager.GetString("CloseAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Settings.
+        /// </summary>
+        public static string Config {
+            get {
+                return ResourceManager.GetString("Config", resourceCulture);
             }
         }
         

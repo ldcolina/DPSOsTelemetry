@@ -167,8 +167,7 @@
     <value>About</value>
   </data>
   <data name="Copyright" xml:space="preserve">
-    <value>Copyright © {0} EnTecPro I-Services.
-All rights reserved.</value>
+    <value>© {0} EnTecPro I-Services.</value>
     <comment>Ok</comment>
   </data>
   <data name="Aceptar" xml:space="preserve">
