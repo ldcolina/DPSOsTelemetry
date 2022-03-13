@@ -32,16 +32,17 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.Version = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.tlpVisualizacion = new System.Windows.Forms.TableLayoutPanel();
+            this.ptbVisualizacion = new System.Windows.Forms.PictureBox();
             this.Visualizacion = new System.Windows.Forms.Label();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tlpGuia = new System.Windows.Forms.TableLayoutPanel();
+            this.ptbGuia = new System.Windows.Forms.PictureBox();
             this.Guia = new System.Windows.Forms.Label();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.tlpActualizaciones = new System.Windows.Forms.TableLayoutPanel();
+            this.ptbActualizaciones = new System.Windows.Forms.PictureBox();
             this.Actualizaciones = new System.Windows.Forms.Label();
             this.Copyright = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -58,12 +59,12 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.tableLayoutPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tableLayoutPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.tlpVisualizacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbVisualizacion)).BeginInit();
+            this.tlpGuia.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbGuia)).BeginInit();
+            this.tlpActualizaciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbActualizaciones)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,6 +105,7 @@
             this.tableLayoutPanel2.AutoSize = true;
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.Controls.Add(this.Version, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.Copyright, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 3);
@@ -111,23 +113,36 @@
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(277, 551);
             this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // Version
+            // 
+            this.Version.AutoSize = true;
+            this.Version.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Version.Location = new System.Drawing.Point(3, 531);
+            this.Version.Name = "Version";
+            this.Version.Size = new System.Drawing.Size(271, 20);
+            this.Version.TabIndex = 3;
+            this.Version.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // groupBox1
             // 
             this.groupBox1.AutoSize = true;
             this.groupBox1.Controls.Add(this.tableLayoutPanel3);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox1.Location = new System.Drawing.Point(10, 0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(277, 194);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox1.Size = new System.Drawing.Size(257, 188);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
@@ -136,11 +151,11 @@
             this.tableLayoutPanel3.AutoSize = true;
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel7, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel6, 0, 4);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 23);
+            this.tableLayoutPanel3.Controls.Add(this.tlpVisualizacion, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.tlpGuia, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tlpActualizaciones, 0, 4);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 20);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
@@ -150,42 +165,42 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(271, 168);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(257, 168);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
-            // tableLayoutPanel7
+            // tlpVisualizacion
             // 
-            this.tableLayoutPanel7.AutoSize = true;
-            this.tableLayoutPanel7.ColumnCount = 2;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel7.Controls.Add(this.pictureBox3, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.Visualizacion, 1, 0);
-            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 59);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 1;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(265, 40);
-            this.tableLayoutPanel7.TabIndex = 6;
-            this.tableLayoutPanel7.Click += new System.EventHandler(this.Visualizacion_Click);
-            this.tableLayoutPanel7.MouseEnter += new System.EventHandler(this.Item_MouseEnter);
-            this.tableLayoutPanel7.MouseLeave += new System.EventHandler(this.Item_MouseLeave);
+            this.tlpVisualizacion.AutoSize = true;
+            this.tlpVisualizacion.ColumnCount = 2;
+            this.tlpVisualizacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpVisualizacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpVisualizacion.Controls.Add(this.ptbVisualizacion, 0, 0);
+            this.tlpVisualizacion.Controls.Add(this.Visualizacion, 1, 0);
+            this.tlpVisualizacion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpVisualizacion.Location = new System.Drawing.Point(3, 59);
+            this.tlpVisualizacion.Name = "tlpVisualizacion";
+            this.tlpVisualizacion.RowCount = 1;
+            this.tlpVisualizacion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpVisualizacion.Size = new System.Drawing.Size(251, 40);
+            this.tlpVisualizacion.TabIndex = 6;
+            this.tlpVisualizacion.Click += new System.EventHandler(this.Visualizacion_Click);
+            this.tlpVisualizacion.MouseEnter += new System.EventHandler(this.Item_MouseEnter);
+            this.tlpVisualizacion.MouseLeave += new System.EventHandler(this.Item_MouseLeave);
             // 
-            // pictureBox3
+            // ptbVisualizacion
             // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox3.Image = global::DPSOsTelemetria.Resources.chat_966411;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.Visualizacion_Click);
-            this.pictureBox3.MouseEnter += new System.EventHandler(this.Item_MouseEnter);
-            this.pictureBox3.MouseLeave += new System.EventHandler(this.Item_MouseLeave);
+            this.ptbVisualizacion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ptbVisualizacion.Image = global::DPSOsTelemetria.Resources.chat_966411;
+            this.ptbVisualizacion.Location = new System.Drawing.Point(0, 0);
+            this.ptbVisualizacion.Margin = new System.Windows.Forms.Padding(0);
+            this.ptbVisualizacion.Name = "ptbVisualizacion";
+            this.ptbVisualizacion.Size = new System.Drawing.Size(40, 40);
+            this.ptbVisualizacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbVisualizacion.TabIndex = 1;
+            this.ptbVisualizacion.TabStop = false;
+            this.ptbVisualizacion.Click += new System.EventHandler(this.Visualizacion_Click);
+            this.ptbVisualizacion.MouseEnter += new System.EventHandler(this.Item_MouseEnter);
+            this.ptbVisualizacion.MouseLeave += new System.EventHandler(this.Item_MouseLeave);
             // 
             // Visualizacion
             // 
@@ -193,47 +208,47 @@
             this.Visualizacion.Dock = System.Windows.Forms.DockStyle.Left;
             this.Visualizacion.Location = new System.Drawing.Point(43, 0);
             this.Visualizacion.Name = "Visualizacion";
-            this.Visualizacion.Size = new System.Drawing.Size(95, 40);
+            this.Visualizacion.Size = new System.Drawing.Size(102, 40);
             this.Visualizacion.TabIndex = 3;
-            this.Visualizacion.Text = "Visualizacion";
+            this.Visualizacion.Text = "Configuración";
             this.Visualizacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Visualizacion.Click += new System.EventHandler(this.Visualizacion_Click);
             this.Visualizacion.MouseEnter += new System.EventHandler(this.Item_MouseEnter);
             this.Visualizacion.MouseLeave += new System.EventHandler(this.Item_MouseLeave);
             // 
-            // tableLayoutPanel5
+            // tlpGuia
             // 
-            this.tableLayoutPanel5.AutoSize = true;
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel5.Controls.Add(this.pictureBox1, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.Guia, 1, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(265, 40);
-            this.tableLayoutPanel5.TabIndex = 4;
-            this.tableLayoutPanel5.Click += new System.EventHandler(this.Guia_Click);
-            this.tableLayoutPanel5.MouseEnter += new System.EventHandler(this.Item_MouseEnter);
-            this.tableLayoutPanel5.MouseLeave += new System.EventHandler(this.Item_MouseLeave);
+            this.tlpGuia.AutoSize = true;
+            this.tlpGuia.ColumnCount = 2;
+            this.tlpGuia.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpGuia.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpGuia.Controls.Add(this.ptbGuia, 0, 0);
+            this.tlpGuia.Controls.Add(this.Guia, 1, 0);
+            this.tlpGuia.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlpGuia.Location = new System.Drawing.Point(3, 3);
+            this.tlpGuia.Name = "tlpGuia";
+            this.tlpGuia.RowCount = 1;
+            this.tlpGuia.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpGuia.Size = new System.Drawing.Size(251, 40);
+            this.tlpGuia.TabIndex = 4;
+            this.tlpGuia.Click += new System.EventHandler(this.Guia_Click);
+            this.tlpGuia.MouseEnter += new System.EventHandler(this.Item_MouseEnter);
+            this.tlpGuia.MouseLeave += new System.EventHandler(this.Item_MouseLeave);
             // 
-            // pictureBox1
+            // ptbGuia
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::DPSOsTelemetria.Resources.instrucciones1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.Guia_Click);
-            this.pictureBox1.MouseEnter += new System.EventHandler(this.Item_MouseEnter);
-            this.pictureBox1.MouseLeave += new System.EventHandler(this.Item_MouseLeave);
+            this.ptbGuia.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ptbGuia.Image = global::DPSOsTelemetria.Resources.instrucciones1;
+            this.ptbGuia.Location = new System.Drawing.Point(0, 0);
+            this.ptbGuia.Margin = new System.Windows.Forms.Padding(0);
+            this.ptbGuia.Name = "ptbGuia";
+            this.ptbGuia.Size = new System.Drawing.Size(40, 40);
+            this.ptbGuia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbGuia.TabIndex = 0;
+            this.ptbGuia.TabStop = false;
+            this.ptbGuia.Click += new System.EventHandler(this.Guia_Click);
+            this.ptbGuia.MouseEnter += new System.EventHandler(this.Item_MouseEnter);
+            this.ptbGuia.MouseLeave += new System.EventHandler(this.Item_MouseLeave);
             // 
             // Guia
             // 
@@ -241,47 +256,47 @@
             this.Guia.Dock = System.Windows.Forms.DockStyle.Left;
             this.Guia.Location = new System.Drawing.Point(43, 0);
             this.Guia.Name = "Guia";
-            this.Guia.Size = new System.Drawing.Size(39, 40);
+            this.Guia.Size = new System.Drawing.Size(45, 40);
             this.Guia.TabIndex = 2;
-            this.Guia.Text = "Guia";
+            this.Guia.Text = "Guías";
             this.Guia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Guia.Click += new System.EventHandler(this.Guia_Click);
             this.Guia.MouseEnter += new System.EventHandler(this.Item_MouseEnter);
             this.Guia.MouseLeave += new System.EventHandler(this.Item_MouseLeave);
             // 
-            // tableLayoutPanel6
+            // tlpActualizaciones
             // 
-            this.tableLayoutPanel6.AutoSize = true;
-            this.tableLayoutPanel6.ColumnCount = 2;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel6.Controls.Add(this.pictureBox2, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.Actualizaciones, 1, 0);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 115);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(265, 40);
-            this.tableLayoutPanel6.TabIndex = 5;
-            this.tableLayoutPanel6.Click += new System.EventHandler(this.Actualizacion_Click);
-            this.tableLayoutPanel6.MouseEnter += new System.EventHandler(this.Item_MouseEnter);
-            this.tableLayoutPanel6.MouseLeave += new System.EventHandler(this.Item_MouseLeave);
+            this.tlpActualizaciones.AutoSize = true;
+            this.tlpActualizaciones.ColumnCount = 2;
+            this.tlpActualizaciones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpActualizaciones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpActualizaciones.Controls.Add(this.ptbActualizaciones, 0, 0);
+            this.tlpActualizaciones.Controls.Add(this.Actualizaciones, 1, 0);
+            this.tlpActualizaciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlpActualizaciones.Location = new System.Drawing.Point(3, 115);
+            this.tlpActualizaciones.Name = "tlpActualizaciones";
+            this.tlpActualizaciones.RowCount = 1;
+            this.tlpActualizaciones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpActualizaciones.Size = new System.Drawing.Size(251, 40);
+            this.tlpActualizaciones.TabIndex = 5;
+            this.tlpActualizaciones.Click += new System.EventHandler(this.Actualizacion_Click);
+            this.tlpActualizaciones.MouseEnter += new System.EventHandler(this.Item_MouseEnter);
+            this.tlpActualizaciones.MouseLeave += new System.EventHandler(this.Item_MouseLeave);
             // 
-            // pictureBox2
+            // ptbActualizaciones
             // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::DPSOsTelemetria.Resources.refresh1;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.Actualizacion_Click);
-            this.pictureBox2.MouseEnter += new System.EventHandler(this.Item_MouseEnter);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.Item_MouseLeave);
+            this.ptbActualizaciones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ptbActualizaciones.Image = global::DPSOsTelemetria.Resources.refresh1;
+            this.ptbActualizaciones.Location = new System.Drawing.Point(0, 0);
+            this.ptbActualizaciones.Margin = new System.Windows.Forms.Padding(0);
+            this.ptbActualizaciones.Name = "ptbActualizaciones";
+            this.ptbActualizaciones.Size = new System.Drawing.Size(40, 40);
+            this.ptbActualizaciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbActualizaciones.TabIndex = 1;
+            this.ptbActualizaciones.TabStop = false;
+            this.ptbActualizaciones.Click += new System.EventHandler(this.Actualizacion_Click);
+            this.ptbActualizaciones.MouseEnter += new System.EventHandler(this.Item_MouseEnter);
+            this.ptbActualizaciones.MouseLeave += new System.EventHandler(this.Item_MouseLeave);
             // 
             // Actualizaciones
             // 
@@ -289,9 +304,9 @@
             this.Actualizaciones.Dock = System.Windows.Forms.DockStyle.Left;
             this.Actualizaciones.Location = new System.Drawing.Point(43, 0);
             this.Actualizaciones.Name = "Actualizaciones";
-            this.Actualizaciones.Size = new System.Drawing.Size(112, 40);
+            this.Actualizaciones.Size = new System.Drawing.Size(157, 40);
             this.Actualizaciones.TabIndex = 3;
-            this.Actualizaciones.Text = "Actualizaciones";
+            this.Actualizaciones.Text = "Buscar actualizaciones";
             this.Actualizaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Actualizaciones.Click += new System.EventHandler(this.Actualizacion_Click);
             this.Actualizaciones.MouseEnter += new System.EventHandler(this.Item_MouseEnter);
@@ -301,11 +316,11 @@
             // 
             this.Copyright.AutoSize = true;
             this.Copyright.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Copyright.Location = new System.Drawing.Point(3, 485);
+            this.Copyright.Location = new System.Drawing.Point(3, 465);
             this.Copyright.Name = "Copyright";
             this.Copyright.Size = new System.Drawing.Size(271, 20);
             this.Copyright.TabIndex = 0;
-            this.Copyright.Text = "Copyright";
+            this.Copyright.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel4
             // 
@@ -321,7 +336,7 @@
             this.tableLayoutPanel4.Controls.Add(this.label6, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.Licenses, 2, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 508);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 488);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -332,12 +347,14 @@
             // Terms
             // 
             this.Terms.AutoSize = true;
+            this.Terms.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Terms.Dock = System.Windows.Forms.DockStyle.Left;
             this.Terms.Location = new System.Drawing.Point(3, 0);
             this.Terms.Name = "Terms";
-            this.Terms.Size = new System.Drawing.Size(48, 20);
+            this.Terms.Size = new System.Drawing.Size(69, 20);
             this.Terms.TabIndex = 0;
-            this.Terms.Text = "Terms";
+            this.Terms.Text = "Términos";
+            this.Terms.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Terms.Click += new System.EventHandler(this.Terms_Click);
             this.Terms.MouseEnter += new System.EventHandler(this.Label_MouseEnter);
             this.Terms.MouseLeave += new System.EventHandler(this.Label_MouseLeave);
@@ -346,21 +363,24 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(140, 0);
+            this.label3.Location = new System.Drawing.Point(149, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(13, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "|";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Privacy
             // 
             this.Privacy.AutoSize = true;
+            this.Privacy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Privacy.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Privacy.Location = new System.Drawing.Point(159, 0);
+            this.Privacy.Location = new System.Drawing.Point(168, 0);
             this.Privacy.Name = "Privacy";
-            this.Privacy.Size = new System.Drawing.Size(55, 20);
+            this.Privacy.Size = new System.Drawing.Size(78, 20);
             this.Privacy.TabIndex = 2;
-            this.Privacy.Text = "Privacy";
+            this.Privacy.Text = "Privacidad";
+            this.Privacy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Privacy.Click += new System.EventHandler(this.Privacy_Click);
             this.Privacy.MouseEnter += new System.EventHandler(this.Label_MouseEnter);
             this.Privacy.MouseLeave += new System.EventHandler(this.Label_MouseLeave);
@@ -368,12 +388,14 @@
             // LicenseAgreement
             // 
             this.LicenseAgreement.AutoSize = true;
+            this.LicenseAgreement.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LicenseAgreement.Dock = System.Windows.Forms.DockStyle.Left;
             this.LicenseAgreement.Location = new System.Drawing.Point(3, 20);
             this.LicenseAgreement.Name = "LicenseAgreement";
-            this.LicenseAgreement.Size = new System.Drawing.Size(131, 20);
+            this.LicenseAgreement.Size = new System.Drawing.Size(140, 20);
             this.LicenseAgreement.TabIndex = 3;
-            this.LicenseAgreement.Text = "LicenseAgreement";
+            this.LicenseAgreement.Text = "Acuerdo de licencia";
+            this.LicenseAgreement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LicenseAgreement.Click += new System.EventHandler(this.LicenseAgreement_Click);
             this.LicenseAgreement.MouseEnter += new System.EventHandler(this.Label_MouseEnter);
             this.LicenseAgreement.MouseLeave += new System.EventHandler(this.Label_MouseLeave);
@@ -382,21 +404,24 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Location = new System.Drawing.Point(140, 20);
+            this.label6.Location = new System.Drawing.Point(149, 20);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(13, 20);
             this.label6.TabIndex = 4;
             this.label6.Text = "|";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Licenses
             // 
             this.Licenses.AutoSize = true;
+            this.Licenses.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Licenses.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Licenses.Location = new System.Drawing.Point(159, 20);
+            this.Licenses.Location = new System.Drawing.Point(168, 20);
             this.Licenses.Name = "Licenses";
-            this.Licenses.Size = new System.Drawing.Size(63, 20);
+            this.Licenses.Size = new System.Drawing.Size(68, 20);
             this.Licenses.TabIndex = 5;
-            this.Licenses.Text = "Licenses";
+            this.Licenses.Text = "Licencias";
+            this.Licenses.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Licenses.Click += new System.EventHandler(this.Licenses_Click);
             this.Licenses.MouseEnter += new System.EventHandler(this.Label_MouseEnter);
             this.Licenses.MouseLeave += new System.EventHandler(this.Label_MouseLeave);
@@ -411,7 +436,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Config";
-            this.Text = "Config";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Configuración";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Config_FormClosing);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -424,15 +450,15 @@
             this.groupBox1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel7.ResumeLayout(false);
-            this.tableLayoutPanel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tableLayoutPanel6.ResumeLayout(false);
-            this.tableLayoutPanel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.tlpVisualizacion.ResumeLayout(false);
+            this.tlpVisualizacion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbVisualizacion)).EndInit();
+            this.tlpGuia.ResumeLayout(false);
+            this.tlpGuia.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbGuia)).EndInit();
+            this.tlpActualizaciones.ResumeLayout(false);
+            this.tlpActualizaciones.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbActualizaciones)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
@@ -446,7 +472,7 @@
         private TableLayoutPanel tableLayoutPanel2;
         private GroupBox groupBox1;
         private TableLayoutPanel tableLayoutPanel3;
-        private PictureBox pictureBox1;
+        private PictureBox ptbGuia;
         private Label Guia;
         private Label Copyright;
         private TableLayoutPanel tableLayoutPanel4;
@@ -456,12 +482,13 @@
         private Label LicenseAgreement;
         private Label label6;
         private Label Licenses;
-        private TableLayoutPanel tableLayoutPanel5;
-        private TableLayoutPanel tableLayoutPanel6;
-        private PictureBox pictureBox2;
+        private TableLayoutPanel tlpGuia;
+        private TableLayoutPanel tlpActualizaciones;
+        private PictureBox ptbActualizaciones;
         private Label Actualizaciones;
-        private TableLayoutPanel tableLayoutPanel7;
-        private PictureBox pictureBox3;
+        private TableLayoutPanel tlpVisualizacion;
+        private PictureBox ptbVisualizacion;
         private Label Visualizacion;
+        private Label Version;
     }
 }

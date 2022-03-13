@@ -34,6 +34,17 @@ namespace Languages
             };
             return Lista;
         }
+
+        public static List<ddl> ddlIdioma()
+        {
+            List<ddl> Lista = new List<ddl>
+            {
+                new ddl() { Value = "es", Text = Setups.Es },
+                new ddl() { Value = "es-MX", Text = Setups.EsMx },
+                new ddl() { Value = "en", Text = Setups.En },
+            };
+            return Lista;
+        }
     }
 
     public class ddl

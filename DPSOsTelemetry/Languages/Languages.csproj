@@ -60,6 +60,12 @@
 		  <AutoGen>True</AutoGen>
 		</Compile>
 
+		<Compile Update="Setups.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>Setups.resx</DependentUpon>
+		</Compile>
+
 		<Compile Update="Siglas.Designer.cs">
 		  <DependentUpon>Siglas.resx</DependentUpon>
 		  <DesignTime>True</DesignTime>
@@ -107,6 +113,11 @@
 		  <SubType>Designer</SubType>
 		  <LastGenOutput>Pozo.Designer.cs</LastGenOutput>
 		  <Generator>PublicResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+
+		<EmbeddedResource Update="Setups.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>Setups.Designer.cs</LastGenOutput>
 		</EmbeddedResource>
 
 		<EmbeddedResource Update="Siglas.resx">

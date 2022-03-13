@@ -133,6 +133,15 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Show well {0}.
+        /// </summary>
+        public static string Mostrar {
+            get {
+                return ResourceManager.GetString("Mostrar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Name.
         /// </summary>
         public static string Nombre {

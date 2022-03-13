@@ -7,8 +7,8 @@ namespace DPSOsTelemetria
 {
     public partial class listaTiempo : Form
     {
-        private DataTable dt = new("Pozos");
         private static readonly ResourceManager SystemWell = new(typeof(Languages.SystemWell));
+        private DataTable dt = new("Pozos");
         private List<ReferenciasI> Last_Telemetria = new();
 
         public listaTiempo()
@@ -29,83 +29,6 @@ namespace DPSOsTelemetria
 
             dataGridView1.DataSource = dt;
             Refrescar();
-        }
-
-        private void listaTiempo_Resize(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                this.WindowState = FormWindowState.Normal;
-                this.Size = this.MdiParent.ClientSize;
-                this.Location = new Point(0, 0);
-            }
-        }
-
-        internal void Refrescar()
-        {
-            Text = Languages.DPSOsTelemetria.listaTiempo;
-
-            dataGridView1.Columns["Name"].HeaderText = Languages.listaTiempo.Nombre;
-            dataGridView1.Columns["Name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-            dataGridView1.Columns["Type"].HeaderText = Languages.listaTiempo.Tipo;
-            dataGridView1.Columns["Type"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-
-            dataGridView1.Columns["Token"].HeaderText = Languages.listaTiempo.Token;
-            dataGridView1.Columns["Token"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-
-            foreach (DataRow dr in ((DataTable)dataGridView1.DataSource).Rows)
-            {
-                ReferenciasI _telemetria = Last_Telemetria.Find(val => val.Token == dr["Token"].ToString());
-                dr["Type"] = SystemWell.GetString(_telemetria.Type);
-
-                dr["Date1"] = _telemetria.Started.ToString("G");
-                if (_telemetria.Range.DatosOperativos.TotalMilliseconds != 0)
-                {
-                    double miliseg = _telemetria.Range.DatosOperativos.TotalMilliseconds * _telemetria.DatosOperativosSends;
-                    dr["Frequency_1"] = _telemetria.Range.DatosOperativos.TotalSeconds;
-                    dr["Date2_1"] = _telemetria.Started.AddMilliseconds(miliseg).ToString("G");
-                }
-                else
-                {
-                    dr["Frequency_1"] = "-";
-                    dr["Date2_1"] = "-";
-                }
-
-                if (_telemetria.Range.CartaDinagrafica.TotalMilliseconds != 0)
-                {
-                    double miliseg = _telemetria.Range.CartaDinagrafica.TotalMilliseconds * _telemetria.CartaDinagraficaSends;
-                    dr["Frequency_2"] = _telemetria.Range.CartaDinagrafica.TotalSeconds;
-                    dr["Date2_2"] = _telemetria.Started.AddMilliseconds(miliseg).ToString("G");
-                }
-                else
-                {
-                    dr["Frequency_2"] = "-";
-                    dr["Date2_2"] = "-";
-                }
-            }
-
-            dataGridView1.Columns["Date1"].HeaderText = Languages.listaTiempo.Fecha1;
-            dataGridView1.Columns["Date1"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-
-            dataGridView1.Columns["Frequency_1"].HeaderText = $"{Languages.listaTiempo.Frecuencia_1} ({Languages.Siglas.Segundo})";
-            dataGridView1.Columns["Frequency_1"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridView1.Columns["Date2_1"].HeaderText = Languages.listaTiempo.Fecha2_1;
-            dataGridView1.Columns["Date2_1"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-
-            dataGridView1.Columns["Frequency_2"].HeaderText = $"{Languages.listaTiempo.Frecuencia_2} ({Languages.Siglas.Segundo})";
-            dataGridView1.Columns["Frequency_2"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridView1.Columns["Date2_2"].HeaderText = Languages.listaTiempo.Fecha2_2;
-            dataGridView1.Columns["Date2_2"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-
-            dataGridView1.Columns["ActionsDone"].HeaderText = Languages.listaTiempo.ActionsDone;
-            dataGridView1.Columns["ActionsDone"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-
-            dataGridView1.Columns["ActionsClear"].HeaderText = Languages.listaTiempo.ActionsClear;
-            dataGridView1.Columns["ActionsClear"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-
-            dataGridView1.Columns["ActionsFails"].HeaderText = Languages.listaTiempo.ActionsFails;
-            dataGridView1.Columns["ActionsFails"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
         }
 
         internal void Recargar(List<ReferenciasI> _Telemetria)
@@ -156,6 +79,87 @@ namespace DPSOsTelemetria
             }
 
             dataGridView1.DataSource = dt;
+        }
+
+        internal void Refrescar()
+        {
+            Text = Languages.DPSOsTelemetria.listaTiempo;
+
+            dataGridView1.Columns["Name"].HeaderText = Languages.listaTiempo.Nombre;
+            dataGridView1.Columns["Type"].HeaderText = Languages.listaTiempo.Tipo;
+            dataGridView1.Columns["Token"].HeaderText = Languages.listaTiempo.Token;
+
+            dataGridView1.Columns["Date1"].HeaderText = Languages.listaTiempo.Fecha1;
+
+            dataGridView1.Columns["Frequency_1"].HeaderText = $"{Languages.listaTiempo.Frecuencia_1} ({Languages.Siglas.Segundo})";
+            dataGridView1.Columns["Date2_1"].HeaderText = Languages.listaTiempo.Fecha2_1;
+
+            dataGridView1.Columns["Frequency_2"].HeaderText = $"{Languages.listaTiempo.Frecuencia_2} ({Languages.Siglas.Segundo})";
+            dataGridView1.Columns["Date2_2"].HeaderText = Languages.listaTiempo.Fecha2_2;
+
+            dataGridView1.Columns["ActionsDone"].HeaderText = Languages.listaTiempo.ActionsDone;
+            dataGridView1.Columns["ActionsClear"].HeaderText = Languages.listaTiempo.ActionsClear;
+            dataGridView1.Columns["ActionsFails"].HeaderText = Languages.listaTiempo.ActionsFails;
+
+            foreach (DataRow dr in ((DataTable)dataGridView1.DataSource).Rows)
+            {
+                ReferenciasI _telemetria = Last_Telemetria.Find(val => val.Token == dr["Token"].ToString());
+                dr["Type"] = SystemWell.GetString(_telemetria.Type);
+
+                dr["Date1"] = _telemetria.Started.ToString("G");
+                if (_telemetria.Range.DatosOperativos.TotalMilliseconds != 0)
+                {
+                    double miliseg = _telemetria.Range.DatosOperativos.TotalMilliseconds * _telemetria.DatosOperativosSends;
+                    dr["Frequency_1"] = _telemetria.Range.DatosOperativos.TotalSeconds;
+                    dr["Date2_1"] = _telemetria.Started.AddMilliseconds(miliseg).ToString("G");
+                }
+                else
+                {
+                    dr["Frequency_1"] = "-";
+                    dr["Date2_1"] = "-";
+                }
+
+                if (_telemetria.Range.CartaDinagrafica.TotalMilliseconds != 0)
+                {
+                    double miliseg = _telemetria.Range.CartaDinagrafica.TotalMilliseconds * _telemetria.CartaDinagraficaSends;
+                    dr["Frequency_2"] = _telemetria.Range.CartaDinagrafica.TotalSeconds;
+                    dr["Date2_2"] = _telemetria.Started.AddMilliseconds(miliseg).ToString("G");
+                }
+                else
+                {
+                    dr["Frequency_2"] = "-";
+                    dr["Date2_2"] = "-";
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string select = dataGridView1.CurrentRow.Cells["Name"].Value.ToString();
+
+            if (!string.IsNullOrEmpty(select))
+                Main.Mostrar = select;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string select = dataGridView1.CurrentRow.Cells["Name"].Value.ToString();
+            button1.Text = Languages.listaTiempo.Mostrar.Replace("{0}", select);
+        }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            button1_Click(null, null);
+        }
+
+        private void listaTiempo_Resize(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Maximized)
+            {
+                WindowState = FormWindowState.Normal;
+                Size = MdiParent.ClientSize;
+                Location = new Point(0, 0);
+            }
         }
     }
 }

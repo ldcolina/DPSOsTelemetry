@@ -2,7 +2,7 @@
 
 namespace DPSOsTelemetria.Pozos.PozoBombeoNeumatico
 {
-    public partial class TomaInformacion : ScrollableControl
+    public partial class TomaInformacion : UserControl
     {
         private readonly ReferenciasII Referencias;
 
@@ -105,6 +105,76 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoNeumatico
             #endregion DatosOperativos
 
             Recargar();
+        }
+
+        internal void Recargar()
+        {
+            #region DatosOperativos
+
+            #region DoPresionTuberiaProduccion
+
+            DoPresionTuberiaProduccion.Text = $"{Languages.Pozo.DoPresionTuberiaProduccion} ({ Configuracion.GetSigla(Siglas.Presion, Referencias.Unidades)})";
+            DoPresionTuberiaProduccionMin.Text = Condicionantes.Wrote_Formating(DoPresionTuberiaProduccionMin.Text);
+            DoPresionTuberiaProduccionMax.Text = Condicionantes.Wrote_Formating(DoPresionTuberiaProduccionMax.Text);
+
+            #endregion DoPresionTuberiaProduccion
+
+            #region DoPresionTuberiaRevestimiento
+
+            DoPresionTuberiaRevestimiento.Text = $"{Languages.Pozo.DoPresionTuberiaRevestimiento} ({ Configuracion.GetSigla(Siglas.Presion, Referencias.Unidades)})";
+            DoPresionTuberiaRevestimientoMin.Text = Condicionantes.Wrote_Formating(DoPresionTuberiaRevestimientoMin.Text);
+            DoPresionTuberiaRevestimientoMax.Text = Condicionantes.Wrote_Formating(DoPresionTuberiaRevestimientoMax.Text);
+
+            #endregion DoPresionTuberiaRevestimiento
+
+            #region DoPresionLineaDescarga
+
+            DoPresionLineaDescarga.Text = $"{Languages.Pozo.DoPresionLineaDescarga} ({ Configuracion.GetSigla(Siglas.Presion, Referencias.Unidades)})";
+            DoPresionLineaDescargaMin.Text = Condicionantes.Wrote_Formating(DoPresionLineaDescargaMin.Text);
+            DoPresionLineaDescargaMax.Text = Condicionantes.Wrote_Formating(DoPresionLineaDescargaMax.Text);
+
+            #endregion DoPresionLineaDescarga
+
+            #region DoTemperaturaSuperficie
+
+            DoTemperaturaSuperficie.Text = $"{Languages.Pozo.DoTemperaturaSuperficie} ({ Configuracion.GetSigla(Siglas.Temperatura, Referencias.Unidades)})";
+            DoTemperaturaSuperficieMin.Text = Condicionantes.Wrote_Formating(DoTemperaturaSuperficieMin.Text);
+            DoTemperaturaSuperficieMax.Text = Condicionantes.Wrote_Formating(DoTemperaturaSuperficieMax.Text);
+
+            #endregion DoTemperaturaSuperficie
+
+            #region DoPresionDisponible
+
+            DoPresionDisponible.Text = $"{Languages.Pozo.DoPresionDisponible} ({ Configuracion.GetSigla(Siglas.Presion, Referencias.Unidades)})";
+            DoPresionDisponibleMin.Text = Condicionantes.Wrote_Formating(DoPresionDisponibleMin.Text);
+            DoPresionDisponibleMax.Text = Condicionantes.Wrote_Formating(DoPresionDisponibleMax.Text);
+
+            #endregion DoPresionDisponible
+
+            #region DoGastoGasInyeccion
+
+            DoGastoGasInyeccion.Text = $"{Languages.Pozo.DoGastoGasInyeccion} ({ Configuracion.GetSigla(Siglas.GastoGas, Referencias.Unidades)})";
+            DoGastoGasInyeccionMin.Text = Condicionantes.Wrote_Formating(DoGastoGasInyeccionMin.Text);
+            DoGastoGasInyeccionMax.Text = Condicionantes.Wrote_Formating(DoGastoGasInyeccionMax.Text);
+
+            #endregion DoGastoGasInyeccion
+
+            #region DoGravedadEspecificaGasInyeccion
+
+            DoGravedadEspecificaGasInyeccion.Text = $"{Languages.Pozo.DoGravedadEspecificaGasInyeccion} (-)";
+            DoGravedadEspecificaGasInyeccionMin.Text = Condicionantes.Wrote_Formating(DoGravedadEspecificaGasInyeccionMin.Text);
+            DoGravedadEspecificaGasInyeccionMax.Text = Condicionantes.Wrote_Formating(DoGravedadEspecificaGasInyeccionMax.Text);
+
+            #endregion DoGravedadEspecificaGasInyeccion
+
+            #region Temporizador
+
+            lbTemporizador1.Text = $"{Languages.Pozo.Temporizador}-{Languages.Pozo.DatosOperativos} ({Languages.Siglas.Segundo})";
+            DatosOperativos.Text = Condicionantes.Wrote_Formating(DatosOperativos.Text);
+
+            #endregion Temporizador
+
+            #endregion DatosOperativos
         }
 
         internal TomaBasica SaveTomaInformacion()
@@ -332,76 +402,6 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoNeumatico
             #endregion DatosOperativos
 
             return Range;
-        }
-
-        internal void Recargar()
-        {
-            #region DatosOperativos
-
-            #region DoPresionTuberiaProduccion
-
-            DoPresionTuberiaProduccion.Text = $"{Languages.Pozo.DoPresionTuberiaProduccion} ({ Configuracion.GetSigla(Siglas.Presion, Referencias.Unidades)})";
-            DoPresionTuberiaProduccionMin.Text = Condicionantes.Wrote_Formating(DoPresionTuberiaProduccionMin.Text);
-            DoPresionTuberiaProduccionMax.Text = Condicionantes.Wrote_Formating(DoPresionTuberiaProduccionMax.Text);
-
-            #endregion DoPresionTuberiaProduccion
-
-            #region DoPresionTuberiaRevestimiento
-
-            DoPresionTuberiaRevestimiento.Text = $"{Languages.Pozo.DoPresionTuberiaRevestimiento} ({ Configuracion.GetSigla(Siglas.Presion, Referencias.Unidades)})";
-            DoPresionTuberiaRevestimientoMin.Text = Condicionantes.Wrote_Formating(DoPresionTuberiaRevestimientoMin.Text);
-            DoPresionTuberiaRevestimientoMax.Text = Condicionantes.Wrote_Formating(DoPresionTuberiaRevestimientoMax.Text);
-
-            #endregion DoPresionTuberiaRevestimiento
-
-            #region DoPresionLineaDescarga
-
-            DoPresionLineaDescarga.Text = $"{Languages.Pozo.DoPresionLineaDescarga} ({ Configuracion.GetSigla(Siglas.Presion, Referencias.Unidades)})";
-            DoPresionLineaDescargaMin.Text = Condicionantes.Wrote_Formating(DoPresionLineaDescargaMin.Text);
-            DoPresionLineaDescargaMax.Text = Condicionantes.Wrote_Formating(DoPresionLineaDescargaMax.Text);
-
-            #endregion DoPresionLineaDescarga
-
-            #region DoTemperaturaSuperficie
-
-            DoTemperaturaSuperficie.Text = $"{Languages.Pozo.DoTemperaturaSuperficie} ({ Configuracion.GetSigla(Siglas.Temperatura, Referencias.Unidades)})";
-            DoTemperaturaSuperficieMin.Text = Condicionantes.Wrote_Formating(DoTemperaturaSuperficieMin.Text);
-            DoTemperaturaSuperficieMax.Text = Condicionantes.Wrote_Formating(DoTemperaturaSuperficieMax.Text);
-
-            #endregion DoTemperaturaSuperficie
-
-            #region DoPresionDisponible
-
-            DoPresionDisponible.Text = $"{Languages.Pozo.DoPresionDisponible} ({ Configuracion.GetSigla(Siglas.Presion, Referencias.Unidades)})";
-            DoPresionDisponibleMin.Text = Condicionantes.Wrote_Formating(DoPresionDisponibleMin.Text);
-            DoPresionDisponibleMax.Text = Condicionantes.Wrote_Formating(DoPresionDisponibleMax.Text);
-
-            #endregion DoPresionDisponible
-
-            #region DoGastoGasInyeccion
-
-            DoGastoGasInyeccion.Text = $"{Languages.Pozo.DoGastoGasInyeccion} ({ Configuracion.GetSigla(Siglas.GastoGas, Referencias.Unidades)})";
-            DoGastoGasInyeccionMin.Text = Condicionantes.Wrote_Formating(DoGastoGasInyeccionMin.Text);
-            DoGastoGasInyeccionMax.Text = Condicionantes.Wrote_Formating(DoGastoGasInyeccionMax.Text);
-
-            #endregion DoGastoGasInyeccion
-
-            #region DoGravedadEspecificaGasInyeccion
-
-            DoGravedadEspecificaGasInyeccion.Text = $"{Languages.Pozo.DoGravedadEspecificaGasInyeccion} (-)";
-            DoGravedadEspecificaGasInyeccionMin.Text = Condicionantes.Wrote_Formating(DoGravedadEspecificaGasInyeccionMin.Text);
-            DoGravedadEspecificaGasInyeccionMax.Text = Condicionantes.Wrote_Formating(DoGravedadEspecificaGasInyeccionMax.Text);
-
-            #endregion DoGravedadEspecificaGasInyeccion
-
-            #region Temporizador
-
-            lbTemporizador1.Text = $"{Languages.Pozo.Temporizador}-{Languages.Pozo.DatosOperativos} ({Languages.Siglas.Segundo})";
-            DatosOperativos.Text = Condicionantes.Wrote_Formating(DatosOperativos.Text);
-
-            #endregion Temporizador
-
-            #endregion DatosOperativos
         }
 
         private void CheckBox_CheckedChanged(object sender, EventArgs e)

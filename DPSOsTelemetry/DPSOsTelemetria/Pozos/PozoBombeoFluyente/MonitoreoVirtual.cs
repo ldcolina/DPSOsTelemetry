@@ -2,7 +2,7 @@
 
 namespace DPSOsTelemetria.Pozos.PozoBombeoFluyente
 {
-    public partial class MonitoreoVirtual : ScrollableControl
+    public partial class MonitoreoVirtual : UserControl
     {
         public MonitoreoVirtual()
 

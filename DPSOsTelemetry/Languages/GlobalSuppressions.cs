@@ -7,4 +7,5 @@ using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage("Style", "IDE1006:Estilos de nombres", Justification = "<pendiente>", Scope = "member", Target = "~M:Languages.Fills.ddlTipoPozo~System.Collections.Generic.List{Languages.ddl}")]
 [assembly: SuppressMessage("Style", "IDE1006:Estilos de nombres", Justification = "<pendiente>", Scope = "type", Target = "~T:Languages.ddl")]
-[assembly: SuppressMessage("Style", "IDE1006:Estilos de nombres", Justification = "<pendiente>", Scope = "member", Target = "~M:Languages.Fills.ddlSistema_Unidades~System.Collections.Generic.List{Languages.ddl}")] 
+[assembly: SuppressMessage("Style", "IDE1006:Estilos de nombres", Justification = "<pendiente>", Scope = "member", Target = "~M:Languages.Fills.ddlSistema_Unidades~System.Collections.Generic.List{Languages.ddl}")]
+[assembly: SuppressMessage("Style", "IDE1006:Estilos de nombres", Justification = "<pendiente>", Scope = "member", Target = "~M:Languages.Fills.ddlIdioma~System.Collections.Generic.List{Languages.ddl}")] 

@@ -699,13 +699,15 @@ namespace DPSOsTelemetria
             }
         }
 
+        private void Pozo_FormClosing(object sender, FormClosingEventArgs e) => Guardar_Info();
+
         private void Pozo_Resize(object sender, EventArgs e)
         {
-            if (this.WindowState == FormWindowState.Maximized)
+            if (WindowState == FormWindowState.Maximized)
             {
-                this.WindowState = FormWindowState.Normal;
-                this.Size = this.MdiParent.ClientSize;
-                this.Location = new Point(0, 0);
+                WindowState = FormWindowState.Normal;
+                Size = MdiParent.ClientSize;
+                Location = new Point(0, 0);
             }
         }
 
@@ -714,7 +716,5 @@ namespace DPSOsTelemetria
             Text = $"{Referencias.Name} ({SystemWell.GetString(Referencias.Type)}) - {General.InformationGathering}";
             InformationGathering();
         }
-
-        private void Pozo_FormClosing(object sender, FormClosingEventArgs e) => Guardar_Info();
     }
 }

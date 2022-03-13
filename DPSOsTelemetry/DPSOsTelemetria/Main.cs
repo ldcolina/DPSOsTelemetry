@@ -9,11 +9,8 @@ namespace DPSOsTelemetria
     {
         #region Directorio
 
-        //private string version => ApplicationDeployment.IsNetworkDeployed ? ApplicationDeployment.CurrentDeployment.CurrentVersion : Application.ProductVersion;
-        private readonly string file;
-
         private readonly string configuracion;
-        private int decimales;
+        private readonly string file;
 
         #endregion Directorio
 
@@ -26,36 +23,44 @@ namespace DPSOsTelemetria
             Directory.CreateDirectory(file);
 
             configuracion = $"{file}/Configuracion.json";
+            Setup datas = new();
             try
             {
                 string datos = File.ReadAllText(configuracion);
-                Setup datas = JsonConvert.DeserializeObject<Setup>(datos);
-                Idiomas(datas.Idioma);
+                datas = JsonConvert.DeserializeObject<Setup>(datos);
             }
             catch
             {
-                File.WriteAllText(configuracion, JsonConvert.SerializeObject(new Setup(), Formatting.Indented));
-                //idiomaToolStripMenuItem_Click(esMxToolStripMenuItem, null);
+                File.WriteAllText(configuracion, JsonConvert.SerializeObject(datas, Formatting.Indented));
             }
+            Idiomas(datas.Idioma);
         }
 
         #region Action
 
         private static Main instance;
 
+        public static ReferenciasII Abrir
+        {
+            set
+            {
+                instance.Abrir_Pozo(value);
+            }
+        }
+
+        public static string Carpeta
+        {
+            get
+            {
+                return instance.file;
+            }
+        }
+
         public static int Decimales
         {
             get
             {
                 return instance.decimales;
-            }
-        }
-
-        public static string _file
-        {
-            get
-            {
-                return instance.file;
             }
         }
 
@@ -67,19 +72,19 @@ namespace DPSOsTelemetria
             }
         }
 
-        public static ReferenciasII Abrir
-        {
-            set
-            {
-                instance.Abrir_Pozo(value);
-            }
-        }
-
         public static ReferenciasII Modificar
         {
             set
             {
                 instance.Modificar_Pozo(value);
+            }
+        }
+
+        public static string Mostrar
+        {
+            set
+            {
+                instance.Mostrar_Pozo(value);
             }
         }
 
@@ -202,17 +207,17 @@ namespace DPSOsTelemetria
 
         #region Ventana
 
-        private void Cascade_Click(object sender, EventArgs e) => LayoutMdi(MdiLayout.Cascade);
-
         private void ArrangeIcons_Click(object sender, EventArgs e) => LayoutMdi(MdiLayout.ArrangeIcons);
 
-        private void TileVertical_Click(object sender, EventArgs e) => LayoutMdi(MdiLayout.TileVertical);
-
-        private void TileHorizontal_Click(object sender, EventArgs e) => LayoutMdi(MdiLayout.TileHorizontal);
+        private void Cascade_Click(object sender, EventArgs e) => LayoutMdi(MdiLayout.Cascade);
 
         private void CloseAll_Click(object sender, EventArgs e) => MdiChildren.ToList().ForEach(child => child.Close());
 
         private void MinimizedAll_Click(object sender, EventArgs e) => MdiChildren.ToList().ForEach(child => child.WindowState = FormWindowState.Minimized);
+
+        private void TileHorizontal_Click(object sender, EventArgs e) => LayoutMdi(MdiLayout.TileHorizontal);
+
+        private void TileVertical_Click(object sender, EventArgs e) => LayoutMdi(MdiLayout.TileVertical);
 
         #endregion Ventana
 
@@ -232,6 +237,18 @@ namespace DPSOsTelemetria
                     Text = Languages.DPSOsTelemetria.listaTiempo
                 };
                 OpenForm.Show();
+            }
+        }
+
+        private void Mostrar_Pozo(string Name)
+        {
+            Form OpenForm = MdiChildren.Where(val => val.Text.Contains(Name)).FirstOrDefault();
+
+            if (OpenForm != null)
+            {
+                if (OpenForm.WindowState == FormWindowState.Minimized)
+                    OpenForm.WindowState = FormWindowState.Normal;
+                OpenForm.Focus();
             }
         }
 
@@ -289,6 +306,8 @@ namespace DPSOsTelemetria
 
         #endregion listTiempo
 
+        #region Configuración
+
         private void Config_Click(object sender, EventArgs e)
         {
             var OpenForm = new Config(configuracion);
@@ -298,57 +317,29 @@ namespace DPSOsTelemetria
             {
                 string datos = File.ReadAllText(configuracion);
                 Setup datas = JsonConvert.DeserializeObject<Setup>(datos);
-                decimales = datas.Decimales;
 
-                #region MdiChildren
+                if ((decimales == datas.Decimales) && (Thread.CurrentThread.CurrentCulture.Name == datas.Idioma))
+                    return;
 
-                foreach (Form child in MdiChildren.Where(val => val.Name == "Pozo"))
-                {
-                    Pozo form = (Pozo)child;
-                    form.Refrescar();
-                }
+                if (decimales != datas.Decimales)
+                    Numeros(datas.Decimales);
 
-                #endregion MdiChildren
+                if (Thread.CurrentThread.CurrentCulture.Name != datas.Idioma)
+                    Idiomas(datas.Idioma);
+
+                Refrescar();
             }
         }
-
-        #endregion Ayuda
 
         #region Idioma
 
         private static readonly ResourceManager resource = new(typeof(Languages.DPSOsTelemetria));
 
-        private void idiomaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Idiomas(string Language)
         {
-            string Language = "es-MX";
-            switch (((ToolStripMenuItem)sender).Name)
-            {
-                case "esToolStripMenuItem":
-                    Language = "es";
-                    break;
-
-                case "esMxToolStripMenuItem":
-                    Language = "es-MX";
-                    break;
-
-                case "enToolStripMenuItem":
-                    Language = "en";
-                    break;
-            }
-
             if (Thread.CurrentThread.CurrentCulture.Name == Language)
                 return;
 
-            string datos = File.ReadAllText(configuracion);
-            Setup datas = JsonConvert.DeserializeObject<Setup>(datos);
-            datas.Idioma = Language;
-            File.WriteAllText(configuracion, JsonConvert.SerializeObject(datas, Formatting.Indented));
-
-            Idiomas(Language);
-        }
-
-        private void Idiomas(string Language)
-        {
             Thread.CurrentThread.CurrentCulture = new CultureInfo(Language);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(Language);
 
@@ -357,12 +348,7 @@ namespace DPSOsTelemetria
 
         private void Main_Load(object sender, EventArgs e)
         {
-            #region Main
-
-            //Text = $"{Languages.DPSOsTelemetria.DPSOsTelemetry}";
-            //esToolStripMenuItem.Text = $"&{Languages.DPSOsTelemetria.Es}";
-            //esMxToolStripMenuItem.Text = $"&{Languages.DPSOsTelemetria.EsMx}";
-            //enToolStripMenuItem.Text = $"&{Languages.DPSOsTelemetria.En}";
+            Text = $"{Languages.DPSOsTelemetria.DPSOsTelemetry}";
 
             foreach (ToolStripMenuItem ToolStrip in menuStrip1.Items.OfType<ToolStripMenuItem>())
             {
@@ -388,11 +374,20 @@ namespace DPSOsTelemetria
                     }
                     catch { }
             }
+        }
 
-            #endregion Main
+        #endregion Idioma
 
-            #region MdiChildren
+        #region Decimales
 
+        private int decimales;
+
+        private void Numeros(int Decimales) => decimales = Decimales;
+
+        #endregion Decimales
+
+        private void Refrescar()
+        {
             foreach (Form child in MdiChildren)
             {
                 switch (child.Name)
@@ -417,10 +412,10 @@ namespace DPSOsTelemetria
                         }
                 }
             }
-
-            #endregion MdiChildren
         }
 
-        #endregion Idioma
+        #endregion Configuración
+
+        #endregion Ayuda
     }
 }

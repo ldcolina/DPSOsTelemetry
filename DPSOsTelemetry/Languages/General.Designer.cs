@@ -97,24 +97,6 @@ namespace Languages {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a © {0} EnTecPro I-Services..
-        /// </summary>
-        public static string Copyright {
-            get {
-                return ResourceManager.GetString("Copyright", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Copyright.
-        /// </summary>
-        public static string Copyrights {
-            get {
-                return ResourceManager.GetString("Copyrights", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a English.
         /// </summary>
         public static string English {
@@ -246,15 +228,6 @@ namespace Languages {
         public static string SI {
             get {
                 return ResourceManager.GetString("SI", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Version {0}.
-        /// </summary>
-        public static string Version {
-            get {
-                return ResourceManager.GetString("Version", resourceCulture);
             }
         }
         

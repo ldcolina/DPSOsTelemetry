@@ -132,9 +132,6 @@
   <data name="Unidad" xml:space="preserve">
     <value>Unidad</value>
   </data>
-  <data name="Carta" xml:space="preserve">
-    <value>Área de Carta Dinagráfica</value>
-  </data>
   <data name="GuardadoComo" xml:space="preserve">
     <value>Ya existe un pozo de tipo {0} con ese nombre desea sustituirlo?</value>
   </data>

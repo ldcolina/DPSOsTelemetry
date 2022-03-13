@@ -6,7 +6,7 @@ using Excel = Microsoft.Office.Interop.Excel;
 
 namespace DPSOsTelemetria.Pozos.PozoBombeoMecanico
 {
-    public partial class TomaInformacion : Form
+    public partial class TomaInformacion : UserControl
     {
         private readonly ReferenciasII Referencias;
         private List<lista> ListCCartaDinagrafica = new();

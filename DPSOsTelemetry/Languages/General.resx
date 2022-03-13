@@ -133,9 +133,6 @@
   <data name="SelectOption" xml:space="preserve">
     <value>Select an option</value>
   </data>
-  <data name="Version" xml:space="preserve">
-    <value>Version {0}</value>
-  </data>
   <data name="English" xml:space="preserve">
     <value>English</value>
   </data>
@@ -166,10 +163,6 @@
   <data name="AcercaDe" xml:space="preserve">
     <value>About</value>
   </data>
-  <data name="Copyright" xml:space="preserve">
-    <value>© {0} EnTecPro I-Services.</value>
-    <comment>Ok</comment>
-  </data>
   <data name="Aceptar" xml:space="preserve">
     <value>Accept</value>
   </data>
@@ -184,8 +177,5 @@
   </data>
   <data name="NombrePrograma" xml:space="preserve">
     <value>Program name</value>
-  </data>
-  <data name="Copyrights" xml:space="preserve">
-    <value>Copyright</value>
   </data>
 </root>

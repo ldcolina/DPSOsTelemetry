@@ -130,4 +130,7 @@
   <data name="Token" xml:space="preserve">
     <value>Token</value>
   </data>
+  <data name="Mostrar" xml:space="preserve">
+    <value>Show well {0}</value>
+  </data>
 </root>

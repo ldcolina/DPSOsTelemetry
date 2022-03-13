@@ -2,7 +2,7 @@
 
 namespace DPSOsTelemetria.Pozos.PozoBombeoJetPump
 {
-    public partial class MonitoreoVirtual : ScrollableControl
+    public partial class MonitoreoVirtual : UserControl
     {
         public MonitoreoVirtual()
 

@@ -88,15 +88,6 @@ namespace Languages {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Dynagraphic Chart Area.
-        /// </summary>
-        public static string Carta {
-            get {
-                return ResourceManager.GetString("Carta", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a Do you want to remove the {0} well?.
         /// </summary>
         public static string ConfirmarEliminacion {

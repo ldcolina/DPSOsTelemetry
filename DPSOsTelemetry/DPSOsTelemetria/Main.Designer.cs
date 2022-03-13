@@ -71,7 +71,7 @@ namespace DPSOsTelemetria
             this.menuStrip1.MdiWindowListItem = this.Ventanas;
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(1067, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(977, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -93,7 +93,7 @@ namespace DPSOsTelemetria
             this.Nuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Nuevo.Name = "Nuevo";
             this.Nuevo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.Nuevo.Size = new System.Drawing.Size(224, 26);
+            this.Nuevo.Size = new System.Drawing.Size(195, 26);
             this.Nuevo.Text = "&Nuevo";
             this.Nuevo.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
@@ -102,33 +102,33 @@ namespace DPSOsTelemetria
             this.Abrir_Eliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Abrir_Eliminar.Name = "Abrir_Eliminar";
             this.Abrir_Eliminar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.Abrir_Eliminar.Size = new System.Drawing.Size(224, 26);
+            this.Abrir_Eliminar.Size = new System.Drawing.Size(195, 26);
             this.Abrir_Eliminar.Text = "&Abrir";
             this.Abrir_Eliminar.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(192, 6);
             // 
             // GuardarArchivo
             // 
             this.GuardarArchivo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.GuardarArchivo.Name = "GuardarArchivo";
             this.GuardarArchivo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.GuardarArchivo.Size = new System.Drawing.Size(224, 26);
+            this.GuardarArchivo.Size = new System.Drawing.Size(195, 26);
             this.GuardarArchivo.Text = "&Guardar";
             this.GuardarArchivo.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(192, 6);
             // 
             // Salir
             // 
             this.Salir.Name = "Salir";
-            this.Salir.Size = new System.Drawing.Size(224, 26);
+            this.Salir.Size = new System.Drawing.Size(195, 26);
             this.Salir.Text = "&Salir";
             this.Salir.Click += new System.EventHandler(this.Salir_Click);
             // 
@@ -148,42 +148,42 @@ namespace DPSOsTelemetria
             // ArrangeIcons
             // 
             this.ArrangeIcons.Name = "ArrangeIcons";
-            this.ArrangeIcons.Size = new System.Drawing.Size(224, 26);
+            this.ArrangeIcons.Size = new System.Drawing.Size(186, 26);
             this.ArrangeIcons.Text = "ArrangeIcons";
             this.ArrangeIcons.Click += new System.EventHandler(this.ArrangeIcons_Click);
             // 
             // Cascade
             // 
             this.Cascade.Name = "Cascade";
-            this.Cascade.Size = new System.Drawing.Size(224, 26);
+            this.Cascade.Size = new System.Drawing.Size(186, 26);
             this.Cascade.Text = "Cascade";
             this.Cascade.Click += new System.EventHandler(this.Cascade_Click);
             // 
             // CloseAll
             // 
             this.CloseAll.Name = "CloseAll";
-            this.CloseAll.Size = new System.Drawing.Size(224, 26);
+            this.CloseAll.Size = new System.Drawing.Size(186, 26);
             this.CloseAll.Text = "CloseAll";
             this.CloseAll.Click += new System.EventHandler(this.CloseAll_Click);
             // 
             // TileHorizontal
             // 
             this.TileHorizontal.Name = "TileHorizontal";
-            this.TileHorizontal.Size = new System.Drawing.Size(224, 26);
+            this.TileHorizontal.Size = new System.Drawing.Size(186, 26);
             this.TileHorizontal.Text = "TileHorizontal";
             this.TileHorizontal.Click += new System.EventHandler(this.TileHorizontal_Click);
             // 
             // TileVertical
             // 
             this.TileVertical.Name = "TileVertical";
-            this.TileVertical.Size = new System.Drawing.Size(224, 26);
+            this.TileVertical.Size = new System.Drawing.Size(186, 26);
             this.TileVertical.Text = "TileVertical";
             this.TileVertical.Click += new System.EventHandler(this.TileVertical_Click);
             // 
             // MinimizedAll
             // 
             this.MinimizedAll.Name = "MinimizedAll";
-            this.MinimizedAll.Size = new System.Drawing.Size(224, 26);
+            this.MinimizedAll.Size = new System.Drawing.Size(186, 26);
             this.MinimizedAll.Text = "MinimizedAll";
             this.MinimizedAll.Click += new System.EventHandler(this.MinimizedAll_Click);
             // 
@@ -200,19 +200,19 @@ namespace DPSOsTelemetria
             // listaTiempo
             // 
             this.listaTiempo.Name = "listaTiempo";
-            this.listaTiempo.Size = new System.Drawing.Size(224, 26);
+            this.listaTiempo.Size = new System.Drawing.Size(171, 26);
             this.listaTiempo.Text = "List_Tiempo";
             this.listaTiempo.Click += new System.EventHandler(this.listaTiempo_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(168, 6);
             // 
             // Config
             // 
             this.Config.Name = "Config";
-            this.Config.Size = new System.Drawing.Size(224, 26);
+            this.Config.Size = new System.Drawing.Size(171, 26);
             this.Config.Text = "&Acerca de...";
             this.Config.Click += new System.EventHandler(this.Config_Click);
             // 
@@ -226,7 +226,7 @@ namespace DPSOsTelemetria
             this.statusStrip1.Location = new System.Drawing.Point(0, 0);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1067, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(977, 26);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -238,8 +238,9 @@ namespace DPSOsTelemetria
             // 
             // toolStripStatusLabel2
             // 
+            this.toolStripStatusLabel2.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Polite;
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(896, 20);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(767, 20);
             this.toolStripStatusLabel2.Spring = true;
             this.toolStripStatusLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -248,10 +249,10 @@ namespace DPSOsTelemetria
             this.panel2.AutoSize = true;
             this.panel2.Controls.Add(this.statusStrip1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 666);
+            this.panel2.Location = new System.Drawing.Point(0, 412);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1067, 26);
+            this.panel2.Size = new System.Drawing.Size(977, 26);
             this.panel2.TabIndex = 4;
             // 
             // timer1
@@ -264,7 +265,7 @@ namespace DPSOsTelemetria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 692);
+            this.ClientSize = new System.Drawing.Size(977, 438);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

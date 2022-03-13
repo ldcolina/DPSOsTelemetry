@@ -70,7 +70,7 @@ namespace Languages {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a administrator.
+        ///   Busca una cadena traducida similar a Administrator.
         /// </summary>
         public static string Administrador {
             get {
@@ -178,33 +178,6 @@ namespace Languages {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a English.
-        /// </summary>
-        public static string En {
-            get {
-                return ResourceManager.GetString("En", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Spanish.
-        /// </summary>
-        public static string Es {
-            get {
-                return ResourceManager.GetString("Es", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Spanish ( Mx ).
-        /// </summary>
-        public static string EsMx {
-            get {
-                return ResourceManager.GetString("EsMx", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a Do you want to register the information?.
         /// </summary>
         public static string Guardado {
@@ -228,15 +201,6 @@ namespace Languages {
         public static string Herramienta {
             get {
                 return ResourceManager.GetString("Herramienta", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Language.
-        /// </summary>
-        public static string Idioma {
-            get {
-                return ResourceManager.GetString("Idioma", resourceCulture);
             }
         }
         

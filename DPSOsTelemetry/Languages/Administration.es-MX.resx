@@ -132,9 +132,6 @@
   <data name="Nombre" xml:space="preserve">
     <value>Nombre</value>
   </data>
-  <data name="Carta" xml:space="preserve">
-    <value>Área de Carta Dinagráfica</value>
-  </data>
   <data name="Sustituir" xml:space="preserve">
     <value>¿Desea reemplazar la información actual con la almacenada?</value>
   </data>

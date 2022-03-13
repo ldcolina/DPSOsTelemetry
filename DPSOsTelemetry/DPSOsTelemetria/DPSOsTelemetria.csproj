@@ -49,7 +49,6 @@
     <Content Include="Icons\antenna-with-signal-lines-symbol_icon-icons.com_56573.ico" />
     <Content Include="Icons\Cavidad Progresiva.jpg" />
     <Content Include="Icons\chat_96641.png" />
-    <Content Include="Icons\configuraciones .png" />
     <Content Include="Icons\inventory.png" />
     <Content Include="Icons\magnifying-glass.png" />
     <Content Include="Icons\off-button.png" />
@@ -116,9 +115,7 @@
     <Compile Update="Pozos\PozoBombeoMecanico\MonitoreoVirtual.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Update="Pozos\PozoBombeoMecanico\TomaInformacion.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Update="Pozos\PozoBombeoMecanico\TomaInformacion.cs" />
     <Compile Update="Pozos\PozoBombeoNeumaticoIntermitente\MonitoreoVirtual.cs">
       <SubType>Component</SubType>
     </Compile>

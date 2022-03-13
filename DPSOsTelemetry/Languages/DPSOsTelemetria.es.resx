@@ -141,15 +141,6 @@
   <data name="Aviso" xml:space="preserve">
     <value>Aviso</value>
   </data>
-  <data name="En" xml:space="preserve">
-    <value>Ingles</value>
-  </data>
-  <data name="Es" xml:space="preserve">
-    <value>Español</value>
-  </data>
-  <data name="EsMx" xml:space="preserve">
-    <value>Español ( Mx )</value>
-  </data>
   <data name="Archivo" xml:space="preserve">
     <value>Archivo</value>
   </data>
@@ -197,8 +188,5 @@
   </data>
   <data name="DPSOsTelemetry" xml:space="preserve">
     <value>Simulador: DPSOS Telemetría</value>
-  </data>
-  <data name="Idioma" xml:space="preserve">
-    <value>Idioma</value>
   </data>
 </root>

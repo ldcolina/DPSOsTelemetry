@@ -6,10 +6,10 @@ namespace DPSOsTelemetria.Administration
 {
     public partial class Administracion_Pozo : Form
     {
-        private static readonly ResourceManager SystemWell = new(typeof(Languages.SystemWell));
-        private readonly string file;
         public string ID = string.Empty;
         public int num = 0;
+        private static readonly ResourceManager SystemWell = new(typeof(Languages.SystemWell));
+        private readonly string file;
 
         public Administracion_Pozo()
         {
@@ -20,24 +20,7 @@ namespace DPSOsTelemetria.Administration
         public Administracion_Pozo(string _Id) : this()
         {
             ID = _Id;
-            file = Main._file;
-        }
-
-        private void Administracion_Pozo_Load(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(ID))
-            {
-                Referencias ControlPozos = JsonConvert.DeserializeObject<Referencias>(File.ReadAllText(ID)) ?? new Referencias();
-
-                Text = ControlPozos.Name;
-
-                txtName.Text = ControlPozos.Name;
-
-                txtToken.Text = ControlPozos.Token;
-
-                ddlUnidades.SelectedItem = ((List<Languages.ddl>)ddlUnidades.DataSource).Find(val => val.Value == ControlPozos.Unidades.ToString());
-                ddlTipoPozo.SelectedItem = ((List<Languages.ddl>)ddlTipoPozo.DataSource).Find(val => val.Value == ControlPozos.Type.ToString());
-            }
+            file = Main.Carpeta;
         }
 
         public void Refrescar()
@@ -76,8 +59,6 @@ namespace DPSOsTelemetria.Administration
                 ddlUnidades.SelectedItem = Sistema_Unidades.First();
             }
         }
-
-        private void Administracion_Pozo_FormClosing(object sender, FormClosingEventArgs e) => e.Cancel = Guardar_Info() == DialogResult.Cancel;
 
         internal DialogResult Guardar_Info()
         {
@@ -295,6 +276,25 @@ namespace DPSOsTelemetria.Administration
             ID = directorio;
 
             return consultar;
+        }
+
+        private void Administracion_Pozo_FormClosing(object sender, FormClosingEventArgs e) => e.Cancel = Guardar_Info() == DialogResult.Cancel;
+
+        private void Administracion_Pozo_Load(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(ID))
+            {
+                Referencias ControlPozos = JsonConvert.DeserializeObject<Referencias>(File.ReadAllText(ID)) ?? new Referencias();
+
+                Text = ControlPozos.Name;
+
+                txtName.Text = ControlPozos.Name;
+
+                txtToken.Text = ControlPozos.Token;
+
+                ddlUnidades.SelectedItem = ((List<Languages.ddl>)ddlUnidades.DataSource).Find(val => val.Value == ControlPozos.Unidades.ToString());
+                ddlTipoPozo.SelectedItem = ((List<Languages.ddl>)ddlTipoPozo.DataSource).Find(val => val.Value == ControlPozos.Type.ToString());
+            }
         }
 
         private void Administracion_Pozo_Resize(object sender, EventArgs e)

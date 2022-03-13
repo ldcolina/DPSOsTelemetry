@@ -7,9 +7,7 @@ using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage("Style", "IDE1006:Estilos de nombres", Justification = "<pendiente>", Scope = "member", Target = "~M:DPSOsTelemetria.Main.abrirToolStripMenuItem_Click(System.Object,System.EventArgs)")]
 [assembly: SuppressMessage("Style", "IDE1006:Estilos de nombres", Justification = "<pendiente>", Scope = "member", Target = "~M:DPSOsTelemetria.Main.guardarToolStripMenuItem_Click(System.Object,System.EventArgs)")]
-[assembly: SuppressMessage("Style", "IDE1006:Estilos de nombres", Justification = "<pendiente>", Scope = "member", Target = "~M:DPSOsTelemetria.Main.idiomaToolStripMenuItem_Click(System.Object,System.EventArgs)")]
 [assembly: SuppressMessage("Style", "IDE1006:Estilos de nombres", Justification = "<pendiente>", Scope = "member", Target = "~M:DPSOsTelemetria.Main.nuevoToolStripMenuItem_Click(System.Object,System.EventArgs)")]
-[assembly: SuppressMessage("Style", "IDE1006:Estilos de nombres", Justification = "<pendiente>", Scope = "member", Target = "~P:DPSOsTelemetria.Main._file")]
 [assembly: SuppressMessage("Style", "IDE1006:Estilos de nombres", Justification = "<pendiente>", Scope = "member", Target = "~M:DPSOsTelemetria.Main.timer1_Tick(System.Object,System.EventArgs)")]
 [assembly: SuppressMessage("Style", "IDE1006:Estilos de nombres", Justification = "<pendiente>", Scope = "member", Target = "~M:DPSOsTelemetria.Administration.Abrir_Eliminar.button1_Click(System.Object,System.EventArgs)")]
 [assembly: SuppressMessage("Style", "IDE1006:Estilos de nombres", Justification = "<pendiente>", Scope = "member", Target = "~M:DPSOsTelemetria.Administration.Abrir_Eliminar.button2_Click(System.Object,System.EventArgs)")]
@@ -26,3 +24,4 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Style", "IDE1006:Estilos de nombres", Justification = "<pendiente>", Scope = "type", Target = "~T:DPSOsTelemetria.listaTiempo")]
 [assembly: SuppressMessage("Style", "IDE1006:Estilos de nombres", Justification = "<pendiente>", Scope = "type", Target = "~T:DPSOsTelemetria.Pozos.PozoBombeoMecanico.TomaInformacion.oDinamometrica")]
 [assembly: SuppressMessage("Style", "IDE0044:Agregar modificador de solo lectura", Justification = "<pendiente>", Scope = "member", Target = "~F:DPSOsTelemetria.Pozos.PozoBombeoMecanico.TomaInformacion.ListCCartaDinagrafica")]
+[assembly: SuppressMessage("Style", "IDE1006:Estilos de nombres", Justification = "<pendiente>", Scope = "member", Target = "~M:DPSOsTelemetria.Configuraciones.Visualizacion.ddlIdioma_SelectedIndexChanged(System.Object,System.EventArgs)")] 

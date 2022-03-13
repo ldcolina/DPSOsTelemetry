@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Administrador" xml:space="preserve">
-    <value>administrator</value>
+    <value>Administrator</value>
   </data>
   <data name="Herramienta" xml:space="preserve">
     <value>Tool</value>
@@ -140,15 +140,6 @@
   </data>
   <data name="Aviso" xml:space="preserve">
     <value>Attention</value>
-  </data>
-  <data name="En" xml:space="preserve">
-    <value>English</value>
-  </data>
-  <data name="Es" xml:space="preserve">
-    <value>Spanish</value>
-  </data>
-  <data name="EsMx" xml:space="preserve">
-    <value>Spanish ( Mx )</value>
   </data>
   <data name="Archivo" xml:space="preserve">
     <value>Archive</value>
@@ -197,8 +188,5 @@
   </data>
   <data name="DPSOsTelemetry" xml:space="preserve">
     <value>Simulator: DPSOS Telemetry</value>
-  </data>
-  <data name="Idioma" xml:space="preserve">
-    <value>Language</value>
   </data>
 </root>

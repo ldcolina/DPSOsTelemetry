@@ -6,14 +6,14 @@ namespace DPSOsTelemetria.Administration
 {
     public partial class Abrir_Eliminar : Form
     {
-        internal readonly string DataBase;
         public string ID;
+        internal readonly string DataBase;
         private static readonly ResourceManager SystemWell = new(typeof(Languages.SystemWell));
 
         public Abrir_Eliminar()
         {
             InitializeComponent();
-            DataBase = Main._file;
+            DataBase = Main.Carpeta;
 
             textBox1_TextChanged(textBox1, null);
         }

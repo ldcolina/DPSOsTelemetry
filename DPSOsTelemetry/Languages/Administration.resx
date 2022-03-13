@@ -132,9 +132,6 @@
   <data name="Unidad" xml:space="preserve">
     <value>Unit</value>
   </data>
-  <data name="Carta" xml:space="preserve">
-    <value>Dynagraphic Chart Area</value>
-  </data>
   <data name="GuardadoComo" xml:space="preserve">
     <value>There is already a well of type {0} with that name do you want to replace it?</value>
   </data>
