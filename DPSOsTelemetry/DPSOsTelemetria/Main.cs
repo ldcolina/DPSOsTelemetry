@@ -11,11 +11,16 @@ namespace DPSOsTelemetria
 
         private readonly string configuracion;
         private readonly string file;
+        private readonly string version = "1.0.0.2";
+        private readonly string anio = "2022";
 
         #endregion Directorio
 
         public Main()
         {
+            Introducction introducction = new(version, anio);
+            introducction.ShowDialog();
+
             InitializeComponent();
             instance = this;
 
@@ -34,6 +39,15 @@ namespace DPSOsTelemetria
                 File.WriteAllText(configuracion, JsonConvert.SerializeObject(datas, Formatting.Indented));
             }
             Idiomas(datas.Idioma);
+
+            if (datas.Version != version)
+            {
+                datas.Version = version;
+                File.WriteAllText(configuracion, JsonConvert.SerializeObject(datas, Formatting.Indented));
+
+                Novedades OpenForm = new(datas);
+                OpenForm.ShowDialog();
+            }
         }
 
         #region Action
@@ -348,7 +362,7 @@ namespace DPSOsTelemetria
 
         private void Main_Load(object sender, EventArgs e)
         {
-            Text = $"{Languages.DPSOsTelemetria.DPSOsTelemetry}";
+            Text = Languages.DPSOsTelemetria.DPSOsTelemetry;
 
             foreach (ToolStripMenuItem ToolStrip in menuStrip1.Items.OfType<ToolStripMenuItem>())
             {

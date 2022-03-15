@@ -70,6 +70,15 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Software update.
+        /// </summary>
+        public static string ActualizacionPrograma {
+            get {
+                return ResourceManager.GetString("ActualizacionPrograma", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a © {0} EnTecPro I-Services..
         /// </summary>
         public static string Copyright {
@@ -160,11 +169,38 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a {0} is up to date.
+        /// </summary>
+        public static string MainLabel {
+            get {
+                return ResourceManager.GetString("MainLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a What&apos;s new:.
+        /// </summary>
+        public static string News {
+            get {
+                return ResourceManager.GetString("News", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Privacy.
         /// </summary>
         public static string Privacy {
             get {
                 return ResourceManager.GetString("Privacy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Release Notes.
+        /// </summary>
+        public static string ReleaseNotes {
+            get {
+                return ResourceManager.GetString("ReleaseNotes", resourceCulture);
             }
         }
         
@@ -183,6 +219,24 @@ namespace Languages {
         public static string Version {
             get {
                 return ResourceManager.GetString("Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a {0} {1} is currently the newest version available.
+        /// </summary>
+        public static string VersionNotes1 {
+            get {
+                return ResourceManager.GetString("VersionNotes1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a {0} has been updated to version {1}.
+        /// </summary>
+        public static string VersionNotes2 {
+            get {
+                return ResourceManager.GetString("VersionNotes2", resourceCulture);
             }
         }
         

@@ -11,7 +11,7 @@ namespace DPSOsTelemetria
         public ReferenciasII Referencias = new();
         public string select;
         public bool status;
-        private static readonly ResourceManager SystemWell = new(typeof(Languages.SystemWell));
+        private static readonly ResourceManager SystemWell = new(typeof(SystemWell));
 
         public Pozo()
         {

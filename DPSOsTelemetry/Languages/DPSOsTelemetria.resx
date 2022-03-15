@@ -187,6 +187,6 @@
     <value>Close all windows</value>
   </data>
   <data name="DPSOsTelemetry" xml:space="preserve">
-    <value>Simulator: DPSOS Telemetry</value>
+    <value>DPSOS Telemetry</value>
   </data>
 </root>

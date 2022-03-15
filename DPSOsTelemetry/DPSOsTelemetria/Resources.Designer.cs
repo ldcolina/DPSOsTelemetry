@@ -241,6 +241,16 @@ namespace DPSOsTelemetria {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_1126282547_170667a {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-1126282547-170667a", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
         /// </summary>
         internal static System.Drawing.Icon Jet_Pump {
@@ -456,6 +466,26 @@ namespace DPSOsTelemetria {
         internal static System.Drawing.Bitmap seo1 {
             get {
                 object obj = ResourceManager.GetObject("seo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon tecnologia {
+            get {
+                object obj = ResourceManager.GetObject("tecnologia", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tecnologia1 {
+            get {
+                object obj = ResourceManager.GetObject("tecnologia1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

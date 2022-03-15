@@ -240,7 +240,7 @@ namespace DPSOsTelemetria
             // 
             this.toolStripStatusLabel2.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Polite;
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(767, 20);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(806, 20);
             this.toolStripStatusLabel2.Spring = true;
             this.toolStripStatusLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 

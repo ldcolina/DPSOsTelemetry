@@ -5,4 +5,5 @@
 
 using System.Diagnostics.CodeAnalysis;
 
-[assembly: SuppressMessage("Style", "IDE1006:Estilos de nombres", Justification = "<pendiente>", Scope = "member", Target = "~M:Telemetria.List_DataTable.getObject``1(System.Data.DataRow,System.Collections.Generic.List{System.String})~``0")] 
+[assembly: SuppressMessage("Style", "IDE1006:Estilos de nombres", Justification = "<pendiente>", Scope = "member", Target = "~M:Telemetria.List_DataTable.getObject``1(System.Data.DataRow,System.Collections.Generic.List{System.String})~``0")]
+[assembly: SuppressMessage("Style", "IDE1006:Estilos de nombres", Justification = "<pendiente>", Scope = "type", Target = "~T:Telemetria.TelemetriaController.correo")] 

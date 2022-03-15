@@ -30,13 +30,18 @@ namespace DPSOsTelemetria
             Privacy.Text = Languages.Setups.Privacy;
             LicenseAgreement.Text = Languages.Setups.LicenseAgreement;
             Licenses.Text = Languages.Setups.Licenses;
-            Version.Text = Languages.Setups.Version.Replace("{0}", "1.0.0.2");
+            Version.Text = Languages.Setups.Version.Replace("{0}", newConfiguracion.Version);
             Visualizacion_Click(null, null);
         }
 
         private void Config_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Destino_Click(2);
+            if (select == 2)
+            {
+                Visualizacion _Visualizacion = splitContainer1.Panel2.Controls.OfType<Visualizacion>().FirstOrDefault();
+                newConfiguracion.Decimales = (int)_Visualizacion.nDecimales.Value;
+                newConfiguracion.Idioma = ((Languages.ddl)_Visualizacion.ddlIdioma.SelectedItem).Value;
+            }
 
             string datos = File.ReadAllText(configuracion);
             var Configuracion = JsonConvert.SerializeObject(newConfiguracion);
@@ -195,7 +200,7 @@ namespace DPSOsTelemetria
                     {
                         splitContainer1.Panel2.Controls.Clear();
 
-                        Actualizaciones _Actualizaciones = new() { Dock = DockStyle.Fill };
+                        Actualizaciones _Actualizaciones = new(newConfiguracion) { Dock = DockStyle.Fill };
                         splitContainer1.Panel2.Controls.Add(_Actualizaciones);
 
                         break;
@@ -229,11 +234,14 @@ namespace DPSOsTelemetria
         }
 
         #endregion Licenses
+
+        private void Config_Shown(object sender, EventArgs e) => splitContainer1.SplitterDistance = tableLayoutPanel2.Width;
     }
 
     public class Setup
     {
         public int Decimales { get; set; } = 4;
         public string Idioma { get; set; } = Thread.CurrentThread.CurrentUICulture.ToString();
+        public string Version { get; set; } = "";
     }
 }

@@ -178,4 +178,7 @@
   <data name="NombrePrograma" xml:space="preserve">
     <value>Program name</value>
   </data>
+  <data name="MoreInfo" xml:space="preserve">
+    <value>For more information review</value>
+  </data>
 </root>

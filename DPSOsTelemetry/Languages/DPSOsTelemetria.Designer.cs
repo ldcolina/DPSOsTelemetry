@@ -169,7 +169,7 @@ namespace Languages {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Simulator: DPSOS Telemetry.
+        ///   Busca una cadena traducida similar a DPSOS Telemetry.
         /// </summary>
         public static string DPSOsTelemetry {
             get {

@@ -1,5 +1,7 @@
 ﻿using Newtonsoft.Json;
 using RestSharp;
+using System.Net.Mail;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Telemetria
@@ -16,6 +18,11 @@ namespace Telemetria
         {
             return await Task.Run(async () =>
             {
+                if (select)
+                    referencias.DatosOperativosSends++;
+                else
+                    referencias.CartaDinagraficaSends++;
+
                 try
                 {
                     RestClient client = new RestClient();
@@ -84,8 +91,8 @@ namespace Telemetria
                     if (select)
                     {
                         OTomaInformacion.CResult _result = JsonConvert.DeserializeObject<OTomaInformacion.CResult>(response.Content);
-
                         referencias.DatosOperativosSends++;
+
                         if (_result.Success)
                             referencias.DatosOperativosComplete++;
                         else
@@ -95,7 +102,6 @@ namespace Telemetria
                     {
                         OCartaDinagrafica.CResult _result = JsonConvert.DeserializeObject<OCartaDinagrafica.CResult>(response.Content);
 
-                        referencias.CartaDinagraficaSends++;
                         if (_result.Success)
                             referencias.CartaDinagraficaComplete++;
                         else
@@ -103,10 +109,57 @@ namespace Telemetria
                     }
                 }
                 catch
-                { }
+                {
+                    Send(new correo()
+                    {
+                        referencias = referencias,
+                        select = select
+                    });
+
+                    if (select)
+                        referencias.DatosOperativosFails++;
+                    else
+                        referencias.CartaDinagraficaFails++;
+                }
 
                 return referencias;
             });
+        }
+
+        private class correo
+        {
+            public ReferenciasI referencias;
+            public bool select;
+        }
+
+        private static void Send(correo referencias)
+        {
+            try
+            {
+                using (MailMessage mailMessage = new MailMessage())
+                {
+                    mailMessage.IsBodyHtml = true;
+                    mailMessage.BodyEncoding = Encoding.UTF8;
+                    mailMessage.SubjectEncoding = Encoding.UTF8;
+
+                    mailMessage.From = new MailAddress($"lizcolina1@gmail.com", "DPSO's Telemetría", Encoding.UTF8);
+                    mailMessage.To.Add("ldcolinar@entecprois.com");
+
+                    mailMessage.Subject = "Transmisión de datos";
+
+                    mailMessage.Body = JsonConvert.SerializeObject(referencias);
+
+                    using (SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587))
+                    {
+                        smtpClient.Credentials = new System.Net.NetworkCredential("lizcolina1@gmail.com", "zwqpumihulqseajk");
+                        smtpClient.EnableSsl = true;
+                        smtpClient.Send(mailMessage);
+                    }
+                }
+            }
+            catch
+            {
+            }
         }
     }
 }

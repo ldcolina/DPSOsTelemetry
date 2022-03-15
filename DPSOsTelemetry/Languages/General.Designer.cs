@@ -160,6 +160,15 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a For more information review.
+        /// </summary>
+        public static string MoreInfo {
+            get {
+                return ResourceManager.GetString("MoreInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a The area you want to access is not available.
         /// </summary>
         public static string NoDisponible {

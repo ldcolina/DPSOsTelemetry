@@ -163,4 +163,22 @@
   <data name="Licenses" xml:space="preserve">
     <value>Licencias</value>
   </data>
+  <data name="ReleaseNotes" xml:space="preserve">
+    <value>Notas</value>
+  </data>
+  <data name="MainLabel" xml:space="preserve">
+    <value>{0} está actualizado</value>
+  </data>
+  <data name="VersionNotes1" xml:space="preserve">
+    <value>{0} {1} es actualmente la versión más reciente disponible</value>
+  </data>
+  <data name="ActualizacionPrograma" xml:space="preserve">
+    <value>Actualización de software</value>
+  </data>
+  <data name="News" xml:space="preserve">
+    <value>Qué hay nuevo:</value>
+  </data>
+  <data name="VersionNotes2" xml:space="preserve">
+    <value>{0} se a actualizado a la versión {1}</value>
+  </data>
 </root>

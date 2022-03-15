@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Config));
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.Version = new System.Windows.Forms.Label();
@@ -52,7 +51,6 @@
             this.LicenseAgreement = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.Licenses = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -68,48 +66,33 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.splitContainer1, 1, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(752, 597);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(23, 23);
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer1.IsSplitterFixed = true;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.AutoScroll = true;
             this.splitContainer1.Panel1.Controls.Add(this.tableLayoutPanel2);
-            this.splitContainer1.Size = new System.Drawing.Size(706, 551);
-            this.splitContainer1.SplitterDistance = 277;
-            this.splitContainer1.TabIndex = 1;
+            this.splitContainer1.Panel1MinSize = 60;
+            this.splitContainer1.Size = new System.Drawing.Size(752, 597);
+            this.splitContainer1.SplitterDistance = 314;
+            this.splitContainer1.SplitterWidth = 5;
+            this.splitContainer1.TabIndex = 2;
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.AutoScroll = true;
             this.tableLayoutPanel2.AutoSize = true;
             this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.Version, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.Copyright, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 3);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -119,30 +102,29 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(277, 551);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(255, 597);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // Version
             // 
+            this.Version.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Version.AutoSize = true;
-            this.Version.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Version.Location = new System.Drawing.Point(3, 531);
+            this.Version.Location = new System.Drawing.Point(195, 577);
             this.Version.Name = "Version";
-            this.Version.Size = new System.Drawing.Size(271, 20);
+            this.Version.Size = new System.Drawing.Size(57, 20);
             this.Version.TabIndex = 3;
-            this.Version.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Version.Text = "Version";
+            this.Version.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox1
             // 
             this.groupBox1.AutoSize = true;
             this.groupBox1.Controls.Add(this.tableLayoutPanel3);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Location = new System.Drawing.Point(10, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox1.Size = new System.Drawing.Size(257, 188);
+            this.groupBox1.Size = new System.Drawing.Size(249, 194);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
@@ -155,17 +137,16 @@
             this.tableLayoutPanel3.Controls.Add(this.tlpGuia, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.tlpActualizaciones, 0, 4);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 20);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 23);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.tableLayoutPanel3.RowCount = 5;
+            this.tableLayoutPanel3.RowCount = 6;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(257, 168);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(243, 168);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // tlpVisualizacion
@@ -181,7 +162,7 @@
             this.tlpVisualizacion.Name = "tlpVisualizacion";
             this.tlpVisualizacion.RowCount = 1;
             this.tlpVisualizacion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpVisualizacion.Size = new System.Drawing.Size(251, 40);
+            this.tlpVisualizacion.Size = new System.Drawing.Size(237, 40);
             this.tlpVisualizacion.TabIndex = 6;
             this.tlpVisualizacion.Click += new System.EventHandler(this.Visualizacion_Click);
             this.tlpVisualizacion.MouseEnter += new System.EventHandler(this.Item_MouseEnter);
@@ -229,7 +210,7 @@
             this.tlpGuia.Name = "tlpGuia";
             this.tlpGuia.RowCount = 1;
             this.tlpGuia.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpGuia.Size = new System.Drawing.Size(251, 40);
+            this.tlpGuia.Size = new System.Drawing.Size(237, 40);
             this.tlpGuia.TabIndex = 4;
             this.tlpGuia.Click += new System.EventHandler(this.Guia_Click);
             this.tlpGuia.MouseEnter += new System.EventHandler(this.Item_MouseEnter);
@@ -277,7 +258,7 @@
             this.tlpActualizaciones.Name = "tlpActualizaciones";
             this.tlpActualizaciones.RowCount = 1;
             this.tlpActualizaciones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpActualizaciones.Size = new System.Drawing.Size(251, 40);
+            this.tlpActualizaciones.Size = new System.Drawing.Size(237, 40);
             this.tlpActualizaciones.TabIndex = 5;
             this.tlpActualizaciones.Click += new System.EventHandler(this.Actualizacion_Click);
             this.tlpActualizaciones.MouseEnter += new System.EventHandler(this.Item_MouseEnter);
@@ -315,11 +296,12 @@
             // Copyright
             // 
             this.Copyright.AutoSize = true;
-            this.Copyright.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Copyright.Location = new System.Drawing.Point(3, 465);
+            this.Copyright.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Copyright.Location = new System.Drawing.Point(3, 511);
             this.Copyright.Name = "Copyright";
-            this.Copyright.Size = new System.Drawing.Size(271, 20);
+            this.Copyright.Size = new System.Drawing.Size(74, 20);
             this.Copyright.TabIndex = 0;
+            this.Copyright.Text = "Copyright";
             this.Copyright.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel4
@@ -335,13 +317,13 @@
             this.tableLayoutPanel4.Controls.Add(this.LicenseAgreement, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.label6, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.Licenses, 2, 1);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 488);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 534);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(271, 40);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(249, 40);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // Terms
@@ -431,7 +413,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(752, 597);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -439,7 +421,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configuración";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Config_FormClosing);
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.Shown += new System.EventHandler(this.Config_Shown);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -467,13 +449,20 @@
 
         #endregion
 
-        private TableLayoutPanel tableLayoutPanel1;
         private SplitContainer splitContainer1;
         private TableLayoutPanel tableLayoutPanel2;
+        private Label Version;
         private GroupBox groupBox1;
         private TableLayoutPanel tableLayoutPanel3;
+        private TableLayoutPanel tlpVisualizacion;
+        private PictureBox ptbVisualizacion;
+        private Label Visualizacion;
+        private TableLayoutPanel tlpGuia;
         private PictureBox ptbGuia;
         private Label Guia;
+        private TableLayoutPanel tlpActualizaciones;
+        private PictureBox ptbActualizaciones;
+        private Label Actualizaciones;
         private Label Copyright;
         private TableLayoutPanel tableLayoutPanel4;
         private Label Terms;
@@ -482,13 +471,5 @@
         private Label LicenseAgreement;
         private Label label6;
         private Label Licenses;
-        private TableLayoutPanel tlpGuia;
-        private TableLayoutPanel tlpActualizaciones;
-        private PictureBox ptbActualizaciones;
-        private Label Actualizaciones;
-        private TableLayoutPanel tlpVisualizacion;
-        private PictureBox ptbVisualizacion;
-        private Label Visualizacion;
-        private Label Version;
     }
 }
