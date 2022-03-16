@@ -115,7 +115,7 @@
             this.tlpVariables.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpVariables.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpVariables.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpVariables.Size = new System.Drawing.Size(620, 317);
+            this.tlpVariables.Size = new System.Drawing.Size(620, 305);
             this.tlpVariables.TabIndex = 6;
             // 
             // DoPresionTuberiaProduccion
@@ -125,7 +125,7 @@
             this.DoPresionTuberiaProduccion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DoPresionTuberiaProduccion.Location = new System.Drawing.Point(3, 0);
             this.DoPresionTuberiaProduccion.Name = "DoPresionTuberiaProduccion";
-            this.DoPresionTuberiaProduccion.Size = new System.Drawing.Size(294, 16);
+            this.DoPresionTuberiaProduccion.Size = new System.Drawing.Size(294, 20);
             this.DoPresionTuberiaProduccion.TabIndex = 0;
             this.DoPresionTuberiaProduccion.Text = "DoPresionTuberiaProduccion";
             // 
@@ -136,7 +136,7 @@
             this.DoPresionTuberiaRevestimiento.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DoPresionTuberiaRevestimiento.Location = new System.Drawing.Point(323, 0);
             this.DoPresionTuberiaRevestimiento.Name = "DoPresionTuberiaRevestimiento";
-            this.DoPresionTuberiaRevestimiento.Size = new System.Drawing.Size(294, 16);
+            this.DoPresionTuberiaRevestimiento.Size = new System.Drawing.Size(294, 20);
             this.DoPresionTuberiaRevestimiento.TabIndex = 3;
             this.DoPresionTuberiaRevestimiento.Text = "DoPresionTuberiaRevestimiento";
             // 
@@ -145,9 +145,9 @@
             this.DoGravedadEspecificaGasInyeccion.AutoSize = true;
             this.tlpVariables.SetColumnSpan(this.DoGravedadEspecificaGasInyeccion, 2);
             this.DoGravedadEspecificaGasInyeccion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoGravedadEspecificaGasInyeccion.Location = new System.Drawing.Point(3, 108);
+            this.DoGravedadEspecificaGasInyeccion.Location = new System.Drawing.Point(3, 120);
             this.DoGravedadEspecificaGasInyeccion.Name = "DoGravedadEspecificaGasInyeccion";
-            this.DoGravedadEspecificaGasInyeccion.Size = new System.Drawing.Size(294, 16);
+            this.DoGravedadEspecificaGasInyeccion.Size = new System.Drawing.Size(294, 20);
             this.DoGravedadEspecificaGasInyeccion.TabIndex = 18;
             this.DoGravedadEspecificaGasInyeccion.Text = "DoGravedadEspecificaGasInyeccion";
             // 
@@ -156,9 +156,9 @@
             this.DoPresionDisponible.AutoSize = true;
             this.tlpVariables.SetColumnSpan(this.DoPresionDisponible, 2);
             this.DoPresionDisponible.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoPresionDisponible.Location = new System.Drawing.Point(3, 72);
+            this.DoPresionDisponible.Location = new System.Drawing.Point(3, 80);
             this.DoPresionDisponible.Name = "DoPresionDisponible";
-            this.DoPresionDisponible.Size = new System.Drawing.Size(294, 16);
+            this.DoPresionDisponible.Size = new System.Drawing.Size(294, 20);
             this.DoPresionDisponible.TabIndex = 6;
             this.DoPresionDisponible.Text = "DoPresionDisponible";
             // 
@@ -167,9 +167,9 @@
             this.DoPresionLineaDescarga.AutoSize = true;
             this.tlpVariables.SetColumnSpan(this.DoPresionLineaDescarga, 2);
             this.DoPresionLineaDescarga.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoPresionLineaDescarga.Location = new System.Drawing.Point(3, 36);
+            this.DoPresionLineaDescarga.Location = new System.Drawing.Point(3, 40);
             this.DoPresionLineaDescarga.Name = "DoPresionLineaDescarga";
-            this.DoPresionLineaDescarga.Size = new System.Drawing.Size(294, 16);
+            this.DoPresionLineaDescarga.Size = new System.Drawing.Size(294, 20);
             this.DoPresionLineaDescarga.TabIndex = 12;
             this.DoPresionLineaDescarga.Text = "DoPresionLineaDescarga";
             // 
@@ -178,9 +178,9 @@
             this.DoGastoGasInyeccion.AutoSize = true;
             this.tlpVariables.SetColumnSpan(this.DoGastoGasInyeccion, 2);
             this.DoGastoGasInyeccion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoGastoGasInyeccion.Location = new System.Drawing.Point(323, 72);
+            this.DoGastoGasInyeccion.Location = new System.Drawing.Point(323, 80);
             this.DoGastoGasInyeccion.Name = "DoGastoGasInyeccion";
-            this.DoGastoGasInyeccion.Size = new System.Drawing.Size(294, 16);
+            this.DoGastoGasInyeccion.Size = new System.Drawing.Size(294, 20);
             this.DoGastoGasInyeccion.TabIndex = 9;
             this.DoGastoGasInyeccion.Text = "DoGastoGasInyeccion";
             // 
@@ -189,9 +189,9 @@
             this.DoTemperaturaSuperficie.AutoSize = true;
             this.tlpVariables.SetColumnSpan(this.DoTemperaturaSuperficie, 2);
             this.DoTemperaturaSuperficie.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoTemperaturaSuperficie.Location = new System.Drawing.Point(323, 36);
+            this.DoTemperaturaSuperficie.Location = new System.Drawing.Point(323, 40);
             this.DoTemperaturaSuperficie.Name = "DoTemperaturaSuperficie";
-            this.DoTemperaturaSuperficie.Size = new System.Drawing.Size(294, 16);
+            this.DoTemperaturaSuperficie.Size = new System.Drawing.Size(294, 20);
             this.DoTemperaturaSuperficie.TabIndex = 15;
             this.DoTemperaturaSuperficie.Text = "DoTemperaturaSuperficie";
             // 
@@ -206,13 +206,13 @@
             this.tableLayoutPanel3.Controls.Add(this.DatosOperativosComplete, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.DatosOperativosFails, 0, 2);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 326);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 314);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(620, 48);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(620, 60);
             this.tableLayoutPanel3.TabIndex = 5;
             // 
             // DatosOperativos
@@ -222,7 +222,7 @@
             this.DatosOperativos.Location = new System.Drawing.Point(313, 0);
             this.DatosOperativos.Name = "DatosOperativos";
             this.tableLayoutPanel3.SetRowSpan(this.DatosOperativos, 3);
-            this.DatosOperativos.Size = new System.Drawing.Size(304, 48);
+            this.DatosOperativos.Size = new System.Drawing.Size(304, 60);
             this.DatosOperativos.TabIndex = 3;
             this.DatosOperativos.Text = "DatosOperativos";
             this.DatosOperativos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -233,7 +233,7 @@
             this.DatosOperativosSends.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DatosOperativosSends.Location = new System.Drawing.Point(3, 0);
             this.DatosOperativosSends.Name = "DatosOperativosSends";
-            this.DatosOperativosSends.Size = new System.Drawing.Size(304, 16);
+            this.DatosOperativosSends.Size = new System.Drawing.Size(304, 20);
             this.DatosOperativosSends.TabIndex = 0;
             this.DatosOperativosSends.Text = "DatosOperativosSends";
             this.DatosOperativosSends.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -242,9 +242,9 @@
             // 
             this.DatosOperativosComplete.AutoSize = true;
             this.DatosOperativosComplete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DatosOperativosComplete.Location = new System.Drawing.Point(3, 16);
+            this.DatosOperativosComplete.Location = new System.Drawing.Point(3, 20);
             this.DatosOperativosComplete.Name = "DatosOperativosComplete";
-            this.DatosOperativosComplete.Size = new System.Drawing.Size(304, 16);
+            this.DatosOperativosComplete.Size = new System.Drawing.Size(304, 20);
             this.DatosOperativosComplete.TabIndex = 1;
             this.DatosOperativosComplete.Text = "DatosOperativosComplete";
             this.DatosOperativosComplete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -253,19 +253,19 @@
             // 
             this.DatosOperativosFails.AutoSize = true;
             this.DatosOperativosFails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DatosOperativosFails.Location = new System.Drawing.Point(3, 32);
+            this.DatosOperativosFails.Location = new System.Drawing.Point(3, 40);
             this.DatosOperativosFails.Name = "DatosOperativosFails";
-            this.DatosOperativosFails.Size = new System.Drawing.Size(304, 16);
+            this.DatosOperativosFails.Size = new System.Drawing.Size(304, 20);
             this.DatosOperativosFails.TabIndex = 2;
             this.DatosOperativosFails.Text = "DatosOperativosFails";
             this.DatosOperativosFails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // MonitoreoVirtual
             // 
-            this.ClientSize = new System.Drawing.Size(672, 423);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "MonitoreoVirtual";
-            this.Text = "MonitoreoVirtual";
+            this.Size = new System.Drawing.Size(672, 423);
+            this.Load += new System.EventHandler(this.MonitoreoVirtual_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();

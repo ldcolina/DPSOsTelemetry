@@ -91,6 +91,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "listaTiempo";
             this.Text = "listaTiempo";
+            this.Load += new System.EventHandler(this.listaTiempo_Load);
             this.Resize += new System.EventHandler(this.listaTiempo_Resize);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

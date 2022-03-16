@@ -84,6 +84,10 @@
             // splitContainer3.Panel1
             // 
             this.splitContainer3.Panel1.Controls.Add(this.tableLayoutPanel4);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.AutoScroll = true;
             this.splitContainer3.Size = new System.Drawing.Size(812, 180);
             this.splitContainer3.SplitterWidth = 1;
             this.splitContainer3.TabIndex = 3;
@@ -129,6 +133,10 @@
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.Controls.Add(this.tableLayoutPanel3);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.AutoScroll = true;
             this.splitContainer2.Size = new System.Drawing.Size(812, 180);
             this.splitContainer2.SplitterWidth = 1;
             this.splitContainer2.TabIndex = 2;
@@ -174,6 +182,10 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.tableLayoutPanel2);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2MinSize = 0;
             this.splitContainer1.Size = new System.Drawing.Size(812, 180);
             this.splitContainer1.SplitterWidth = 1;
@@ -216,6 +228,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Guia";
             this.Size = new System.Drawing.Size(812, 616);
+            this.Load += new System.EventHandler(this.Guia_Load);
             this.Resize += new System.EventHandler(this.Guia_Resize);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);

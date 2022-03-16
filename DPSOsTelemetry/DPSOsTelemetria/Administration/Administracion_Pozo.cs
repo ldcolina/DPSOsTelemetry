@@ -26,8 +26,12 @@ namespace DPSOsTelemetria.Administration
         public void Refrescar()
         {
             if (string.IsNullOrEmpty(ID))
+            {
                 Text = Languages.Administration.Nuevo.Replace("{0}", num.ToString());
-
+                txtName.Enabled = false;
+            }
+            label1.Text = Languages.Administration.Main;
+            label2.Text = Languages.Administration.Info;
             lblName.Text = Languages.Administration.Nombre;
             lblToken.Text = Languages.Administration.Token;
             lblUnidades.Text = Languages.Administration.Unidad;
@@ -69,8 +73,9 @@ namespace DPSOsTelemetria.Administration
                 Unidades = ((Languages.ddl)ddlUnidades.SelectedItem).Value,
                 Type = ((Languages.ddl)ddlTipoPozo.SelectedItem).Value,
             };
+            Referencias ControlPozos = !string.IsNullOrEmpty(ID) ? JsonConvert.DeserializeObject<Referencias>(File.ReadAllText(ID)) : new();
 
-            if (JsonConvert.SerializeObject(new Referencias()) == JsonConvert.SerializeObject(newWell))
+            if (JsonConvert.SerializeObject(ControlPozos) == JsonConvert.SerializeObject(newWell))
                 return DialogResult.No;
 
             DialogResult consultar = DialogResult.Yes;
@@ -123,150 +128,123 @@ namespace DPSOsTelemetria.Administration
                 return DialogResult.Cancel;
             }
 
-            switch (!string.IsNullOrEmpty(ID))
+            if (!string.IsNullOrEmpty(ID))
             {
-                case true:
+                consultar = MessageBox.Show(Languages.DPSOsTelemetria.Guardado, Languages.DPSOsTelemetria.Aviso, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+                if (consultar != DialogResult.Yes)
+                    return consultar;
+            }
+
+            List<string> datos = Directory.GetFiles(file).ToList();
+            int cases = 0;
+            foreach (string val in datos)
+            {
+                Referencias d = JsonConvert.DeserializeObject<Referencias>(File.ReadAllText(val));
+
+                if ((d.Name == newWell.Name) && (d.Token == newWell.Token) && (d.Type == newWell.Type))
+                {
+                    cases = 3;
+                    ID = val;
+                    ControlPozos = d;
+                    break;
+                }
+                else if ((d.Token == newWell.Token) && (d.Name == newWell.Type))
+                {
+                    cases = 2;
+                    ID = val;
+                    ControlPozos = d;
+                    break;
+                }
+                else if (d.Token == newWell.Token)
+                {
+                    cases = 1;
+                    ID = val;
+                    ControlPozos = d;
+                    break;
+                }
+            };
+
+            string _mensaje = string.Empty;
+            switch (cases)
+            {
+                case 3:
+                    _mensaje = Languages.Administration.GuardadoComo3;
+                    break;
+
+                case 2:
+                    _mensaje = Languages.Administration.GuardadoComo2;
+                    break;
+
+                case 1:
+                    _mensaje = Languages.Administration.GuardadoComo1;
+                    break;
+            }
+
+            lblName.Text = Languages.Administration.Nombre;
+            lblToken.Text = Languages.Administration.Token;
+            lblUnidades.Text = Languages.Administration.Unidad;
+            lblTipo.Text = Languages.Administration.Tipo;
+
+            if (!string.IsNullOrEmpty(_mensaje))
+            {
+                _mensaje = _mensaje.Replace("{0}", newWell.Name).Replace("{1}", newWell.Token).Replace("{2}", SystemWell.GetString(newWell.Type));
+                consultar = MessageBox.Show(_mensaje, Languages.DPSOsTelemetria.Aviso, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+                if (consultar == DialogResult.Cancel)
+                    return consultar;
+
+                if (consultar != DialogResult.Yes)
+                {
+                    consultar = MessageBox.Show(Languages.Administration.Sustituir, Languages.DPSOsTelemetria.Aviso, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (consultar == DialogResult.Yes)
                     {
-                        Referencias ControlPozos = JsonConvert.DeserializeObject<Referencias>(File.ReadAllText(ID));
-
-                        if (JsonConvert.SerializeObject(ControlPozos) != JsonConvert.SerializeObject(newWell))
-                        {
-                            consultar = MessageBox.Show(Languages.DPSOsTelemetria.Guardado, Languages.DPSOsTelemetria.Aviso, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
-
-                            if (consultar != DialogResult.Yes)
-                                return consultar;
-                        }
-                        else
-                            return DialogResult.No;
-
-                        break;
+                        Administracion_Pozo_Load(null, null);
                     }
-                case false:
+                    else
                     {
-                        List<string> datos = Directory.GetFiles(file).ToList();
+                        ID = string.Empty;
 
-                        int cases = 0;
-                        Referencias ControlPozos = new();
-                        foreach (string val in datos)
-                        {
-                            Referencias d = JsonConvert.DeserializeObject<Referencias>(File.ReadAllText(val));
-
-                            if ((d.Name == newWell.Name) && (d.Token == newWell.Token) && (d.Type == newWell.Type))
-                            {
-                                cases = 4;
-                                ID = val;
-                                ControlPozos = d;
-                                break;
-                            }
-                            else if ((d.Token == newWell.Token) && (d.Name == newWell.Type))
-                            {
-                                cases = 3;
-                                ID = val;
-                                ControlPozos = d;
-                                break;
-                            }
-                            else if ((d.Name == newWell.Name) && (d.Name == newWell.Type))
-                            {
-                                cases = 2;
-                                ID = val;
-                                ControlPozos = d;
-                                break;
-                            }
-                            else if (d.Token == newWell.Token)
-                            {
-                                cases = 1;
-                                ID = val;
-                                ControlPozos = d;
-                                break;
-                            }
-                        };
-
-                        string _mensaje = string.Empty;
                         switch (cases)
                         {
-                            case 4:
-                                {
-                                    _mensaje = Languages.Administration.GuardadoComo4;
-
-                                    break;
-                                }
                             case 3:
                                 {
-                                    _mensaje = Languages.Administration.GuardadoComo3;
-
+                                    lblName.Text = $"{Languages.Administration.Nombre}*";
+                                    lblToken.Text = $"{Languages.Administration.Token}*";
+                                    lblTipo.Text = $"{Languages.Administration.Tipo}*";
                                     break;
                                 }
                             case 2:
                                 {
-                                    _mensaje = Languages.Administration.GuardadoComo2;
-
+                                    lblToken.Text = $"{Languages.Administration.Token}*";
+                                    lblTipo.Text = $"{Languages.Administration.Tipo}*";
                                     break;
                                 }
                             case 1:
                                 {
-                                    _mensaje = Languages.Administration.GuardadoComo1;
-
+                                    lblToken.Text = $"{Languages.Administration.Token}*";
                                     break;
                                 }
                         }
-
-                        if (!string.IsNullOrEmpty(_mensaje))
-                        {
-                            _mensaje = _mensaje.Replace("{0}", newWell.Name).Replace("{1}", newWell.Token).Replace("{2}", SystemWell.GetString(newWell.Type));
-                            consultar = MessageBox.Show(_mensaje, Languages.DPSOsTelemetria.Aviso, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
-
-                            if (consultar == DialogResult.Cancel)
-                                return consultar;
-
-                            if (consultar != DialogResult.Yes)
-                            {
-                                consultar = MessageBox.Show(Languages.Administration.Sustituir, Languages.DPSOsTelemetria.Aviso, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                                if (consultar == DialogResult.Yes)
-                                {
-                                    Administracion_Pozo_Load(null, null);
-                                }
-                                else
-                                {
-                                    ID = string.Empty;
-
-                                    switch (cases)
-                                    {
-                                        case 3:
-                                        case 1:
-                                            {
-                                                txtToken.SelectAll();
-                                                txtToken.Focus();
-                                                break;
-                                            }
-                                        case 2:
-                                            {
-                                                txtName.SelectAll();
-                                                txtName.Focus();
-                                                break;
-                                            }
-                                    }
-                                }
-
-                                return DialogResult.Cancel;
-                            }
-                        }
-                        else
-                        {
-                            while (datos.Exists(val => val == ID) || string.IsNullOrEmpty(ID))
-                            {
-                                while (ID.Length < 15)
-                                {
-                                    Guid Guid = Guid.NewGuid();
-                                    ID += Convert.ToBase64String(Guid.ToByteArray());
-                                    string t = new(ID.Where(c => Char.IsLetterOrDigit(c)).ToArray());
-                                    ID = t;
-                                }
-                                ID = ID[..15];
-                            }
-                        }
-                        break;
                     }
+
+                    return DialogResult.Cancel;
+                }
+            }
+            else if (string.IsNullOrEmpty(ID))
+            {
+                while (datos.Exists(val => val == ID) || string.IsNullOrEmpty(ID))
+                {
+                    while (ID.Length < 15)
+                    {
+                        Guid Guid = Guid.NewGuid();
+                        ID += Convert.ToBase64String(Guid.ToByteArray());
+                        string t = new(ID.Where(c => Char.IsLetterOrDigit(c)).ToArray());
+                        ID = t;
+                    }
+                    ID = ID[..15];
+                }
             }
 
             Text = newWell.Name;
@@ -309,7 +287,7 @@ namespace DPSOsTelemetria.Administration
             {
                 case "FL":
                     {
-                        pictureBox1.Image = Resources.Fluyente1;
+                        pictureBox1.Image = Resources.Fluyente;
                         break;
                     }
 
@@ -321,37 +299,37 @@ namespace DPSOsTelemetria.Administration
 
                 case "BN":
                     {
-                        pictureBox1.Image = Resources.Neumatico1;
+                        pictureBox1.Image = Resources.Neumatico;
                         break;
                     }
 
                 case "BNI":
                     {
-                        pictureBox1.Image = Resources.Neumatico_Intermitente1;
+                        pictureBox1.Image = Resources.Neumatico_Intermitente;
                         break;
                     }
 
                 case "BM":
                     {
-                        pictureBox1.Image = Resources.Mecanico1;
+                        pictureBox1.Image = Resources.Mecanico;
                         break;
                     }
 
                 case "BCP":
                     {
-                        pictureBox1.Image = Resources.Cavidad_Progresiva1;
+                        pictureBox1.Image = Resources.Cavidad_Progresiva;
                         break;
                     }
 
                 case "BEC":
                     {
-                        pictureBox1.Image = Resources.Electrocentrífugo1;
+                        pictureBox1.Image = Resources.Electrocentrífugo;
                         break;
                     }
 
                 case "BJP":
                     {
-                        pictureBox1.Image = Resources.Jet_Pump1;
+                        pictureBox1.Image = Resources.Jet_Pump;
                         break;
                     }
                 default:

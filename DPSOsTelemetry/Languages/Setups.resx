@@ -181,4 +181,21 @@
   <data name="VersionNotes2" xml:space="preserve">
     <value>{0} has been updated to version {1}</value>
   </data>
+  <data name="newPozo1" xml:space="preserve">
+    <value>Create new well
+- Use the keyboard shortcut Ctrl+N (Mac: Cmd+N);
+- From the menu, select {0}→{1}....</value>
+  </data>
+  <data name="newPozo2" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="newPozo3" xml:space="preserve">
+    <value>Token *must be unique for each well</value>
+  </data>
+  <data name="newPozo4" xml:space="preserve">
+    <value>Type of well</value>
+  </data>
+  <data name="newPozo5" xml:space="preserve">
+    <value>System of units to be used</value>
+  </data>
 </root>

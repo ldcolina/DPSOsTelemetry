@@ -72,5 +72,10 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoNeumatico
 
             #endregion DatosOperativos
         }
+
+        private void MonitoreoVirtual_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

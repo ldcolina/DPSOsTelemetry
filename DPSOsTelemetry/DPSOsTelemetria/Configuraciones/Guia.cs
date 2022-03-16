@@ -147,5 +147,17 @@
                     }
             }
         }
+
+        private void Guia_Load(object sender, EventArgs e)
+        {
+            var Guia1 = new Guia1() { Dock=DockStyle.Top };
+            splitContainer1.Panel2.Controls.Add(Guia1);
+
+            var Guia2 = new Guia2() { Dock = DockStyle.Top };
+            splitContainer2.Panel2.Controls.Add(Guia2);
+
+            var Guia3 = new Guia3() { Dock = DockStyle.Top };
+            splitContainer3.Panel2.Controls.Add(Guia3);
+        }
     }
 }

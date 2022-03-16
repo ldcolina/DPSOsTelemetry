@@ -101,22 +101,22 @@ namespace DPSOsTelemetria {
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Icon Cavidad_Progresiva {
+        internal static System.Drawing.Bitmap Cavidad_Progresiva {
             get {
                 object obj = ResourceManager.GetObject("Cavidad_Progresiva", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
         /// </summary>
-        internal static System.Drawing.Bitmap Cavidad_Progresiva1 {
+        internal static System.Drawing.Icon Cavidad_Progresiva1 {
             get {
                 object obj = ResourceManager.GetObject("Cavidad_Progresiva1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
@@ -141,41 +141,31 @@ namespace DPSOsTelemetria {
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
         /// </summary>
-        internal static System.Drawing.Bitmap configuraciones {
+        internal static System.Drawing.Icon configuraciones {
             get {
                 object obj = ResourceManager.GetObject("configuraciones", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Icon configuraciones1 {
+        internal static System.Drawing.Bitmap configuraciones1 {
             get {
                 object obj = ResourceManager.GetObject("configuraciones1", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Icon Electrocentrífugo {
+        internal static System.Drawing.Bitmap Electrocentrífugo {
             get {
                 object obj = ResourceManager.GetObject("Electrocentrífugo", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Electrocentrífugo1 {
-            get {
-                object obj = ResourceManager.GetObject("Electrocentrífugo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +173,9 @@ namespace DPSOsTelemetria {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
         /// </summary>
-        internal static System.Drawing.Icon Fluyente {
+        internal static System.Drawing.Icon Electrocentrífugo1 {
             get {
-                object obj = ResourceManager.GetObject("Fluyente", resourceCulture);
+                object obj = ResourceManager.GetObject("Electrocentrífugo1", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
@@ -193,10 +183,20 @@ namespace DPSOsTelemetria {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Fluyente1 {
+        internal static System.Drawing.Bitmap Fluyente {
+            get {
+                object obj = ResourceManager.GetObject("Fluyente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon Fluyente1 {
             get {
                 object obj = ResourceManager.GetObject("Fluyente1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
@@ -245,7 +245,17 @@ namespace DPSOsTelemetria {
         /// </summary>
         internal static System.Drawing.Bitmap istockphoto_1126282547_170667a {
             get {
-                object obj = ResourceManager.GetObject("istockphoto-1126282547-170667a", resourceCulture);
+                object obj = ResourceManager.GetObject("istockphoto_1126282547_170667a", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Jet_Pump {
+            get {
+                object obj = ResourceManager.GetObject("Jet_Pump", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,20 +263,10 @@ namespace DPSOsTelemetria {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
         /// </summary>
-        internal static System.Drawing.Icon Jet_Pump {
-            get {
-                object obj = ResourceManager.GetObject("Jet_Pump", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Jet_Pump1 {
+        internal static System.Drawing.Icon Jet_Pump1 {
             get {
                 object obj = ResourceManager.GetObject("Jet_Pump1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
@@ -291,51 +291,31 @@ namespace DPSOsTelemetria {
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Icon Mecanico {
+        internal static System.Drawing.Bitmap Mecanico {
             get {
                 object obj = ResourceManager.GetObject("Mecanico", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
         /// </summary>
-        internal static System.Drawing.Bitmap Mecanico1 {
+        internal static System.Drawing.Icon Mecanico1 {
             get {
                 object obj = ResourceManager.GetObject("Mecanico1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Icon Neumatico {
+        internal static System.Drawing.Bitmap Neumatico {
             get {
                 object obj = ResourceManager.GetObject("Neumatico", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
-        /// </summary>
-        internal static System.Drawing.Icon Neumatico_Intermitente {
-            get {
-                object obj = ResourceManager.GetObject("Neumatico_Intermitente", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Neumatico_Intermitente1 {
-            get {
-                object obj = ResourceManager.GetObject("Neumatico_Intermitente1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -343,9 +323,49 @@ namespace DPSOsTelemetria {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Neumatico1 {
+        internal static System.Drawing.Bitmap Neumatico_Intermitente {
+            get {
+                object obj = ResourceManager.GetObject("Neumatico_Intermitente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon Neumatico_Intermitente1 {
+            get {
+                object obj = ResourceManager.GetObject("Neumatico_Intermitente1", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon Neumatico1 {
             get {
                 object obj = ResourceManager.GetObject("Neumatico1", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_well {
+            get {
+                object obj = ResourceManager.GetObject("new_well", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nuevo_pozo {
+            get {
+                object obj = ResourceManager.GetObject("nuevo_pozo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -467,6 +487,42 @@ namespace DPSOsTelemetria {
             get {
                 object obj = ResourceManager.GetObject("seo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a New presentation image.
+        /// </summary>
+        internal static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Built-in menu: Help/Settings.
+        /// </summary>
+        internal static string String2 {
+            get {
+                return ResourceManager.GetString("String2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Program Usage Guide.
+        /// </summary>
+        internal static string String3 {
+            get {
+                return ResourceManager.GetString("String3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Greater interactive fluidity between windows.
+        /// </summary>
+        internal static string String4 {
+            get {
+                return ResourceManager.GetString("String4", resourceCulture);
             }
         }
         

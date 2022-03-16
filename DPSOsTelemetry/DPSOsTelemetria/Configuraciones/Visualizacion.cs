@@ -2,29 +2,17 @@
 {
     public partial class Visualizacion : UserControl
     {
+        private readonly string idioma;
+        private readonly int decimales;
         public Visualizacion()
         {
             InitializeComponent();
         }
 
-        public void Refrescar(string idioma, int decimales)
+        public Visualizacion(string _idioma, int _decimales):this()
         {
-            label1.Text = Languages.Setups.Visualizacion;
-            label2.Text = Languages.Setups.Idioma;
-            List<Languages.ddl> Idioma = Languages.Fills.ddlIdioma();
-            ddlIdioma.DataSource = Idioma;
-            ddlIdioma.DisplayMember = "Text";
-            try
-            {
-                ddlIdioma.SelectedItem = Idioma.Find(val => val.Value == idioma);
-            }
-            catch
-            {
-                ddlIdioma.SelectedItem = Idioma.First();
-            }
-
-            label3.Text = Languages.Setups.Decimales;
-            nDecimales.Value = decimales;
+            idioma = _idioma;
+            decimales = _decimales;
         }
 
         private void Changed(object sender, EventArgs e)
@@ -61,6 +49,26 @@
             {
             }
             label4.Text = string.Join("\n", texto.ToArray());
+        }
+
+        private void Visualizacion_Load(object sender, EventArgs e)
+        {
+            label1.Text = Languages.Setups.Visualizacion;
+            label2.Text = Languages.Setups.Idioma;
+            List<Languages.ddl> Idioma = Languages.Fills.ddlIdioma();
+            ddlIdioma.DataSource = Idioma;
+            ddlIdioma.DisplayMember = "Text";
+            try
+            {
+                ddlIdioma.SelectedItem = Idioma.Find(val => val.Value == idioma);
+            }
+            catch
+            {
+                ddlIdioma.SelectedItem = Idioma.First();
+            }
+
+            label3.Text = Languages.Setups.Decimales;
+            nDecimales.Value = decimales;
         }
     }
 }

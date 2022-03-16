@@ -716,10 +716,10 @@
             // 
             // TomaInformacion
             // 
-            this.ClientSize = new System.Drawing.Size(614, 563);
             this.Controls.Add(this.tabControl1);
             this.Name = "TomaInformacion";
-            this.Text = "TomaInformacion";
+            this.Size = new System.Drawing.Size(614, 563);
+            this.Load += new System.EventHandler(this.TomaInformacion_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);

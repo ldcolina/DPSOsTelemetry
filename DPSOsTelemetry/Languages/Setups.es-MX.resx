@@ -180,4 +180,21 @@
   <data name="VersionNotes2" xml:space="preserve">
     <value>{0} se a actualizado a la versión {1}</value>
   </data>
+  <data name="newPozo1" xml:space="preserve">
+    <value>Crear nuevo pozo
+- Use el atajo de teclado Ctrl+N (Mac: Cmd+N);
+- Desde el menú, seleccione {0}→{1}....</value>
+  </data>
+  <data name="newPozo2" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="newPozo3" xml:space="preserve">
+    <value>Token *debe ser único para cada pozo</value>
+  </data>
+  <data name="newPozo4" xml:space="preserve">
+    <value>Tipo de pozo</value>
+  </data>
+  <data name="newPozo5" xml:space="preserve">
+    <value>Sistema de unidades a emplear</value>
+  </data>
 </root>

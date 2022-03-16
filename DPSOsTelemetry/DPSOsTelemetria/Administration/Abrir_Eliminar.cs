@@ -14,8 +14,6 @@ namespace DPSOsTelemetria.Administration
         {
             InitializeComponent();
             DataBase = Main.Carpeta;
-
-            textBox1_TextChanged(textBox1, null);
         }
 
         #region Buscar pozo
@@ -100,6 +98,11 @@ namespace DPSOsTelemetria.Administration
         private void Abrir_Eliminar_FormClosed(object sender, FormClosedEventArgs e)
         {
             DialogResult = DialogResult.OK;
+        }
+
+        private void Abrir_Eliminar_Load(object sender, EventArgs e)
+        {
+            textBox1_TextChanged(textBox1, null);
         }
     }
 }

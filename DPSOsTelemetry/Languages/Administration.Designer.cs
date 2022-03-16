@@ -124,7 +124,7 @@ namespace Languages {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a The well {0} ({2}) already exists, do you want to replace it?.
+        ///   Busca una cadena traducida similar a The well with the token:{1} ({2}) already exists do you want to replace it?.
         /// </summary>
         public static string GuardadoComo2 {
             get {
@@ -133,7 +133,7 @@ namespace Languages {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a The well with the token:{1} ({2}) already exists do you want to replace it?.
+        ///   Busca una cadena traducida similar a The well {0} with the token:{1} ({2}) already exists, do you want to replace it?.
         /// </summary>
         public static string GuardadoComo3 {
             get {
@@ -142,11 +142,20 @@ namespace Languages {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a The well {0} with the token:{1} ({2}) already exists, do you want to replace it?.
+        ///   Busca una cadena traducida similar a Enter the well information:.
         /// </summary>
-        public static string GuardadoComo4 {
+        public static string Info {
             get {
-                return ResourceManager.GetString("GuardadoComo4", resourceCulture);
+                return ResourceManager.GetString("Info", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Create new well.
+        /// </summary>
+        public static string Main {
+            get {
+                return ResourceManager.GetString("Main", resourceCulture);
             }
         }
         

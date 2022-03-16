@@ -81,11 +81,11 @@
             this.tableLayoutPanel4.Controls.Add(this.lbTemporizador, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.Temporizador, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 486);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 481);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(562, 28);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(562, 33);
             this.tableLayoutPanel4.TabIndex = 4;
             // 
             // lbTemporizador
@@ -94,7 +94,7 @@
             this.lbTemporizador.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbTemporizador.Location = new System.Drawing.Point(3, 0);
             this.lbTemporizador.Name = "lbTemporizador";
-            this.lbTemporizador.Size = new System.Drawing.Size(103, 28);
+            this.lbTemporizador.Size = new System.Drawing.Size(115, 33);
             this.lbTemporizador.TabIndex = 0;
             this.lbTemporizador.Text = "lbTemporizador";
             this.lbTemporizador.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -102,9 +102,9 @@
             // Temporizador
             // 
             this.Temporizador.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Temporizador.Location = new System.Drawing.Point(112, 3);
+            this.Temporizador.Location = new System.Drawing.Point(124, 3);
             this.Temporizador.Name = "Temporizador";
-            this.Temporizador.Size = new System.Drawing.Size(447, 22);
+            this.Temporizador.Size = new System.Drawing.Size(435, 27);
             this.Temporizador.TabIndex = 1;
             this.Temporizador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Wrote_KeyPress);
             this.Temporizador.Leave += new System.EventHandler(this.Wrote_Leave);
@@ -122,15 +122,15 @@
             this.tlpVariables.RowCount = 2;
             this.tlpVariables.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpVariables.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpVariables.Size = new System.Drawing.Size(568, 483);
+            this.tlpVariables.Size = new System.Drawing.Size(568, 478);
             this.tlpVariables.TabIndex = 5;
             // 
             // TomaInformacion
             // 
-            this.ClientSize = new System.Drawing.Size(614, 563);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "TomaInformacion";
-            this.Text = "TomaInformacion";
+            this.Size = new System.Drawing.Size(614, 563);
+            this.Load += new System.EventHandler(this.TomaInformacion_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();

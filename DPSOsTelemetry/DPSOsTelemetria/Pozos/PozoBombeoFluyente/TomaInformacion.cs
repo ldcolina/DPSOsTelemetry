@@ -1378,5 +1378,10 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoFluyente
         private void Wrote_KeyPress(object sender, KeyPressEventArgs e) => Condicionantes.Wrote_KeyPress(sender, e);
 
         private void Wrote_Leave(object sender, EventArgs e) => ((TextBox)sender).Text = Condicionantes.Wrote_Formating(((TextBox)sender).Text);
+
+        private void TomaInformacion_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -162,16 +162,19 @@
   <data name="Token" xml:space="preserve">
     <value>Token</value>
   </data>
-  <data name="GuardadoComo4" xml:space="preserve">
+  <data name="GuardadoComo3" xml:space="preserve">
     <value>Ya existe el pozo {0} con el token:{1} ({2}) desea sustituirlo?</value>
   </data>
-  <data name="GuardadoComo3" xml:space="preserve">
-    <value>Ya existe el pozo con el token:{1} ({2}) desea sustituirlo?</value>
-  </data>
   <data name="GuardadoComo2" xml:space="preserve">
-    <value>Ya existe el pozo {0} ({2}) desea sustituirlo?</value>
+    <value>Ya existe el pozo con el token:{1} ({2}) desea sustituirlo?</value>
   </data>
   <data name="GuardadoComo1" xml:space="preserve">
     <value>Ya existe el pozo con el token:{1} desea sustituirlo?</value>
+  </data>
+  <data name="Main" xml:space="preserve">
+    <value>Crear nuevo pozo</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Introduzca la información del pozo:</value>
   </data>
 </root>

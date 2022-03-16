@@ -178,6 +178,53 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Create new well
+        ///- Use the keyboard shortcut Ctrl+N (Mac: Cmd+N);
+        ///- From the menu, select {0}→{1}.....
+        /// </summary>
+        public static string newPozo1 {
+            get {
+                return ResourceManager.GetString("newPozo1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Name.
+        /// </summary>
+        public static string newPozo2 {
+            get {
+                return ResourceManager.GetString("newPozo2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Token *must be unique for each well.
+        /// </summary>
+        public static string newPozo3 {
+            get {
+                return ResourceManager.GetString("newPozo3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Type of well.
+        /// </summary>
+        public static string newPozo4 {
+            get {
+                return ResourceManager.GetString("newPozo4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a System of units to be used.
+        /// </summary>
+        public static string newPozo5 {
+            get {
+                return ResourceManager.GetString("newPozo5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a What&apos;s new:.
         /// </summary>
         public static string News {

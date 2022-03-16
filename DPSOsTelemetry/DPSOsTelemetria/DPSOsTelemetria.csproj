@@ -6,32 +6,12 @@
     <Nullable>disable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <PackageIcon>antenna-with-signal-lines-symbol_icon-icons.com_56573.ico</PackageIcon>
     <Copyright>EnTecPro </Copyright>
     <SignAssembly>False</SignAssembly>
     <Version>1.0.0.0</Version>
-    <ApplicationIcon>Icons\antenna-with-signal-lines-symbol_icon-icons.com_56573.ico</ApplicationIcon>
+    <ApplicationIcon>Icons\icon\antenna-with-signal-lines-symbol_icon-icons.com_56573.ico</ApplicationIcon>
+    <PackageIcon>antenna-with-signal-lines-symbol_icon-icons.com_56573.png</PackageIcon>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="Icons\adddatabase_5668.ico" />
-    <None Remove="Icons\Cavidad Progresiva.jpg" />
-    <None Remove="Icons\chat_96641.png" />
-    <None Remove="Icons\configuraciones .png" />
-    <None Remove="Icons\Electrocentrífugo.jpg" />
-    <None Remove="Icons\Fluyente.jpg" />
-    <None Remove="Icons\inventory.png" />
-    <None Remove="Icons\Jet Pump.jpg" />
-    <None Remove="Icons\magnifying-glass.png" />
-    <None Remove="Icons\Mecanico.jpg" />
-    <None Remove="Icons\Neumatico Intermitente.jpg" />
-    <None Remove="Icons\Neumatico.jpg" />
-    <None Remove="Icons\off-button.png" />
-    <None Remove="Icons\oil-platform.png" />
-    <None Remove="Icons\oil_pump_icon_150208.ico" />
-    <None Remove="Icons\on-button.png" />
-    <None Remove="Icons\seo.png" />
-  </ItemGroup>
 
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Interop.Excel">
@@ -46,16 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Icons\adddatabase_5668.ico" />
-    <Content Include="Icons\antenna-with-signal-lines-symbol_icon-icons.com_56573.ico" />
-    <Content Include="Icons\Cavidad Progresiva.jpg" />
-    <Content Include="Icons\chat_96641.png" />
-    <Content Include="Icons\inventory.png" />
-    <Content Include="Icons\magnifying-glass.png" />
-    <Content Include="Icons\off-button.png" />
-    <Content Include="Icons\oil-platform.png" />
-    <Content Include="Icons\on-button.png" />
-    <Content Include="Icons\seo.png" />
+    <Content Include="Icons\icon\antenna-with-signal-lines-symbol_icon-icons.com_56573.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -145,10 +116,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Icons\antenna-with-signal-lines-symbol_icon-icons.com_56573.ico">
+    <None Update="Icons\ima_ico\antenna-with-signal-lines-symbol_icon-icons.com_56573.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
+
+  
 
 </Project>

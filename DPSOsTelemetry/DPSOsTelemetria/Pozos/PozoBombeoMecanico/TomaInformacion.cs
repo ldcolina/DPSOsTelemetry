@@ -1096,5 +1096,10 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoMecanico
         }
 
         #endregion CCartaDinagrafica
+
+        private void TomaInformacion_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

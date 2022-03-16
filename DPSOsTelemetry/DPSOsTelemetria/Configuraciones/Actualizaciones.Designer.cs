@@ -144,6 +144,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Actualizaciones";
             this.Size = new System.Drawing.Size(760, 404);
+            this.Load += new System.EventHandler(this.Actualizaciones_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();

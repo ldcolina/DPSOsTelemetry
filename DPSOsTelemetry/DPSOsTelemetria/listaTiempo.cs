@@ -14,21 +14,6 @@ namespace DPSOsTelemetria
         public listaTiempo()
         {
             InitializeComponent();
-
-            dt.Columns.Add("Name", typeof(string));
-            dt.Columns.Add("Type", typeof(string));
-            dt.Columns.Add("Token", typeof(string));
-            dt.Columns.Add("Date1", typeof(string));
-            dt.Columns.Add("Frequency_1", typeof(string));
-            dt.Columns.Add("Date2_1", typeof(string));
-            dt.Columns.Add("Frequency_2", typeof(string));
-            dt.Columns.Add("Date2_2", typeof(string));
-            dt.Columns.Add("ActionsDone", typeof(int));
-            dt.Columns.Add("ActionsClear", typeof(int));
-            dt.Columns.Add("ActionsFails", typeof(int));
-
-            dataGridView1.DataSource = dt;
-            Refrescar();
         }
 
         internal void Recargar(List<ReferenciasI> _Telemetria)
@@ -83,6 +68,9 @@ namespace DPSOsTelemetria
 
         internal void Refrescar()
         {
+            string select = dataGridView1.CurrentRow.Cells["Name"].Value.ToString();
+            button1.Text = Languages.listaTiempo.Mostrar.Replace("{0}", !string.IsNullOrEmpty(select) ? select : "-");
+
             Text = Languages.DPSOsTelemetria.listaTiempo;
 
             dataGridView1.Columns["Name"].HeaderText = Languages.listaTiempo.Nombre;
@@ -160,6 +148,24 @@ namespace DPSOsTelemetria
                 Size = MdiParent.ClientSize;
                 Location = new Point(0, 0);
             }
+        }
+
+        private void listaTiempo_Load(object sender, EventArgs e)
+        {
+            dt.Columns.Add("Name", typeof(string));
+            dt.Columns.Add("Type", typeof(string));
+            dt.Columns.Add("Token", typeof(string));
+            dt.Columns.Add("Date1", typeof(string));
+            dt.Columns.Add("Frequency_1", typeof(string));
+            dt.Columns.Add("Date2_1", typeof(string));
+            dt.Columns.Add("Frequency_2", typeof(string));
+            dt.Columns.Add("Date2_2", typeof(string));
+            dt.Columns.Add("ActionsDone", typeof(int));
+            dt.Columns.Add("ActionsClear", typeof(int));
+            dt.Columns.Add("ActionsFails", typeof(int));
+
+            dataGridView1.DataSource = dt;
+            Refrescar();
         }
     }
 }

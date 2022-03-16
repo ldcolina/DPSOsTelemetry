@@ -163,15 +163,18 @@
     <value>Token</value>
   </data>
   <data name="GuardadoComo2" xml:space="preserve">
-    <value>The well {0} ({2}) already exists, do you want to replace it?</value>
-  </data>
-  <data name="GuardadoComo3" xml:space="preserve">
     <value>The well with the token:{1} ({2}) already exists do you want to replace it?</value>
   </data>
-  <data name="GuardadoComo4" xml:space="preserve">
+  <data name="GuardadoComo3" xml:space="preserve">
     <value>The well {0} with the token:{1} ({2}) already exists, do you want to replace it?</value>
   </data>
   <data name="GuardadoComo1" xml:space="preserve">
     <value>The well with the token:{1} already exists do you want to replace it?</value>
+  </data>
+  <data name="Main" xml:space="preserve">
+    <value>Create new well</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Enter the well information:</value>
   </data>
 </root>

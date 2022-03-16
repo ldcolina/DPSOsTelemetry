@@ -212,5 +212,10 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoNeumaticoIntermitente
 
             #endregion CartaDinagrafica
         }
+
+        private void MonitoreoVirtual_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

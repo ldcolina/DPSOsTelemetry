@@ -131,6 +131,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Visualizacion";
             this.Size = new System.Drawing.Size(294, 288);
+            this.Load += new System.EventHandler(this.Visualizacion_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nDecimales)).EndInit();

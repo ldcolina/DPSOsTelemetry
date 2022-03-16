@@ -19,19 +19,6 @@ namespace DPSOsTelemetria
             string datos = File.ReadAllText(configuracion);
             newConfiguracion = JsonConvert.DeserializeObject<Setup>(datos);
 
-            Text = Languages.DPSOsTelemetria.Config;
-
-            Visualizacion.Text = Languages.Setups.Visualizacion;
-            Guia.Text = Languages.Setups.Guia;
-            Actualizaciones.Text = Languages.Setups.Actualizaciones;
-
-            Copyright.Text = Languages.Setups.Copyright.Replace("{0}", "2022");
-            Terms.Text = Languages.Setups.Terms;
-            Privacy.Text = Languages.Setups.Privacy;
-            LicenseAgreement.Text = Languages.Setups.LicenseAgreement;
-            Licenses.Text = Languages.Setups.Licenses;
-            Version.Text = Languages.Setups.Version.Replace("{0}", newConfiguracion.Version);
-            Visualizacion_Click(null, null);
         }
 
         private void Config_FormClosing(object sender, FormClosingEventArgs e)
@@ -190,9 +177,8 @@ namespace DPSOsTelemetria
                     {
                         splitContainer1.Panel2.Controls.Clear();
 
-                        Visualizacion _Visualizacion = new() { Dock = DockStyle.Fill };
+                        Visualizacion _Visualizacion = new(_decimales: newConfiguracion.Decimales, _idioma: newConfiguracion.Idioma) { Dock = DockStyle.Fill };
                         splitContainer1.Panel2.Controls.Add(_Visualizacion);
-                        _Visualizacion.Refrescar(decimales: newConfiguracion.Decimales, idioma: newConfiguracion.Idioma);
 
                         break;
                     }
@@ -236,6 +222,24 @@ namespace DPSOsTelemetria
         #endregion Licenses
 
         private void Config_Shown(object sender, EventArgs e) => splitContainer1.SplitterDistance = tableLayoutPanel2.Width;
+
+        private void Config_Load(object sender, EventArgs e)
+        {
+
+            Text = Languages.DPSOsTelemetria.Config;
+
+            Visualizacion.Text = Languages.Setups.Visualizacion;
+            Guia.Text = Languages.Setups.Guia;
+            Actualizaciones.Text = Languages.Setups.Actualizaciones;
+
+            Copyright.Text = Languages.Setups.Copyright.Replace("{0}", "2022");
+            Terms.Text = Languages.Setups.Terms;
+            Privacy.Text = Languages.Setups.Privacy;
+            LicenseAgreement.Text = Languages.Setups.LicenseAgreement;
+            Licenses.Text = Languages.Setups.Licenses;
+            Version.Text = Languages.Setups.Version.Replace("{0}", newConfiguracion.Version);
+            Visualizacion_Click(null, null);
+        }
     }
 
     public class Setup

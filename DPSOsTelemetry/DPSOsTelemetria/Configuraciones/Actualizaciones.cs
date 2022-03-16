@@ -31,5 +31,10 @@ namespace DPSOsTelemetria.Configuraciones
         }
 
         public Actualizaciones(Setup setup) : this() => VersionNotes.Text = Languages.Setups.VersionNotes1.Replace("{0}", Languages.DPSOsTelemetria.DPSOsTelemetry).Replace("{1}", setup.Version);
+
+        private void Actualizaciones_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -18,8 +18,8 @@ namespace DPSOsTelemetria
 
         public Main()
         {
-            Introducction introducction = new(version, anio);
-            introducction.ShowDialog();
+            //Introducction introducction = new(version, anio);
+            //introducction.ShowDialog();
 
             InitializeComponent();
             instance = this;
