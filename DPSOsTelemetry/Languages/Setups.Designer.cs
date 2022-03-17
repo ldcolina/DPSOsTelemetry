@@ -178,8 +178,16 @@ namespace Languages {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Create new well
-        ///- Use the keyboard shortcut Ctrl+N (Mac: Cmd+N);
+        ///   Busca una cadena traducida similar a Create new well.
+        /// </summary>
+        public static string newPozo {
+            get {
+                return ResourceManager.GetString("newPozo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a - Use the keyboard shortcut Ctrl+N (Mac: Cmd+N);
         ///- From the menu, select {0}→{1}.....
         /// </summary>
         public static string newPozo1 {
@@ -257,6 +265,160 @@ namespace Languages {
         public static string Terms {
             get {
                 return ResourceManager.GetString("Terms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Data transmission.
+        /// </summary>
+        public static string TransmisionDatos {
+            get {
+                return ResourceManager.GetString("TransmisionDatos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a - Use the keyboard shortcut Ctrl+O (Mac: Cmd+O);
+        ///- From the menu, select {0}→{1}.....
+        /// </summary>
+        public static string TransmisionDatos1 {
+            get {
+                return ResourceManager.GetString("TransmisionDatos1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Minimum value.
+        /// </summary>
+        public static string TransmisionDatos10 {
+            get {
+                return ResourceManager.GetString("TransmisionDatos10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Maximum value.
+        /// </summary>
+        public static string TransmisionDatos11 {
+            get {
+                return ResourceManager.GetString("TransmisionDatos11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Frequency time.
+        /// </summary>
+        public static string TransmisionDatos12 {
+            get {
+                return ResourceManager.GetString("TransmisionDatos12", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Once telemetry has begun, the following available fields are:.
+        /// </summary>
+        public static string TransmisionDatos13 {
+            get {
+                return ResourceManager.GetString("TransmisionDatos13", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fields with the transmitted information.
+        /// </summary>
+        public static string TransmisionDatos14 {
+            get {
+                return ResourceManager.GetString("TransmisionDatos14", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Current data transmission information.
+        /// </summary>
+        public static string TransmisionDatos15 {
+            get {
+                return ResourceManager.GetString("TransmisionDatos15", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Date and time that the next transmission will take place.
+        /// </summary>
+        public static string TransmisionDatos16 {
+            get {
+                return ResourceManager.GetString("TransmisionDatos16", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Search field by: Name / Token / Type.
+        /// </summary>
+        public static string TransmisionDatos2 {
+            get {
+                return ResourceManager.GetString("TransmisionDatos2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Information table of the wells created.
+        /// </summary>
+        public static string TransmisionDatos3 {
+            get {
+                return ResourceManager.GetString("TransmisionDatos3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enter to modify the well.
+        /// </summary>
+        public static string TransmisionDatos4 {
+            get {
+                return ResourceManager.GetString("TransmisionDatos4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Open window to perform telemetry.
+        /// </summary>
+        public static string TransmisionDatos5 {
+            get {
+                return ResourceManager.GetString("TransmisionDatos5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Eliminate the existing well.
+        /// </summary>
+        public static string TransmisionDatos6 {
+            get {
+                return ResourceManager.GetString("TransmisionDatos6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a After exiting the {0}, a window will open which will consist of a series of empty and disabled fields to fill in.
+        /// </summary>
+        public static string TransmisionDatos7 {
+            get {
+                return ResourceManager.GetString("TransmisionDatos7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enable / Disable telemetry.
+        /// </summary>
+        public static string TransmisionDatos8 {
+            get {
+                return ResourceManager.GetString("TransmisionDatos8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enable / Disable streaming data.
+        /// </summary>
+        public static string TransmisionDatos9 {
+            get {
+                return ResourceManager.GetString("TransmisionDatos9", resourceCulture);
             }
         }
         

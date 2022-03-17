@@ -11,19 +11,19 @@
 
         private void NuevoPozo_Click(object sender, EventArgs e)
         {
-            select = 1;
+            select = select != 1 ? 1 : 0;
             Guia_Resize(null, null);
         }
 
         private void TransmisionDatos_Click(object sender, EventArgs e)
         {
-            select = 2;
+            select = select != 2 ? 2 : 0;
             Guia_Resize(null, null);
         }
 
         private void ListaPozos_Click(object sender, EventArgs e)
         {
-            select = 3;
+            select = select != 3 ? 3 : 0;
             Guia_Resize(null, null);
         }
 
@@ -150,14 +150,131 @@
 
         private void Guia_Load(object sender, EventArgs e)
         {
-            var Guia1 = new Guia1() { Dock=DockStyle.Top };
-            splitContainer1.Panel2.Controls.Add(Guia1);
+            #region splitContainer1
 
-            var Guia2 = new Guia2() { Dock = DockStyle.Top };
-            splitContainer2.Panel2.Controls.Add(Guia2);
+            Guia1_Load();
 
-            var Guia3 = new Guia3() { Dock = DockStyle.Top };
-            splitContainer3.Panel2.Controls.Add(Guia3);
+            #endregion splitContainer1
+
+            #region splitContainer2
+
+            Guia2_Load();
+
+            #endregion splitContainer2
+
+            #region splitContainer3
+
+            //Guia3_Load();
+
+            #endregion splitContainer3
+        }
+
+        private void Guia1_Load()
+        {
+            NuevoPozo.Text = Languages.Setups.newPozo;
+
+            Bitmap Image = null;
+            switch (Thread.CurrentThread.CurrentCulture.Name)
+            {
+                case "en":
+                    {
+                        Image = (Bitmap)Resources.new_well;
+                        break;
+                    }
+                case "es":
+                case "es-MX":
+                    {
+                        Image = (Bitmap)Resources.nuevo_pozo;
+                        break;
+                    }
+            }
+
+            label1.Text = Languages.Setups.newPozo1.Replace("{0}", Languages.DPSOsTelemetria.Archivo).Replace("{1}", Languages.DPSOsTelemetria.Nuevo);
+
+            pictureBox1.Image = Image;
+
+            List<string> mensaje = new()
+            {
+                $"1.-\t{Languages.Setups.newPozo2}.",
+                $"2.-\t{Languages.Setups.newPozo3}.",
+                $"3.-\t{Languages.Setups.newPozo4}.",
+                $"4.-\t{Languages.Setups.newPozo5}.",
+            };
+            label2.Text = string.Join("\n", mensaje.ToArray());
+        }
+
+        private void Guia2_Load()
+        {
+            TransmisionDatos.Text = Languages.Setups.TransmisionDatos;
+
+            Bitmap Image1 = null, Image2 = null, Image3 = null;
+            switch (Thread.CurrentThread.CurrentCulture.Name)
+            {
+                case "en":
+                    {
+                        Image1 = (Bitmap)Resources.telemetry;
+                        Image2 = (Bitmap)Resources.telemetry2;
+                        Image3 = (Bitmap)Resources.telemetry3;
+                        break;
+                    }
+                case "es":
+                case "es-MX":
+                    {
+                        Image1 = (Bitmap)Resources.telemetria;
+                        Image2 = (Bitmap)Resources.telemetria2;
+                        Image3 = (Bitmap)Resources.telemetria3;
+                        break;
+                    }
+            }
+
+            label7.Text = Languages.Setups.TransmisionDatos1.Replace("{0}", Languages.DPSOsTelemetria.Archivo).Replace("{1}", Languages.DPSOsTelemetria.Abrir_Eliminar.Substring(0, Languages.DPSOsTelemetria.Abrir_Eliminar.IndexOf(" ")));
+
+            pictureBox2.Image = Image1;
+
+            List<string> mensaje1 = new()
+            {
+                $"1.-\t{Languages.Setups.TransmisionDatos2}.",
+                $"2.-\t{Languages.Setups.TransmisionDatos3}.",
+                $"3.-\t{Languages.Setups.TransmisionDatos4}.",
+                $"4.-\t{Languages.Setups.TransmisionDatos5}.",
+                $"5.-\t{Languages.Setups.TransmisionDatos6}.",
+            };
+            label8.Text = string.Join("\n", mensaje1.ToArray());
+
+            label3.Text = Languages.Setups.TransmisionDatos7.Replace("{0}", Languages.DPSOsTelemetria.Abrir_Eliminar);
+
+            pictureBox4.Image = Image2;
+
+            List<string> mensaje2 = new()
+            {
+                $"1.-\t{Languages.Setups.TransmisionDatos8}.",
+                $"2.-\t{Languages.Setups.TransmisionDatos9}.",
+                $"3.-\t{Languages.Setups.TransmisionDatos10}.",
+                $"4.-\t{Languages.Setups.TransmisionDatos11}.",
+                $"5.-\t{Languages.Setups.TransmisionDatos12}.",
+            };
+            label4.Text = string.Join("\n", mensaje2.ToArray());
+
+            label5.Text = Languages.Setups.TransmisionDatos13.Replace("{0}", Languages.DPSOsTelemetria.Archivo).Replace("{1}", Languages.DPSOsTelemetria.Abrir_Eliminar.Substring(0, Languages.DPSOsTelemetria.Abrir_Eliminar.IndexOf(" ")));
+
+            pictureBox3.Image = Image3;
+
+            List<string> mensaje3 = new()
+            {
+                $"1.-\t{Languages.Setups.TransmisionDatos8}.",
+                $"2.-\t{Languages.Setups.TransmisionDatos14}.",
+                $"3.-\t{Languages.Setups.TransmisionDatos15}.",
+                $"4.-\t{Languages.Setups.TransmisionDatos16}.",
+            };
+            label6.Text = string.Join("\n", mensaje3.ToArray());
+        }
+
+        private void pictureBox_Resize(object sender, EventArgs e)
+        {
+            int Width = ((PictureBox)sender).Width,
+                Height = ((PictureBox)sender).Image.Height * ((PictureBox)sender).Width / ((PictureBox)sender).Image.Width;
+
+            ((PictureBox)sender).Size = new Size(Width, Height);
         }
     }
 }

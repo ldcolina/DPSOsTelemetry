@@ -360,7 +360,7 @@
     <value>lbf</value>
     <comment>Fuerza: libra fuerza</comment>
   </data>
-	<data name="Libra_PieElevadoTres" xml:space="preserve">
+  <data name="Libra_PieElevadoTres" xml:space="preserve">
     <value>lb/cfs</value>
     <comment>Densidad: libra/pie cúbico</comment>
   </data>
@@ -600,7 +600,7 @@
     <value>cfs/sec</value>
     <comment>Flujo volumétrico de líquido: pies cúbicos por segundo</comment>
   </data>
-	<data name="PieCubicoEstandarPorBarrilTanqueReserva" xml:space="preserve">
+  <data name="PieCubicoEstandarPorBarrilTanqueReserva" xml:space="preserve">
     <value>SCF/STB</value>
     <comment>Relaciones de Volumen: Pie cúbico estándar por barril de tanque de reserva</comment>
   </data>

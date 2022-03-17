@@ -45,7 +45,7 @@ namespace DPSOsTelemetria
                 datas.Version = version;
                 File.WriteAllText(configuracion, JsonConvert.SerializeObject(datas, Formatting.Indented));
 
-                Novedades OpenForm = new(datas);
+                Configuraciones.Novedades OpenForm = new(datas, false);
                 OpenForm.ShowDialog();
             }
         }

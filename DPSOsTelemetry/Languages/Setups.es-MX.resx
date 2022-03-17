@@ -181,8 +181,7 @@
     <value>{0} se a actualizado a la versión {1}</value>
   </data>
   <data name="newPozo1" xml:space="preserve">
-    <value>Crear nuevo pozo
-- Use el atajo de teclado Ctrl+N (Mac: Cmd+N);
+    <value>- Use el atajo de teclado Ctrl+N (Mac: Cmd+N);
 - Desde el menú, seleccione {0}→{1}....</value>
   </data>
   <data name="newPozo2" xml:space="preserve">
@@ -196,5 +195,60 @@
   </data>
   <data name="newPozo5" xml:space="preserve">
     <value>Sistema de unidades a emplear</value>
+  </data>
+  <data name="newPozo" xml:space="preserve">
+    <value>Crear nuevo pozo</value>
+  </data>
+  <data name="TransmisionDatos" xml:space="preserve">
+    <value>Transmision de datos</value>
+  </data>
+  <data name="TransmisionDatos1" xml:space="preserve">
+    <value>- Use el atajo de teclado Ctrl+O (Mac: Cmd+O);
+- Desde el menú, seleccione {0}→{1}....</value>
+  </data>
+  <data name="TransmisionDatos2" xml:space="preserve">
+    <value>Campo de búsqueda por: Nombre / Token / Tipo</value>
+  </data>
+  <data name="TransmisionDatos3" xml:space="preserve">
+    <value>Tabla de información de los pozos creados</value>
+  </data>
+  <data name="TransmisionDatos4" xml:space="preserve">
+    <value>Entrar a modificar el pozo</value>
+  </data>
+  <data name="TransmisionDatos5" xml:space="preserve">
+    <value>Abrir ventana para realizar telemetría</value>
+  </data>
+  <data name="TransmisionDatos6" xml:space="preserve">
+    <value>Eliminar el pozo existente</value>
+  </data>
+  <data name="TransmisionDatos12" xml:space="preserve">
+    <value>Tiempo de frecuencia</value>
+  </data>
+  <data name="TransmisionDatos11" xml:space="preserve">
+    <value>Valor máximo</value>
+  </data>
+  <data name="TransmisionDatos10" xml:space="preserve">
+    <value>Valor mínimo</value>
+  </data>
+  <data name="TransmisionDatos9" xml:space="preserve">
+    <value>Activar / Desactivar datos</value>
+  </data>
+  <data name="TransmisionDatos8" xml:space="preserve">
+    <value>Activar / Desactivar telemetría</value>
+  </data>
+  <data name="TransmisionDatos7" xml:space="preserve">
+    <value>Después de salir del {0}, se abrirá una ventana del cual consistirá en una serie de campos vacíos y desactivados para llenar</value>
+  </data>
+  <data name="TransmisionDatos14" xml:space="preserve">
+    <value>Campos con la información transmitida</value>
+  </data>
+  <data name="TransmisionDatos15" xml:space="preserve">
+    <value>Información actual de la transmisión de datos</value>
+  </data>
+  <data name="TransmisionDatos16" xml:space="preserve">
+    <value>Fecha y hora que se realizará la siguiente transmisión</value>
+  </data>
+  <data name="TransmisionDatos13" xml:space="preserve">
+    <value>Una vez que la telemetría ha comenzado, los siguientes campos disponibles son:</value>
   </data>
 </root>

@@ -1,4 +1,4 @@
-﻿namespace DPSOsTelemetria
+﻿namespace DPSOsTelemetria.Configuraciones
 {
     partial class Novedades
     {

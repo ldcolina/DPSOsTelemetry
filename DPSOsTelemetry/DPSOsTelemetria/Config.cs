@@ -18,7 +18,6 @@ namespace DPSOsTelemetria
             configuracion = config;
             string datos = File.ReadAllText(configuracion);
             newConfiguracion = JsonConvert.DeserializeObject<Setup>(datos);
-
         }
 
         private void Config_FormClosing(object sender, FormClosingEventArgs e)
@@ -148,7 +147,11 @@ namespace DPSOsTelemetria
 
         private int select = 0;
 
-        private void Actualizacion_Click(object sender, EventArgs e) => Destino_Click(3);
+        private void Actualizacion_Click(object sender, EventArgs e)
+        {
+            Novedades OpenForm = new(newConfiguracion, true);
+            OpenForm.ShowDialog();
+        }
 
         private void Destino_Click(int _select)
         {
@@ -179,15 +182,6 @@ namespace DPSOsTelemetria
 
                         Visualizacion _Visualizacion = new(_decimales: newConfiguracion.Decimales, _idioma: newConfiguracion.Idioma) { Dock = DockStyle.Fill };
                         splitContainer1.Panel2.Controls.Add(_Visualizacion);
-
-                        break;
-                    }
-                case 3:
-                    {
-                        splitContainer1.Panel2.Controls.Clear();
-
-                        Actualizaciones _Actualizaciones = new(newConfiguracion) { Dock = DockStyle.Fill };
-                        splitContainer1.Panel2.Controls.Add(_Actualizaciones);
 
                         break;
                     }
@@ -225,7 +219,6 @@ namespace DPSOsTelemetria
 
         private void Config_Load(object sender, EventArgs e)
         {
-
             Text = Languages.DPSOsTelemetria.Config;
 
             Visualizacion.Text = Languages.Setups.Visualizacion;

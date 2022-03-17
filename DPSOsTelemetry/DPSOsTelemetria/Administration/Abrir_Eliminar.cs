@@ -102,7 +102,12 @@ namespace DPSOsTelemetria.Administration
 
         private void Abrir_Eliminar_Load(object sender, EventArgs e)
         {
-            textBox1_TextChanged(textBox1, null);
+            Text = Languages.DPSOsTelemetria.Abrir_Eliminar;
+            label1.Text = Languages.Administration.Buscar;
+            button1.Text = Languages.Administration.Modificar;
+            button2.Text = Languages.Administration.Abrir;
+            button3.Text = Languages.Administration.Eliminar;
+            textBox1_TextChanged(null, null);
         }
     }
 }

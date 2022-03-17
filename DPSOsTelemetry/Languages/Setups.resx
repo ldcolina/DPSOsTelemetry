@@ -182,8 +182,7 @@
     <value>{0} has been updated to version {1}</value>
   </data>
   <data name="newPozo1" xml:space="preserve">
-    <value>Create new well
-- Use the keyboard shortcut Ctrl+N (Mac: Cmd+N);
+    <value>- Use the keyboard shortcut Ctrl+N (Mac: Cmd+N);
 - From the menu, select {0}→{1}....</value>
   </data>
   <data name="newPozo2" xml:space="preserve">
@@ -197,5 +196,60 @@
   </data>
   <data name="newPozo5" xml:space="preserve">
     <value>System of units to be used</value>
+  </data>
+  <data name="newPozo" xml:space="preserve">
+    <value>Create new well</value>
+  </data>
+  <data name="TransmisionDatos" xml:space="preserve">
+    <value>Data transmission</value>
+  </data>
+  <data name="TransmisionDatos1" xml:space="preserve">
+    <value>- Use the keyboard shortcut Ctrl+O (Mac: Cmd+O);
+- From the menu, select {0}→{1}....</value>
+  </data>
+  <data name="TransmisionDatos2" xml:space="preserve">
+    <value>Search field by: Name / Token / Type</value>
+  </data>
+  <data name="TransmisionDatos3" xml:space="preserve">
+    <value>Information table of the wells created</value>
+  </data>
+  <data name="TransmisionDatos4" xml:space="preserve">
+    <value>Enter to modify the well</value>
+  </data>
+  <data name="TransmisionDatos5" xml:space="preserve">
+    <value>Open window to perform telemetry</value>
+  </data>
+  <data name="TransmisionDatos6" xml:space="preserve">
+    <value>Eliminate the existing well</value>
+  </data>
+  <data name="TransmisionDatos8" xml:space="preserve">
+    <value>Enable / Disable telemetry</value>
+  </data>
+  <data name="TransmisionDatos9" xml:space="preserve">
+    <value>Enable / Disable streaming data</value>
+  </data>
+  <data name="TransmisionDatos10" xml:space="preserve">
+    <value>Minimum value</value>
+  </data>
+  <data name="TransmisionDatos11" xml:space="preserve">
+    <value>Maximum value</value>
+  </data>
+  <data name="TransmisionDatos12" xml:space="preserve">
+    <value>Frequency time</value>
+  </data>
+  <data name="TransmisionDatos7" xml:space="preserve">
+    <value>After exiting the {0}, a window will open which will consist of a series of empty and disabled fields to fill in</value>
+  </data>
+  <data name="TransmisionDatos13" xml:space="preserve">
+    <value>Once telemetry has begun, the following available fields are:</value>
+  </data>
+  <data name="TransmisionDatos14" xml:space="preserve">
+    <value>Fields with the transmitted information</value>
+  </data>
+  <data name="TransmisionDatos15" xml:space="preserve">
+    <value>Current data transmission information</value>
+  </data>
+  <data name="TransmisionDatos16" xml:space="preserve">
+    <value>Date and time that the next transmission will take place</value>
   </data>
 </root>

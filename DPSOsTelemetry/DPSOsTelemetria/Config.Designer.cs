@@ -78,7 +78,7 @@
             // 
             this.splitContainer1.Panel1.Controls.Add(this.tableLayoutPanel2);
             this.splitContainer1.Panel1MinSize = 60;
-            this.splitContainer1.Size = new System.Drawing.Size(752, 597);
+            this.splitContainer1.Size = new System.Drawing.Size(752, 603);
             this.splitContainer1.SplitterDistance = 314;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 2;
@@ -102,14 +102,14 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(255, 597);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(255, 603);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // Version
             // 
             this.Version.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Version.AutoSize = true;
-            this.Version.Location = new System.Drawing.Point(195, 577);
+            this.Version.Location = new System.Drawing.Point(195, 583);
             this.Version.Name = "Version";
             this.Version.Size = new System.Drawing.Size(57, 20);
             this.Version.TabIndex = 3;
@@ -297,7 +297,7 @@
             // 
             this.Copyright.AutoSize = true;
             this.Copyright.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Copyright.Location = new System.Drawing.Point(3, 511);
+            this.Copyright.Location = new System.Drawing.Point(3, 517);
             this.Copyright.Name = "Copyright";
             this.Copyright.Size = new System.Drawing.Size(74, 20);
             this.Copyright.TabIndex = 0;
@@ -318,7 +318,7 @@
             this.tableLayoutPanel4.Controls.Add(this.label6, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.Licenses, 2, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 534);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 540);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -412,11 +412,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(752, 597);
+            this.ClientSize = new System.Drawing.Size(752, 603);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(770, 650);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(770, 650);
             this.Name = "Config";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configuración";
