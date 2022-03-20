@@ -460,7 +460,7 @@ namespace Languages {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a {0} {1} is currently the newest version available.
+        ///   Busca una cadena traducida similar a You are running version {1}.
         /// </summary>
         public static string VersionNotes1 {
             get {

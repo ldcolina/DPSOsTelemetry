@@ -25,7 +25,7 @@ namespace DPSOsTelemetria.Configuraciones
         {
             button1.Text = Languages.General.Aceptar;
             Text = Languages.Setups.ActualizacionPrograma;
-            MainLabel.Text = Languages.Setups.MainLabel.Replace("{0}", Languages.DPSOsTelemetria.DPSOsTelemetry);
+            MainLabel.Text = (select ? "{0}" : Languages.Setups.MainLabel).Replace("{0}", Languages.DPSOsTelemetria.DPSOsTelemetry);
             VersionNotes.Text = (select ? Languages.Setups.VersionNotes1 : Languages.Setups.VersionNotes2).Replace("{0}", Languages.DPSOsTelemetria.DPSOsTelemetry).Replace("{1}", setup.Version);
             ReleaseNotes.Text = Languages.Setups.ReleaseNotes;
 

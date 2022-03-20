@@ -168,9 +168,6 @@
   <data name="MainLabel" xml:space="preserve">
     <value>{0} está actualizado</value>
   </data>
-  <data name="VersionNotes1" xml:space="preserve">
-    <value>{0} {1} es actualmente la versión más reciente disponible</value>
-  </data>
   <data name="ActualizacionPrograma" xml:space="preserve">
     <value>Actualización de software</value>
   </data>
@@ -260,5 +257,8 @@
   </data>
   <data name="ListaPozos2" xml:space="preserve">
     <value>Esta ventana contiene información principal de los tiempos y estado de la transmisión realizada</value>
+  </data>
+  <data name="VersionNotes1" xml:space="preserve">
+    <value>Está ejecutando la versión {1}</value>
   </data>
 </root>

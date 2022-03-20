@@ -170,7 +170,7 @@
     <value>{0} está actualizado</value>
   </data>
   <data name="VersionNotes1" xml:space="preserve">
-    <value>{0} {1} es actualmente la versión más reciente disponible</value>
+    <value>Está ejecutando la versión {1}</value>
   </data>
   <data name="ActualizacionPrograma" xml:space="preserve">
     <value>Actualización de software</value>

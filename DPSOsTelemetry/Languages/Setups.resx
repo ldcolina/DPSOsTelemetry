@@ -170,7 +170,7 @@
     <value>{0} is up to date</value>
   </data>
   <data name="VersionNotes1" xml:space="preserve">
-    <value>{0} {1} is currently the newest version available</value>
+    <value>You are running version {1}</value>
   </data>
   <data name="ActualizacionPrograma" xml:space="preserve">
     <value>Software update</value>
