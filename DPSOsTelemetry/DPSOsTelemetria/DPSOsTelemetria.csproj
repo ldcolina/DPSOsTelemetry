@@ -74,10 +74,10 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Update="Pozos\PozoBombeoFluyente\MonitoreoVirtual.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Pozos\PozoBombeoFluyente\TomaInformacion.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Pozos\PozoBombeoJetPump\MonitoreoVirtual.cs">
       <SubType>Component</SubType>

@@ -11,7 +11,7 @@ namespace DPSOsTelemetria
 
         private readonly string configuracion;
         private readonly string file;
-        private readonly string version = "1.0.0.2";
+        private readonly string version = "1.0.0.3";
         private readonly string anio = "2022";
 
         #endregion Directorio

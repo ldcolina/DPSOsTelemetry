@@ -26,10 +26,8 @@ namespace DPSOsTelemetria.Administration
         public void Refrescar()
         {
             if (string.IsNullOrEmpty(ID))
-            {
                 Text = Languages.Administration.Nuevo.Replace("{0}", num.ToString());
-                txtName.Enabled = false;
-            }
+
             label1.Text = Languages.Administration.Main;
             label2.Text = Languages.Administration.Info;
             lblName.Text = Languages.Administration.Nombre;
@@ -262,6 +260,7 @@ namespace DPSOsTelemetria.Administration
 
                 Text = ControlPozos.Name;
 
+                txtName.Enabled = false;
                 txtName.Text = ControlPozos.Name;
 
                 txtToken.Text = ControlPozos.Token;
@@ -330,7 +329,7 @@ namespace DPSOsTelemetria.Administration
                     }
                 default:
                     {
-                        pictureBox1.Image = null;
+                        pictureBox1.Image = Resources.oil_platform1;
                         break;
                     }
             }
