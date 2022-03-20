@@ -4,12 +4,13 @@
     {
         private readonly string idioma;
         private readonly int decimales;
+
         public Visualizacion()
         {
             InitializeComponent();
         }
 
-        public Visualizacion(string _idioma, int _decimales):this()
+        public Visualizacion(string _idioma, int _decimales) : this()
         {
             idioma = _idioma;
             decimales = _decimales;

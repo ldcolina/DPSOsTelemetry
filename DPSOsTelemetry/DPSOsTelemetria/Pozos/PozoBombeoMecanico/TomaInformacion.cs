@@ -1099,7 +1099,6 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoMecanico
 
         private void TomaInformacion_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

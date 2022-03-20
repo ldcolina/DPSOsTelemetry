@@ -11,15 +11,15 @@ namespace DPSOsTelemetria
 
         private readonly string configuracion;
         private readonly string file;
-        private readonly string version = "1.0.0.2";
+        private readonly string version = "1.0.0.4";
         private readonly string anio = "2022";
 
         #endregion Directorio
 
         public Main()
         {
-            //Introducction introducction = new(version, anio);
-            //introducction.ShowDialog();
+            Introducction introducction = new(version, anio);
+            introducction.ShowDialog();
 
             InitializeComponent();
             instance = this;

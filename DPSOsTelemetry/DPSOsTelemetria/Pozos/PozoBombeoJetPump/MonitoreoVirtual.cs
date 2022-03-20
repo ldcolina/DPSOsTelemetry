@@ -215,7 +215,6 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoJetPump
 
         private void MonitoreoVirtual_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

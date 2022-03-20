@@ -159,9 +159,6 @@
   <data name="Off" xml:space="preserve">
     <value>Apagado</value>
   </data>
-  <data name="listaTiempo" xml:space="preserve">
-    <value>Lista de Temporizadores</value>
-  </data>
   <data name="Nuevo" xml:space="preserve">
     <value>Nuevo</value>
   </data>
@@ -188,5 +185,8 @@
   </data>
   <data name="Config" xml:space="preserve">
     <value>Configuración</value>
+  </data>
+  <data name="listaTiempo" xml:space="preserve">
+    <value>Lista de Transmisiones</value>
   </data>
 </root>

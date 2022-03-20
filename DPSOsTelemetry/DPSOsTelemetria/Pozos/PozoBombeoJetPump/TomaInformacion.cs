@@ -1381,7 +1381,6 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoJetPump
 
         private void TomaInformacion_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

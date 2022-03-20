@@ -420,7 +420,6 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoNeumatico
 
         private void TomaInformacion_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

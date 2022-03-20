@@ -164,7 +164,7 @@
 
             #region splitContainer3
 
-            //Guia3_Load();
+            Guia3_Load();
 
             #endregion splitContainer3
         }
@@ -201,6 +201,7 @@
                 $"4.-\t{Languages.Setups.newPozo5}.",
             };
             label2.Text = string.Join("\n", mensaje.ToArray());
+            splitContainer1.Panel2.AutoScroll = true;
         }
 
         private void Guia2_Load()
@@ -267,6 +268,16 @@
                 $"4.-\t{Languages.Setups.TransmisionDatos16}.",
             };
             label6.Text = string.Join("\n", mensaje3.ToArray());
+            splitContainer2.Panel2.AutoScroll = true;
+        }
+
+        private void Guia3_Load()
+        {
+            ListaPozos.Text = Languages.Setups.ListaPozos;
+
+            label9.Text = Languages.Setups.ListaPozos1.Replace("{0}", Languages.DPSOsTelemetria.Ayuda).Replace("{1}", Languages.DPSOsTelemetria.listaTiempo);
+            label10.Text = Languages.Setups.ListaPozos2;
+            splitContainer3.Panel2.AutoScroll = true;
         }
 
         private void pictureBox_Resize(object sender, EventArgs e)

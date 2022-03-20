@@ -169,6 +169,34 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a List of transmissions.
+        /// </summary>
+        public static string ListaPozos {
+            get {
+                return ResourceManager.GetString("ListaPozos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a To access this modality, you must have at least 1 well in transmission.
+        ///- From the menu, select {0}→{1}.....
+        /// </summary>
+        public static string ListaPozos1 {
+            get {
+                return ResourceManager.GetString("ListaPozos1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a This window contains main information of the times and status of the transmission made.
+        /// </summary>
+        public static string ListaPozos2 {
+            get {
+                return ResourceManager.GetString("ListaPozos2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a {0} is up to date.
         /// </summary>
         public static string MainLabel {

@@ -252,4 +252,14 @@
   <data name="TransmisionDatos16" xml:space="preserve">
     <value>Date and time that the next transmission will take place</value>
   </data>
+  <data name="ListaPozos" xml:space="preserve">
+    <value>List of transmissions</value>
+  </data>
+  <data name="ListaPozos1" xml:space="preserve">
+    <value>To access this modality, you must have at least 1 well in transmission.
+- From the menu, select {0}→{1}....</value>
+  </data>
+  <data name="ListaPozos2" xml:space="preserve">
+    <value>This window contains main information of the times and status of the transmission made</value>
+  </data>
 </root>

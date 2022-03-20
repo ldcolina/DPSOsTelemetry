@@ -138,32 +138,33 @@ namespace DPSOsTelemetria.Administration
 
             List<string> datos = Directory.GetFiles(file).ToList();
             int cases = 0;
-            foreach (string val in datos)
-            {
-                Referencias d = JsonConvert.DeserializeObject<Referencias>(File.ReadAllText(val));
+            if (txtName.Enabled)
+                foreach (string val in datos)
+                {
+                    Referencias d = JsonConvert.DeserializeObject<Referencias>(File.ReadAllText(val));
 
-                if ((d.Name == newWell.Name) && (d.Token == newWell.Token) && (d.Type == newWell.Type))
-                {
-                    cases = 3;
-                    ID = val;
-                    ControlPozos = d;
-                    break;
-                }
-                else if ((d.Token == newWell.Token) && (d.Name == newWell.Type))
-                {
-                    cases = 2;
-                    ID = val;
-                    ControlPozos = d;
-                    break;
-                }
-                else if (d.Token == newWell.Token)
-                {
-                    cases = 1;
-                    ID = val;
-                    ControlPozos = d;
-                    break;
-                }
-            };
+                    if ((d.Name == newWell.Name) && (d.Token == newWell.Token) && (d.Type == newWell.Type))
+                    {
+                        cases = 3;
+                        ID = val;
+                        ControlPozos = d;
+                        break;
+                    }
+                    else if ((d.Token == newWell.Token) && (d.Name == newWell.Type))
+                    {
+                        cases = 2;
+                        ID = val;
+                        ControlPozos = d;
+                        break;
+                    }
+                    else if (d.Token == newWell.Token)
+                    {
+                        cases = 1;
+                        ID = val;
+                        ControlPozos = d;
+                        break;
+                    }
+                };
 
             string _mensaje = string.Empty;
             switch (cases)
@@ -180,11 +181,6 @@ namespace DPSOsTelemetria.Administration
                     _mensaje = Languages.Administration.GuardadoComo1;
                     break;
             }
-
-            lblName.Text = Languages.Administration.Nombre;
-            lblToken.Text = Languages.Administration.Token;
-            lblUnidades.Text = Languages.Administration.Unidad;
-            lblTipo.Text = Languages.Administration.Tipo;
 
             if (!string.IsNullOrEmpty(_mensaje))
             {

@@ -251,4 +251,14 @@
   <data name="TransmisionDatos13" xml:space="preserve">
     <value>Una vez que la telemetría ha comenzado, los siguientes campos disponibles son:</value>
   </data>
+  <data name="ListaPozos" xml:space="preserve">
+    <value>Lista de transmisiones</value>
+  </data>
+  <data name="ListaPozos1" xml:space="preserve">
+    <value>Para acceder a esta modalidad, debe de tener al menos 1 pozo en transmisión.
+- Desde el menú, seleccione {0}→{1}....</value>
+  </data>
+  <data name="ListaPozos2" xml:space="preserve">
+    <value>Esta ventana contiene información principal de los tiempos y estado de la transmisión realizada</value>
+  </data>
 </root>

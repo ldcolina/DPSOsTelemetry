@@ -205,7 +205,7 @@ namespace Languages {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a List of timers.
+        ///   Busca una cadena traducida similar a List of Transmissions.
         /// </summary>
         public static string listaTiempo {
             get {

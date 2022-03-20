@@ -29,4 +29,4 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("CodeQuality", "IDE0076:\"SuppressMessageAttribute\" global no válido", Justification = "<pendiente>")]
 [assembly: SuppressMessage("Style", "IDE1006:Estilos de nombres", Justification = "<pendiente>", Scope = "member", Target = "~M:DPSOsTelemetria.Configuraciones.Introducction.timer1_Tick(System.Object,System.EventArgs)")]
 [assembly: SuppressMessage("Style", "IDE1006:Estilos de nombres", Justification = "<pendiente>", Scope = "member", Target = "~M:DPSOsTelemetria.Configuraciones.Introducction.timer2_Tick(System.Object,System.EventArgs)")]
-[assembly: SuppressMessage("CodeQuality", "IDE0051:Quitar miembros privados no utilizados", Justification = "<pendiente>", Scope = "member", Target = "~F:DPSOsTelemetria.Main.anio")]
+[assembly: SuppressMessage("CodeQuality", "IDE0051:Quitar miembros privados no utilizados", Justification = "<pendiente>", Scope = "member", Target = "~F:DPSOsTelemetria.Main.anio")] 

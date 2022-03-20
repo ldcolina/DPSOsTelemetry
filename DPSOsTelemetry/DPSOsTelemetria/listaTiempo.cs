@@ -68,8 +68,15 @@ namespace DPSOsTelemetria
 
         internal void Refrescar()
         {
-            string select = dataGridView1.CurrentRow.Cells["Name"].Value.ToString();
-            button1.Text = Languages.listaTiempo.Mostrar.Replace("{0}", !string.IsNullOrEmpty(select) ? select : "-");
+            try
+            {
+                string select = dataGridView1.CurrentRow.Cells["Name"].Value.ToString();
+                button1.Text = Languages.listaTiempo.Mostrar.Replace("{0}", !string.IsNullOrEmpty(select) ? select : "-");
+            }
+            catch
+            {
+                button1.Text = Languages.listaTiempo.Mostrar.Replace("{0}", "-");
+            }
 
             Text = Languages.DPSOsTelemetria.listaTiempo;
 

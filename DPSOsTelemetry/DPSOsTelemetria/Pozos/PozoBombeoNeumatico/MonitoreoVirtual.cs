@@ -75,7 +75,6 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoNeumatico
 
         private void MonitoreoVirtual_Load(object sender, EventArgs e)
         {
-
         }
     }
 }
