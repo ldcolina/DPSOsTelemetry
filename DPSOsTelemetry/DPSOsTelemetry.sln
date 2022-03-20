@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Languages", "Languages\Lang
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DPSOsTelemetria", "DPSOsTelemetria\DPSOsTelemetria.csproj", "{EE00B4D8-8150-4140-A89C-4404512D6A6C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPSOsTelemetria2", "DPSOsTelemetria2\DPSOsTelemetria2.csproj", "{1C0CC814-6227-46EC-B44C-AD8EC8D05FAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{EE00B4D8-8150-4140-A89C-4404512D6A6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE00B4D8-8150-4140-A89C-4404512D6A6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE00B4D8-8150-4140-A89C-4404512D6A6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C0CC814-6227-46EC-B44C-AD8EC8D05FAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C0CC814-6227-46EC-B44C-AD8EC8D05FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C0CC814-6227-46EC-B44C-AD8EC8D05FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C0CC814-6227-46EC-B44C-AD8EC8D05FAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

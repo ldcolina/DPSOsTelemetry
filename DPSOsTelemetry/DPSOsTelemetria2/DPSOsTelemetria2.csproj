@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C0CC814-6227-46EC-B44C-AD8EC8D05FAD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DPSOsTelemetria2</RootNamespace>
+    <AssemblyName>DPSOsTelemetria2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\P51s\source\repos\DPSOsTelemetryAutoUpdate\published2\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>https://raw.githubusercontent.com/ldcolina/DPSOsTelemetry/master/published2/</UpdateUrl>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A91AB1FD3AAA5A880E1BB7EA98ED7814403CD276</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>DPSOsTelemetria2_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administration\Abrir_Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\Abrir_Eliminar.Designer.cs">
+      <DependentUpon>Abrir_Eliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Administracion_Pozo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\Administracion_Pozo.Designer.cs">
+      <DependentUpon>Administracion_Pozo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config.Designer.cs">
+      <DependentUpon>Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuraciones\Guia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Configuraciones\Guia.Designer.cs">
+      <DependentUpon>Guia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuraciones\Novedades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuraciones\Novedades.Designer.cs">
+      <DependentUpon>Novedades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuraciones\Visualizacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Configuraciones\Visualizacion.Designer.cs">
+      <DependentUpon>Visualizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Introducction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Introducction.Designer.cs">
+      <DependentUpon>Introducction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listaTiempo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listaTiempo.Designer.cs">
+      <DependentUpon>listaTiempo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pozo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pozo.Designer.cs">
+      <DependentUpon>Pozo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoCavidadProgresiva\MonitoreoVirtual.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoCavidadProgresiva\MonitoreoVirtual.Designer.cs">
+      <DependentUpon>MonitoreoVirtual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoCavidadProgresiva\TomaInformacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoCavidadProgresiva\TomaInformacion.Designer.cs">
+      <DependentUpon>TomaInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoElectroCentrifugo\MonitoreoVirtual.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoElectroCentrifugo\MonitoreoVirtual.Designer.cs">
+      <DependentUpon>MonitoreoVirtual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoElectroCentrifugo\TomaInformacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoElectroCentrifugo\TomaInformacion.Designer.cs">
+      <DependentUpon>TomaInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoFluyenteGas\MonitoreoVirtual.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoFluyenteGas\MonitoreoVirtual.Designer.cs">
+      <DependentUpon>MonitoreoVirtual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoFluyenteGas\TomaInformacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoFluyenteGas\TomaInformacion.Designer.cs">
+      <DependentUpon>TomaInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoFluyente\MonitoreoVirtual.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoFluyente\MonitoreoVirtual.Designer.cs">
+      <DependentUpon>MonitoreoVirtual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoFluyente\TomaInformacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoFluyente\TomaInformacion.Designer.cs">
+      <DependentUpon>TomaInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoJetPump\MonitoreoVirtual.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoJetPump\MonitoreoVirtual.Designer.cs">
+      <DependentUpon>MonitoreoVirtual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoJetPump\TomaInformacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoJetPump\TomaInformacion.Designer.cs">
+      <DependentUpon>TomaInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoMecanico\MonitoreoVirtual.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoMecanico\MonitoreoVirtual.Designer.cs">
+      <DependentUpon>MonitoreoVirtual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoMecanico\TomaInformacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoMecanico\TomaInformacion.Designer.cs">
+      <DependentUpon>TomaInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoNeumaticoIntermitente\MonitoreoVirtual.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoNeumaticoIntermitente\MonitoreoVirtual.Designer.cs">
+      <DependentUpon>MonitoreoVirtual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoNeumaticoIntermitente\TomaInformacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoNeumaticoIntermitente\TomaInformacion.Designer.cs">
+      <DependentUpon>TomaInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoNeumatico\MonitoreoVirtual.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoNeumatico\MonitoreoVirtual.Designer.cs">
+      <DependentUpon>MonitoreoVirtual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoNeumatico\TomaInformacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pozos\PozoBombeoNeumatico\TomaInformacion.Designer.cs">
+      <DependentUpon>TomaInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Administration\Abrir_Eliminar.resx">
+      <DependentUpon>Abrir_Eliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\Administracion_Pozo.resx">
+      <DependentUpon>Administracion_Pozo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config.resx">
+      <DependentUpon>Config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuraciones\Guia.resx">
+      <DependentUpon>Guia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuraciones\Novedades.resx">
+      <DependentUpon>Novedades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuraciones\Visualizacion.resx">
+      <DependentUpon>Visualizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Introducction.resx">
+      <DependentUpon>Introducction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listaTiempo.resx">
+      <DependentUpon>listaTiempo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pozo.resx">
+      <DependentUpon>Pozo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pozos\PozoBombeoCavidadProgresiva\MonitoreoVirtual.resx">
+      <DependentUpon>MonitoreoVirtual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pozos\PozoBombeoCavidadProgresiva\TomaInformacion.resx">
+      <DependentUpon>TomaInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pozos\PozoBombeoElectroCentrifugo\MonitoreoVirtual.resx">
+      <DependentUpon>MonitoreoVirtual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pozos\PozoBombeoElectroCentrifugo\TomaInformacion.resx">
+      <DependentUpon>TomaInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pozos\PozoBombeoFluyenteGas\MonitoreoVirtual.resx">
+      <DependentUpon>MonitoreoVirtual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pozos\PozoBombeoFluyenteGas\TomaInformacion.resx">
+      <DependentUpon>TomaInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pozos\PozoBombeoFluyente\MonitoreoVirtual.resx">
+      <DependentUpon>MonitoreoVirtual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pozos\PozoBombeoFluyente\TomaInformacion.resx">
+      <DependentUpon>TomaInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pozos\PozoBombeoJetPump\MonitoreoVirtual.resx">
+      <DependentUpon>MonitoreoVirtual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pozos\PozoBombeoJetPump\TomaInformacion.resx">
+      <DependentUpon>TomaInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pozos\PozoBombeoMecanico\MonitoreoVirtual.resx">
+      <DependentUpon>MonitoreoVirtual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pozos\PozoBombeoMecanico\TomaInformacion.resx">
+      <DependentUpon>TomaInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pozos\PozoBombeoNeumaticoIntermitente\MonitoreoVirtual.resx">
+      <DependentUpon>MonitoreoVirtual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pozos\PozoBombeoNeumaticoIntermitente\TomaInformacion.resx">
+      <DependentUpon>TomaInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pozos\PozoBombeoNeumatico\MonitoreoVirtual.resx">
+      <DependentUpon>MonitoreoVirtual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pozos\PozoBombeoNeumatico\TomaInformacion.resx">
+      <DependentUpon>TomaInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="DPSOsTelemetria2_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons\esp\new_well.png" />
+    <Content Include="Icons\esp\nuevo_pozo.png" />
+    <Content Include="Icons\esp\telemetria.png" />
+    <Content Include="Icons\esp\telemetria2.png" />
+    <Content Include="Icons\esp\telemetria3.png" />
+    <Content Include="Icons\esp\telemetry.png" />
+    <Content Include="Icons\esp\telemetry2.png" />
+    <Content Include="Icons\esp\telemetry3.png" />
+    <Content Include="Icons\icon\adddatabase_5668.ico" />
+    <Content Include="Icons\icon\antenna-with-signal-lines-symbol_icon-icons.com_56573.ico" />
+    <Content Include="Icons\icon\chat_96641.ico" />
+    <Content Include="Icons\icon\configuraciones.ico" />
+    <Content Include="Icons\icon\instrucciones.ico" />
+    <Content Include="Icons\icon\inventory.ico" />
+    <Content Include="Icons\icon\magnifying-glass.ico" />
+    <Content Include="Icons\icon\off-button.ico" />
+    <Content Include="Icons\icon\oil-platform.ico" />
+    <Content Include="Icons\icon\on-button.ico" />
+    <Content Include="Icons\icon\optimization_timer_icon_187421.ico" />
+    <Content Include="Icons\icon\refresh.ico" />
+    <Content Include="Icons\icon\seo.ico" />
+    <Content Include="Icons\icon\tecnologia.ico" />
+    <Content Include="Icons\ima_ico\adddatabase_5668.png" />
+    <Content Include="Icons\ima_ico\antenna-with-signal-lines-symbol_icon-icons.com_56573.png" />
+    <Content Include="Icons\ima_ico\chat_96641.png" />
+    <Content Include="Icons\ima_ico\configuraciones.png" />
+    <Content Include="Icons\ima_ico\instrucciones.png" />
+    <Content Include="Icons\ima_ico\inventory.png" />
+    <Content Include="Icons\ima_ico\magnifying-glass.png" />
+    <Content Include="Icons\ima_ico\off-button.png" />
+    <Content Include="Icons\ima_ico\oil-platform.png" />
+    <Content Include="Icons\ima_ico\on-button.png" />
+    <Content Include="Icons\ima_ico\optimization_timer_icon_187421.png" />
+    <Content Include="Icons\ima_ico\refresh.png" />
+    <Content Include="Icons\ima_ico\seo.png" />
+    <Content Include="Icons\ima_ico\tecnologia.png" />
+    <Content Include="Icons\istockphoto-1126282547-170667a.jpg" />
+    <Content Include="Icons\Pozos\Cavidad Progresiva.ico" />
+    <Content Include="Icons\Pozos\Cavidad Progresiva.jpg" />
+    <Content Include="Icons\Pozos\Electrocentrífugo.ico" />
+    <Content Include="Icons\Pozos\Electrocentrífugo.png" />
+    <Content Include="Icons\Pozos\Fluyente.ico" />
+    <Content Include="Icons\Pozos\Fluyente.png" />
+    <Content Include="Icons\Pozos\Jet Pump.ico" />
+    <Content Include="Icons\Pozos\Jet Pump.png" />
+    <Content Include="Icons\Pozos\Mecanico.ico" />
+    <Content Include="Icons\Pozos\Mecanico.png" />
+    <Content Include="Icons\Pozos\Neumatico Intermitente.ico" />
+    <Content Include="Icons\Pozos\Neumatico Intermitente.png" />
+    <Content Include="Icons\Pozos\Neumatico.ico" />
+    <Content Include="Icons\Pozos\Neumatico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Languages\Languages.csproj">
+      <Project>{f0ee9aee-ea74-433d-9bbe-7bc0c0983444}</Project>
+      <Name>Languages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Telemetria\Telemetria.csproj">
+      <Project>{15f01879-739e-471e-89e1-0e66c34bd745}</Project>
+      <Name>Telemetria</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

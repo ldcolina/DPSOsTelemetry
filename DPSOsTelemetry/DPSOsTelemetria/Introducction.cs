@@ -26,7 +26,7 @@
             while (Opacity > 0)
             {
                 Opacity = (double)((decimal)Opacity - 0.1M);
-                System.Threading.Thread.Sleep(10);
+                Thread.Sleep(10);
             }
         }
 
