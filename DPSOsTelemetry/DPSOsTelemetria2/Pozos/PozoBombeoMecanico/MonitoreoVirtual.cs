@@ -1,17 +1,20 @@
-﻿using Telemetria;
+﻿using DevExpress.Utils;
+using DevExpress.XtraCharts;
 using System.Data;
-
-using System;
+using System.Drawing;
+using System.Linq;
+using Telemetria;
+using System.Windows.Forms;
 
 namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
 {
-    public partial class MonitoreoVirtual : System.Windows.Forms.UserControl
+    public partial class MonitoreoVirtual : UserControl
     {
         public MonitoreoVirtual()
 
         {
             InitializeComponent();
-            //chart1.Legend.Visibility = DefaultBoolean.False;
+            chart1.Legend.Visibility = DefaultBoolean.False;
         }
 
         internal void Recargar(int decimales, ReferenciasI _Telemetria)
@@ -112,52 +115,52 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             for (int i = 0; i < CCartaDinagrafica.SurfaceCardPosition.Count; i++)
                 dt.Rows.Add(CCartaDinagrafica.SurfaceCardPosition[i], CCartaDinagrafica.SurfaceCardLoad[i]);
 
-            //Series Serie = new Series(dt.TableName, ViewType.ScatterLine)
-            //{
-            //    DataSource = dt,
-            //    ArgumentDataMember = "X",
-            //};
-            //Serie.ValueDataMembers.AddRange("Y");
+            Series Serie = new Series(dt.TableName, ViewType.ScatterLine)
+            {
+                DataSource = dt,
+                ArgumentDataMember = "X",
+            };
+            Serie.ValueDataMembers.AddRange("Y");
 
-            //chart1.Series.Clear();
-            //chart1.Series.Add(Serie);
+            chart1.Series.Clear();
+            chart1.Series.Add(Serie);
 
-            //decimal MinX = CCartaDinagrafica.SurfaceCardPosition.Count > 0 ? CCartaDinagrafica.SurfaceCardPosition.Min(val => val) : 0;
-            //decimal MaxX = CCartaDinagrafica.SurfaceCardPosition.Count > 0 ? CCartaDinagrafica.SurfaceCardPosition.Max(val => val) : 0;
-            //decimal MinY = CCartaDinagrafica.SurfaceCardLoad.Count > 0 ? CCartaDinagrafica.SurfaceCardLoad.Min(val => val) : 0;
-            //decimal MaxY = CCartaDinagrafica.SurfaceCardLoad.Count > 0 ? CCartaDinagrafica.SurfaceCardLoad.Max(val => val) : 0;
+            decimal MinX = CCartaDinagrafica.SurfaceCardPosition.Count > 0 ? CCartaDinagrafica.SurfaceCardPosition.Min(val => val) : 0;
+            decimal MaxX = CCartaDinagrafica.SurfaceCardPosition.Count > 0 ? CCartaDinagrafica.SurfaceCardPosition.Max(val => val) : 0;
+            decimal MinY = CCartaDinagrafica.SurfaceCardLoad.Count > 0 ? CCartaDinagrafica.SurfaceCardLoad.Min(val => val) : 0;
+            decimal MaxY = CCartaDinagrafica.SurfaceCardLoad.Count > 0 ? CCartaDinagrafica.SurfaceCardLoad.Max(val => val) : 0;
 
-            //decimal area = (MaxX - MinX) / 2;
-            //if (area == 0)
-            //    area = 1;
-            //MinX -= area * 1 / 16;
-            //MaxX += area * 1 / 16;
+            decimal area = (MaxX - MinX) / 2;
+            if (area == 0)
+                area = 1;
+            MinX -= area * 1 / 16;
+            MaxX += area * 1 / 16;
 
-            //area = (MaxY - MinY) / 2;
-            //if (area == 0)
-            //    area = 1;
-            //MinY -= area * 1 / 16;
-            //MaxY += area * 1 / 16;
+            area = (MaxY - MinY) / 2;
+            if (area == 0)
+                area = 1;
+            MinY -= area * 1 / 16;
+            MaxY += area * 1 / 16;
 
-            //chart1.Legend.Visibility = DefaultBoolean.False;
+            chart1.Legend.Visibility = DefaultBoolean.False;
 
-            //XYDiagram diagram = (XYDiagram)chart1.Diagram;
-            //diagram.AxisX.WholeRange.SideMarginsValue = 0;
-            //diagram.AxisY.WholeRange.SideMarginsValue = 0;
-            //diagram.AxisX.WholeRange.SetMinMaxValues(MinX, MaxX);
-            //diagram.AxisY.WholeRange.SetMinMaxValues(MinY, MaxY);
+            XYDiagram diagram = (XYDiagram)chart1.Diagram;
+            diagram.AxisX.WholeRange.SideMarginsValue = 0;
+            diagram.AxisY.WholeRange.SideMarginsValue = 0;
+            diagram.AxisX.WholeRange.SetMinMaxValues(MinX, MaxX);
+            diagram.AxisY.WholeRange.SetMinMaxValues(MinY, MaxY);
 
-            //// Customize the appearance of the Desplazamiento (ft).
-            //diagram.AxisX.Title.Text = $"{Languages.Graphics.Axis_Desplazamiento} ({Configuracion.GetSigla(Siglas.Longitud_Carta, _Telemetria.Unidades)})";
-            //diagram.AxisX.Title.Visibility = DefaultBoolean.True;
-            //diagram.AxisX.Title.Alignment = StringAlignment.Center;
-            //diagram.AxisX.Title.EnableAntialiasing = DefaultBoolean.True;
+            // Customize the appearance of the Desplazamiento (ft).
+            diagram.AxisX.Title.Text = $"{Languages.Graphics.Axis_Desplazamiento} ({Configuracion.GetSigla(Siglas.Longitud_Carta, _Telemetria.Unidades)})";
+            diagram.AxisX.Title.Visibility = DefaultBoolean.True;
+            diagram.AxisX.Title.Alignment = StringAlignment.Center;
+            diagram.AxisX.Title.EnableAntialiasing = DefaultBoolean.True;
 
-            //// Customize the appearance of the Carga (klbf).
-            //diagram.AxisY.Title.Text = $"{Languages.Graphics.Axis_Carga} ({Configuracion.GetSigla(Siglas.Fuerza, _Telemetria.Unidades)})";
-            //diagram.AxisY.Title.Visibility = DefaultBoolean.True;
-            //diagram.AxisY.Title.Alignment = StringAlignment.Center;
-            //diagram.AxisY.Title.EnableAntialiasing = DefaultBoolean.True;
+            // Customize the appearance of the Carga (klbf).
+            diagram.AxisY.Title.Text = $"{Languages.Graphics.Axis_Carga} ({Configuracion.GetSigla(Siglas.Fuerza, _Telemetria.Unidades)})";
+            diagram.AxisY.Title.Visibility = DefaultBoolean.True;
+            diagram.AxisY.Title.Alignment = StringAlignment.Center;
+            diagram.AxisY.Title.EnableAntialiasing = DefaultBoolean.True;
 
             #region Temporizador
 
@@ -172,10 +175,6 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             #endregion Temporizador
 
             #endregion CartaDinagrafica
-        }
-
-        private void MonitoreoVirtual_Load(object sender, EventArgs e)
-        {
         }
     }
 }

@@ -1,8 +1,7 @@
-﻿using Telemetria;
-using System.Windows.Forms;
-
-using System;
+﻿using System;
 using System.Linq;
+using System.Windows.Forms;
+using Telemetria;
 
 namespace DPSOsTelemetria2.Pozos.PozoBombeoFluyente
 {
@@ -91,8 +90,6 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoFluyente
             }
 
             #endregion DatosOperativos
-
-            Recargar();
         }
 
         internal void Recargar()
@@ -330,8 +327,6 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoFluyente
 
         private void Wrote_Leave(object sender, EventArgs e) => ((TextBox)sender).Text = Condicionantes.Wrote_Formating(((TextBox)sender).Text);
 
-        private void TomaInformacion_Load(object sender, EventArgs e)
-        {
-        }
+        private void TomaInformacion_Load(object sender, EventArgs e) => Recargar();
     }
 }

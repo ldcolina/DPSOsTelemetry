@@ -34,7 +34,7 @@
             // 
             this.Name = "MonitoreoVirtual";
             this.Size = new System.Drawing.Size(800, 450);
-            this.Load += new System.EventHandler(this.MonitoreoVirtual_Load);
+            
             this.ResumeLayout(false);
 
         }

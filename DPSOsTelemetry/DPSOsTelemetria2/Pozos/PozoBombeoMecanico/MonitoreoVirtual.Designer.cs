@@ -59,6 +59,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.CartaDinagraficaSends = new System.Windows.Forms.Label();
             this.CartaDinagraficaComplete = new System.Windows.Forms.Label();
             this.CartaDinagraficaFails = new System.Windows.Forms.Label();
+            this.chart1 = new DevExpress.XtraCharts.ChartControl();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -69,6 +70,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -85,10 +87,10 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.tableLayoutPanel1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(792, 417);
+            this.tabPage1.Size = new System.Drawing.Size(792, 421);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -108,7 +110,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(786, 411);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(786, 415);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -123,7 +125,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(740, 365);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(740, 369);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // tableLayoutPanel4
@@ -137,13 +139,13 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tableLayoutPanel4.Controls.Add(this.DatosOperativosComplete, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.DatosOperativosFails, 0, 2);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 302);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 318);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(734, 60);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(734, 48);
             this.tableLayoutPanel4.TabIndex = 6;
             // 
             // DatosOperativos
@@ -153,7 +155,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DatosOperativos.Location = new System.Drawing.Point(370, 0);
             this.DatosOperativos.Name = "DatosOperativos";
             this.tableLayoutPanel4.SetRowSpan(this.DatosOperativos, 3);
-            this.DatosOperativos.Size = new System.Drawing.Size(361, 60);
+            this.DatosOperativos.Size = new System.Drawing.Size(361, 48);
             this.DatosOperativos.TabIndex = 3;
             this.DatosOperativos.Text = "DatosOperativos";
             this.DatosOperativos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -164,7 +166,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DatosOperativosSends.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DatosOperativosSends.Location = new System.Drawing.Point(3, 0);
             this.DatosOperativosSends.Name = "DatosOperativosSends";
-            this.DatosOperativosSends.Size = new System.Drawing.Size(361, 20);
+            this.DatosOperativosSends.Size = new System.Drawing.Size(361, 16);
             this.DatosOperativosSends.TabIndex = 0;
             this.DatosOperativosSends.Text = "DatosOperativosSends";
             this.DatosOperativosSends.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -173,9 +175,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             // 
             this.DatosOperativosComplete.AutoSize = true;
             this.DatosOperativosComplete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DatosOperativosComplete.Location = new System.Drawing.Point(3, 20);
+            this.DatosOperativosComplete.Location = new System.Drawing.Point(3, 16);
             this.DatosOperativosComplete.Name = "DatosOperativosComplete";
-            this.DatosOperativosComplete.Size = new System.Drawing.Size(361, 20);
+            this.DatosOperativosComplete.Size = new System.Drawing.Size(361, 16);
             this.DatosOperativosComplete.TabIndex = 1;
             this.DatosOperativosComplete.Text = "DatosOperativosComplete";
             this.DatosOperativosComplete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -184,9 +186,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             // 
             this.DatosOperativosFails.AutoSize = true;
             this.DatosOperativosFails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DatosOperativosFails.Location = new System.Drawing.Point(3, 40);
+            this.DatosOperativosFails.Location = new System.Drawing.Point(3, 32);
             this.DatosOperativosFails.Name = "DatosOperativosFails";
-            this.DatosOperativosFails.Size = new System.Drawing.Size(361, 20);
+            this.DatosOperativosFails.Size = new System.Drawing.Size(361, 16);
             this.DatosOperativosFails.TabIndex = 2;
             this.DatosOperativosFails.Text = "DatosOperativosFails";
             this.DatosOperativosFails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -233,7 +235,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tlpVariables.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpVariables.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpVariables.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpVariables.Size = new System.Drawing.Size(734, 293);
+            this.tlpVariables.Size = new System.Drawing.Size(734, 309);
             this.tlpVariables.TabIndex = 3;
             // 
             // DoPresionTuberiaProduccion
@@ -243,7 +245,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DoPresionTuberiaProduccion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DoPresionTuberiaProduccion.Location = new System.Drawing.Point(3, 0);
             this.DoPresionTuberiaProduccion.Name = "DoPresionTuberiaProduccion";
-            this.DoPresionTuberiaProduccion.Size = new System.Drawing.Size(350, 20);
+            this.DoPresionTuberiaProduccion.Size = new System.Drawing.Size(350, 16);
             this.DoPresionTuberiaProduccion.TabIndex = 0;
             this.DoPresionTuberiaProduccion.Text = "DoPresionTuberiaProduccion";
             // 
@@ -254,7 +256,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DoPresionTuberiaRevestimiento.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DoPresionTuberiaRevestimiento.Location = new System.Drawing.Point(379, 0);
             this.DoPresionTuberiaRevestimiento.Name = "DoPresionTuberiaRevestimiento";
-            this.DoPresionTuberiaRevestimiento.Size = new System.Drawing.Size(352, 20);
+            this.DoPresionTuberiaRevestimiento.Size = new System.Drawing.Size(352, 16);
             this.DoPresionTuberiaRevestimiento.TabIndex = 3;
             this.DoPresionTuberiaRevestimiento.Text = "DoPresionTuberiaRevestimiento";
             // 
@@ -263,9 +265,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DoPresionEntradaBomba.AutoSize = true;
             this.tlpVariables.SetColumnSpan(this.DoPresionEntradaBomba, 2);
             this.DoPresionEntradaBomba.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoPresionEntradaBomba.Location = new System.Drawing.Point(3, 120);
+            this.DoPresionEntradaBomba.Location = new System.Drawing.Point(3, 108);
             this.DoPresionEntradaBomba.Name = "DoPresionEntradaBomba";
-            this.DoPresionEntradaBomba.Size = new System.Drawing.Size(350, 20);
+            this.DoPresionEntradaBomba.Size = new System.Drawing.Size(350, 16);
             this.DoPresionEntradaBomba.TabIndex = 18;
             this.DoPresionEntradaBomba.Text = "DoPresionEntradaBomba";
             // 
@@ -274,9 +276,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DoSumergenciaEfectivaBomba.AutoSize = true;
             this.tlpVariables.SetColumnSpan(this.DoSumergenciaEfectivaBomba, 2);
             this.DoSumergenciaEfectivaBomba.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoSumergenciaEfectivaBomba.Location = new System.Drawing.Point(3, 80);
+            this.DoSumergenciaEfectivaBomba.Location = new System.Drawing.Point(3, 72);
             this.DoSumergenciaEfectivaBomba.Name = "DoSumergenciaEfectivaBomba";
-            this.DoSumergenciaEfectivaBomba.Size = new System.Drawing.Size(350, 20);
+            this.DoSumergenciaEfectivaBomba.Size = new System.Drawing.Size(350, 16);
             this.DoSumergenciaEfectivaBomba.TabIndex = 12;
             this.DoSumergenciaEfectivaBomba.Text = "DoSumergenciaEfectivaBomba";
             // 
@@ -285,9 +287,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DoPresionLineaDescarga.AutoSize = true;
             this.tlpVariables.SetColumnSpan(this.DoPresionLineaDescarga, 2);
             this.DoPresionLineaDescarga.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoPresionLineaDescarga.Location = new System.Drawing.Point(3, 40);
+            this.DoPresionLineaDescarga.Location = new System.Drawing.Point(3, 36);
             this.DoPresionLineaDescarga.Name = "DoPresionLineaDescarga";
-            this.DoPresionLineaDescarga.Size = new System.Drawing.Size(350, 20);
+            this.DoPresionLineaDescarga.Size = new System.Drawing.Size(350, 16);
             this.DoPresionLineaDescarga.TabIndex = 6;
             this.DoPresionLineaDescarga.Text = "DoPresionLineaDescarga";
             // 
@@ -296,9 +298,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DoNivelFluidoPozoTr.AutoSize = true;
             this.tlpVariables.SetColumnSpan(this.DoNivelFluidoPozoTr, 2);
             this.DoNivelFluidoPozoTr.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoNivelFluidoPozoTr.Location = new System.Drawing.Point(379, 80);
+            this.DoNivelFluidoPozoTr.Location = new System.Drawing.Point(379, 72);
             this.DoNivelFluidoPozoTr.Name = "DoNivelFluidoPozoTr";
-            this.DoNivelFluidoPozoTr.Size = new System.Drawing.Size(352, 20);
+            this.DoNivelFluidoPozoTr.Size = new System.Drawing.Size(352, 16);
             this.DoNivelFluidoPozoTr.TabIndex = 15;
             this.DoNivelFluidoPozoTr.Text = "DoNivelFluidoPozoTr";
             // 
@@ -307,9 +309,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DoTemperaturaSuperficie.AutoSize = true;
             this.tlpVariables.SetColumnSpan(this.DoTemperaturaSuperficie, 2);
             this.DoTemperaturaSuperficie.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoTemperaturaSuperficie.Location = new System.Drawing.Point(379, 40);
+            this.DoTemperaturaSuperficie.Location = new System.Drawing.Point(379, 36);
             this.DoTemperaturaSuperficie.Name = "DoTemperaturaSuperficie";
-            this.DoTemperaturaSuperficie.Size = new System.Drawing.Size(352, 20);
+            this.DoTemperaturaSuperficie.Size = new System.Drawing.Size(352, 16);
             this.DoTemperaturaSuperficie.TabIndex = 9;
             this.DoTemperaturaSuperficie.Text = "DoTemperaturaSuperficie";
             // 
@@ -318,9 +320,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DoVelocidadUnidadBombeo.AutoSize = true;
             this.tlpVariables.SetColumnSpan(this.DoVelocidadUnidadBombeo, 2);
             this.DoVelocidadUnidadBombeo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoVelocidadUnidadBombeo.Location = new System.Drawing.Point(379, 120);
+            this.DoVelocidadUnidadBombeo.Location = new System.Drawing.Point(379, 108);
             this.DoVelocidadUnidadBombeo.Name = "DoVelocidadUnidadBombeo";
-            this.DoVelocidadUnidadBombeo.Size = new System.Drawing.Size(352, 20);
+            this.DoVelocidadUnidadBombeo.Size = new System.Drawing.Size(352, 16);
             this.DoVelocidadUnidadBombeo.TabIndex = 21;
             this.DoVelocidadUnidadBombeo.Text = "DoVelocidadUnidadBombeo";
             // 
@@ -329,9 +331,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DoVelocidadMotor.AutoSize = true;
             this.tlpVariables.SetColumnSpan(this.DoVelocidadMotor, 2);
             this.DoVelocidadMotor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoVelocidadMotor.Location = new System.Drawing.Point(3, 160);
+            this.DoVelocidadMotor.Location = new System.Drawing.Point(3, 144);
             this.DoVelocidadMotor.Name = "DoVelocidadMotor";
-            this.DoVelocidadMotor.Size = new System.Drawing.Size(350, 20);
+            this.DoVelocidadMotor.Size = new System.Drawing.Size(350, 16);
             this.DoVelocidadMotor.TabIndex = 24;
             this.DoVelocidadMotor.Text = "DoVelocidadMotor";
             // 
@@ -340,9 +342,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DoLongitudCarrera.AutoSize = true;
             this.tlpVariables.SetColumnSpan(this.DoLongitudCarrera, 2);
             this.DoLongitudCarrera.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoLongitudCarrera.Location = new System.Drawing.Point(379, 160);
+            this.DoLongitudCarrera.Location = new System.Drawing.Point(379, 144);
             this.DoLongitudCarrera.Name = "DoLongitudCarrera";
-            this.DoLongitudCarrera.Size = new System.Drawing.Size(352, 20);
+            this.DoLongitudCarrera.Size = new System.Drawing.Size(352, 16);
             this.DoLongitudCarrera.TabIndex = 27;
             this.DoLongitudCarrera.Text = "DoLongitudCarrera";
             // 
@@ -351,19 +353,19 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DoEficienciaLlenado.AutoSize = true;
             this.tlpVariables.SetColumnSpan(this.DoEficienciaLlenado, 2);
             this.DoEficienciaLlenado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoEficienciaLlenado.Location = new System.Drawing.Point(3, 200);
+            this.DoEficienciaLlenado.Location = new System.Drawing.Point(3, 180);
             this.DoEficienciaLlenado.Name = "DoEficienciaLlenado";
-            this.DoEficienciaLlenado.Size = new System.Drawing.Size(350, 20);
+            this.DoEficienciaLlenado.Size = new System.Drawing.Size(350, 16);
             this.DoEficienciaLlenado.TabIndex = 30;
             this.DoEficienciaLlenado.Text = "DoEficienciaLlenado";
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.tableLayoutPanel3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(792, 417);
+            this.tabPage2.Size = new System.Drawing.Size(792, 421);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -383,13 +385,14 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(786, 411);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(786, 415);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 1;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Controls.Add(this.chart1, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(23, 23);
@@ -397,7 +400,8 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(740, 365);
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(740, 369);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
             // tableLayoutPanel6
@@ -411,13 +415,13 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tableLayoutPanel6.Controls.Add(this.CartaDinagraficaComplete, 0, 1);
             this.tableLayoutPanel6.Controls.Add(this.CartaDinagraficaFails, 0, 2);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 302);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 318);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 3;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(734, 60);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(734, 48);
             this.tableLayoutPanel6.TabIndex = 6;
             // 
             // CartaDinagrafica
@@ -427,7 +431,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.CartaDinagrafica.Location = new System.Drawing.Point(370, 0);
             this.CartaDinagrafica.Name = "CartaDinagrafica";
             this.tableLayoutPanel6.SetRowSpan(this.CartaDinagrafica, 3);
-            this.CartaDinagrafica.Size = new System.Drawing.Size(361, 60);
+            this.CartaDinagrafica.Size = new System.Drawing.Size(361, 48);
             this.CartaDinagrafica.TabIndex = 3;
             this.CartaDinagrafica.Text = "CartaDinagrafica";
             this.CartaDinagrafica.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -438,7 +442,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.CartaDinagraficaSends.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CartaDinagraficaSends.Location = new System.Drawing.Point(3, 0);
             this.CartaDinagraficaSends.Name = "CartaDinagraficaSends";
-            this.CartaDinagraficaSends.Size = new System.Drawing.Size(361, 20);
+            this.CartaDinagraficaSends.Size = new System.Drawing.Size(361, 16);
             this.CartaDinagraficaSends.TabIndex = 0;
             this.CartaDinagraficaSends.Text = "CartaDinagraficaSends";
             this.CartaDinagraficaSends.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -447,9 +451,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             // 
             this.CartaDinagraficaComplete.AutoSize = true;
             this.CartaDinagraficaComplete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CartaDinagraficaComplete.Location = new System.Drawing.Point(3, 20);
+            this.CartaDinagraficaComplete.Location = new System.Drawing.Point(3, 16);
             this.CartaDinagraficaComplete.Name = "CartaDinagraficaComplete";
-            this.CartaDinagraficaComplete.Size = new System.Drawing.Size(361, 20);
+            this.CartaDinagraficaComplete.Size = new System.Drawing.Size(361, 16);
             this.CartaDinagraficaComplete.TabIndex = 1;
             this.CartaDinagraficaComplete.Text = "CartaDinagraficaComplete";
             this.CartaDinagraficaComplete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -458,19 +462,29 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             // 
             this.CartaDinagraficaFails.AutoSize = true;
             this.CartaDinagraficaFails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CartaDinagraficaFails.Location = new System.Drawing.Point(3, 40);
+            this.CartaDinagraficaFails.Location = new System.Drawing.Point(3, 32);
             this.CartaDinagraficaFails.Name = "CartaDinagraficaFails";
-            this.CartaDinagraficaFails.Size = new System.Drawing.Size(361, 20);
+            this.CartaDinagraficaFails.Size = new System.Drawing.Size(361, 16);
             this.CartaDinagraficaFails.TabIndex = 2;
             this.CartaDinagraficaFails.Text = "CartaDinagraficaFails";
             this.CartaDinagraficaFails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // chart1
+            // 
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chart1.Legend.Name = "Default Legend";
+            this.chart1.Location = new System.Drawing.Point(3, 3);
+            this.chart1.Name = "chart1";
+            this.chart1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            this.chart1.Size = new System.Drawing.Size(734, 309);
+            this.chart1.TabIndex = 7;
             // 
             // MonitoreoVirtual
             // 
             this.Controls.Add(this.tabControl1);
             this.Name = "MonitoreoVirtual";
             this.Size = new System.Drawing.Size(800, 450);
-            this.Load += new System.EventHandler(this.MonitoreoVirtual_Load);
+            
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -486,6 +500,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -521,5 +536,6 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
         private Label CartaDinagraficaSends;
         private Label CartaDinagraficaComplete;
         private Label CartaDinagraficaFails;
+        internal DevExpress.XtraCharts.ChartControl chart1;
     }
 }

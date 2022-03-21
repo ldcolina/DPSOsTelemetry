@@ -30,7 +30,7 @@ namespace DPSOsTelemetria2
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager Languages = new System.ComponentModel.ComponentResourceManager(typeof(Pozo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pozo));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblOnOff = new System.Windows.Forms.Label();
@@ -111,11 +111,11 @@ namespace DPSOsTelemetria2
             this.ClientSize = new System.Drawing.Size(732, 553);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Icon = ((System.Drawing.Icon)(Languages.GetObject("$this.Icon")));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Pozo";
             this.Text = "Pozo";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Pozo_FormClosing);
-            this.Shown += new System.EventHandler(this.Pozo_Shown);
+            this.Load += new System.EventHandler(this.Pozo_Load);
             this.Resize += new System.EventHandler(this.Pozo_Resize);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

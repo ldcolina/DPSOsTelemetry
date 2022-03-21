@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager Languages = new System.ComponentModel.ComponentResourceManager(typeof(Pozo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pozo));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblOnOff = new System.Windows.Forms.Label();
@@ -45,9 +45,9 @@
             this.panel1.Controls.Add(this.tableLayoutPanel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(732, 58);
+            this.panel1.Size = new System.Drawing.Size(732, 74);
             this.panel1.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -62,21 +62,22 @@
             this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 1, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 6F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 6F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(732, 58);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(732, 74);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // lblOnOff
             // 
             this.lblOnOff.AutoSize = true;
             this.lblOnOff.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblOnOff.Location = new System.Drawing.Point(55, 6);
+            this.lblOnOff.Location = new System.Drawing.Point(55, 8);
             this.lblOnOff.Name = "lblOnOff";
-            this.lblOnOff.Size = new System.Drawing.Size(668, 46);
+            this.lblOnOff.Size = new System.Drawing.Size(668, 58);
             this.lblOnOff.TabIndex = 1;
             this.lblOnOff.Text = "label1";
             this.lblOnOff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -85,9 +86,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 12);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.Size = new System.Drawing.Size(40, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -96,24 +98,25 @@
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 58);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(0, 74);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(732, 495);
+            this.panel2.Size = new System.Drawing.Size(732, 617);
             this.panel2.TabIndex = 3;
             // 
             // Pozo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 553);
+            this.ClientSize = new System.Drawing.Size(732, 691);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Icon = ((System.Drawing.Icon)(Languages.GetObject("$this.Icon")));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Pozo";
             this.Text = "Pozo";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Pozo_FormClosing);
-            this.Shown += new System.EventHandler(this.Pozo_Shown);
+            this.Load += new System.EventHandler(this.Pozo_Load);
             this.Resize += new System.EventHandler(this.Pozo_Resize);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

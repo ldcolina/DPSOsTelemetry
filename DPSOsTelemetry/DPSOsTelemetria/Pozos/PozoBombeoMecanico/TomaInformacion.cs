@@ -183,8 +183,6 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoMecanico
             #endregion Temporizador
 
             #endregion CartaDinagrafica
-
-            Recargar();
         }
 
         internal void Recargar()
@@ -1097,8 +1095,6 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoMecanico
 
         #endregion CCartaDinagrafica
 
-        private void TomaInformacion_Load(object sender, EventArgs e)
-        {
-        }
+        private void TomaInformacion_Load(object sender, EventArgs e) => Recargar();
     }
 }

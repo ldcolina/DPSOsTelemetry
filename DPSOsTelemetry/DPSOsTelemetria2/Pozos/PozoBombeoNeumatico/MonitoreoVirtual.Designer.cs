@@ -267,7 +267,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "MonitoreoVirtual";
             this.Size = new System.Drawing.Size(672, 423);
-            this.Load += new System.EventHandler(this.MonitoreoVirtual_Load);
+            
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();

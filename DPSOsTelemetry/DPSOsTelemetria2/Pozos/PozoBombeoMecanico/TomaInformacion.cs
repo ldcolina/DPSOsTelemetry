@@ -1,15 +1,16 @@
-﻿using Telemetria;
+﻿using DevExpress.Utils;
+using DevExpress.XtraCharts;
 using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Security;
-
-using Excel = Microsoft.Office.Interop.Excel;
-using System.Windows.Forms;
-
-using System;
+using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security;
+using System.Windows.Forms;
+using Telemetria;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
 {
@@ -190,8 +191,6 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             #endregion Temporizador
 
             #endregion CartaDinagrafica
-
-            Recargar();
         }
 
         internal void Recargar()
@@ -961,7 +960,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             {
                 OpenFileDialog file = openFileDialog1;
 
-                // Empezamos a manejar el archivo
+                //Empezamos a manejar el archivo
                 string archivo = file.FileName;
                 string extencion = Path.GetExtension(archivo);
 
@@ -1034,78 +1033,80 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
 
         private void CCartaDinagraficaList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //chart1.Series.Clear();
-            //decimal MinX = 0;
-            //decimal MaxX = 1;
-            //decimal MinY = 0;
-            //decimal MaxY = 1;
+            chart1.Series.Clear();
+            decimal MinX = 0;
+            decimal MaxX = 0;
+            decimal MinY = 0;
+            decimal MaxY = 0;
 
-            //try
-            //{
-            //    OCartaDinagrafica.CCartaDinagrafica CCartaDinagrafica = ListCCartaDinagrafica[((lista)CCartaDinagraficaList.SelectedItem).index].Carta;
-            //    DataTable dt = new DataTable(Languages.Graphics.DinamometricaFondo);
-            //    dt.Columns.Add("X", typeof(decimal));
-            //    dt.Columns.Add("Y", typeof(decimal));
-            //    for (int i = 0; i < CCartaDinagrafica.SurfaceCardPosition.Count; i++)
-            //        dt.Rows.Add(CCartaDinagrafica.SurfaceCardPosition[i], CCartaDinagrafica.SurfaceCardLoad[i]);
+            try
+            {
+                OCartaDinagrafica.CCartaDinagrafica CCartaDinagrafica = ListCCartaDinagrafica[((lista)CCartaDinagraficaList.SelectedItem).index].Carta;
+                DataTable dt = new DataTable(Languages.Graphics.DinamometricaFondo);
+                dt.Columns.Add("X", typeof(decimal));
+                dt.Columns.Add("Y", typeof(decimal));
+                for (int i = 0; i < CCartaDinagrafica.SurfaceCardPosition.Count; i++)
+                    dt.Rows.Add(CCartaDinagrafica.SurfaceCardPosition[i], CCartaDinagrafica.SurfaceCardLoad[i]);
 
-            //    Series Serie = new Series(dt.TableName, ViewType.ScatterLine)
-            //    {
-            //        DataSource = dt,
-            //        ArgumentDataMember = "X",
-            //    };
-            //    Serie.ValueDataMembers.AddRange("Y");
+                Series Serie = new Series(dt.TableName, ViewType.ScatterLine)
+                {
+                    DataSource = dt,
+                    ArgumentDataMember = "X",
+                };
+                Serie.ValueDataMembers.AddRange("Y");
 
-            //    chart1.Series.Add(Serie);
+                chart1.Series.Add(Serie);
 
-            //    MinX = CCartaDinagrafica.SurfaceCardPosition.Min(val => val);
-            //    MaxX = CCartaDinagrafica.SurfaceCardPosition.Max(val => val);
-            //    MinY = CCartaDinagrafica.SurfaceCardLoad.Min(val => val);
-            //    MaxY = CCartaDinagrafica.SurfaceCardLoad.Max(val => val);
-            //}
-            //catch
-            //{
-            //}
+                MinX = CCartaDinagrafica.SurfaceCardPosition.Min(val => val);
+                MaxX = CCartaDinagrafica.SurfaceCardPosition.Max(val => val);
+                MinY = CCartaDinagrafica.SurfaceCardLoad.Min(val => val);
+                MaxY = CCartaDinagrafica.SurfaceCardLoad.Max(val => val);
+            }
+            catch
+            {
+            }
 
-            //decimal area = (MaxX - MinX) / 2;
-            //MinX -= area * 1 / 16;
-            //MaxX += area * 1 / 16;
+            decimal area = (MaxX - MinX) / 2;
+            if (area == 0)
+                area = 1;
+            MinX -= area * 1 / 16;
+            MaxX += area * 1 / 16;
 
-            //area = (MaxY - MinY) / 2;
-            //MinY -= area * 1 / 16;
-            //MaxY += area * 1 / 16;
+            area = (MaxY - MinY) / 2;
+            if (area == 0)
+                area = 1;
+            MinY -= area * 1 / 16;
+            MaxY += area * 1 / 16;
 
-            //chart1.Legend.Visibility = DefaultBoolean.False;
+            chart1.Legend.Visibility = DefaultBoolean.False;
 
-            //try
-            //{
-            //    XYDiagram diagram = (XYDiagram)chart1.Diagram;
-            //    diagram.AxisX.WholeRange.SideMarginsValue = 0;
-            //    diagram.AxisY.WholeRange.SideMarginsValue = 0;
-            //    diagram.AxisX.WholeRange.SetMinMaxValues(MinX, MaxX);
-            //    diagram.AxisY.WholeRange.SetMinMaxValues(MinY, MaxY);
+            try
+            {
+                XYDiagram diagram = (XYDiagram)chart1.Diagram;
+                diagram.AxisX.WholeRange.SideMarginsValue = 0;
+                diagram.AxisY.WholeRange.SideMarginsValue = 0;
+                diagram.AxisX.WholeRange.SetMinMaxValues(MinX, MaxX);
+                diagram.AxisY.WholeRange.SetMinMaxValues(MinY, MaxY);
 
-            //    // Customize the appearance of the Desplazamiento (ft).
-            //    diagram.AxisX.Title.Text = $"{Languages.Graphics.Axis_Desplazamiento} ({Configuracion.GetSigla(Siglas.Longitud_Carta, Referencias.Unidades)})";
-            //    diagram.AxisX.Title.Visibility = DefaultBoolean.True;
-            //    diagram.AxisX.Title.Alignment = StringAlignment.Center;
-            //    diagram.AxisX.Title.EnableAntialiasing = DefaultBoolean.True;
+                // Customize the appearance of the Desplazamiento (ft).
+                diagram.AxisX.Title.Text = $"{Languages.Graphics.Axis_Desplazamiento} ({Configuracion.GetSigla(Siglas.Longitud_Carta, Referencias.Unidades)})";
+                diagram.AxisX.Title.Visibility = DefaultBoolean.True;
+                diagram.AxisX.Title.Alignment = StringAlignment.Center;
+                diagram.AxisX.Title.EnableAntialiasing = DefaultBoolean.True;
 
-            //    // Customize the appearance of the Carga (klbf).
-            //    diagram.AxisY.Title.Text = $"{Languages.Graphics.Axis_Carga} ({Configuracion.GetSigla(Siglas.Fuerza, Referencias.Unidades)})";
-            //    diagram.AxisY.Title.Visibility = DefaultBoolean.True;
-            //    diagram.AxisY.Title.Alignment = StringAlignment.Center;
-            //    diagram.AxisY.Title.EnableAntialiasing = DefaultBoolean.True;
-            //}
-            //catch
-            //{
-            //}
+                // Customize the appearance of the Carga (klbf).
+                diagram.AxisY.Title.Text = $"{Languages.Graphics.Axis_Carga} ({Configuracion.GetSigla(Siglas.Fuerza, Referencias.Unidades)})";
+                diagram.AxisY.Title.Visibility = DefaultBoolean.True;
+                diagram.AxisY.Title.Alignment = StringAlignment.Center;
+                diagram.AxisY.Title.EnableAntialiasing = DefaultBoolean.True;
+            }
+            catch
+            {
+            }
         }
 
         #endregion CCartaDinagrafica
 
-        private void TomaInformacion_Load(object sender, EventArgs e)
-        {
-        }
+        private void TomaInformacion_Load(object sender, EventArgs e) => Recargar();
     }
 }

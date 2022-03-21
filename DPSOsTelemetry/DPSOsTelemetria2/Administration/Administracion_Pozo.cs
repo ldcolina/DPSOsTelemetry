@@ -1,16 +1,14 @@
-﻿using Telemetria;
+﻿using DPSOsTelemetria2.Properties;
 using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Windows.Forms;
 using System.Drawing;
-
-using System.Resources;
-
-using System;
 using System.IO;
 using System.Linq;
-using DPSOsTelemetria2.Properties;
+using System.Resources;
+using System.Windows.Forms;
+using Telemetria;
 
 namespace DPSOsTelemetria2.Administration
 {

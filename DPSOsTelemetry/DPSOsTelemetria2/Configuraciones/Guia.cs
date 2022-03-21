@@ -1,10 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Windows.Forms;
-
+﻿using DPSOsTelemetria2.Properties;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Threading;
-using DPSOsTelemetria2.Properties;
+using System.Windows.Forms;
 
 namespace DPSOsTelemetria2.Configuraciones
 {

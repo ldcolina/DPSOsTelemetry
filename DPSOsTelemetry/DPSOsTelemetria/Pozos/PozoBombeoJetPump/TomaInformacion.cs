@@ -243,21 +243,6 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoJetPump
 
             #endregion DatosOperativos
 
-            #region CCartaDinagrafica
-
-            //CCartaDinagrafica = CCartaDinagrafica.Check;
-            //List<OCartaDinagrafica.CCartaDinagrafica> ListCCartaDinagrafica = new List<OCartaDinagrafica.CCartaDinagrafica>();
-
-            #region Temporizador
-
-            //CartaDinagrafica.Text = Condicionantes.Wrote_Formating(referencias.Range.CartaDinagrafica.TotalSeconds.ToString());
-            //CartaDinagrafica.Leave += Wrote_Leave;
-            //CartaDinagrafica.KeyPress += Wrote_KeyPress;
-
-            #endregion Temporizador
-
-            #endregion CCartaDinagrafica
-
             foreach (var item in tlpVariables.Controls)
             {
                 switch (item.GetType().Name)
@@ -278,8 +263,6 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoJetPump
                         }
                 }
             }
-
-            Recargar();
         }
 
         internal void Recargar()
@@ -510,19 +493,6 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoJetPump
             #endregion Temporizador
 
             #endregion DatosOperativos
-
-            #region CartaDinagrafica
-
-            //CCartaDinagrafica.Text = $"{Languages.Pozo.CCartaDinagrafica} ({ Configuracion.GetSigla(Siglas.Longitud_Carta, Referencias.Unidades)}/{ Configuracion.GetSigla(Siglas.Fuerza, Referencias.Unidades)})";
-
-            #region Temporizador
-
-            //lbTemporizador2.Text = $"{Languages.Pozo.Temporizador}-{Languages.Pozo.CartaDinagrafica} ({Languages.Siglas.Segundo})";
-            //CartaDinagrafica.Text = Condicionantes.Wrote_Formating(CartaDinagrafica.Text);
-
-            #endregion Temporizador
-
-            #endregion CartaDinagrafica
         }
 
         internal TomaBasica SaveTomaInformacion()
@@ -1349,19 +1319,6 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoJetPump
 
             #endregion DatosOperativos
 
-            #region CCartaDinagrafica
-
-            //Range.CCartaDinagrafica = CCartaDinagrafica.Check;
-            //List<OCartaDinagrafica.CCartaDinagrafica> ListCCartaDinagrafica = new List<OCartaDinagrafica.CCartaDinagrafica>();
-
-            #region Temporizador
-
-            //Range.CartaDinagrafica = TimeSpan.FromSeconds(Convert.ToDouble(CartaDinagrafica.Text));
-
-            #endregion Temporizador
-
-            #endregion CCartaDinagrafica
-
             return Range;
         }
 
@@ -1379,8 +1336,6 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoJetPump
 
         private void Wrote_Leave(object sender, EventArgs e) => ((TextBox)sender).Text = Condicionantes.Wrote_Formating(((TextBox)sender).Text);
 
-        private void TomaInformacion_Load(object sender, EventArgs e)
-        {
-        }
+        private void TomaInformacion_Load(object sender, EventArgs e) => Recargar();
     }
 }

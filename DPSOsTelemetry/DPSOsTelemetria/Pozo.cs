@@ -711,7 +711,7 @@ namespace DPSOsTelemetria
             }
         }
 
-        private void Pozo_Shown(object sender, EventArgs e)
+        private void Pozo_Load(object sender, EventArgs e)
         {
             Text = $"{Referencias.Name} ({SystemWell.GetString(Referencias.Type)}) - {General.InformationGathering}";
             InformationGathering();

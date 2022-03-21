@@ -1,12 +1,11 @@
-﻿using Newtonsoft.Json;
-using System.Windows.Forms;
-
+﻿using DPSOsTelemetria2.Configuraciones;
+using Newtonsoft.Json;
 using System;
+using System.Drawing;
 using System.IO;
 using System.Linq;
-using DPSOsTelemetria2.Configuraciones;
-using System.Drawing;
 using System.Threading;
+using System.Windows.Forms;
 
 namespace DPSOsTelemetria2
 {

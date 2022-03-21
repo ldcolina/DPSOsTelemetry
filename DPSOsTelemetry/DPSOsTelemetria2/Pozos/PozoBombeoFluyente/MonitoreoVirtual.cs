@@ -1,10 +1,9 @@
 ﻿using Telemetria;
-
-using System;
+using System.Windows.Forms;
 
 namespace DPSOsTelemetria2.Pozos.PozoBombeoFluyente
 {
-    public partial class MonitoreoVirtual : System.Windows.Forms.UserControl
+    public partial class MonitoreoVirtual : UserControl
     {
         public MonitoreoVirtual()
 
@@ -61,10 +60,6 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoFluyente
             #endregion Temporizador
 
             #endregion DatosOperativos
-        }
-
-        private void MonitoreoVirtual_Load(object sender, EventArgs e)
-        {
         }
     }
 }

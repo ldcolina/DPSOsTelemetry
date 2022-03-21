@@ -91,7 +91,6 @@ namespace Telemetria
                     if (select)
                     {
                         OTomaInformacion.CResult _result = JsonConvert.DeserializeObject<OTomaInformacion.CResult>(response.Content);
-                        referencias.DatosOperativosSends++;
 
                         if (_result.Success)
                             referencias.DatosOperativosComplete++;

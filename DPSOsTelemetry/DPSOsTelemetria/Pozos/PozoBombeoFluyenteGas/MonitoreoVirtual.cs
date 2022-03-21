@@ -191,30 +191,6 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoFluyenteGas
             #endregion Temporizador
 
             #endregion DatosOperativos
-
-            #region CartaDinagrafica
-
-            //OCartaDinagrafica.CCartaDinagrafica CCartaDinagrafica = _Telemetria.CartaDinagrafica;
-
-            //CCartaDinagrafica.Text = $"{Languages.Pozo.CCartaDinagrafica}: {DatosOperativos.xxx.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.Longitud_Carta, _Telemetria.Unidades)}/{ Configuracion.GetSigla(Siglas.Fuerza, _Telemetria.Unidades)}";
-
-            #region Temporizador
-
-            //CartaDinagraficaSends.Text = $"{Languages.Pozo.Envio}: {_Telemetria.CartaDinagraficaSends}";
-            //CartaDinagraficaComplete.Text = $"{Languages.Pozo.EnvioCorrecto}: {_Telemetria.CartaDinagraficaComplete}";
-            //CartaDinagraficaFails.Text = $"{Languages.Pozo.EnvioIncorrecto}: {_Telemetria.CartaDinagraficaFails}";
-            //if (_Telemetria.Range.CartaDinagrafica.TotalMilliseconds != 0)
-            //    CartaDinagrafica.Text = $"{Languages.Pozo.ProxActualizacion}:\n{_Telemetria.Started.AddMilliseconds(_Telemetria.Range.CartaDinagrafica.TotalMilliseconds * _Telemetria.CartaDinagraficaSends).ToLocalTime():G}";
-            //else
-            //    CartaDinagrafica.Text = $"{Languages.Pozo.ProxActualizacion}:\n-";
-
-            #endregion Temporizador
-
-            #endregion CartaDinagrafica
-        }
-
-        private void MonitoreoVirtual_Load(object sender, EventArgs e)
-        {
         }
     }
 }

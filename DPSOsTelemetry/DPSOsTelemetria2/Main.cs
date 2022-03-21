@@ -1,16 +1,14 @@
-﻿using Telemetria;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Windows.Forms;
-
-using System.Resources;
-
-using System;
+using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Resources;
 using System.Threading;
-using System.Globalization;
+using System.Windows.Forms;
+using Telemetria;
 
 namespace DPSOsTelemetria2
 {
@@ -20,7 +18,7 @@ namespace DPSOsTelemetria2
 
         private readonly string configuracion;
         private readonly string file;
-        private readonly string version = "1.0.0.3";
+        private readonly string version = "1.0.0.4";
         private readonly string anio = "2022";
 
         #endregion Directorio
@@ -33,7 +31,7 @@ namespace DPSOsTelemetria2
             InitializeComponent();
             instance = this;
 
-            file = $"{Directory.GetDirectoryRoot(Directory.GetCurrentDirectory())}DPSOsTelemetria2";
+            file = $"{Directory.GetDirectoryRoot(Directory.GetCurrentDirectory())}DPSOsTelemetria";
             Directory.CreateDirectory(file);
 
             configuracion = $"{file}/Configuracion.json";
@@ -121,7 +119,7 @@ namespace DPSOsTelemetria2
         {
             Referencias Well = JsonConvert.DeserializeObject<Referencias>(File.ReadAllText(ReferenciasII.ID)) ?? new Referencias();
 
-            Form OpenForm = MdiChildren.Where(val => val.Text.Contains(ReferenciasII.Name)).FirstOrDefault();
+            Form OpenForm = MdiChildren.Where(val => val.Text.Contains($"{ReferenciasII.Name} ({SystemWell.GetString(ReferenciasII.Type)})")).FirstOrDefault();
 
             if (OpenForm == null)
             {
@@ -357,6 +355,7 @@ namespace DPSOsTelemetria2
         #region Idioma
 
         private static readonly ResourceManager resource = new ResourceManager(typeof(Languages.DPSOsTelemetria));
+        private static readonly ResourceManager SystemWell = new ResourceManager(typeof(Languages.SystemWell));
 
         private void Idiomas(string Language)
         {

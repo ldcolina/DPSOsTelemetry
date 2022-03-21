@@ -1,16 +1,14 @@
-﻿using Telemetria;
+﻿using DPSOsTelemetria2.Properties;
+using Languages;
 using Newtonsoft.Json;
-using System.Windows.Forms;
-
-using System.Resources;
-
 using System;
+using System.Drawing;
 using System.IO;
 using System.Linq;
-using Languages;
-using DPSOsTelemetria2.Properties;
+using System.Resources;
 using System.Threading.Tasks;
-using System.Drawing;
+using System.Windows.Forms;
+using Telemetria;
 
 namespace DPSOsTelemetria2
 {
@@ -525,7 +523,7 @@ namespace DPSOsTelemetria2
                     {
                         _Telemetria.CartaDinagrafica = CCartaDinagrafica;
 
-                        _Telemetria = await TelemetriaController.Post(_Telemetria, true);
+                        _Telemetria = await TelemetriaController.Post(_Telemetria, false);
                     }
                 }
 
@@ -720,7 +718,7 @@ namespace DPSOsTelemetria2
             }
         }
 
-        private void Pozo_Shown(object sender, EventArgs e)
+        private void Pozo_Load(object sender, EventArgs e)
         {
             Text = $"{Referencias.Name} ({SystemWell.GetString(Referencias.Type)}) - {General.InformationGathering}";
             InformationGathering();

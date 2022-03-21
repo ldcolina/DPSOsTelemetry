@@ -82,6 +82,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.CCartaDinagraficaList = new System.Windows.Forms.ComboBox();
             this.CCartaDinagraficaAgregar = new System.Windows.Forms.Button();
             this.CCartaDinagraficaEliminar = new System.Windows.Forms.Button();
+            this.chart1 = new DevExpress.XtraCharts.ChartControl();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -94,6 +95,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -110,10 +112,10 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.tableLayoutPanel1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(606, 530);
+            this.tabPage1.Size = new System.Drawing.Size(606, 534);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -133,7 +135,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(600, 524);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(600, 528);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -148,7 +150,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(554, 478);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(554, 482);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // tableLayoutPanel4
@@ -160,11 +162,11 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tableLayoutPanel4.Controls.Add(this.lbTemporizador1, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.DatosOperativos, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 442);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 451);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(548, 33);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(548, 28);
             this.tableLayoutPanel4.TabIndex = 4;
             // 
             // lbTemporizador1
@@ -173,7 +175,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.lbTemporizador1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbTemporizador1.Location = new System.Drawing.Point(3, 0);
             this.lbTemporizador1.Name = "lbTemporizador1";
-            this.lbTemporizador1.Size = new System.Drawing.Size(123, 33);
+            this.lbTemporizador1.Size = new System.Drawing.Size(110, 28);
             this.lbTemporizador1.TabIndex = 0;
             this.lbTemporizador1.Text = "lbTemporizador1";
             this.lbTemporizador1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -181,9 +183,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             // DatosOperativos
             // 
             this.DatosOperativos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DatosOperativos.Location = new System.Drawing.Point(132, 3);
+            this.DatosOperativos.Location = new System.Drawing.Point(119, 3);
             this.DatosOperativos.Name = "DatosOperativos";
-            this.DatosOperativos.Size = new System.Drawing.Size(413, 27);
+            this.DatosOperativos.Size = new System.Drawing.Size(426, 22);
             this.DatosOperativos.TabIndex = 0;
             // 
             // tlpVariables
@@ -250,7 +252,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tlpVariables.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpVariables.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpVariables.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpVariables.Size = new System.Drawing.Size(548, 433);
+            this.tlpVariables.Size = new System.Drawing.Size(548, 442);
             this.tlpVariables.TabIndex = 3;
             // 
             // DoPresionTuberiaProduccion
@@ -260,7 +262,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DoPresionTuberiaProduccion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DoPresionTuberiaProduccion.Location = new System.Drawing.Point(3, 3);
             this.DoPresionTuberiaProduccion.Name = "DoPresionTuberiaProduccion";
-            this.DoPresionTuberiaProduccion.Size = new System.Drawing.Size(258, 24);
+            this.DoPresionTuberiaProduccion.Size = new System.Drawing.Size(258, 20);
             this.DoPresionTuberiaProduccion.TabIndex = 0;
             this.DoPresionTuberiaProduccion.Text = "DoPresionTuberiaProduccion";
             this.DoPresionTuberiaProduccion.UseVisualStyleBackColor = true;
@@ -268,17 +270,17 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             // DoPresionTuberiaProduccionMin
             // 
             this.DoPresionTuberiaProduccionMin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoPresionTuberiaProduccionMin.Location = new System.Drawing.Point(3, 33);
+            this.DoPresionTuberiaProduccionMin.Location = new System.Drawing.Point(3, 29);
             this.DoPresionTuberiaProduccionMin.Name = "DoPresionTuberiaProduccionMin";
-            this.DoPresionTuberiaProduccionMin.Size = new System.Drawing.Size(126, 27);
+            this.DoPresionTuberiaProduccionMin.Size = new System.Drawing.Size(126, 22);
             this.DoPresionTuberiaProduccionMin.TabIndex = 1;
             // 
             // DoPresionTuberiaProduccionMax
             // 
             this.DoPresionTuberiaProduccionMax.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoPresionTuberiaProduccionMax.Location = new System.Drawing.Point(135, 33);
+            this.DoPresionTuberiaProduccionMax.Location = new System.Drawing.Point(135, 29);
             this.DoPresionTuberiaProduccionMax.Name = "DoPresionTuberiaProduccionMax";
-            this.DoPresionTuberiaProduccionMax.Size = new System.Drawing.Size(126, 27);
+            this.DoPresionTuberiaProduccionMax.Size = new System.Drawing.Size(126, 22);
             this.DoPresionTuberiaProduccionMax.TabIndex = 2;
             // 
             // DoPresionTuberiaRevestimiento
@@ -288,7 +290,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DoPresionTuberiaRevestimiento.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DoPresionTuberiaRevestimiento.Location = new System.Drawing.Point(287, 3);
             this.DoPresionTuberiaRevestimiento.Name = "DoPresionTuberiaRevestimiento";
-            this.DoPresionTuberiaRevestimiento.Size = new System.Drawing.Size(258, 24);
+            this.DoPresionTuberiaRevestimiento.Size = new System.Drawing.Size(258, 20);
             this.DoPresionTuberiaRevestimiento.TabIndex = 3;
             this.DoPresionTuberiaRevestimiento.Text = "DoPresionTuberiaRevestimiento";
             this.DoPresionTuberiaRevestimiento.UseVisualStyleBackColor = true;
@@ -296,17 +298,17 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             // DoPresionTuberiaRevestimientoMin
             // 
             this.DoPresionTuberiaRevestimientoMin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoPresionTuberiaRevestimientoMin.Location = new System.Drawing.Point(287, 33);
+            this.DoPresionTuberiaRevestimientoMin.Location = new System.Drawing.Point(287, 29);
             this.DoPresionTuberiaRevestimientoMin.Name = "DoPresionTuberiaRevestimientoMin";
-            this.DoPresionTuberiaRevestimientoMin.Size = new System.Drawing.Size(126, 27);
+            this.DoPresionTuberiaRevestimientoMin.Size = new System.Drawing.Size(126, 22);
             this.DoPresionTuberiaRevestimientoMin.TabIndex = 4;
             // 
             // DoPresionTuberiaRevestimientoMax
             // 
             this.DoPresionTuberiaRevestimientoMax.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoPresionTuberiaRevestimientoMax.Location = new System.Drawing.Point(419, 33);
+            this.DoPresionTuberiaRevestimientoMax.Location = new System.Drawing.Point(419, 29);
             this.DoPresionTuberiaRevestimientoMax.Name = "DoPresionTuberiaRevestimientoMax";
-            this.DoPresionTuberiaRevestimientoMax.Size = new System.Drawing.Size(126, 27);
+            this.DoPresionTuberiaRevestimientoMax.Size = new System.Drawing.Size(126, 22);
             this.DoPresionTuberiaRevestimientoMax.TabIndex = 5;
             // 
             // DoPresionEntradaBomba
@@ -314,9 +316,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DoPresionEntradaBomba.AutoSize = true;
             this.tlpVariables.SetColumnSpan(this.DoPresionEntradaBomba, 2);
             this.DoPresionEntradaBomba.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoPresionEntradaBomba.Location = new System.Drawing.Point(3, 252);
+            this.DoPresionEntradaBomba.Location = new System.Drawing.Point(3, 225);
             this.DoPresionEntradaBomba.Name = "DoPresionEntradaBomba";
-            this.DoPresionEntradaBomba.Size = new System.Drawing.Size(258, 24);
+            this.DoPresionEntradaBomba.Size = new System.Drawing.Size(258, 20);
             this.DoPresionEntradaBomba.TabIndex = 18;
             this.DoPresionEntradaBomba.Text = "DoPresionEntradaBomba";
             this.DoPresionEntradaBomba.UseVisualStyleBackColor = true;
@@ -324,17 +326,17 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             // DoPresionEntradaBombaMin
             // 
             this.DoPresionEntradaBombaMin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoPresionEntradaBombaMin.Location = new System.Drawing.Point(3, 282);
+            this.DoPresionEntradaBombaMin.Location = new System.Drawing.Point(3, 251);
             this.DoPresionEntradaBombaMin.Name = "DoPresionEntradaBombaMin";
-            this.DoPresionEntradaBombaMin.Size = new System.Drawing.Size(126, 27);
+            this.DoPresionEntradaBombaMin.Size = new System.Drawing.Size(126, 22);
             this.DoPresionEntradaBombaMin.TabIndex = 19;
             // 
             // DoPresionEntradaBombaMax
             // 
             this.DoPresionEntradaBombaMax.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoPresionEntradaBombaMax.Location = new System.Drawing.Point(135, 282);
+            this.DoPresionEntradaBombaMax.Location = new System.Drawing.Point(135, 251);
             this.DoPresionEntradaBombaMax.Name = "DoPresionEntradaBombaMax";
-            this.DoPresionEntradaBombaMax.Size = new System.Drawing.Size(126, 27);
+            this.DoPresionEntradaBombaMax.Size = new System.Drawing.Size(126, 22);
             this.DoPresionEntradaBombaMax.TabIndex = 20;
             // 
             // DoSumergenciaEfectivaBomba
@@ -342,9 +344,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DoSumergenciaEfectivaBomba.AutoSize = true;
             this.tlpVariables.SetColumnSpan(this.DoSumergenciaEfectivaBomba, 2);
             this.DoSumergenciaEfectivaBomba.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoSumergenciaEfectivaBomba.Location = new System.Drawing.Point(3, 169);
+            this.DoSumergenciaEfectivaBomba.Location = new System.Drawing.Point(3, 151);
             this.DoSumergenciaEfectivaBomba.Name = "DoSumergenciaEfectivaBomba";
-            this.DoSumergenciaEfectivaBomba.Size = new System.Drawing.Size(258, 24);
+            this.DoSumergenciaEfectivaBomba.Size = new System.Drawing.Size(258, 20);
             this.DoSumergenciaEfectivaBomba.TabIndex = 12;
             this.DoSumergenciaEfectivaBomba.Text = "DoSumergenciaEfectivaBomba";
             this.DoSumergenciaEfectivaBomba.UseVisualStyleBackColor = true;
@@ -354,9 +356,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DoPresionLineaDescarga.AutoSize = true;
             this.tlpVariables.SetColumnSpan(this.DoPresionLineaDescarga, 2);
             this.DoPresionLineaDescarga.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoPresionLineaDescarga.Location = new System.Drawing.Point(3, 86);
+            this.DoPresionLineaDescarga.Location = new System.Drawing.Point(3, 77);
             this.DoPresionLineaDescarga.Name = "DoPresionLineaDescarga";
-            this.DoPresionLineaDescarga.Size = new System.Drawing.Size(258, 24);
+            this.DoPresionLineaDescarga.Size = new System.Drawing.Size(258, 20);
             this.DoPresionLineaDescarga.TabIndex = 6;
             this.DoPresionLineaDescarga.Text = "DoPresionLineaDescarga";
             this.DoPresionLineaDescarga.UseVisualStyleBackColor = true;
@@ -364,33 +366,33 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             // DoSumergenciaEfectivaBombaMin
             // 
             this.DoSumergenciaEfectivaBombaMin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoSumergenciaEfectivaBombaMin.Location = new System.Drawing.Point(3, 199);
+            this.DoSumergenciaEfectivaBombaMin.Location = new System.Drawing.Point(3, 177);
             this.DoSumergenciaEfectivaBombaMin.Name = "DoSumergenciaEfectivaBombaMin";
-            this.DoSumergenciaEfectivaBombaMin.Size = new System.Drawing.Size(126, 27);
+            this.DoSumergenciaEfectivaBombaMin.Size = new System.Drawing.Size(126, 22);
             this.DoSumergenciaEfectivaBombaMin.TabIndex = 13;
             // 
             // DoPresionLineaDescargaMin
             // 
             this.DoPresionLineaDescargaMin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoPresionLineaDescargaMin.Location = new System.Drawing.Point(3, 116);
+            this.DoPresionLineaDescargaMin.Location = new System.Drawing.Point(3, 103);
             this.DoPresionLineaDescargaMin.Name = "DoPresionLineaDescargaMin";
-            this.DoPresionLineaDescargaMin.Size = new System.Drawing.Size(126, 27);
+            this.DoPresionLineaDescargaMin.Size = new System.Drawing.Size(126, 22);
             this.DoPresionLineaDescargaMin.TabIndex = 7;
             // 
             // DoSumergenciaEfectivaBombaMax
             // 
             this.DoSumergenciaEfectivaBombaMax.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoSumergenciaEfectivaBombaMax.Location = new System.Drawing.Point(135, 199);
+            this.DoSumergenciaEfectivaBombaMax.Location = new System.Drawing.Point(135, 177);
             this.DoSumergenciaEfectivaBombaMax.Name = "DoSumergenciaEfectivaBombaMax";
-            this.DoSumergenciaEfectivaBombaMax.Size = new System.Drawing.Size(126, 27);
+            this.DoSumergenciaEfectivaBombaMax.Size = new System.Drawing.Size(126, 22);
             this.DoSumergenciaEfectivaBombaMax.TabIndex = 14;
             // 
             // DoPresionLineaDescargaMax
             // 
             this.DoPresionLineaDescargaMax.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoPresionLineaDescargaMax.Location = new System.Drawing.Point(135, 116);
+            this.DoPresionLineaDescargaMax.Location = new System.Drawing.Point(135, 103);
             this.DoPresionLineaDescargaMax.Name = "DoPresionLineaDescargaMax";
-            this.DoPresionLineaDescargaMax.Size = new System.Drawing.Size(126, 27);
+            this.DoPresionLineaDescargaMax.Size = new System.Drawing.Size(126, 22);
             this.DoPresionLineaDescargaMax.TabIndex = 8;
             // 
             // DoNivelFluidoPozoTr
@@ -398,9 +400,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DoNivelFluidoPozoTr.AutoSize = true;
             this.tlpVariables.SetColumnSpan(this.DoNivelFluidoPozoTr, 2);
             this.DoNivelFluidoPozoTr.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoNivelFluidoPozoTr.Location = new System.Drawing.Point(287, 169);
+            this.DoNivelFluidoPozoTr.Location = new System.Drawing.Point(287, 151);
             this.DoNivelFluidoPozoTr.Name = "DoNivelFluidoPozoTr";
-            this.DoNivelFluidoPozoTr.Size = new System.Drawing.Size(258, 24);
+            this.DoNivelFluidoPozoTr.Size = new System.Drawing.Size(258, 20);
             this.DoNivelFluidoPozoTr.TabIndex = 15;
             this.DoNivelFluidoPozoTr.Text = "DoNivelFluidoPozoTr";
             this.DoNivelFluidoPozoTr.UseVisualStyleBackColor = true;
@@ -410,9 +412,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DoTemperaturaSuperficie.AutoSize = true;
             this.tlpVariables.SetColumnSpan(this.DoTemperaturaSuperficie, 2);
             this.DoTemperaturaSuperficie.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoTemperaturaSuperficie.Location = new System.Drawing.Point(287, 86);
+            this.DoTemperaturaSuperficie.Location = new System.Drawing.Point(287, 77);
             this.DoTemperaturaSuperficie.Name = "DoTemperaturaSuperficie";
-            this.DoTemperaturaSuperficie.Size = new System.Drawing.Size(258, 24);
+            this.DoTemperaturaSuperficie.Size = new System.Drawing.Size(258, 20);
             this.DoTemperaturaSuperficie.TabIndex = 9;
             this.DoTemperaturaSuperficie.Text = "DoTemperaturaSuperficie";
             this.DoTemperaturaSuperficie.UseVisualStyleBackColor = true;
@@ -420,33 +422,33 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             // DoNivelFluidoPozoTrMin
             // 
             this.DoNivelFluidoPozoTrMin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoNivelFluidoPozoTrMin.Location = new System.Drawing.Point(287, 199);
+            this.DoNivelFluidoPozoTrMin.Location = new System.Drawing.Point(287, 177);
             this.DoNivelFluidoPozoTrMin.Name = "DoNivelFluidoPozoTrMin";
-            this.DoNivelFluidoPozoTrMin.Size = new System.Drawing.Size(126, 27);
+            this.DoNivelFluidoPozoTrMin.Size = new System.Drawing.Size(126, 22);
             this.DoNivelFluidoPozoTrMin.TabIndex = 16;
             // 
             // DoTemperaturaSuperficieMin
             // 
             this.DoTemperaturaSuperficieMin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoTemperaturaSuperficieMin.Location = new System.Drawing.Point(287, 116);
+            this.DoTemperaturaSuperficieMin.Location = new System.Drawing.Point(287, 103);
             this.DoTemperaturaSuperficieMin.Name = "DoTemperaturaSuperficieMin";
-            this.DoTemperaturaSuperficieMin.Size = new System.Drawing.Size(126, 27);
+            this.DoTemperaturaSuperficieMin.Size = new System.Drawing.Size(126, 22);
             this.DoTemperaturaSuperficieMin.TabIndex = 10;
             // 
             // DoNivelFluidoPozoTrMax
             // 
             this.DoNivelFluidoPozoTrMax.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoNivelFluidoPozoTrMax.Location = new System.Drawing.Point(419, 199);
+            this.DoNivelFluidoPozoTrMax.Location = new System.Drawing.Point(419, 177);
             this.DoNivelFluidoPozoTrMax.Name = "DoNivelFluidoPozoTrMax";
-            this.DoNivelFluidoPozoTrMax.Size = new System.Drawing.Size(126, 27);
+            this.DoNivelFluidoPozoTrMax.Size = new System.Drawing.Size(126, 22);
             this.DoNivelFluidoPozoTrMax.TabIndex = 17;
             // 
             // DoTemperaturaSuperficieMax
             // 
             this.DoTemperaturaSuperficieMax.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoTemperaturaSuperficieMax.Location = new System.Drawing.Point(419, 116);
+            this.DoTemperaturaSuperficieMax.Location = new System.Drawing.Point(419, 103);
             this.DoTemperaturaSuperficieMax.Name = "DoTemperaturaSuperficieMax";
-            this.DoTemperaturaSuperficieMax.Size = new System.Drawing.Size(126, 27);
+            this.DoTemperaturaSuperficieMax.Size = new System.Drawing.Size(126, 22);
             this.DoTemperaturaSuperficieMax.TabIndex = 11;
             // 
             // DoVelocidadUnidadBombeo
@@ -454,9 +456,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DoVelocidadUnidadBombeo.AutoSize = true;
             this.tlpVariables.SetColumnSpan(this.DoVelocidadUnidadBombeo, 2);
             this.DoVelocidadUnidadBombeo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoVelocidadUnidadBombeo.Location = new System.Drawing.Point(287, 252);
+            this.DoVelocidadUnidadBombeo.Location = new System.Drawing.Point(287, 225);
             this.DoVelocidadUnidadBombeo.Name = "DoVelocidadUnidadBombeo";
-            this.DoVelocidadUnidadBombeo.Size = new System.Drawing.Size(258, 24);
+            this.DoVelocidadUnidadBombeo.Size = new System.Drawing.Size(258, 20);
             this.DoVelocidadUnidadBombeo.TabIndex = 21;
             this.DoVelocidadUnidadBombeo.Text = "DoVelocidadUnidadBombeo";
             this.DoVelocidadUnidadBombeo.UseVisualStyleBackColor = true;
@@ -464,17 +466,17 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             // DoVelocidadUnidadBombeoMin
             // 
             this.DoVelocidadUnidadBombeoMin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoVelocidadUnidadBombeoMin.Location = new System.Drawing.Point(287, 282);
+            this.DoVelocidadUnidadBombeoMin.Location = new System.Drawing.Point(287, 251);
             this.DoVelocidadUnidadBombeoMin.Name = "DoVelocidadUnidadBombeoMin";
-            this.DoVelocidadUnidadBombeoMin.Size = new System.Drawing.Size(126, 27);
+            this.DoVelocidadUnidadBombeoMin.Size = new System.Drawing.Size(126, 22);
             this.DoVelocidadUnidadBombeoMin.TabIndex = 22;
             // 
             // DoVelocidadUnidadBombeoMax
             // 
             this.DoVelocidadUnidadBombeoMax.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoVelocidadUnidadBombeoMax.Location = new System.Drawing.Point(419, 282);
+            this.DoVelocidadUnidadBombeoMax.Location = new System.Drawing.Point(419, 251);
             this.DoVelocidadUnidadBombeoMax.Name = "DoVelocidadUnidadBombeoMax";
-            this.DoVelocidadUnidadBombeoMax.Size = new System.Drawing.Size(126, 27);
+            this.DoVelocidadUnidadBombeoMax.Size = new System.Drawing.Size(126, 22);
             this.DoVelocidadUnidadBombeoMax.TabIndex = 23;
             // 
             // DoVelocidadMotor
@@ -482,9 +484,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DoVelocidadMotor.AutoSize = true;
             this.tlpVariables.SetColumnSpan(this.DoVelocidadMotor, 2);
             this.DoVelocidadMotor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoVelocidadMotor.Location = new System.Drawing.Point(3, 335);
+            this.DoVelocidadMotor.Location = new System.Drawing.Point(3, 299);
             this.DoVelocidadMotor.Name = "DoVelocidadMotor";
-            this.DoVelocidadMotor.Size = new System.Drawing.Size(258, 24);
+            this.DoVelocidadMotor.Size = new System.Drawing.Size(258, 20);
             this.DoVelocidadMotor.TabIndex = 24;
             this.DoVelocidadMotor.Text = "DoVelocidadMotor";
             this.DoVelocidadMotor.UseVisualStyleBackColor = true;
@@ -492,17 +494,17 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             // DoVelocidadMotorMin
             // 
             this.DoVelocidadMotorMin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoVelocidadMotorMin.Location = new System.Drawing.Point(3, 365);
+            this.DoVelocidadMotorMin.Location = new System.Drawing.Point(3, 325);
             this.DoVelocidadMotorMin.Name = "DoVelocidadMotorMin";
-            this.DoVelocidadMotorMin.Size = new System.Drawing.Size(126, 27);
+            this.DoVelocidadMotorMin.Size = new System.Drawing.Size(126, 22);
             this.DoVelocidadMotorMin.TabIndex = 25;
             // 
             // DoVelocidadMotorMax
             // 
             this.DoVelocidadMotorMax.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoVelocidadMotorMax.Location = new System.Drawing.Point(135, 365);
+            this.DoVelocidadMotorMax.Location = new System.Drawing.Point(135, 325);
             this.DoVelocidadMotorMax.Name = "DoVelocidadMotorMax";
-            this.DoVelocidadMotorMax.Size = new System.Drawing.Size(126, 27);
+            this.DoVelocidadMotorMax.Size = new System.Drawing.Size(126, 22);
             this.DoVelocidadMotorMax.TabIndex = 26;
             // 
             // DoLongitudCarrera
@@ -510,9 +512,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DoLongitudCarrera.AutoSize = true;
             this.tlpVariables.SetColumnSpan(this.DoLongitudCarrera, 2);
             this.DoLongitudCarrera.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoLongitudCarrera.Location = new System.Drawing.Point(287, 335);
+            this.DoLongitudCarrera.Location = new System.Drawing.Point(287, 299);
             this.DoLongitudCarrera.Name = "DoLongitudCarrera";
-            this.DoLongitudCarrera.Size = new System.Drawing.Size(258, 24);
+            this.DoLongitudCarrera.Size = new System.Drawing.Size(258, 20);
             this.DoLongitudCarrera.TabIndex = 27;
             this.DoLongitudCarrera.Text = "DoLongitudCarrera";
             this.DoLongitudCarrera.UseVisualStyleBackColor = true;
@@ -520,17 +522,17 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             // DoLongitudCarreraMin
             // 
             this.DoLongitudCarreraMin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoLongitudCarreraMin.Location = new System.Drawing.Point(287, 365);
+            this.DoLongitudCarreraMin.Location = new System.Drawing.Point(287, 325);
             this.DoLongitudCarreraMin.Name = "DoLongitudCarreraMin";
-            this.DoLongitudCarreraMin.Size = new System.Drawing.Size(126, 27);
+            this.DoLongitudCarreraMin.Size = new System.Drawing.Size(126, 22);
             this.DoLongitudCarreraMin.TabIndex = 28;
             // 
             // DoLongitudCarreraMax
             // 
             this.DoLongitudCarreraMax.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoLongitudCarreraMax.Location = new System.Drawing.Point(419, 365);
+            this.DoLongitudCarreraMax.Location = new System.Drawing.Point(419, 325);
             this.DoLongitudCarreraMax.Name = "DoLongitudCarreraMax";
-            this.DoLongitudCarreraMax.Size = new System.Drawing.Size(126, 27);
+            this.DoLongitudCarreraMax.Size = new System.Drawing.Size(126, 22);
             this.DoLongitudCarreraMax.TabIndex = 29;
             // 
             // DoEficienciaLlenado
@@ -538,9 +540,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DoEficienciaLlenado.AutoSize = true;
             this.tlpVariables.SetColumnSpan(this.DoEficienciaLlenado, 2);
             this.DoEficienciaLlenado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoEficienciaLlenado.Location = new System.Drawing.Point(3, 418);
+            this.DoEficienciaLlenado.Location = new System.Drawing.Point(3, 373);
             this.DoEficienciaLlenado.Name = "DoEficienciaLlenado";
-            this.DoEficienciaLlenado.Size = new System.Drawing.Size(258, 24);
+            this.DoEficienciaLlenado.Size = new System.Drawing.Size(258, 20);
             this.DoEficienciaLlenado.TabIndex = 30;
             this.DoEficienciaLlenado.Text = "DoEficienciaLlenado";
             this.DoEficienciaLlenado.UseVisualStyleBackColor = true;
@@ -548,26 +550,26 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             // DoEficienciaLlenadoMin
             // 
             this.DoEficienciaLlenadoMin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoEficienciaLlenadoMin.Location = new System.Drawing.Point(3, 448);
+            this.DoEficienciaLlenadoMin.Location = new System.Drawing.Point(3, 399);
             this.DoEficienciaLlenadoMin.Name = "DoEficienciaLlenadoMin";
-            this.DoEficienciaLlenadoMin.Size = new System.Drawing.Size(126, 27);
+            this.DoEficienciaLlenadoMin.Size = new System.Drawing.Size(126, 22);
             this.DoEficienciaLlenadoMin.TabIndex = 31;
             // 
             // DoEficienciaLlenadoMax
             // 
             this.DoEficienciaLlenadoMax.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoEficienciaLlenadoMax.Location = new System.Drawing.Point(135, 448);
+            this.DoEficienciaLlenadoMax.Location = new System.Drawing.Point(135, 399);
             this.DoEficienciaLlenadoMax.Name = "DoEficienciaLlenadoMax";
-            this.DoEficienciaLlenadoMax.Size = new System.Drawing.Size(126, 27);
+            this.DoEficienciaLlenadoMax.Size = new System.Drawing.Size(126, 22);
             this.DoEficienciaLlenadoMax.TabIndex = 32;
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.tableLayoutPanel3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(606, 530);
+            this.tabPage2.Size = new System.Drawing.Size(606, 534);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -587,7 +589,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(600, 524);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(600, 528);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // tableLayoutPanel5
@@ -602,7 +604,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(554, 478);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(554, 482);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
             // tableLayoutPanel6
@@ -614,11 +616,11 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tableLayoutPanel6.Controls.Add(this.lbTemporizador2, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.CartaDinagrafica, 1, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 442);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 451);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(548, 33);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(548, 28);
             this.tableLayoutPanel6.TabIndex = 4;
             // 
             // lbTemporizador2
@@ -627,7 +629,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.lbTemporizador2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbTemporizador2.Location = new System.Drawing.Point(3, 0);
             this.lbTemporizador2.Name = "lbTemporizador2";
-            this.lbTemporizador2.Size = new System.Drawing.Size(123, 33);
+            this.lbTemporizador2.Size = new System.Drawing.Size(110, 28);
             this.lbTemporizador2.TabIndex = 0;
             this.lbTemporizador2.Text = "lbTemporizador2";
             this.lbTemporizador2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -635,9 +637,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             // CartaDinagrafica
             // 
             this.CartaDinagrafica.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CartaDinagrafica.Location = new System.Drawing.Point(132, 3);
+            this.CartaDinagrafica.Location = new System.Drawing.Point(119, 3);
             this.CartaDinagrafica.Name = "CartaDinagrafica";
-            this.CartaDinagrafica.Size = new System.Drawing.Size(413, 27);
+            this.CartaDinagrafica.Size = new System.Drawing.Size(426, 22);
             this.CartaDinagrafica.TabIndex = 0;
             // 
             // tableLayoutPanel7
@@ -651,8 +653,8 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tableLayoutPanel7.Controls.Add(this.CCartaDinagraficaList, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.CCartaDinagraficaAgregar, 0, 3);
             this.tableLayoutPanel7.Controls.Add(this.CCartaDinagraficaEliminar, 0, 4);
+            this.tableLayoutPanel7.Controls.Add(this.chart1, 2, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Enabled = false;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 6;
@@ -662,7 +664,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(548, 433);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(548, 442);
             this.tableLayoutPanel7.TabIndex = 3;
             // 
             // CCartaDinagrafica
@@ -671,7 +673,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.CCartaDinagrafica.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CCartaDinagrafica.Location = new System.Drawing.Point(3, 3);
             this.CCartaDinagrafica.Name = "CCartaDinagrafica";
-            this.CCartaDinagrafica.Size = new System.Drawing.Size(194, 24);
+            this.CCartaDinagrafica.Size = new System.Drawing.Size(194, 20);
             this.CCartaDinagrafica.TabIndex = 0;
             this.CCartaDinagrafica.Text = "CCartaDinagrafica";
             this.CCartaDinagrafica.UseVisualStyleBackColor = true;
@@ -679,12 +681,12 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             // 
             // CCartaDinagraficaList
             // 
-            this.CCartaDinagraficaList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CCartaDinagraficaList.Dock = System.Windows.Forms.DockStyle.Top;
             this.CCartaDinagraficaList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CCartaDinagraficaList.FormattingEnabled = true;
-            this.CCartaDinagraficaList.Location = new System.Drawing.Point(3, 33);
+            this.CCartaDinagraficaList.Location = new System.Drawing.Point(3, 29);
             this.CCartaDinagraficaList.Name = "CCartaDinagraficaList";
-            this.CCartaDinagraficaList.Size = new System.Drawing.Size(194, 28);
+            this.CCartaDinagraficaList.Size = new System.Drawing.Size(194, 24);
             this.CCartaDinagraficaList.TabIndex = 1;
             this.CCartaDinagraficaList.SelectedIndexChanged += new System.EventHandler(this.CCartaDinagraficaList_SelectedIndexChanged);
             // 
@@ -692,7 +694,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             // 
             this.CCartaDinagraficaAgregar.AutoSize = true;
             this.CCartaDinagraficaAgregar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CCartaDinagraficaAgregar.Location = new System.Drawing.Point(3, 87);
+            this.CCartaDinagraficaAgregar.Location = new System.Drawing.Point(3, 79);
             this.CCartaDinagraficaAgregar.Name = "CCartaDinagraficaAgregar";
             this.CCartaDinagraficaAgregar.Size = new System.Drawing.Size(194, 30);
             this.CCartaDinagraficaAgregar.TabIndex = 2;
@@ -704,13 +706,24 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             // 
             this.CCartaDinagraficaEliminar.AutoSize = true;
             this.CCartaDinagraficaEliminar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CCartaDinagraficaEliminar.Location = new System.Drawing.Point(3, 123);
+            this.CCartaDinagraficaEliminar.Location = new System.Drawing.Point(3, 115);
             this.CCartaDinagraficaEliminar.Name = "CCartaDinagraficaEliminar";
             this.CCartaDinagraficaEliminar.Size = new System.Drawing.Size(194, 30);
             this.CCartaDinagraficaEliminar.TabIndex = 3;
             this.CCartaDinagraficaEliminar.Text = "CCartaDinagraficaEliminar";
             this.CCartaDinagraficaEliminar.UseVisualStyleBackColor = true;
             this.CCartaDinagraficaEliminar.Click += new System.EventHandler(this.CCartaDinagraficaEliminar_Click);
+            // 
+            // chart1
+            // 
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chart1.Legend.Name = "Default Legend";
+            this.chart1.Location = new System.Drawing.Point(216, 3);
+            this.chart1.Name = "chart1";
+            this.tableLayoutPanel7.SetRowSpan(this.chart1, 6);
+            this.chart1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            this.chart1.Size = new System.Drawing.Size(329, 436);
+            this.chart1.TabIndex = 4;
             // 
             // openFileDialog1
             // 
@@ -739,6 +752,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tableLayoutPanel6.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -798,5 +812,6 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
         private Button CCartaDinagraficaAgregar;
         private Button CCartaDinagraficaEliminar;
         private OpenFileDialog openFileDialog1;
+        internal DevExpress.XtraCharts.ChartControl chart1;
     }
 }

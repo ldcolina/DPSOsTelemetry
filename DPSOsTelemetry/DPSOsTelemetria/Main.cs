@@ -112,7 +112,7 @@ namespace DPSOsTelemetria
         {
             Referencias Well = JsonConvert.DeserializeObject<Referencias>(File.ReadAllText(ReferenciasII.ID)) ?? new Referencias();
 
-            Form OpenForm = MdiChildren.Where(val => val.Text.Contains(ReferenciasII.Name)).FirstOrDefault();
+            Form OpenForm = MdiChildren.Where(val => val.Text.Contains($"{ReferenciasII.Name} ({SystemWell.GetString(ReferenciasII.Type)})")).FirstOrDefault();
 
             if (OpenForm == null)
             {
@@ -348,6 +348,7 @@ namespace DPSOsTelemetria
         #region Idioma
 
         private static readonly ResourceManager resource = new(typeof(Languages.DPSOsTelemetria));
+        private static readonly ResourceManager SystemWell = new ResourceManager(typeof(Languages.SystemWell));
 
         private void Idiomas(string Language)
         {

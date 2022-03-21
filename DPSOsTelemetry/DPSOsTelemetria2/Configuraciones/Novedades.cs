@@ -1,9 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Windows.Forms;
-
+﻿using System;
+using System.Collections.Generic;
 using System.Resources;
-
-using System;
+using System.Windows.Forms;
 
 namespace DPSOsTelemetria2.Configuraciones
 {
