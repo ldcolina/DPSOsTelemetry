@@ -12,6 +12,7 @@ namespace DPSOsTelemetria2
     public partial class Config : Form
     {
         private readonly string configuracion;
+
         private Setup newConfiguracion;
 
         public Config()
@@ -231,7 +232,7 @@ namespace DPSOsTelemetria2
             Guia.Text = Languages.Setups.Guia;
             Actualizaciones.Text = Languages.Setups.Actualizaciones;
 
-            Copyright.Text = Languages.Setups.Copyright.Replace("{0}", "2022");
+            Copyright.Text = Languages.Setups.Copyright.Replace("{0}", Main.Anio);
             Terms.Text = Languages.Setups.Terms;
             Privacy.Text = Languages.Setups.Privacy;
             LicenseAgreement.Text = Languages.Setups.LicenseAgreement;
@@ -244,7 +245,9 @@ namespace DPSOsTelemetria2
     public class Setup
     {
         public int Decimales { get; set; } = 4;
+
         public string Idioma { get; set; } = Thread.CurrentThread.CurrentUICulture.ToString();
+
         public string Version { get; set; } = "";
     }
 }

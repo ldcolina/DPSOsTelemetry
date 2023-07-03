@@ -262,4 +262,10 @@
   <data name="ListaPozos2" xml:space="preserve">
     <value>This window contains main information of the times and status of the transmission made</value>
   </data>
+  <data name="TransmisionDatos17" xml:space="preserve">
+    <value>General well transmission information</value>
+  </data>
+  <data name="TransmisionDatos18" xml:space="preserve">
+    <value>Open window of selected well</value>
+  </data>
 </root>

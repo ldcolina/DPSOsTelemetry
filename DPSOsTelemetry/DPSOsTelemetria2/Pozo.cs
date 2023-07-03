@@ -15,9 +15,13 @@ namespace DPSOsTelemetria2
     public partial class Pozo : Form
     {
         public ReferenciasI _Telemetria = new ReferenciasI();
+
         public ReferenciasII Referencias = new ReferenciasII();
+
         public string select;
+
         public bool status;
+
         private static readonly ResourceManager SystemWell = new ResourceManager(typeof(SystemWell));
 
         public Pozo()
@@ -301,194 +305,194 @@ namespace DPSOsTelemetria2
 
                     #region Read
 
-                    #region DoPresionTuberiaProduccion
+                    #region presionTuberiaProduccion
 
-                    if (_Telemetria.Range.DoPresionTuberiaProduccion)
-                        DatosOperativos.DoPresionTuberiaProduccion = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoPresionTuberiaProduccionMax - _Telemetria.Range.DoPresionTuberiaProduccionMin) + _Telemetria.Range.DoPresionTuberiaProduccionMin;
+                    if (_Telemetria.Range.presionTuberiaProduccion)
+                        DatosOperativos.presionTuberiaProduccion = (decimal)new Random().NextDouble() * (_Telemetria.Range.presionTuberiaProduccionMax - _Telemetria.Range.presionTuberiaProduccionMin) + _Telemetria.Range.presionTuberiaProduccionMin;
 
-                    #endregion DoPresionTuberiaProduccion
+                    #endregion presionTuberiaProduccion
 
-                    #region DoPresionTuberiaRevestimiento
+                    #region presionTuberiaRevestimiento
 
-                    if (_Telemetria.Range.DoPresionTuberiaRevestimiento)
-                        DatosOperativos.DoPresionTuberiaRevestimiento = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoPresionTuberiaRevestimientoMax - _Telemetria.Range.DoPresionTuberiaRevestimientoMin) + _Telemetria.Range.DoPresionTuberiaRevestimientoMin;
+                    if (_Telemetria.Range.presionTuberiaRevestimiento)
+                        DatosOperativos.presionTuberiaRevestimiento = (decimal)new Random().NextDouble() * (_Telemetria.Range.presionTuberiaRevestimientoMax - _Telemetria.Range.presionTuberiaRevestimientoMin) + _Telemetria.Range.presionTuberiaRevestimientoMin;
 
-                    #endregion DoPresionTuberiaRevestimiento
+                    #endregion presionTuberiaRevestimiento
 
-                    #region DoPresionAperturaCampo
+                    #region presionAperturaCampo
 
-                    if (_Telemetria.Range.DoPresionAperturaCampo)
-                        DatosOperativos.DoPresionAperturaCampo = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoPresionAperturaCampoMax - _Telemetria.Range.DoPresionAperturaCampoMin) + _Telemetria.Range.DoPresionAperturaCampoMin;
+                    if (_Telemetria.Range.presionAperturaCampo)
+                        DatosOperativos.presionAperturaCampo = (decimal)new Random().NextDouble() * (_Telemetria.Range.presionAperturaCampoMax - _Telemetria.Range.presionAperturaCampoMin) + _Telemetria.Range.presionAperturaCampoMin;
 
-                    #endregion DoPresionAperturaCampo
+                    #endregion presionAperturaCampo
 
-                    #region DoPresionLineaDescarga
+                    #region presionLineaDescarga
 
-                    if (_Telemetria.Range.DoPresionLineaDescarga)
-                        DatosOperativos.DoPresionLineaDescarga = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoPresionLineaDescargaMax - _Telemetria.Range.DoPresionLineaDescargaMin) + _Telemetria.Range.DoPresionLineaDescargaMin;
+                    if (_Telemetria.Range.presionLineaDescarga)
+                        DatosOperativos.presionLineaDescarga = (decimal)new Random().NextDouble() * (_Telemetria.Range.presionLineaDescargaMax - _Telemetria.Range.presionLineaDescargaMin) + _Telemetria.Range.presionLineaDescargaMin;
 
-                    #endregion DoPresionLineaDescarga
+                    #endregion presionLineaDescarga
 
-                    #region DoTemperaturaSuperficie
+                    #region temperaturaSuperficie
 
-                    if (_Telemetria.Range.DoTemperaturaSuperficie)
-                        DatosOperativos.DoTemperaturaSuperficie = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoTemperaturaSuperficieMax - _Telemetria.Range.DoTemperaturaSuperficieMin) + _Telemetria.Range.DoTemperaturaSuperficieMin;
+                    if (_Telemetria.Range.temperaturaSuperficie)
+                        DatosOperativos.temperaturaSuperficie = (decimal)new Random().NextDouble() * (_Telemetria.Range.temperaturaSuperficieMax - _Telemetria.Range.temperaturaSuperficieMin) + _Telemetria.Range.temperaturaSuperficieMin;
 
-                    #endregion DoTemperaturaSuperficie
+                    #endregion temperaturaSuperficie
 
-                    #region DoSumergenciaEfectivaBomba
+                    #region sumergenciaEfectivaBomba
 
-                    if (_Telemetria.Range.DoSumergenciaEfectivaBomba)
-                        DatosOperativos.DoSumergenciaEfectivaBomba = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoSumergenciaEfectivaBombaMax - _Telemetria.Range.DoSumergenciaEfectivaBombaMin) + _Telemetria.Range.DoSumergenciaEfectivaBombaMin;
+                    if (_Telemetria.Range.sumergenciaEfectivaBomba)
+                        DatosOperativos.sumergenciaEfectivaBomba = (decimal)new Random().NextDouble() * (_Telemetria.Range.sumergenciaEfectivaBombaMax - _Telemetria.Range.sumergenciaEfectivaBombaMin) + _Telemetria.Range.sumergenciaEfectivaBombaMin;
 
-                    #endregion DoSumergenciaEfectivaBomba
+                    #endregion sumergenciaEfectivaBomba
 
-                    #region DoNivelFluidoPozoTp
+                    #region nivelFluidoPozoTp
 
-                    if (_Telemetria.Range.DoNivelFluidoPozoTp)
-                        DatosOperativos.DoNivelFluidoPozoTp = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoNivelFluidoPozoTpMax - _Telemetria.Range.DoNivelFluidoPozoTpMin) + _Telemetria.Range.DoNivelFluidoPozoTpMin;
+                    if (_Telemetria.Range.nivelFluidoPozoTp)
+                        DatosOperativos.nivelFluidoPozoTp = (decimal)new Random().NextDouble() * (_Telemetria.Range.nivelFluidoPozoTpMax - _Telemetria.Range.nivelFluidoPozoTpMin) + _Telemetria.Range.nivelFluidoPozoTpMin;
 
-                    #endregion DoNivelFluidoPozoTp
+                    #endregion nivelFluidoPozoTp
 
-                    #region DoNivelFluidoPozoTr
+                    #region nivelFluidoPozoTr
 
-                    if (_Telemetria.Range.DoNivelFluidoPozoTr)
-                        DatosOperativos.DoNivelFluidoPozoTr = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoNivelFluidoPozoTrMax - _Telemetria.Range.DoNivelFluidoPozoTrMin) + _Telemetria.Range.DoNivelFluidoPozoTrMin;
+                    if (_Telemetria.Range.nivelFluidoPozoTr)
+                        DatosOperativos.nivelFluidoPozoTr = (decimal)new Random().NextDouble() * (_Telemetria.Range.nivelFluidoPozoTrMax - _Telemetria.Range.nivelFluidoPozoTrMin) + _Telemetria.Range.nivelFluidoPozoTrMin;
 
-                    #endregion DoNivelFluidoPozoTr
+                    #endregion nivelFluidoPozoTr
 
-                    #region DoPresionEntradaBomba
+                    #region presionEntradaBomba
 
-                    if (_Telemetria.Range.DoPresionEntradaBomba)
-                        DatosOperativos.DoPresionEntradaBomba = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoPresionEntradaBombaMax - _Telemetria.Range.DoPresionEntradaBombaMin) + _Telemetria.Range.DoPresionEntradaBombaMin;
+                    if (_Telemetria.Range.presionEntradaBomba)
+                        DatosOperativos.presionEntradaBomba = (decimal)new Random().NextDouble() * (_Telemetria.Range.presionEntradaBombaMax - _Telemetria.Range.presionEntradaBombaMin) + _Telemetria.Range.presionEntradaBombaMin;
 
-                    #endregion DoPresionEntradaBomba
+                    #endregion presionEntradaBomba
 
-                    #region DoVelocidadBomba
+                    #region velocidadBomba
 
-                    if (_Telemetria.Range.DoVelocidadBomba)
-                        DatosOperativos.DoVelocidadBomba = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoVelocidadBombaMax - _Telemetria.Range.DoVelocidadBombaMin) + _Telemetria.Range.DoVelocidadBombaMin;
+                    if (_Telemetria.Range.velocidadBomba)
+                        DatosOperativos.velocidadBomba = (decimal)new Random().NextDouble() * (_Telemetria.Range.velocidadBombaMax - _Telemetria.Range.velocidadBombaMin) + _Telemetria.Range.velocidadBombaMin;
 
-                    #endregion DoVelocidadBomba
+                    #endregion velocidadBomba
 
-                    #region DoVelocidadUnidadBombeo
+                    #region velocidadUnidadBombeo
 
-                    if (_Telemetria.Range.DoVelocidadUnidadBombeo)
-                        DatosOperativos.DoVelocidadUnidadBombeo = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoVelocidadUnidadBombeoMax - _Telemetria.Range.DoVelocidadUnidadBombeoMin) + _Telemetria.Range.DoVelocidadUnidadBombeoMin;
+                    if (_Telemetria.Range.velocidadUnidadBombeo)
+                        DatosOperativos.velocidadUnidadBombeo = (decimal)new Random().NextDouble() * (_Telemetria.Range.velocidadUnidadBombeoMax - _Telemetria.Range.velocidadUnidadBombeoMin) + _Telemetria.Range.velocidadUnidadBombeoMin;
 
-                    #endregion DoVelocidadUnidadBombeo
+                    #endregion velocidadUnidadBombeo
 
-                    #region DoFrecuenciaOperacionBomba
+                    #region frecuenciaOperacionBomba
 
-                    if (_Telemetria.Range.DoFrecuenciaOperacionBomba)
-                        DatosOperativos.DoFrecuenciaOperacionBomba = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoFrecuenciaOperacionBombaMax - _Telemetria.Range.DoFrecuenciaOperacionBombaMin) + _Telemetria.Range.DoFrecuenciaOperacionBombaMin;
+                    if (_Telemetria.Range.frecuenciaOperacionBomba)
+                        DatosOperativos.frecuenciaOperacionBomba = (decimal)new Random().NextDouble() * (_Telemetria.Range.frecuenciaOperacionBombaMax - _Telemetria.Range.frecuenciaOperacionBombaMin) + _Telemetria.Range.frecuenciaOperacionBombaMin;
 
-                    #endregion DoFrecuenciaOperacionBomba
+                    #endregion frecuenciaOperacionBomba
 
-                    #region DoVelocidadMotor
+                    #region velocidadMotor
 
-                    if (_Telemetria.Range.DoVelocidadMotor)
-                        DatosOperativos.DoVelocidadMotor = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoVelocidadMotorMax - _Telemetria.Range.DoVelocidadMotorMin) + _Telemetria.Range.DoVelocidadMotorMin;
+                    if (_Telemetria.Range.velocidadMotor)
+                        DatosOperativos.velocidadMotor = (decimal)new Random().NextDouble() * (_Telemetria.Range.velocidadMotorMax - _Telemetria.Range.velocidadMotorMin) + _Telemetria.Range.velocidadMotorMin;
 
-                    #endregion DoVelocidadMotor
+                    #endregion velocidadMotor
 
-                    #region DoLongitudCarrera
+                    #region longitudCarrera
 
-                    if (_Telemetria.Range.DoLongitudCarrera)
-                        DatosOperativos.DoLongitudCarrera = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoLongitudCarreraMax - _Telemetria.Range.DoLongitudCarreraMin) + _Telemetria.Range.DoLongitudCarreraMin;
+                    if (_Telemetria.Range.longitudCarrera)
+                        DatosOperativos.longitudCarrera = (decimal)new Random().NextDouble() * (_Telemetria.Range.longitudCarreraMax - _Telemetria.Range.longitudCarreraMin) + _Telemetria.Range.longitudCarreraMin;
 
-                    #endregion DoLongitudCarrera
+                    #endregion longitudCarrera
 
-                    #region DoPresionDisponible
+                    #region presionDisponible
 
-                    if (_Telemetria.Range.DoPresionDisponible)
-                        DatosOperativos.DoPresionDisponible = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoPresionDisponibleMax - _Telemetria.Range.DoPresionDisponibleMin) + _Telemetria.Range.DoPresionDisponibleMin;
+                    if (_Telemetria.Range.presionDisponible)
+                        DatosOperativos.presionDisponible = (decimal)new Random().NextDouble() * (_Telemetria.Range.presionDisponibleMax - _Telemetria.Range.presionDisponibleMin) + _Telemetria.Range.presionDisponibleMin;
 
-                    #endregion DoPresionDisponible
+                    #endregion presionDisponible
 
-                    #region DoGastoInyeccionFluidoPotencia
+                    #region gastoInyeccionFluidoPotencia
 
-                    if (_Telemetria.Range.DoGastoInyeccionFluidoPotencia)
-                        DatosOperativos.DoGastoInyeccionFluidoPotencia = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoGastoInyeccionFluidoPotenciaMax - _Telemetria.Range.DoGastoInyeccionFluidoPotenciaMin) + _Telemetria.Range.DoGastoInyeccionFluidoPotenciaMin;
+                    if (_Telemetria.Range.gastoInyeccionFluidoPotencia)
+                        DatosOperativos.gastoInyeccionFluidoPotencia = (decimal)new Random().NextDouble() * (_Telemetria.Range.gastoInyeccionFluidoPotenciaMax - _Telemetria.Range.gastoInyeccionFluidoPotenciaMin) + _Telemetria.Range.gastoInyeccionFluidoPotenciaMin;
 
-                    #endregion DoGastoInyeccionFluidoPotencia
+                    #endregion gastoInyeccionFluidoPotencia
 
-                    #region DoGravedadEspecificaFluidoPotencia
+                    #region gravedadEspecificaFluidoPotencia
 
-                    if (_Telemetria.Range.DoGravedadEspecificaFluidoPotencia)
-                        DatosOperativos.DoGravedadEspecificaFluidoPotencia = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoGravedadEspecificaFluidoPotenciaMax - _Telemetria.Range.DoGravedadEspecificaFluidoPotenciaMin) + _Telemetria.Range.DoGravedadEspecificaFluidoPotenciaMin;
+                    if (_Telemetria.Range.gravedadEspecificaFluidoPotencia)
+                        DatosOperativos.gravedadEspecificaFluidoPotencia = (decimal)new Random().NextDouble() * (_Telemetria.Range.gravedadEspecificaFluidoPotenciaMax - _Telemetria.Range.gravedadEspecificaFluidoPotenciaMin) + _Telemetria.Range.gravedadEspecificaFluidoPotenciaMin;
 
-                    #endregion DoGravedadEspecificaFluidoPotencia
+                    #endregion gravedadEspecificaFluidoPotencia
 
-                    #region DoGastoGasInyeccion
+                    #region gastoGasInyeccion
 
-                    if (_Telemetria.Range.DoGastoGasInyeccion)
-                        DatosOperativos.DoGastoGasInyeccion = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoGastoGasInyeccionMax - _Telemetria.Range.DoGastoGasInyeccionMin) + _Telemetria.Range.DoGastoGasInyeccionMin;
+                    if (_Telemetria.Range.gastoGasInyeccion)
+                        DatosOperativos.gastoGasInyeccion = (decimal)new Random().NextDouble() * (_Telemetria.Range.gastoGasInyeccionMax - _Telemetria.Range.gastoGasInyeccionMin) + _Telemetria.Range.gastoGasInyeccionMin;
 
-                    #endregion DoGastoGasInyeccion
+                    #endregion gastoGasInyeccion
 
-                    #region DoGravedadEspecificaGasInyeccion
+                    #region gravedadEspecificaGasInyeccion
 
-                    if (_Telemetria.Range.DoGravedadEspecificaGasInyeccion)
-                        DatosOperativos.DoGravedadEspecificaGasInyeccion = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoGravedadEspecificaGasInyeccionMax - _Telemetria.Range.DoGravedadEspecificaGasInyeccionMin) + _Telemetria.Range.DoGravedadEspecificaGasInyeccionMin;
+                    if (_Telemetria.Range.gravedadEspecificaGasInyeccion)
+                        DatosOperativos.gravedadEspecificaGasInyeccion = (decimal)new Random().NextDouble() * (_Telemetria.Range.gravedadEspecificaGasInyeccionMax - _Telemetria.Range.gravedadEspecificaGasInyeccionMin) + _Telemetria.Range.gravedadEspecificaGasInyeccionMin;
 
-                    #endregion DoGravedadEspecificaGasInyeccion
+                    #endregion gravedadEspecificaGasInyeccion
 
-                    #region DoTorque
+                    #region torque
 
-                    if (_Telemetria.Range.DoTorque)
-                        DatosOperativos.DoTorque = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoTorqueMax - _Telemetria.Range.DoTorqueMin) + _Telemetria.Range.DoTorqueMin;
+                    if (_Telemetria.Range.torque)
+                        DatosOperativos.torque = (decimal)new Random().NextDouble() * (_Telemetria.Range.torqueMax - _Telemetria.Range.torqueMin) + _Telemetria.Range.torqueMin;
 
-                    #endregion DoTorque
+                    #endregion torque
 
-                    #region DoCorriente
+                    #region corriente
 
-                    if (_Telemetria.Range.DoCorriente)
-                        DatosOperativos.DoCorriente = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoCorrienteMax - _Telemetria.Range.DoCorrienteMin) + _Telemetria.Range.DoCorrienteMin;
+                    if (_Telemetria.Range.corriente)
+                        DatosOperativos.corriente = (decimal)new Random().NextDouble() * (_Telemetria.Range.corrienteMax - _Telemetria.Range.corrienteMin) + _Telemetria.Range.corrienteMin;
 
-                    #endregion DoCorriente
+                    #endregion corriente
 
-                    #region DoDiametroEstrangulador
+                    #region diametroEstrangulador
 
-                    if (_Telemetria.Range.DoDiametroEstrangulador)
-                        DatosOperativos.DoDiametroEstrangulador = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoDiametroEstranguladorMax - _Telemetria.Range.DoDiametroEstranguladorMin) + _Telemetria.Range.DoDiametroEstranguladorMin;
+                    if (_Telemetria.Range.diametroEstrangulador)
+                        DatosOperativos.diametroEstrangulador = (decimal)new Random().NextDouble() * (_Telemetria.Range.diametroEstranguladorMax - _Telemetria.Range.diametroEstranguladorMin) + _Telemetria.Range.diametroEstranguladorMin;
 
-                    #endregion DoDiametroEstrangulador
+                    #endregion diametroEstrangulador
 
-                    #region DoTiempoCiclo
+                    #region tiempoCiclo
 
-                    if (_Telemetria.Range.DoTiempoCiclo)
-                        DatosOperativos.DoTiempoCiclo = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoTiempoCicloMax - _Telemetria.Range.DoTiempoCicloMin) + _Telemetria.Range.DoTiempoCicloMin;
+                    if (_Telemetria.Range.tiempoCiclo)
+                        DatosOperativos.tiempoCiclo = (decimal)new Random().NextDouble() * (_Telemetria.Range.tiempoCicloMax - _Telemetria.Range.tiempoCicloMin) + _Telemetria.Range.tiempoCicloMin;
 
-                    #endregion DoTiempoCiclo
+                    #endregion tiempoCiclo
 
-                    #region DoTiempoRecuperacion
+                    #region tiempoRecuperacion
 
-                    if (_Telemetria.Range.DoTiempoRecuperacion)
-                        DatosOperativos.DoTiempoRecuperacion = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoTiempoRecuperacionMax - _Telemetria.Range.DoTiempoRecuperacionMin) + _Telemetria.Range.DoTiempoRecuperacionMin;
+                    if (_Telemetria.Range.tiempoRecuperacion)
+                        DatosOperativos.tiempoRecuperacion = (decimal)new Random().NextDouble() * (_Telemetria.Range.tiempoRecuperacionMax - _Telemetria.Range.tiempoRecuperacionMin) + _Telemetria.Range.tiempoRecuperacionMin;
 
-                    #endregion DoTiempoRecuperacion
+                    #endregion tiempoRecuperacion
 
-                    #region DoTiempoInyeccion
+                    #region tiempoInyeccion
 
-                    if (_Telemetria.Range.DoTiempoInyeccion)
-                        DatosOperativos.DoTiempoInyeccion = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoTiempoInyeccionMax - _Telemetria.Range.DoTiempoInyeccionMin) + _Telemetria.Range.DoTiempoInyeccionMin;
+                    if (_Telemetria.Range.tiempoInyeccion)
+                        DatosOperativos.tiempoInyeccion = (decimal)new Random().NextDouble() * (_Telemetria.Range.tiempoInyeccionMax - _Telemetria.Range.tiempoInyeccionMin) + _Telemetria.Range.tiempoInyeccionMin;
 
-                    #endregion DoTiempoInyeccion
+                    #endregion tiempoInyeccion
 
-                    #region DoTiempoDesplazamientoTapon
+                    #region tiempoDesplazamientoTapon
 
-                    if (_Telemetria.Range.DoTiempoDesplazamientoTapon)
-                        DatosOperativos.DoTiempoDesplazamientoTapon = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoTiempoDesplazamientoTaponMax - _Telemetria.Range.DoTiempoDesplazamientoTaponMin) + _Telemetria.Range.DoTiempoDesplazamientoTaponMin;
+                    if (_Telemetria.Range.tiempoDesplazamientoTapon)
+                        DatosOperativos.tiempoDesplazamientoTapon = (decimal)new Random().NextDouble() * (_Telemetria.Range.tiempoDesplazamientoTaponMax - _Telemetria.Range.tiempoDesplazamientoTaponMin) + _Telemetria.Range.tiempoDesplazamientoTaponMin;
 
-                    #endregion DoTiempoDesplazamientoTapon
+                    #endregion tiempoDesplazamientoTapon
 
-                    #region DoEficienciaLlenado
+                    #region eficienciaLlenado
 
-                    if (_Telemetria.Range.DoEficienciaLlenado)
-                        DatosOperativos.DoEficienciaLlenado = (decimal)new Random().NextDouble() * (_Telemetria.Range.DoEficienciaLlenadoMax - _Telemetria.Range.DoEficienciaLlenadoMin) + _Telemetria.Range.DoEficienciaLlenadoMin;
+                    if (_Telemetria.Range.eficienciaLlenado)
+                        DatosOperativos.eficienciaLlenado = (decimal)new Random().NextDouble() * (_Telemetria.Range.eficienciaLlenadoMax - _Telemetria.Range.eficienciaLlenadoMin) + _Telemetria.Range.eficienciaLlenadoMin;
 
-                    #endregion DoEficienciaLlenado
+                    #endregion eficienciaLlenado
 
                     #endregion Read
 
@@ -505,7 +509,7 @@ namespace DPSOsTelemetria2
                 #region CartaDinagrafica
 
                 DateTime time2 = _Telemetria.Started.AddMilliseconds(_Telemetria.Range.CartaDinagrafica.TotalMilliseconds * _Telemetria.DatosOperativosSends);
-                if ((_Telemetria.Range.DatosOperativos.TotalMilliseconds != 0) & (time1 <= DateTime.UtcNow))
+                if ((_Telemetria.Range.CartaDinagrafica.TotalMilliseconds != 0) & (time1 <= DateTime.UtcNow))
                 {
                     OCartaDinagrafica.CCartaDinagrafica CCartaDinagrafica = new OCartaDinagrafica.CCartaDinagrafica();
 

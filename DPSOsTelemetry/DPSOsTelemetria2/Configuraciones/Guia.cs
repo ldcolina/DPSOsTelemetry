@@ -282,8 +282,32 @@ namespace DPSOsTelemetria2.Configuraciones
         {
             ListaPozos.Text = Languages.Setups.ListaPozos;
 
+            Bitmap Image1 = null;
+            switch (Thread.CurrentThread.CurrentCulture.Name)
+            {
+                case "en":
+                    {
+                        Image1 = (Bitmap)Resources.Transmission;
+                        break;
+                    }
+                case "es":
+                case "es-MX":
+                    {
+                        Image1 = (Bitmap)Resources.Transmisiones;
+                        break;
+                    }
+            }
+
             label9.Text = Languages.Setups.ListaPozos1.Replace("{0}", Languages.DPSOsTelemetria.Ayuda).Replace("{1}", Languages.DPSOsTelemetria.listaTiempo);
             label10.Text = Languages.Setups.ListaPozos2;
+            pictureBox5.Image = Image1;
+
+            List<string> mensaje = new List<string>()
+            {
+                $"1.-\t{Languages.Setups.TransmisionDatos17}.",
+                $"2.-\t{Languages.Setups.TransmisionDatos18}.",
+            };
+            label11.Text = string.Join("\n", mensaje.ToArray());
             splitContainer3.Panel2.AutoScroll = true;
         }
 

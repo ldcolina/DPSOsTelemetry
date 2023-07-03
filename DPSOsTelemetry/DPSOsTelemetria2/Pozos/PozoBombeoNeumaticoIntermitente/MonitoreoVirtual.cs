@@ -1,5 +1,5 @@
-﻿using Telemetria;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
+using Telemetria;
 
 namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumaticoIntermitente
 {
@@ -17,167 +17,167 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumaticoIntermitente
 
             OTomaInformacion.CTomaBasica DatosOperativos = _Telemetria.DatosOperativos;
 
-            #region DoPresionTuberiaProduccion
+            #region presionTuberiaProduccion
 
-            //DoPresionTuberiaProduccion.Text = $"{Languages.Pozo.DoPresionTuberiaProduccion}:\n{DatosOperativos.DoPresionTuberiaProduccion.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.Presion, _Telemetria.Unidades)}";
+            //presionTuberiaProduccion.Text = $"{Languages.Pozo.presionTuberiaProduccion}:\n{DatosOperativos.presionTuberiaProduccion.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
 
-            #endregion DoPresionTuberiaProduccion
+            #endregion presionTuberiaProduccion
 
-            #region DoPresionTuberiaRevestimiento
+            #region presionTuberiaRevestimiento
 
-            //DoPresionTuberiaRevestimiento.Text = $"{Languages.Pozo.DoPresionTuberiaRevestimiento}:\n{DatosOperativos.DoPresionTuberiaRevestimiento.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.Presion, _Telemetria.Unidades)}";
+            //presionTuberiaRevestimiento.Text = $"{Languages.Pozo.presionTuberiaRevestimiento}:\n{DatosOperativos.presionTuberiaRevestimiento.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
 
-            #endregion DoPresionTuberiaRevestimiento
+            #endregion presionTuberiaRevestimiento
 
-            #region DoPresionAperturaCampo
+            #region presionAperturaCampo
 
-            //DoPresionAperturaCampo.Text = $"{Languages.Pozo.DoPresionAperturaCampo}:\n{DatosOperativos.DoPresionAperturaCampo.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.Presion, _Telemetria.Unidades)}";
+            //presionAperturaCampo.Text = $"{Languages.Pozo.presionAperturaCampo}:\n{DatosOperativos.presionAperturaCampo.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
 
-            #endregion DoPresionAperturaCampo
+            #endregion presionAperturaCampo
 
-            #region DoPresionLineaDescarga
+            #region presionLineaDescarga
 
-            //DoPresionLineaDescarga.Text = $"{Languages.Pozo.DoPresionLineaDescarga}:\n{DatosOperativos.DoPresionLineaDescarga.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.Presion, _Telemetria.Unidades)}";
+            //presionLineaDescarga.Text = $"{Languages.Pozo.presionLineaDescarga}:\n{DatosOperativos.presionLineaDescarga.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
 
-            #endregion DoPresionLineaDescarga
+            #endregion presionLineaDescarga
 
-            #region DoTemperaturaSuperficie
+            #region temperaturaSuperficie
 
-            //DoTemperaturaSuperficie.Text = $"{Languages.Pozo.DoTemperaturaSuperficie}:\n{DatosOperativos.DoTemperaturaSuperficie.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.Temperatura, _Telemetria.Unidades)}";
+            //temperaturaSuperficie.Text = $"{Languages.Pozo.temperaturaSuperficie}:\n{DatosOperativos.temperaturaSuperficie.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.Temperatura, _Telemetria.Unidades)}";
 
-            #endregion DoTemperaturaSuperficie
+            #endregion temperaturaSuperficie
 
-            #region DoSumergenciaEfectivaBomba
+            #region sumergenciaEfectivaBomba
 
-            //DoSumergenciaEfectivaBomba.Text = $"{Languages.Pozo.DoSumergenciaEfectivaBomba}:\n{DatosOperativos.DoSumergenciaEfectivaBomba.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.Distancia, _Telemetria.Unidades)}";
+            //sumergenciaEfectivaBomba.Text = $"{Languages.Pozo.sumergenciaEfectivaBomba}:\n{DatosOperativos.sumergenciaEfectivaBomba.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.Distancia, _Telemetria.Unidades)}";
 
-            #endregion DoSumergenciaEfectivaBomba
+            #endregion sumergenciaEfectivaBomba
 
-            #region DoNivelFluidoPozoTp
+            #region nivelFluidoPozoTp
 
-            //DoNivelFluidoPozoTp.Text = $"{Languages.Pozo.DoNivelFluidoPozoTp}:\n{DatosOperativos.DoNivelFluidoPozoTp.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.Distancia, _Telemetria.Unidades)}";
+            //nivelFluidoPozoTp.Text = $"{Languages.Pozo.nivelFluidoPozoTp}:\n{DatosOperativos.nivelFluidoPozoTp.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.Distancia, _Telemetria.Unidades)}";
 
-            #endregion DoNivelFluidoPozoTp
+            #endregion nivelFluidoPozoTp
 
-            #region DoNivelFluidoPozoTr
+            #region nivelFluidoPozoTr
 
-            //DoNivelFluidoPozoTr.Text = $"{Languages.Pozo.DoNivelFluidoPozoTr}:\n{DatosOperativos.DoNivelFluidoPozoTr.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.Distancia, _Telemetria.Unidades)}";
+            //nivelFluidoPozoTr.Text = $"{Languages.Pozo.nivelFluidoPozoTr}:\n{DatosOperativos.nivelFluidoPozoTr.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.Distancia, _Telemetria.Unidades)}";
 
-            #endregion DoNivelFluidoPozoTr
+            #endregion nivelFluidoPozoTr
 
-            #region DoPresionEntradaBomba
+            #region presionEntradaBomba
 
-            //DoPresionEntradaBomba.Text = $"{Languages.Pozo.DoPresionEntradaBomba}:\n{DatosOperativos.DoPresionEntradaBomba.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.Presion, _Telemetria.Unidades)}";
+            //presionEntradaBomba.Text = $"{Languages.Pozo.presionEntradaBomba}:\n{DatosOperativos.presionEntradaBomba.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
 
-            #endregion DoPresionEntradaBomba
+            #endregion presionEntradaBomba
 
-            #region DoVelocidadBomba
+            #region velocidadBomba
 
-            //DoVelocidadBomba.Text = $"{Languages.Pozo.DoVelocidadBomba}:\n{DatosOperativos.DoVelocidadBomba.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.Velocidad, _Telemetria.Unidades)}";
+            //velocidadBomba.Text = $"{Languages.Pozo.velocidadBomba}:\n{DatosOperativos.velocidadBomba.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.Velocidad, _Telemetria.Unidades)}";
 
-            #endregion DoVelocidadBomba
+            #endregion velocidadBomba
 
-            #region DoVelocidadUnidadBombeo
+            #region velocidadUnidadBombeo
 
-            //DoVelocidadUnidadBombeo.Text = $"{Languages.Pozo.DoVelocidadUnidadBombeo}:\n{DatosOperativos.DoVelocidadUnidadBombeo.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.Embolada, _Telemetria.Unidades)}";
+            //velocidadUnidadBombeo.Text = $"{Languages.Pozo.velocidadUnidadBombeo}:\n{DatosOperativos.velocidadUnidadBombeo.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.Embolada, _Telemetria.Unidades)}";
 
-            #endregion DoVelocidadUnidadBombeo
+            #endregion velocidadUnidadBombeo
 
-            #region DoFrecuenciaOperacionBomba
+            #region frecuenciaOperacionBomba
 
-            //DoFrecuenciaOperacionBomba.Text = $"{Languages.Pozo.DoFrecuenciaOperacionBomba}:\n{DatosOperativos.DoFrecuenciaOperacionBomba.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.Frecuencia, _Telemetria.Unidades)}";
+            //frecuenciaOperacionBomba.Text = $"{Languages.Pozo.frecuenciaOperacionBomba}:\n{DatosOperativos.frecuenciaOperacionBomba.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.Frecuencia, _Telemetria.Unidades)}";
 
-            #endregion DoFrecuenciaOperacionBomba
+            #endregion frecuenciaOperacionBomba
 
-            #region DoVelocidadMotor
+            #region velocidadMotor
 
-            //DoVelocidadMotor.Text = $"{Languages.Pozo.DoVelocidadMotor}:\n{DatosOperativos.DoVelocidadMotor.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.Velocidad, _Telemetria.Unidades)}";
+            //velocidadMotor.Text = $"{Languages.Pozo.velocidadMotor}:\n{DatosOperativos.velocidadMotor.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.Velocidad, _Telemetria.Unidades)}";
 
-            #endregion DoVelocidadMotor
+            #endregion velocidadMotor
 
-            #region DoLongitudCarrera
+            #region longitudCarrera
 
-            //DoLongitudCarrera.Text = $"{Languages.Pozo.DoLongitudCarrera}:\n{DatosOperativos.DoLongitudCarrera.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.Distancia, _Telemetria.Unidades)}";
+            //longitudCarrera.Text = $"{Languages.Pozo.longitudCarrera}:\n{DatosOperativos.longitudCarrera.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.Distancia, _Telemetria.Unidades)}";
 
-            #endregion DoLongitudCarrera
+            #endregion longitudCarrera
 
-            #region DoPresionDisponible
+            #region presionDisponible
 
-            //DoPresionDisponible.Text = $"{Languages.Pozo.DoPresionDisponible}:\n{DatosOperativos.DoPresionDisponible.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.Presion, _Telemetria.Unidades)}";
+            //presionDisponible.Text = $"{Languages.Pozo.presionDisponible}:\n{DatosOperativos.presionDisponible.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
 
-            #endregion DoPresionDisponible
+            #endregion presionDisponible
 
-            #region DoGastoInyeccionFluidoPotencia
+            #region gastoInyeccionFluidoPotencia
 
-            //DoGastoInyeccionFluidoPotencia.Text = $"{Languages.Pozo.DoGastoInyeccionFluidoPotencia}:\n{DatosOperativos.DoGastoInyeccionFluidoPotencia.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.GastoGas, _Telemetria.Unidades)}";
+            //gastoInyeccionFluidoPotencia.Text = $"{Languages.Pozo.gastoInyeccionFluidoPotencia}:\n{DatosOperativos.gastoInyeccionFluidoPotencia.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.GastoGas, _Telemetria.Unidades)}";
 
-            #endregion DoGastoInyeccionFluidoPotencia
+            #endregion gastoInyeccionFluidoPotencia
 
-            #region DoGravedadEspecificaFluidoPotencia
+            #region gravedadEspecificaFluidoPotencia
 
-            //DoGravedadEspecificaFluidoPotencia.Text = $"{Languages.Pozo.DoGravedadEspecificaFluidoPotencia}:\n{DatosOperativos.DoGravedadEspecificaFluidoPotencia.ToString($"n{decimales}")}";
+            //gravedadEspecificaFluidoPotencia.Text = $"{Languages.Pozo.gravedadEspecificaFluidoPotencia}:\n{DatosOperativos.gravedadEspecificaFluidoPotencia.ToString($"n{decimales}")}";
 
-            #endregion DoGravedadEspecificaFluidoPotencia
+            #endregion gravedadEspecificaFluidoPotencia
 
-            #region DoGastoGasInyeccion
+            #region gastoGasInyeccion
 
-            //DoGastoGasInyeccion.Text = $"{Languages.Pozo.DoGastoGasInyeccion}:\n{DatosOperativos.DoGastoGasInyeccion.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.GastoGas, _Telemetria.Unidades)}";
+            //gastoGasInyeccion.Text = $"{Languages.Pozo.gastoGasInyeccion}:\n{DatosOperativos.gastoGasInyeccion.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.GastoGas, _Telemetria.Unidades)}";
 
-            #endregion DoGastoGasInyeccion
+            #endregion gastoGasInyeccion
 
-            #region DoGravedadEspecificaGasInyeccion
+            #region gravedadEspecificaGasInyeccion
 
-            //DoGravedadEspecificaGasInyeccion.Text = $"{Languages.Pozo.DoGravedadEspecificaGasInyeccion}:\n{DatosOperativos.DoGravedadEspecificaGasInyeccion.ToString($"n{decimales}")}";
+            //gravedadEspecificaGasInyeccion.Text = $"{Languages.Pozo.gravedadEspecificaGasInyeccion}:\n{DatosOperativos.gravedadEspecificaGasInyeccion.ToString($"n{decimales}")}";
 
-            #endregion DoGravedadEspecificaGasInyeccion
+            #endregion gravedadEspecificaGasInyeccion
 
-            #region DoTorque
+            #region torque
 
-            //DoTorque.Text = $"{Languages.Pozo.DoTorque}:\n{DatosOperativos.DoTorque.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.Torque, _Telemetria.Unidades)}";
+            //torque.Text = $"{Languages.Pozo.torque}:\n{DatosOperativos.torque.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.Torque, _Telemetria.Unidades)}";
 
-            #endregion DoTorque
+            #endregion torque
 
-            #region DoCorriente
+            #region corriente
 
-            //DoCorriente.Text = $"{Languages.Pozo.DoCorriente}:\n{DatosOperativos.DoCorriente.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.Corriente, _Telemetria.Unidades)}";
+            //corriente.Text = $"{Languages.Pozo.corriente}:\n{DatosOperativos.corriente.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.Corriente, _Telemetria.Unidades)}";
 
-            #endregion DoCorriente
+            #endregion corriente
 
-            #region DoDiametroEstrangulador
+            #region diametroEstrangulador
 
-            //DoDiametroEstrangulador.Text = $"{Languages.Pozo.DoDiametroEstrangulador}:\n{DatosOperativos.DoDiametroEstrangulador.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.Diametro, _Telemetria.Unidades)}";
+            //diametroEstrangulador.Text = $"{Languages.Pozo.diametroEstrangulador}:\n{DatosOperativos.diametroEstrangulador.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.Diametro, _Telemetria.Unidades)}";
 
-            #endregion DoDiametroEstrangulador
+            #endregion diametroEstrangulador
 
-            #region DoTiempoCiclo
+            #region tiempoCiclo
 
-            //DoTiempoCiclo.Text = $"{Languages.Pozo.DoTiempoCiclo}:\n{DatosOperativos.DoTiempoCiclo.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.Segundo, _Telemetria.Unidades)}";
+            //tiempoCiclo.Text = $"{Languages.Pozo.tiempoCiclo}:\n{DatosOperativos.tiempoCiclo.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.Segundo, _Telemetria.Unidades)}";
 
-            #endregion DoTiempoCiclo
+            #endregion tiempoCiclo
 
-            #region DoTiempoRecuperacion
+            #region tiempoRecuperacion
 
-            //DoTiempoRecuperacion.Text = $"{Languages.Pozo.DoTiempoRecuperacion}:\n{DatosOperativos.DoTiempoRecuperacion.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.Segundo, _Telemetria.Unidades)}";
+            //tiempoRecuperacion.Text = $"{Languages.Pozo.tiempoRecuperacion}:\n{DatosOperativos.tiempoRecuperacion.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.Segundo, _Telemetria.Unidades)}";
 
-            #endregion DoTiempoRecuperacion
+            #endregion tiempoRecuperacion
 
-            #region DoTiempoInyeccion
+            #region tiempoInyeccion
 
-            //DoTiempoInyeccion.Text = $"{Languages.Pozo.DoTiempoInyeccion}:\n{DatosOperativos.DoTiempoInyeccion.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.Segundo, _Telemetria.Unidades)}";
+            //tiempoInyeccion.Text = $"{Languages.Pozo.tiempoInyeccion}:\n{DatosOperativos.tiempoInyeccion.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.Segundo, _Telemetria.Unidades)}";
 
-            #endregion DoTiempoInyeccion
+            #endregion tiempoInyeccion
 
-            #region DoTiempoDesplazamientoTapon
+            #region tiempoDesplazamientoTapon
 
-            //DoTiempoDesplazamientoTapon.Text = $"{Languages.Pozo.DoTiempoDesplazamientoTapon}:\n{DatosOperativos.DoTiempoDesplazamientoTapon.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.Segundo, _Telemetria.Unidades)}";
+            //tiempoDesplazamientoTapon.Text = $"{Languages.Pozo.tiempoDesplazamientoTapon}:\n{DatosOperativos.tiempoDesplazamientoTapon.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.Segundo, _Telemetria.Unidades)}";
 
-            #endregion DoTiempoDesplazamientoTapon
+            #endregion tiempoDesplazamientoTapon
 
-            #region DoEficienciaLlenado
+            #region eficienciaLlenado
 
-            //DoEficienciaLlenado.Text = $"{Languages.Pozo.DoEficienciaLlenado}:\n{DatosOperativos.DoEficienciaLlenado.ToString($"n{decimales}")} { Configuracion.GetSigla(Siglas.Porcentaje, _Telemetria.Unidades)}";
+            //eficienciaLlenado.Text = $"{Languages.Pozo.eficienciaLlenado}:\n{DatosOperativos.eficienciaLlenado.ToString($"n{decimales}")} { Configuracion.GetSigla(Referencia.Porcentaje, _Telemetria.Unidades)}";
 
-            #endregion DoEficienciaLlenado
+            #endregion eficienciaLlenado
 
             #region Temporizador
 

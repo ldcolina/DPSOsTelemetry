@@ -11,9 +11,9 @@ namespace Languages
                 new ddl() { Value = "None", Text = General.SelectOption },
                 new ddl() { Value = "0", Text = General.Oilfield },
                 new ddl() { Value = "2", Text = General.Mexico },
-                //new ddl() { Value = "3", Text = General.English },
-                //new ddl() { Value = "4", Text = General.Latin_SI },
-                //new ddl() { Value = "1", Text = General.SI }
+                new ddl() { Value = "3", Text = General.English },
+                new ddl() { Value = "4", Text = General.Latin_SI },
+                new ddl() { Value = "1", Text = General.SI }
             };
             return Lista;
         }
@@ -24,12 +24,13 @@ namespace Languages
             {
                 new ddl() { Value = "None", Text = General.SelectOption },
                 new ddl() { Value = "FL", Text = SystemWell.FL },
-                //new ddl() { Value = "FLG", Text = SystemWell.FLG },
-                new ddl() { Value = "BN", Text = SystemWell.BN },
-                //new ddl() { Value = "BNI", Text = SystemWell.BNI },
                 new ddl() { Value = "BM", Text = SystemWell.BM },
+
+                //new ddl() { Value = "FLG", Text = SystemWell.FLG },
+                //new ddl() { Value = "BN", Text = SystemWell.BN },
+                //new ddl() { Value = "BNI", Text = SystemWell.BNI },
                 //new ddl() { Value = "BCP", Text = SystemWell.BCP },
-                new ddl() { Value = "BEC", Text = SystemWell.BEC },
+                //new ddl() { Value = "BEC", Text = SystemWell.BEC },
                 //new ddl() { Value = "BJP", Text = SystemWell.BJP }
             };
             return Lista;
@@ -50,6 +51,7 @@ namespace Languages
     public class ddl
     {
         public string Text { get; set; }
+
         public string Value { get; set; }
     }
 }

@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using System;
+﻿using System;
 
 namespace Telemetria
 {
@@ -9,47 +7,77 @@ namespace Telemetria
         public class CResult
         {
             public bool Success { set; get; } = false;
+
             public string Message { set; get; } = "N/D";
         }
 
         public class CTomaInformacion
         {
-            [JsonConverter(typeof(UnixDateTimeConverter))]
-            public DateTimeOffset Time { get; set; }
+            //[JsonConverter(typeof(UnixDateTimeConverter))]
+            public DateTime time { get; set; }
 
-            public string Token { set; get; } = string.Empty;
-            public CTomaBasica DatosOperativos { set; get; } = new CTomaBasica();
+            public string token { set; get; } = string.Empty;
+
+            public string pozoId { set; get; } = string.Empty;
+
+            public CTomaBasica datosOperativos { set; get; } = new CTomaBasica();
         }
 
         public class CTomaBasica
         {
-            public decimal DoPresionTuberiaProduccion { get; set; } = 0;
-            public decimal DoPresionTuberiaRevestimiento { get; set; } = 0;
-            public decimal DoPresionAperturaCampo { get; set; } = 0;
-            public decimal DoPresionLineaDescarga { get; set; } = 0;
-            public decimal DoTemperaturaSuperficie { get; set; } = 0;
-            public decimal DoSumergenciaEfectivaBomba { get; set; } = 0;
-            public decimal DoNivelFluidoPozoTp { get; set; } = 0;
-            public decimal DoNivelFluidoPozoTr { get; set; } = 0;
-            public decimal DoPresionEntradaBomba { get; set; } = 0;
-            public decimal DoVelocidadBomba { get; set; } = 0;
-            public decimal DoVelocidadUnidadBombeo { get; set; } = 0;
-            public decimal DoFrecuenciaOperacionBomba { get; set; } = 0;
-            public decimal DoVelocidadMotor { get; set; } = 0;
-            public decimal DoLongitudCarrera { get; set; } = 0;
-            public decimal DoPresionDisponible { get; set; } = 0;
-            public decimal DoGastoInyeccionFluidoPotencia { get; set; } = 0;
-            public decimal DoGravedadEspecificaFluidoPotencia { get; set; } = 0;
-            public decimal DoGastoGasInyeccion { get; set; } = 0;
-            public decimal DoGravedadEspecificaGasInyeccion { get; set; } = 0;
-            public decimal DoTorque { get; set; } = 0;
-            public decimal DoCorriente { get; set; } = 0;
-            public decimal DoDiametroEstrangulador { get; set; } = 0;
-            public decimal DoTiempoCiclo { get; set; } = 0;
-            public decimal DoTiempoRecuperacion { get; set; } = 0;
-            public decimal DoTiempoInyeccion { get; set; } = 0;
-            public decimal DoTiempoDesplazamientoTapon { get; set; } = 0;
-            public decimal DoEficienciaLlenado { get; set; } = 0;
+            public decimal presionTuberiaProduccion { get; set; } = 0;
+
+            public decimal presionTuberiaRevestimiento { get; set; } = 0;
+
+            public decimal presionAperturaCampo { get; set; } = 0;
+
+            public decimal presionLineaDescarga { get; set; } = 0;
+
+            public decimal temperaturaSuperficie { get; set; } = 0;
+
+            public decimal sumergenciaEfectivaBomba { get; set; } = 0;
+
+            public decimal nivelFluidoPozoTp { get; set; } = 0;
+
+            public decimal nivelFluidoPozoTr { get; set; } = 0;
+
+            public decimal presionEntradaBomba { get; set; } = 0;
+
+            public decimal velocidadBomba { get; set; } = 0;
+
+            public decimal velocidadUnidadBombeo { get; set; } = 0;
+
+            public decimal frecuenciaOperacionBomba { get; set; } = 0;
+
+            public decimal velocidadMotor { get; set; } = 0;
+
+            public decimal longitudCarrera { get; set; } = 0;
+
+            public decimal presionDisponible { get; set; } = 0;
+
+            public decimal gastoInyeccionFluidoPotencia { get; set; } = 0;
+
+            public decimal gravedadEspecificaFluidoPotencia { get; set; } = 0;
+
+            public decimal gastoGasInyeccion { get; set; } = 0;
+
+            public decimal gravedadEspecificaGasInyeccion { get; set; } = 0;
+
+            public decimal torque { get; set; } = 0;
+
+            public decimal corriente { get; set; } = 0;
+
+            public decimal diametroEstrangulador { get; set; } = 0;
+
+            public decimal tiempoCiclo { get; set; } = 0;
+
+            public decimal tiempoRecuperacion { get; set; } = 0;
+
+            public decimal tiempoInyeccion { get; set; } = 0;
+
+            public decimal tiempoDesplazamientoTapon { get; set; } = 0;
+
+            public decimal eficienciaLlenado { get; set; } = 0;
         }
     }
 }

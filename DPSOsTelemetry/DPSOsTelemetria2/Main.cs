@@ -17,9 +17,12 @@ namespace DPSOsTelemetria2
         #region Directorio
 
         private readonly string configuracion;
+
         private readonly string file;
-        private readonly string version = "1.0.0.4";
-        private readonly string anio = "2022";
+
+        private readonly string version = "1.1.0.6";
+
+        private readonly string anio = "2023";
 
         #endregion Directorio
 
@@ -66,6 +69,14 @@ namespace DPSOsTelemetria2
             set
             {
                 instance.Abrir_Pozo(value);
+            }
+        }
+
+        public static string Anio
+        {
+            get
+            {
+                return instance.anio;
             }
         }
 
@@ -314,6 +325,7 @@ namespace DPSOsTelemetria2
             }
 
             listaTiempo.Enabled = list.Count > 0;
+            Ventanas.Enabled = list.Count > 0;
             Form OpenForm = MdiChildren.Where(val => val.Name == "listaTiempo").FirstOrDefault();
             if (OpenForm != null)
                 if (listaTiempo.Enabled)
@@ -355,6 +367,7 @@ namespace DPSOsTelemetria2
         #region Idioma
 
         private static readonly ResourceManager resource = new ResourceManager(typeof(Languages.DPSOsTelemetria));
+
         private static readonly ResourceManager SystemWell = new ResourceManager(typeof(Languages.SystemWell));
 
         private void Idiomas(string Language)

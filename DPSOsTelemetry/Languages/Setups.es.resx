@@ -262,4 +262,10 @@
   <data name="ListaPozos2" xml:space="preserve">
     <value>Esta ventana contiene información principal de los tiempos y estado de la transmisión realizada</value>
   </data>
+  <data name="TransmisionDatos17" xml:space="preserve">
+    <value>Información de transmisión del pozo general</value>
+  </data>
+  <data name="TransmisionDatos18" xml:space="preserve">
+    <value>Abrir ventana del pozo seleccionado</value>
+  </data>
 </root>

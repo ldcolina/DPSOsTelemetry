@@ -261,4 +261,10 @@
   <data name="VersionNotes1" xml:space="preserve">
     <value>Está ejecutando la versión {1}</value>
   </data>
+  <data name="TransmisionDatos17" xml:space="preserve">
+    <value>Información de transmisión del pozo general</value>
+  </data>
+  <data name="TransmisionDatos18" xml:space="preserve">
+    <value>Abrir ventana del pozo seleccionado</value>
+  </data>
 </root>

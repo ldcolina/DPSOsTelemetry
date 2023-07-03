@@ -7,6 +7,7 @@ namespace DPSOsTelemetria2.Configuraciones
     public partial class Visualizacion : System.Windows.Forms.UserControl
     {
         private readonly string idioma;
+
         private readonly int decimales;
 
         public Visualizacion()
@@ -46,7 +47,7 @@ namespace DPSOsTelemetria2.Configuraciones
                 texto = new List<string>
                 {
                     Languages.Setups.Ejemplo,
-                    new DateTime().ToString("F", Culture),
+                    DateTime.Now.ToString("F", Culture),
                     number
                 };
             }

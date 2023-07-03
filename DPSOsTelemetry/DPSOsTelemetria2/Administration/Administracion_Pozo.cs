@@ -15,8 +15,11 @@ namespace DPSOsTelemetria2.Administration
     public partial class Administracion_Pozo : Form
     {
         public string ID = string.Empty;
+
         public int num = 0;
+
         private static readonly ResourceManager SystemWell = new ResourceManager(typeof(Languages.SystemWell));
+
         private readonly string file;
 
         public Administracion_Pozo()

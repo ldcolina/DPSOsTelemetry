@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Languages;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -12,8 +13,10 @@ namespace DPSOsTelemetria2
 {
     public partial class listaTiempo : Form
     {
-        private static readonly ResourceManager SystemWell = new ResourceManager(typeof(Languages.SystemWell));
+        private static readonly ResourceManager SystemWell = new ResourceManager(typeof(SystemWell));
+
         private DataTable dt = new DataTable("Pozos");
+
         private List<ReferenciasI> Last_Telemetria = new List<ReferenciasI>();
 
         public listaTiempo()
@@ -69,36 +72,33 @@ namespace DPSOsTelemetria2
             }
 
             dataGridView1.DataSource = dt;
+            Refrescar();
         }
 
         internal void Refrescar()
         {
-            try
-            {
-                string select = dataGridView1.CurrentRow.Cells["Name"].Value.ToString();
-                button1.Text = Languages.listaTiempo.Mostrar.Replace("{0}", !string.IsNullOrEmpty(select) ? select : "-");
-            }
-            catch
-            {
-                button1.Text = Languages.listaTiempo.Mostrar.Replace("{0}", "-");
-            }
-
-            Text = Languages.DPSOsTelemetria.listaTiempo;
+            Text = DPSOsTelemetria.listaTiempo;
 
             dataGridView1.Columns["Name"].HeaderText = Languages.listaTiempo.Nombre;
+
             dataGridView1.Columns["Type"].HeaderText = Languages.listaTiempo.Tipo;
+
             dataGridView1.Columns["Token"].HeaderText = Languages.listaTiempo.Token;
 
             dataGridView1.Columns["Date1"].HeaderText = Languages.listaTiempo.Fecha1;
 
-            dataGridView1.Columns["Frequency_1"].HeaderText = $"{Languages.listaTiempo.Frecuencia_1} ({Languages.Siglas.Segundo})";
+            dataGridView1.Columns["Frequency_1"].HeaderText = $"{Languages.listaTiempo.Frecuencia_1} ({Siglas.Segundo})";
+
             dataGridView1.Columns["Date2_1"].HeaderText = Languages.listaTiempo.Fecha2_1;
 
-            dataGridView1.Columns["Frequency_2"].HeaderText = $"{Languages.listaTiempo.Frecuencia_2} ({Languages.Siglas.Segundo})";
+            dataGridView1.Columns["Frequency_2"].HeaderText = $"{Languages.listaTiempo.Frecuencia_2} ({Siglas.Segundo})";
+
             dataGridView1.Columns["Date2_2"].HeaderText = Languages.listaTiempo.Fecha2_2;
 
             dataGridView1.Columns["ActionsDone"].HeaderText = Languages.listaTiempo.ActionsDone;
+
             dataGridView1.Columns["ActionsClear"].HeaderText = Languages.listaTiempo.ActionsClear;
+
             dataGridView1.Columns["ActionsFails"].HeaderText = Languages.listaTiempo.ActionsFails;
 
             foreach (DataRow dr in ((DataTable)dataGridView1.DataSource).Rows)
@@ -130,6 +130,16 @@ namespace DPSOsTelemetria2
                     dr["Frequency_2"] = "-";
                     dr["Date2_2"] = "-";
                 }
+            }
+
+            try
+            {
+                string select = dataGridView1.CurrentRow.Cells["Name"].Value.ToString();
+                button1.Text = Languages.listaTiempo.Mostrar.Replace("{0}", !string.IsNullOrEmpty(select) ? select : "-");
+            }
+            catch
+            {
+                button1.Text = Languages.listaTiempo.Mostrar.Replace("{0}", "-");
             }
         }
 
@@ -175,9 +185,6 @@ namespace DPSOsTelemetria2
             dt.Columns.Add("ActionsDone", typeof(int));
             dt.Columns.Add("ActionsClear", typeof(int));
             dt.Columns.Add("ActionsFails", typeof(int));
-
-            dataGridView1.DataSource = dt;
-            Refrescar();
         }
     }
 }

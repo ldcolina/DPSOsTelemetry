@@ -49,7 +49,7 @@ namespace DPSOsTelemetria2
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(732, 58);
+            this.panel1.Size = new System.Drawing.Size(765, 58);
             this.panel1.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -69,16 +69,16 @@ namespace DPSOsTelemetria2
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 6F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 6F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(732, 58);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(765, 58);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // lblOnOff
             // 
             this.lblOnOff.AutoSize = true;
-            this.lblOnOff.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblOnOff.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblOnOff.Location = new System.Drawing.Point(55, 6);
             this.lblOnOff.Name = "lblOnOff";
-            this.lblOnOff.Size = new System.Drawing.Size(668, 46);
+            this.lblOnOff.Size = new System.Drawing.Size(44, 46);
             this.lblOnOff.TabIndex = 1;
             this.lblOnOff.Text = "label1";
             this.lblOnOff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -101,14 +101,14 @@ namespace DPSOsTelemetria2
             this.panel2.Location = new System.Drawing.Point(0, 58);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(732, 495);
+            this.panel2.Size = new System.Drawing.Size(765, 685);
             this.panel2.TabIndex = 3;
             // 
             // Pozo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 553);
+            this.ClientSize = new System.Drawing.Size(765, 743);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

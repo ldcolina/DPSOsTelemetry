@@ -40,17 +40,17 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.DatosOperativosComplete = new System.Windows.Forms.Label();
             this.DatosOperativosFails = new System.Windows.Forms.Label();
             this.tlpVariables = new System.Windows.Forms.TableLayoutPanel();
-            this.DoPresionTuberiaProduccion = new System.Windows.Forms.Label();
-            this.DoPresionTuberiaRevestimiento = new System.Windows.Forms.Label();
-            this.DoPresionEntradaBomba = new System.Windows.Forms.Label();
-            this.DoSumergenciaEfectivaBomba = new System.Windows.Forms.Label();
-            this.DoPresionLineaDescarga = new System.Windows.Forms.Label();
-            this.DoNivelFluidoPozoTr = new System.Windows.Forms.Label();
-            this.DoTemperaturaSuperficie = new System.Windows.Forms.Label();
-            this.DoVelocidadUnidadBombeo = new System.Windows.Forms.Label();
-            this.DoVelocidadMotor = new System.Windows.Forms.Label();
-            this.DoLongitudCarrera = new System.Windows.Forms.Label();
-            this.DoEficienciaLlenado = new System.Windows.Forms.Label();
+            this.presionTuberiaProduccion = new System.Windows.Forms.Label();
+            this.presionTuberiaRevestimiento = new System.Windows.Forms.Label();
+            this.presionEntradaBomba = new System.Windows.Forms.Label();
+            this.sumergenciaEfectivaBomba = new System.Windows.Forms.Label();
+            this.presionLineaDescarga = new System.Windows.Forms.Label();
+            this.nivelFluidoPozoTr = new System.Windows.Forms.Label();
+            this.temperaturaSuperficie = new System.Windows.Forms.Label();
+            this.velocidadUnidadBombeo = new System.Windows.Forms.Label();
+            this.velocidadMotor = new System.Windows.Forms.Label();
+            this.longitudCarrera = new System.Windows.Forms.Label();
+            this.eficienciaLlenado = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -202,17 +202,17 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tlpVariables.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpVariables.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpVariables.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpVariables.Controls.Add(this.DoPresionTuberiaProduccion, 0, 0);
-            this.tlpVariables.Controls.Add(this.DoPresionTuberiaRevestimiento, 3, 0);
-            this.tlpVariables.Controls.Add(this.DoPresionEntradaBomba, 0, 6);
-            this.tlpVariables.Controls.Add(this.DoSumergenciaEfectivaBomba, 0, 4);
-            this.tlpVariables.Controls.Add(this.DoPresionLineaDescarga, 0, 2);
-            this.tlpVariables.Controls.Add(this.DoNivelFluidoPozoTr, 3, 4);
-            this.tlpVariables.Controls.Add(this.DoTemperaturaSuperficie, 3, 2);
-            this.tlpVariables.Controls.Add(this.DoVelocidadUnidadBombeo, 3, 6);
-            this.tlpVariables.Controls.Add(this.DoVelocidadMotor, 0, 8);
-            this.tlpVariables.Controls.Add(this.DoLongitudCarrera, 3, 8);
-            this.tlpVariables.Controls.Add(this.DoEficienciaLlenado, 0, 10);
+            this.tlpVariables.Controls.Add(this.presionTuberiaProduccion, 0, 0);
+            this.tlpVariables.Controls.Add(this.presionTuberiaRevestimiento, 3, 0);
+            this.tlpVariables.Controls.Add(this.presionEntradaBomba, 0, 6);
+            this.tlpVariables.Controls.Add(this.sumergenciaEfectivaBomba, 0, 4);
+            this.tlpVariables.Controls.Add(this.presionLineaDescarga, 0, 2);
+            this.tlpVariables.Controls.Add(this.nivelFluidoPozoTr, 3, 4);
+            this.tlpVariables.Controls.Add(this.temperaturaSuperficie, 3, 2);
+            this.tlpVariables.Controls.Add(this.velocidadUnidadBombeo, 3, 6);
+            this.tlpVariables.Controls.Add(this.velocidadMotor, 0, 8);
+            this.tlpVariables.Controls.Add(this.longitudCarrera, 3, 8);
+            this.tlpVariables.Controls.Add(this.eficienciaLlenado, 0, 10);
             this.tlpVariables.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpVariables.Location = new System.Drawing.Point(3, 3);
             this.tlpVariables.Name = "tlpVariables";
@@ -238,126 +238,126 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tlpVariables.Size = new System.Drawing.Size(734, 309);
             this.tlpVariables.TabIndex = 3;
             // 
-            // DoPresionTuberiaProduccion
+            // presionTuberiaProduccion
             // 
-            this.DoPresionTuberiaProduccion.AutoSize = true;
-            this.tlpVariables.SetColumnSpan(this.DoPresionTuberiaProduccion, 2);
-            this.DoPresionTuberiaProduccion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoPresionTuberiaProduccion.Location = new System.Drawing.Point(3, 0);
-            this.DoPresionTuberiaProduccion.Name = "DoPresionTuberiaProduccion";
-            this.DoPresionTuberiaProduccion.Size = new System.Drawing.Size(350, 16);
-            this.DoPresionTuberiaProduccion.TabIndex = 0;
-            this.DoPresionTuberiaProduccion.Text = "DoPresionTuberiaProduccion";
+            this.presionTuberiaProduccion.AutoSize = true;
+            this.tlpVariables.SetColumnSpan(this.presionTuberiaProduccion, 2);
+            this.presionTuberiaProduccion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.presionTuberiaProduccion.Location = new System.Drawing.Point(3, 0);
+            this.presionTuberiaProduccion.Name = "presionTuberiaProduccion";
+            this.presionTuberiaProduccion.Size = new System.Drawing.Size(350, 16);
+            this.presionTuberiaProduccion.TabIndex = 0;
+            this.presionTuberiaProduccion.Text = "presionTuberiaProduccion";
             // 
-            // DoPresionTuberiaRevestimiento
+            // presionTuberiaRevestimiento
             // 
-            this.DoPresionTuberiaRevestimiento.AutoSize = true;
-            this.tlpVariables.SetColumnSpan(this.DoPresionTuberiaRevestimiento, 2);
-            this.DoPresionTuberiaRevestimiento.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoPresionTuberiaRevestimiento.Location = new System.Drawing.Point(379, 0);
-            this.DoPresionTuberiaRevestimiento.Name = "DoPresionTuberiaRevestimiento";
-            this.DoPresionTuberiaRevestimiento.Size = new System.Drawing.Size(352, 16);
-            this.DoPresionTuberiaRevestimiento.TabIndex = 3;
-            this.DoPresionTuberiaRevestimiento.Text = "DoPresionTuberiaRevestimiento";
+            this.presionTuberiaRevestimiento.AutoSize = true;
+            this.tlpVariables.SetColumnSpan(this.presionTuberiaRevestimiento, 2);
+            this.presionTuberiaRevestimiento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.presionTuberiaRevestimiento.Location = new System.Drawing.Point(379, 0);
+            this.presionTuberiaRevestimiento.Name = "presionTuberiaRevestimiento";
+            this.presionTuberiaRevestimiento.Size = new System.Drawing.Size(352, 16);
+            this.presionTuberiaRevestimiento.TabIndex = 3;
+            this.presionTuberiaRevestimiento.Text = "presionTuberiaRevestimiento";
             // 
-            // DoPresionEntradaBomba
+            // presionEntradaBomba
             // 
-            this.DoPresionEntradaBomba.AutoSize = true;
-            this.tlpVariables.SetColumnSpan(this.DoPresionEntradaBomba, 2);
-            this.DoPresionEntradaBomba.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoPresionEntradaBomba.Location = new System.Drawing.Point(3, 108);
-            this.DoPresionEntradaBomba.Name = "DoPresionEntradaBomba";
-            this.DoPresionEntradaBomba.Size = new System.Drawing.Size(350, 16);
-            this.DoPresionEntradaBomba.TabIndex = 18;
-            this.DoPresionEntradaBomba.Text = "DoPresionEntradaBomba";
+            this.presionEntradaBomba.AutoSize = true;
+            this.tlpVariables.SetColumnSpan(this.presionEntradaBomba, 2);
+            this.presionEntradaBomba.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.presionEntradaBomba.Location = new System.Drawing.Point(3, 108);
+            this.presionEntradaBomba.Name = "presionEntradaBomba";
+            this.presionEntradaBomba.Size = new System.Drawing.Size(350, 16);
+            this.presionEntradaBomba.TabIndex = 18;
+            this.presionEntradaBomba.Text = "presionEntradaBomba";
             // 
-            // DoSumergenciaEfectivaBomba
+            // sumergenciaEfectivaBomba
             // 
-            this.DoSumergenciaEfectivaBomba.AutoSize = true;
-            this.tlpVariables.SetColumnSpan(this.DoSumergenciaEfectivaBomba, 2);
-            this.DoSumergenciaEfectivaBomba.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoSumergenciaEfectivaBomba.Location = new System.Drawing.Point(3, 72);
-            this.DoSumergenciaEfectivaBomba.Name = "DoSumergenciaEfectivaBomba";
-            this.DoSumergenciaEfectivaBomba.Size = new System.Drawing.Size(350, 16);
-            this.DoSumergenciaEfectivaBomba.TabIndex = 12;
-            this.DoSumergenciaEfectivaBomba.Text = "DoSumergenciaEfectivaBomba";
+            this.sumergenciaEfectivaBomba.AutoSize = true;
+            this.tlpVariables.SetColumnSpan(this.sumergenciaEfectivaBomba, 2);
+            this.sumergenciaEfectivaBomba.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sumergenciaEfectivaBomba.Location = new System.Drawing.Point(3, 72);
+            this.sumergenciaEfectivaBomba.Name = "sumergenciaEfectivaBomba";
+            this.sumergenciaEfectivaBomba.Size = new System.Drawing.Size(350, 16);
+            this.sumergenciaEfectivaBomba.TabIndex = 12;
+            this.sumergenciaEfectivaBomba.Text = "sumergenciaEfectivaBomba";
             // 
-            // DoPresionLineaDescarga
+            // presionLineaDescarga
             // 
-            this.DoPresionLineaDescarga.AutoSize = true;
-            this.tlpVariables.SetColumnSpan(this.DoPresionLineaDescarga, 2);
-            this.DoPresionLineaDescarga.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoPresionLineaDescarga.Location = new System.Drawing.Point(3, 36);
-            this.DoPresionLineaDescarga.Name = "DoPresionLineaDescarga";
-            this.DoPresionLineaDescarga.Size = new System.Drawing.Size(350, 16);
-            this.DoPresionLineaDescarga.TabIndex = 6;
-            this.DoPresionLineaDescarga.Text = "DoPresionLineaDescarga";
+            this.presionLineaDescarga.AutoSize = true;
+            this.tlpVariables.SetColumnSpan(this.presionLineaDescarga, 2);
+            this.presionLineaDescarga.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.presionLineaDescarga.Location = new System.Drawing.Point(3, 36);
+            this.presionLineaDescarga.Name = "presionLineaDescarga";
+            this.presionLineaDescarga.Size = new System.Drawing.Size(350, 16);
+            this.presionLineaDescarga.TabIndex = 6;
+            this.presionLineaDescarga.Text = "presionLineaDescarga";
             // 
-            // DoNivelFluidoPozoTr
+            // nivelFluidoPozoTr
             // 
-            this.DoNivelFluidoPozoTr.AutoSize = true;
-            this.tlpVariables.SetColumnSpan(this.DoNivelFluidoPozoTr, 2);
-            this.DoNivelFluidoPozoTr.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoNivelFluidoPozoTr.Location = new System.Drawing.Point(379, 72);
-            this.DoNivelFluidoPozoTr.Name = "DoNivelFluidoPozoTr";
-            this.DoNivelFluidoPozoTr.Size = new System.Drawing.Size(352, 16);
-            this.DoNivelFluidoPozoTr.TabIndex = 15;
-            this.DoNivelFluidoPozoTr.Text = "DoNivelFluidoPozoTr";
+            this.nivelFluidoPozoTr.AutoSize = true;
+            this.tlpVariables.SetColumnSpan(this.nivelFluidoPozoTr, 2);
+            this.nivelFluidoPozoTr.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nivelFluidoPozoTr.Location = new System.Drawing.Point(379, 72);
+            this.nivelFluidoPozoTr.Name = "nivelFluidoPozoTr";
+            this.nivelFluidoPozoTr.Size = new System.Drawing.Size(352, 16);
+            this.nivelFluidoPozoTr.TabIndex = 15;
+            this.nivelFluidoPozoTr.Text = "nivelFluidoPozoTr";
             // 
-            // DoTemperaturaSuperficie
+            // temperaturaSuperficie
             // 
-            this.DoTemperaturaSuperficie.AutoSize = true;
-            this.tlpVariables.SetColumnSpan(this.DoTemperaturaSuperficie, 2);
-            this.DoTemperaturaSuperficie.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoTemperaturaSuperficie.Location = new System.Drawing.Point(379, 36);
-            this.DoTemperaturaSuperficie.Name = "DoTemperaturaSuperficie";
-            this.DoTemperaturaSuperficie.Size = new System.Drawing.Size(352, 16);
-            this.DoTemperaturaSuperficie.TabIndex = 9;
-            this.DoTemperaturaSuperficie.Text = "DoTemperaturaSuperficie";
+            this.temperaturaSuperficie.AutoSize = true;
+            this.tlpVariables.SetColumnSpan(this.temperaturaSuperficie, 2);
+            this.temperaturaSuperficie.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.temperaturaSuperficie.Location = new System.Drawing.Point(379, 36);
+            this.temperaturaSuperficie.Name = "temperaturaSuperficie";
+            this.temperaturaSuperficie.Size = new System.Drawing.Size(352, 16);
+            this.temperaturaSuperficie.TabIndex = 9;
+            this.temperaturaSuperficie.Text = "temperaturaSuperficie";
             // 
-            // DoVelocidadUnidadBombeo
+            // velocidadUnidadBombeo
             // 
-            this.DoVelocidadUnidadBombeo.AutoSize = true;
-            this.tlpVariables.SetColumnSpan(this.DoVelocidadUnidadBombeo, 2);
-            this.DoVelocidadUnidadBombeo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoVelocidadUnidadBombeo.Location = new System.Drawing.Point(379, 108);
-            this.DoVelocidadUnidadBombeo.Name = "DoVelocidadUnidadBombeo";
-            this.DoVelocidadUnidadBombeo.Size = new System.Drawing.Size(352, 16);
-            this.DoVelocidadUnidadBombeo.TabIndex = 21;
-            this.DoVelocidadUnidadBombeo.Text = "DoVelocidadUnidadBombeo";
+            this.velocidadUnidadBombeo.AutoSize = true;
+            this.tlpVariables.SetColumnSpan(this.velocidadUnidadBombeo, 2);
+            this.velocidadUnidadBombeo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.velocidadUnidadBombeo.Location = new System.Drawing.Point(379, 108);
+            this.velocidadUnidadBombeo.Name = "velocidadUnidadBombeo";
+            this.velocidadUnidadBombeo.Size = new System.Drawing.Size(352, 16);
+            this.velocidadUnidadBombeo.TabIndex = 21;
+            this.velocidadUnidadBombeo.Text = "velocidadUnidadBombeo";
             // 
-            // DoVelocidadMotor
+            // velocidadMotor
             // 
-            this.DoVelocidadMotor.AutoSize = true;
-            this.tlpVariables.SetColumnSpan(this.DoVelocidadMotor, 2);
-            this.DoVelocidadMotor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoVelocidadMotor.Location = new System.Drawing.Point(3, 144);
-            this.DoVelocidadMotor.Name = "DoVelocidadMotor";
-            this.DoVelocidadMotor.Size = new System.Drawing.Size(350, 16);
-            this.DoVelocidadMotor.TabIndex = 24;
-            this.DoVelocidadMotor.Text = "DoVelocidadMotor";
+            this.velocidadMotor.AutoSize = true;
+            this.tlpVariables.SetColumnSpan(this.velocidadMotor, 2);
+            this.velocidadMotor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.velocidadMotor.Location = new System.Drawing.Point(3, 144);
+            this.velocidadMotor.Name = "velocidadMotor";
+            this.velocidadMotor.Size = new System.Drawing.Size(350, 16);
+            this.velocidadMotor.TabIndex = 24;
+            this.velocidadMotor.Text = "velocidadMotor";
             // 
-            // DoLongitudCarrera
+            // longitudCarrera
             // 
-            this.DoLongitudCarrera.AutoSize = true;
-            this.tlpVariables.SetColumnSpan(this.DoLongitudCarrera, 2);
-            this.DoLongitudCarrera.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoLongitudCarrera.Location = new System.Drawing.Point(379, 144);
-            this.DoLongitudCarrera.Name = "DoLongitudCarrera";
-            this.DoLongitudCarrera.Size = new System.Drawing.Size(352, 16);
-            this.DoLongitudCarrera.TabIndex = 27;
-            this.DoLongitudCarrera.Text = "DoLongitudCarrera";
+            this.longitudCarrera.AutoSize = true;
+            this.tlpVariables.SetColumnSpan(this.longitudCarrera, 2);
+            this.longitudCarrera.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.longitudCarrera.Location = new System.Drawing.Point(379, 144);
+            this.longitudCarrera.Name = "longitudCarrera";
+            this.longitudCarrera.Size = new System.Drawing.Size(352, 16);
+            this.longitudCarrera.TabIndex = 27;
+            this.longitudCarrera.Text = "longitudCarrera";
             // 
-            // DoEficienciaLlenado
+            // eficienciaLlenado
             // 
-            this.DoEficienciaLlenado.AutoSize = true;
-            this.tlpVariables.SetColumnSpan(this.DoEficienciaLlenado, 2);
-            this.DoEficienciaLlenado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoEficienciaLlenado.Location = new System.Drawing.Point(3, 180);
-            this.DoEficienciaLlenado.Name = "DoEficienciaLlenado";
-            this.DoEficienciaLlenado.Size = new System.Drawing.Size(350, 16);
-            this.DoEficienciaLlenado.TabIndex = 30;
-            this.DoEficienciaLlenado.Text = "DoEficienciaLlenado";
+            this.eficienciaLlenado.AutoSize = true;
+            this.tlpVariables.SetColumnSpan(this.eficienciaLlenado, 2);
+            this.eficienciaLlenado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.eficienciaLlenado.Location = new System.Drawing.Point(3, 180);
+            this.eficienciaLlenado.Name = "eficienciaLlenado";
+            this.eficienciaLlenado.Size = new System.Drawing.Size(350, 16);
+            this.eficienciaLlenado.TabIndex = 30;
+            this.eficienciaLlenado.Text = "eficienciaLlenado";
             // 
             // tabPage2
             // 
@@ -512,17 +512,17 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tlpVariables;
-        private Label DoPresionTuberiaProduccion;
-        private Label DoPresionTuberiaRevestimiento;
-        private Label DoPresionEntradaBomba;
-        private Label DoSumergenciaEfectivaBomba;
-        private Label DoPresionLineaDescarga;
-        private Label DoNivelFluidoPozoTr;
-        private Label DoTemperaturaSuperficie;
-        private Label DoVelocidadUnidadBombeo;
-        private Label DoVelocidadMotor;
-        private Label DoLongitudCarrera;
-        private Label DoEficienciaLlenado;
+        private Label presionTuberiaProduccion;
+        private Label presionTuberiaRevestimiento;
+        private Label presionEntradaBomba;
+        private Label sumergenciaEfectivaBomba;
+        private Label presionLineaDescarga;
+        private Label nivelFluidoPozoTr;
+        private Label temperaturaSuperficie;
+        private Label velocidadUnidadBombeo;
+        private Label velocidadMotor;
+        private Label longitudCarrera;
+        private Label eficienciaLlenado;
         private TabPage tabPage2;
         private TableLayoutPanel tableLayoutPanel3;
         private TableLayoutPanel tableLayoutPanel5;

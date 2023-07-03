@@ -11,6 +11,7 @@ namespace DPSOsTelemetria2
         }
 
         private readonly string Version;
+
         private readonly string Anio;
 
         public Introducction(string _Version, string _Anio) : this()

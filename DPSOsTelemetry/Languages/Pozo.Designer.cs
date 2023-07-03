@@ -99,144 +99,9 @@ namespace Languages {
         /// <summary>
         ///   Busca una cadena traducida similar a Filling efficiency.
         /// </summary>
-        public static string DoEficienciaLlenado {
+        public static string eficienciaLlenado {
             get {
-                return ResourceManager.GetString("DoEficienciaLlenado", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Pump operating frequency.
-        /// </summary>
-        public static string DoFrecuenciaOperacionBomba {
-            get {
-                return ResourceManager.GetString("DoFrecuenciaOperacionBomba", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Injection gas expenditure.
-        /// </summary>
-        public static string DoGastoGasInyeccion {
-            get {
-                return ResourceManager.GetString("DoGastoGasInyeccion", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Specific gravity of injection gas.
-        /// </summary>
-        public static string DoGravedadEspecificaGasInyeccion {
-            get {
-                return ResourceManager.GetString("DoGravedadEspecificaGasInyeccion", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Stroke length.
-        /// </summary>
-        public static string DoLongitudCarrera {
-            get {
-                return ResourceManager.GetString("DoLongitudCarrera", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a TP well fluid level.
-        /// </summary>
-        public static string DoNivelFluidoPozoTp {
-            get {
-                return ResourceManager.GetString("DoNivelFluidoPozoTp", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a TR well fluid level.
-        /// </summary>
-        public static string DoNivelFluidoPozoTr {
-            get {
-                return ResourceManager.GetString("DoNivelFluidoPozoTr", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Available pressure.
-        /// </summary>
-        public static string DoPresionDisponible {
-            get {
-                return ResourceManager.GetString("DoPresionDisponible", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Pump inlet pressure.
-        /// </summary>
-        public static string DoPresionEntradaBomba {
-            get {
-                return ResourceManager.GetString("DoPresionEntradaBomba", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Pressure in discharge line.
-        /// </summary>
-        public static string DoPresionLineaDescarga {
-            get {
-                return ResourceManager.GetString("DoPresionLineaDescarga", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Tubing head pressure.
-        /// </summary>
-        public static string DoPresionTuberiaProduccion {
-            get {
-                return ResourceManager.GetString("DoPresionTuberiaProduccion", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Casing head pressure.
-        /// </summary>
-        public static string DoPresionTuberiaRevestimiento {
-            get {
-                return ResourceManager.GetString("DoPresionTuberiaRevestimiento", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Effective submergence of the pump.
-        /// </summary>
-        public static string DoSumergenciaEfectivaBomba {
-            get {
-                return ResourceManager.GetString("DoSumergenciaEfectivaBomba", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Surface temperature.
-        /// </summary>
-        public static string DoTemperaturaSuperficie {
-            get {
-                return ResourceManager.GetString("DoTemperaturaSuperficie", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Engine speed.
-        /// </summary>
-        public static string DoVelocidadMotor {
-            get {
-                return ResourceManager.GetString("DoVelocidadMotor", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Pumping unit speed.
-        /// </summary>
-        public static string DoVelocidadUnidadBombeo {
-            get {
-                return ResourceManager.GetString("DoVelocidadUnidadBombeo", resourceCulture);
+                return ResourceManager.GetString("eficienciaLlenado", resourceCulture);
             }
         }
         
@@ -295,6 +160,33 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Pump operating frequency.
+        /// </summary>
+        public static string frecuenciaOperacionBomba {
+            get {
+                return ResourceManager.GetString("frecuenciaOperacionBomba", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Injection gas expenditure.
+        /// </summary>
+        public static string gastoGasInyeccion {
+            get {
+                return ResourceManager.GetString("gastoGasInyeccion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Specific gravity of injection gas.
+        /// </summary>
+        public static string gravedadEspecificaGasInyeccion {
+            get {
+                return ResourceManager.GetString("gravedadEspecificaGasInyeccion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a {0}: The minimum value {1} must be greater than or equal to 0.
         /// </summary>
         public static string GreaterThan {
@@ -313,6 +205,78 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Stroke length.
+        /// </summary>
+        public static string longitudCarrera {
+            get {
+                return ResourceManager.GetString("longitudCarrera", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a TP well fluid level.
+        /// </summary>
+        public static string nivelFluidoPozoTp {
+            get {
+                return ResourceManager.GetString("nivelFluidoPozoTp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a TR well fluid level.
+        /// </summary>
+        public static string nivelFluidoPozoTr {
+            get {
+                return ResourceManager.GetString("nivelFluidoPozoTr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Available pressure.
+        /// </summary>
+        public static string presionDisponible {
+            get {
+                return ResourceManager.GetString("presionDisponible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Pump inlet pressure.
+        /// </summary>
+        public static string presionEntradaBomba {
+            get {
+                return ResourceManager.GetString("presionEntradaBomba", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Pressure in discharge line.
+        /// </summary>
+        public static string presionLineaDescarga {
+            get {
+                return ResourceManager.GetString("presionLineaDescarga", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Tubing head pressure.
+        /// </summary>
+        public static string presionTuberiaProduccion {
+            get {
+                return ResourceManager.GetString("presionTuberiaProduccion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Casing head pressure.
+        /// </summary>
+        public static string presionTuberiaRevestimiento {
+            get {
+                return ResourceManager.GetString("presionTuberiaRevestimiento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Next update.
         /// </summary>
         public static string ProxActualizacion {
@@ -322,11 +286,47 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Effective submergence of the pump.
+        /// </summary>
+        public static string sumergenciaEfectivaBomba {
+            get {
+                return ResourceManager.GetString("sumergenciaEfectivaBomba", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Surface temperature.
+        /// </summary>
+        public static string temperaturaSuperficie {
+            get {
+                return ResourceManager.GetString("temperaturaSuperficie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Timer.
         /// </summary>
         public static string Temporizador {
             get {
                 return ResourceManager.GetString("Temporizador", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Engine speed.
+        /// </summary>
+        public static string velocidadMotor {
+            get {
+                return ResourceManager.GetString("velocidadMotor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Pumping unit speed.
+        /// </summary>
+        public static string velocidadUnidadBombeo {
+            get {
+                return ResourceManager.GetString("velocidadUnidadBombeo", resourceCulture);
             }
         }
     }

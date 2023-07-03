@@ -379,6 +379,24 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a General well transmission information.
+        /// </summary>
+        public static string TransmisionDatos17 {
+            get {
+                return ResourceManager.GetString("TransmisionDatos17", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Open window of selected well.
+        /// </summary>
+        public static string TransmisionDatos18 {
+            get {
+                return ResourceManager.GetString("TransmisionDatos18", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Search field by: Name / Token / Type.
         /// </summary>
         public static string TransmisionDatos2 {

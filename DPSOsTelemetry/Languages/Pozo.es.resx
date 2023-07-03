@@ -120,10 +120,10 @@
   <data name="GreaterThanValue" xml:space="preserve">
     <value>{0}: El valor mínimo {1} debe se menor al valor máximo {2}</value>
   </data>
-  <data name="DoPresionTuberiaRevestimiento" xml:space="preserve">
+  <data name="presionTuberiaRevestimiento" xml:space="preserve">
     <value>Presión en tubería de revestimiento</value>
   </data>
-  <data name="DoPresionTuberiaProduccion" xml:space="preserve">
+  <data name="presionTuberiaProduccion" xml:space="preserve">
     <value>Presión en tubería de producción</value>
   </data>
   <data name="GreaterThan" xml:space="preserve">
@@ -138,43 +138,43 @@
   <data name="ErrorCarta" xml:space="preserve">
     <value>Error de archivo.\nNo se cargo ninguna carta dinagráfica.</value>
   </data>
-  <data name="DoPresionLineaDescarga" xml:space="preserve">
+  <data name="presionLineaDescarga" xml:space="preserve">
     <value>Presión en la línea de descarga</value>
   </data>
-  <data name="DoTemperaturaSuperficie" xml:space="preserve">
+  <data name="temperaturaSuperficie" xml:space="preserve">
     <value>Temperatura de superficie</value>
   </data>
-  <data name="DoVelocidadMotor" xml:space="preserve">
+  <data name="velocidadMotor" xml:space="preserve">
     <value>Velocidad del motor</value>
   </data>
-  <data name="DoVelocidadUnidadBombeo" xml:space="preserve">
+  <data name="velocidadUnidadBombeo" xml:space="preserve">
     <value>Velocidad de unidad de bombeo</value>
   </data>
-  <data name="DoEficienciaLlenado" xml:space="preserve">
+  <data name="eficienciaLlenado" xml:space="preserve">
     <value>Eficiencia de llenado</value>
   </data>
-  <data name="DoSumergenciaEfectivaBomba" xml:space="preserve">
+  <data name="sumergenciaEfectivaBomba" xml:space="preserve">
     <value>Sumergencia efectiva de la bomba</value>
   </data>
-  <data name="DoNivelFluidoPozoTr" xml:space="preserve">
+  <data name="nivelFluidoPozoTr" xml:space="preserve">
     <value>Nivel de fluido del pozo TR</value>
   </data>
-  <data name="DoNivelFluidoPozoTp" xml:space="preserve">
+  <data name="nivelFluidoPozoTp" xml:space="preserve">
     <value>Nivel de fluido del pozo TP</value>
   </data>
-  <data name="DoPresionEntradaBomba" xml:space="preserve">
+  <data name="presionEntradaBomba" xml:space="preserve">
     <value>Presión de entrada de la bomba</value>
   </data>
-  <data name="DoFrecuenciaOperacionBomba" xml:space="preserve">
+  <data name="frecuenciaOperacionBomba" xml:space="preserve">
     <value>Frecuencia de operación de la bomba</value>
   </data>
-  <data name="DoLongitudCarrera" xml:space="preserve">
+  <data name="longitudCarrera" xml:space="preserve">
     <value>Longitud de carrera</value>
   </data>
-  <data name="DoPresionDisponible" xml:space="preserve">
+  <data name="presionDisponible" xml:space="preserve">
     <value>Presión disponible</value>
   </data>
-  <data name="DoGastoGasInyeccion" xml:space="preserve">
+  <data name="gastoGasInyeccion" xml:space="preserve">
     <value>Gasto de gas de inyección</value>
   </data>
   <data name="EnvioCorrecto" xml:space="preserve">
@@ -189,7 +189,7 @@
   <data name="ProxActualizacion" xml:space="preserve">
     <value>Próxima actualización</value>
   </data>
-  <data name="DoGravedadEspecificaGasInyeccion" xml:space="preserve">
+  <data name="gravedadEspecificaGasInyeccion" xml:space="preserve">
     <value>Gravedad especifica del gas de inyección</value>
   </data>
   <data name="DatosOperativos" xml:space="preserve">

@@ -8,7 +8,9 @@ namespace DPSOsTelemetria2.Configuraciones
     public partial class Novedades : Form
     {
         private readonly Setup setup;
+
         private readonly bool select;
+
         private static readonly ResourceManager resource = new ResourceManager(typeof(Properties.Resources));
 
         public Novedades()

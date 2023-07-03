@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Languages;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,8 +14,10 @@ namespace DPSOsTelemetria2.Administration
     public partial class Abrir_Eliminar : Form
     {
         public string ID;
+
         internal readonly string DataBase;
-        private static readonly ResourceManager SystemWell = new ResourceManager(typeof(Languages.SystemWell));
+
+        private static readonly ResourceManager SystemWell = new ResourceManager(typeof(SystemWell));
 
         public Abrir_Eliminar()
         {
@@ -108,7 +111,7 @@ namespace DPSOsTelemetria2.Administration
 
         private void Abrir_Eliminar_Load(object sender, EventArgs e)
         {
-            Text = Languages.DPSOsTelemetria.Abrir_Eliminar;
+            Text = DPSOsTelemetria.Abrir_Eliminar;
             label1.Text = Languages.Administration.Buscar;
             button1.Text = Languages.Administration.Modificar;
             button2.Text = Languages.Administration.Abrir;
