@@ -46,275 +46,397 @@ namespace Telemetria
 
     public class TomaBasica
     {
-        #region presionTuberiaProduccion
+        #region OTomaInformacion
 
-        public bool presionTuberiaProduccion { get; set; } = false;
+        #region CargaSobreBarraPulida
 
-        public decimal presionTuberiaProduccionMax { get; set; } = 0;
+        public bool CargaSobreBarraPulida { set; get; } = false;
 
-        public decimal presionTuberiaProduccionMin { get; set; } = 0;
+        public decimal CargaSobreBarraPulidaMax { set; get; } = 0;
 
-        #endregion presionTuberiaProduccion
+        public decimal CargaSobreBarraPulidaMin { set; get; } = 0;
 
-        #region presionTuberiaRevestimiento
+        #endregion CargaSobreBarraPulida
 
-        public bool presionTuberiaRevestimiento { get; set; } = false;
+        #region Corriente
 
-        public decimal presionTuberiaRevestimientoMax { get; set; } = 0;
+        public bool Corriente { set; get; } = false;
 
-        public decimal presionTuberiaRevestimientoMin { get; set; } = 0;
+        public decimal CorrienteMax { set; get; } = 0;
 
-        #endregion presionTuberiaRevestimiento
+        public decimal CorrienteMin { set; get; } = 0;
 
-        #region presionAperturaCampo
+        #endregion Corriente
 
-        public bool presionAperturaCampo { get; set; } = false;
+        #region DiametroEstrangulador
 
-        public decimal presionAperturaCampoMax { get; set; } = 0;
+        public bool DiametroEstrangulador { set; get; } = false;
 
-        public decimal presionAperturaCampoMin { get; set; } = 0;
+        public decimal DiametroEstranguladorMax { set; get; } = 0;
 
-        #endregion presionAperturaCampo
+        public decimal DiametroEstranguladorMin { set; get; } = 0;
 
-        #region presionLineaDescarga
+        #endregion DiametroEstrangulador
 
-        public bool presionLineaDescarga { get; set; } = false;
+        #region EficienciaLlenado
 
-        public decimal presionLineaDescargaMax { get; set; } = 0;
+        public bool EficienciaLlenado { set; get; } = false;
 
-        public decimal presionLineaDescargaMin { get; set; } = 0;
+        public decimal EficienciaLlenadoMax { set; get; } = 0;
 
-        #endregion presionLineaDescarga
+        public decimal EficienciaLlenadoMin { set; get; } = 0;
 
-        #region temperaturaSuperficie
+        #endregion EficienciaLlenado
 
-        public bool temperaturaSuperficie { get; set; } = false;
+        #region Emulsion
 
-        public decimal temperaturaSuperficieMax { get; set; } = 0;
+        public bool Emulsion { set; get; } = false;
 
-        public decimal temperaturaSuperficieMin { get; set; } = 0;
+        public decimal EmulsionMax { set; get; } = 0;
 
-        #endregion temperaturaSuperficie
+        public decimal EmulsionMin { set; get; } = 0;
 
-        #region sumergenciaEfectivaBomba
+        #endregion Emulsion
 
-        public bool sumergenciaEfectivaBomba { get; set; } = false;
+        #region FrecuenciaOperacionBomba
 
-        public decimal sumergenciaEfectivaBombaMax { get; set; } = 0;
+        public bool FrecuenciaOperacionBomba { set; get; } = false;
 
-        public decimal sumergenciaEfectivaBombaMin { get; set; } = 0;
+        public decimal FrecuenciaOperacionBombaMax { set; get; } = 0;
 
-        #endregion sumergenciaEfectivaBomba
+        public decimal FrecuenciaOperacionBombaMin { set; get; } = 0;
 
-        #region nivelFluidoPozoTp
+        #endregion FrecuenciaOperacionBomba
 
-        public bool nivelFluidoPozoTp { get; set; } = false;
+        #region GastoAceite
 
-        public decimal nivelFluidoPozoTpMax { get; set; } = 0;
+        public bool GastoAceite { set; get; } = false;
 
-        public decimal nivelFluidoPozoTpMin { get; set; } = 0;
+        public decimal GastoAceiteMax { set; get; } = 0;
 
-        #endregion nivelFluidoPozoTp
+        public decimal GastoAceiteMin { set; get; } = 0;
 
-        #region nivelFluidoPozoTr
+        #endregion GastoAceite
 
-        public bool nivelFluidoPozoTr { get; set; } = false;
+        #region GastoGas
 
-        public decimal nivelFluidoPozoTrMax { get; set; } = 0;
+        public bool GastoGas { set; get; } = false;
 
-        public decimal nivelFluidoPozoTrMin { get; set; } = 0;
+        public decimal GastoGasMax { set; get; } = 0;
 
-        #endregion nivelFluidoPozoTr
+        public decimal GastoGasMin { set; get; } = 0;
 
-        #region presionEntradaBomba
+        #endregion GastoGas
 
-        public bool presionEntradaBomba { get; set; } = false;
+        #region GastoGasInyeccion
 
-        public decimal presionEntradaBombaMax { get; set; } = 0;
+        public bool GastoGasInyeccion { set; get; } = false;
 
-        public decimal presionEntradaBombaMin { get; set; } = 0;
+        public decimal GastoGasInyeccionMax { set; get; } = 0;
 
-        #endregion presionEntradaBomba
+        public decimal GastoGasInyeccionMin { set; get; } = 0;
 
-        #region velocidadBomba
+        #endregion GastoGasInyeccion
 
-        public bool velocidadBomba { get; set; } = false;
+        #region GastoInyeccionFluidoPotencia
 
-        public decimal velocidadBombaMax { get; set; } = 0;
+        public bool GastoInyeccionFluidoPotencia { set; get; } = false;
 
-        public decimal velocidadBombaMin { get; set; } = 0;
+        public decimal GastoInyeccionFluidoPotenciaMax { set; get; } = 0;
 
-        #endregion velocidadBomba
+        public decimal GastoInyeccionFluidoPotenciaMin { set; get; } = 0;
 
-        #region velocidadUnidadBombeo
+        #endregion GastoInyeccionFluidoPotencia
 
-        public bool velocidadUnidadBombeo { get; set; } = false;
+        #region GastoLiquido
 
-        public decimal velocidadUnidadBombeoMax { get; set; } = 0;
+        public bool GastoLiquido { set; get; } = false;
 
-        public decimal velocidadUnidadBombeoMin { get; set; } = 0;
+        public decimal GastoLiquidoMax { set; get; } = 0;
 
-        #endregion velocidadUnidadBombeo
+        public decimal GastoLiquidoMin { set; get; } = 0;
 
-        #region frecuenciaOperacionBomba
+        #endregion GastoLiquido
 
-        public bool frecuenciaOperacionBomba { get; set; } = false;
+        #region GastoLiquidoPruebaProduccion
 
-        public decimal frecuenciaOperacionBombaMax { get; set; } = 0;
+        public bool GastoLiquidoPruebaProduccion { set; get; } = false;
 
-        public decimal frecuenciaOperacionBombaMin { get; set; } = 0;
+        public decimal GastoLiquidoPruebaProduccionMax { set; get; } = 0;
 
-        #endregion frecuenciaOperacionBomba
+        public decimal GastoLiquidoPruebaProduccionMin { set; get; } = 0;
 
-        #region velocidadMotor
+        #endregion GastoLiquidoPruebaProduccion
 
-        public bool velocidadMotor { get; set; } = false;
+        #region GravedadEspecificaFluidoPotencia
 
-        public decimal velocidadMotorMax { get; set; } = 0;
+        public bool GravedadEspecificaFluidoPotencia { set; get; } = false;
 
-        public decimal velocidadMotorMin { get; set; } = 0;
+        public decimal GravedadEspecificaFluidoPotenciaMax { set; get; } = 0;
 
-        #endregion velocidadMotor
+        public decimal GravedadEspecificaFluidoPotenciaMin { set; get; } = 0;
 
-        #region longitudCarrera
+        #endregion GravedadEspecificaFluidoPotencia
 
-        public bool longitudCarrera { get; set; } = false;
+        #region GravedadEspecificaGasInyeccion
 
-        public decimal longitudCarreraMax { get; set; } = 0;
+        public bool GravedadEspecificaGasInyeccion { set; get; } = false;
 
-        public decimal longitudCarreraMin { get; set; } = 0;
+        public decimal GravedadEspecificaGasInyeccionMax { set; get; } = 0;
 
-        #endregion longitudCarrera
+        public decimal GravedadEspecificaGasInyeccionMin { set; get; } = 0;
 
-        #region presionDisponible
+        #endregion GravedadEspecificaGasInyeccion
 
-        public bool presionDisponible { get; set; } = false;
+        #region GravedadEspecificaGasProducido
 
-        public decimal presionDisponibleMax { get; set; } = 0;
+        public bool GravedadEspecificaGasProducido { set; get; } = false;
 
-        public decimal presionDisponibleMin { get; set; } = 0;
+        public decimal GravedadEspecificaGasProducidoMax { set; get; } = 0;
 
-        #endregion presionDisponible
+        public decimal GravedadEspecificaGasProducidoMin { set; get; } = 0;
 
-        #region gastoInyeccionFluidoPotencia
+        #endregion GravedadEspecificaGasProducido
 
-        public bool gastoInyeccionFluidoPotencia { get; set; } = false;
+        #region GravedadPetroleo
 
-        public decimal gastoInyeccionFluidoPotenciaMax { get; set; } = 0;
+        public bool GravedadPetroleo { set; get; } = false;
 
-        public decimal gastoInyeccionFluidoPotenciaMin { get; set; } = 0;
+        public decimal GravedadPetroleoMax { set; get; } = 0;
 
-        #endregion gastoInyeccionFluidoPotencia
+        public decimal GravedadPetroleoMin { set; get; } = 0;
 
-        #region gravedadEspecificaFluidoPotencia
+        #endregion GravedadPetroleo
 
-        public bool gravedadEspecificaFluidoPotencia { get; set; } = false;
+        #region LongitudCarrera
 
-        public decimal gravedadEspecificaFluidoPotenciaMax { get; set; } = 0;
+        public bool LongitudCarrera { set; get; } = false;
 
-        public decimal gravedadEspecificaFluidoPotenciaMin { get; set; } = 0;
+        public decimal LongitudCarreraMax { set; get; } = 0;
 
-        #endregion gravedadEspecificaFluidoPotencia
+        public decimal LongitudCarreraMin { set; get; } = 0;
 
-        #region gastoGasInyeccion
+        #endregion LongitudCarrera
 
-        public bool gastoGasInyeccion { get; set; } = false;
+        #region NivelFluidoPozoTp
 
-        public decimal gastoGasInyeccionMax { get; set; } = 0;
+        public bool NivelFluidoPozoTp { set; get; } = false;
 
-        public decimal gastoGasInyeccionMin { get; set; } = 0;
+        public decimal NivelFluidoPozoTpMax { set; get; } = 0;
 
-        #endregion gastoGasInyeccion
+        public decimal NivelFluidoPozoTpMin { set; get; } = 0;
 
-        #region gravedadEspecificaGasInyeccion
+        #endregion NivelFluidoPozoTp
 
-        public bool gravedadEspecificaGasInyeccion { get; set; } = false;
+        #region NivelFluidoPozoTr
 
-        public decimal gravedadEspecificaGasInyeccionMax { get; set; } = 0;
+        public bool NivelFluidoPozoTr { set; get; } = false;
 
-        public decimal gravedadEspecificaGasInyeccionMin { get; set; } = 0;
+        public decimal NivelFluidoPozoTrMax { set; get; } = 0;
 
-        #endregion gravedadEspecificaGasInyeccion
+        public decimal NivelFluidoPozoTrMin { set; get; } = 0;
 
-        #region torque
+        #endregion NivelFluidoPozoTr
 
-        public bool torque { get; set; } = false;
+        #region PorcentajeAguaSedimento
 
-        public decimal torqueMax { get; set; } = 0;
+        public bool PorcentajeAguaSedimento { set; get; } = false;
 
-        public decimal torqueMin { get; set; } = 0;
+        public decimal PorcentajeAguaSedimentoMax { set; get; } = 0;
 
-        #endregion torque
+        public decimal PorcentajeAguaSedimentoMin { set; get; } = 0;
 
-        #region corriente
+        #endregion PorcentajeAguaSedimento
 
-        public bool corriente { get; set; } = false;
+        #region PresionAperturaCampo
 
-        public decimal corrienteMax { get; set; } = 0;
+        public bool PresionAperturaCampo { set; get; } = false;
 
-        public decimal corrienteMin { get; set; } = 0;
+        public decimal PresionAperturaCampoMax { set; get; } = 0;
 
-        #endregion corriente
+        public decimal PresionAperturaCampoMin { set; get; } = 0;
 
-        #region diametroEstrangulador
+        #endregion PresionAperturaCampo
 
-        public bool diametroEstrangulador { get; set; } = false;
+        #region PresionDisponible
 
-        public decimal diametroEstranguladorMax { get; set; } = 0;
+        public bool PresionDisponible { set; get; } = false;
 
-        public decimal diametroEstranguladorMin { get; set; } = 0;
+        public decimal PresionDisponibleMax { set; get; } = 0;
 
-        #endregion diametroEstrangulador
+        public decimal PresionDisponibleMin { set; get; } = 0;
 
-        #region tiempoCiclo
+        #endregion PresionDisponible
 
-        public bool tiempoCiclo { get; set; } = false;
+        #region PresionEntradaBomba
 
-        public decimal tiempoCicloMax { get; set; } = 0;
+        public bool PresionEntradaBomba { set; get; } = false;
 
-        public decimal tiempoCicloMin { get; set; } = 0;
+        public decimal PresionEntradaBombaMax { set; get; } = 0;
 
-        #endregion tiempoCiclo
+        public decimal PresionEntradaBombaMin { set; get; } = 0;
 
-        #region tiempoRecuperacion
+        #endregion PresionEntradaBomba
 
-        public bool tiempoRecuperacion { get; set; } = false;
+        #region PresionLineaDescarga
 
-        public decimal tiempoRecuperacionMax { get; set; } = 0;
+        public bool PresionLineaDescarga { set; get; } = false;
 
-        public decimal tiempoRecuperacionMin { get; set; } = 0;
+        public decimal PresionLineaDescargaMax { set; get; } = 0;
 
-        #endregion tiempoRecuperacion
+        public decimal PresionLineaDescargaMin { set; get; } = 0;
 
-        #region tiempoInyeccion
+        #endregion PresionLineaDescarga
 
-        public bool tiempoInyeccion { get; set; } = false;
+        #region PresionTuberiaProduccion
 
-        public decimal tiempoInyeccionMax { get; set; } = 0;
+        public bool PresionTuberiaProduccion { set; get; } = false;
 
-        public decimal tiempoInyeccionMin { get; set; } = 0;
+        public decimal PresionTuberiaProduccionMax { set; get; } = 0;
 
-        #endregion tiempoInyeccion
+        public decimal PresionTuberiaProduccionMin { set; get; } = 0;
 
-        #region tiempoDesplazamientoTapon
+        #endregion PresionTuberiaProduccion
 
-        public bool tiempoDesplazamientoTapon { get; set; } = false;
+        #region PresionTuberiaRevestimiento
 
-        public decimal tiempoDesplazamientoTaponMax { get; set; } = 0;
+        public bool PresionTuberiaRevestimiento { set; get; } = false;
 
-        public decimal tiempoDesplazamientoTaponMin { get; set; } = 0;
+        public decimal PresionTuberiaRevestimientoMax { set; get; } = 0;
 
-        #endregion tiempoDesplazamientoTapon
+        public decimal PresionTuberiaRevestimientoMin { set; get; } = 0;
 
-        #region eficienciaLlenado
+        #endregion PresionTuberiaRevestimiento
 
-        public bool eficienciaLlenado { get; set; } = false;
+        #region RelacionGasAceite
 
-        public decimal eficienciaLlenadoMax { get; set; } = 0;
+        public bool RelacionGasAceite { set; get; } = false;
 
-        public decimal eficienciaLlenadoMin { get; set; } = 0;
+        public decimal RelacionGasAceiteMax { set; get; } = 0;
 
-        #endregion eficienciaLlenado
+        public decimal RelacionGasAceiteMin { set; get; } = 0;
+
+        #endregion RelacionGasAceite
+
+        #region SalinidadAgua
+
+        public bool SalinidadAgua { set; get; } = false;
+
+        public decimal SalinidadAguaMax { set; get; } = 0;
+
+        public decimal SalinidadAguaMin { set; get; } = 0;
+
+        #endregion SalinidadAgua
+
+        #region SumergenciaEfectivaBomba
+
+        public bool SumergenciaEfectivaBomba { set; get; } = false;
+
+        public decimal SumergenciaEfectivaBombaMax { set; get; } = 0;
+
+        public decimal SumergenciaEfectivaBombaMin { set; get; } = 0;
+
+        #endregion SumergenciaEfectivaBomba
+
+        #region TemperaturaSuperficie
+
+        public bool TemperaturaSuperficie { set; get; } = false;
+
+        public decimal TemperaturaSuperficieMax { set; get; } = 0;
+
+        public decimal TemperaturaSuperficieMin { set; get; } = 0;
+
+        #endregion TemperaturaSuperficie
+
+        #region TiempoCiclo
+
+        public bool TiempoCiclo { set; get; } = false;
+
+        public decimal TiempoCicloMax { set; get; } = 0;
+
+        public decimal TiempoCicloMin { set; get; } = 0;
+
+        #endregion TiempoCiclo
+
+        #region TiempoDesplazamientoTapon
+
+        public bool TiempoDesplazamientoTapon { set; get; } = false;
+
+        public decimal TiempoDesplazamientoTaponMax { set; get; } = 0;
+
+        public decimal TiempoDesplazamientoTaponMin { set; get; } = 0;
+
+        #endregion TiempoDesplazamientoTapon
+
+        #region TiempoInyeccion
+
+        public bool TiempoInyeccion { set; get; } = false;
+
+        public decimal TiempoInyeccionMax { set; get; } = 0;
+
+        public decimal TiempoInyeccionMin { set; get; } = 0;
+
+        #endregion TiempoInyeccion
+
+        #region TiempoRecuperacion
+
+        public bool TiempoRecuperacion { set; get; } = false;
+
+        public decimal TiempoRecuperacionMax { set; get; } = 0;
+
+        public decimal TiempoRecuperacionMin { set; get; } = 0;
+
+        #endregion TiempoRecuperacion
+
+        #region Torque
+
+        public bool Torque { set; get; } = false;
+
+        public decimal TorqueMax { set; get; } = 0;
+
+        public decimal TorqueMin { set; get; } = 0;
+
+        #endregion Torque
+
+        #region VelocidadBomba
+
+        public bool VelocidadBomba { set; get; } = false;
+
+        public decimal VelocidadBombaMax { set; get; } = 0;
+
+        public decimal VelocidadBombaMin { set; get; } = 0;
+
+        #endregion VelocidadBomba
+
+        #region VelocidadMotor
+
+        public bool VelocidadMotor { set; get; } = false;
+
+        public decimal VelocidadMotorMax { set; get; } = 0;
+
+        public decimal VelocidadMotorMin { set; get; } = 0;
+
+        #endregion VelocidadMotor
+
+        #region VelocidadUnidadBombeo
+
+        public bool VelocidadUnidadBombeo { set; get; } = false;
+
+        public decimal VelocidadUnidadBombeoMax { set; get; } = 0;
+
+        public decimal VelocidadUnidadBombeoMin { set; get; } = 0;
+
+        #endregion VelocidadUnidadBombeo
+
+        #endregion OTomaInformacion
+
+        #region OCartaDinagrafica
+
+        public bool CCartaDinagrafica { get; set; } = false;
+
+        public List<OCartaDinagrafica.CCartaDinagrafica> ListCCartaDinagrafica { get; set; } = new List<OCartaDinagrafica.CCartaDinagrafica>();
+
+        #endregion OCartaDinagrafica
 
         #region Temporizador
 
@@ -323,13 +445,5 @@ namespace Telemetria
         public TimeSpan DatosOperativos { get; set; } = TimeSpan.Zero;
 
         #endregion Temporizador
-
-        #region CCartaDinagrafica
-
-        public bool CCartaDinagrafica { get; set; } = false;
-
-        public List<OCartaDinagrafica.CCartaDinagrafica> ListCCartaDinagrafica { get; set; } = new List<OCartaDinagrafica.CCartaDinagrafica>();
-
-        #endregion CCartaDinagrafica
     }
 }

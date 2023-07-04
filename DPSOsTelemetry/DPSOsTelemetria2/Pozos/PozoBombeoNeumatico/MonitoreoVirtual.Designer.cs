@@ -33,13 +33,13 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tlpVariables = new System.Windows.Forms.TableLayoutPanel();
-            this.presionTuberiaProduccion = new System.Windows.Forms.Label();
-            this.presionTuberiaRevestimiento = new System.Windows.Forms.Label();
+            this.PresionTuberiaProduccion = new System.Windows.Forms.Label();
+            this.PresionTuberiaRevestimiento = new System.Windows.Forms.Label();
             this.gravedadEspecificaGasInyeccion = new System.Windows.Forms.Label();
-            this.presionDisponible = new System.Windows.Forms.Label();
-            this.presionLineaDescarga = new System.Windows.Forms.Label();
+            this.PresionDisponible = new System.Windows.Forms.Label();
+            this.PresionLineaDescarga = new System.Windows.Forms.Label();
             this.gastoGasInyeccion = new System.Windows.Forms.Label();
-            this.temperaturaSuperficie = new System.Windows.Forms.Label();
+            this.TemperaturaSuperficie = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.DatosOperativos = new System.Windows.Forms.Label();
             this.DatosOperativosSends = new System.Windows.Forms.Label();
@@ -94,13 +94,13 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
             this.tlpVariables.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpVariables.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpVariables.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpVariables.Controls.Add(this.presionTuberiaProduccion, 0, 0);
-            this.tlpVariables.Controls.Add(this.presionTuberiaRevestimiento, 3, 0);
+            this.tlpVariables.Controls.Add(this.PresionTuberiaProduccion, 0, 0);
+            this.tlpVariables.Controls.Add(this.PresionTuberiaRevestimiento, 3, 0);
             this.tlpVariables.Controls.Add(this.gravedadEspecificaGasInyeccion, 0, 6);
-            this.tlpVariables.Controls.Add(this.presionDisponible, 0, 4);
-            this.tlpVariables.Controls.Add(this.presionLineaDescarga, 0, 2);
+            this.tlpVariables.Controls.Add(this.PresionDisponible, 0, 4);
+            this.tlpVariables.Controls.Add(this.PresionLineaDescarga, 0, 2);
             this.tlpVariables.Controls.Add(this.gastoGasInyeccion, 3, 4);
-            this.tlpVariables.Controls.Add(this.temperaturaSuperficie, 3, 2);
+            this.tlpVariables.Controls.Add(this.TemperaturaSuperficie, 3, 2);
             this.tlpVariables.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpVariables.Location = new System.Drawing.Point(3, 3);
             this.tlpVariables.Name = "tlpVariables";
@@ -120,27 +120,27 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
             this.tlpVariables.Size = new System.Drawing.Size(620, 305);
             this.tlpVariables.TabIndex = 6;
             // 
-            // presionTuberiaProduccion
+            // PresionTuberiaProduccion
             // 
-            this.presionTuberiaProduccion.AutoSize = true;
-            this.tlpVariables.SetColumnSpan(this.presionTuberiaProduccion, 2);
-            this.presionTuberiaProduccion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.presionTuberiaProduccion.Location = new System.Drawing.Point(3, 0);
-            this.presionTuberiaProduccion.Name = "presionTuberiaProduccion";
-            this.presionTuberiaProduccion.Size = new System.Drawing.Size(294, 20);
-            this.presionTuberiaProduccion.TabIndex = 0;
-            this.presionTuberiaProduccion.Text = "presionTuberiaProduccion";
+            this.PresionTuberiaProduccion.AutoSize = true;
+            this.tlpVariables.SetColumnSpan(this.PresionTuberiaProduccion, 2);
+            this.PresionTuberiaProduccion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PresionTuberiaProduccion.Location = new System.Drawing.Point(3, 0);
+            this.PresionTuberiaProduccion.Name = "PresionTuberiaProduccion";
+            this.PresionTuberiaProduccion.Size = new System.Drawing.Size(294, 20);
+            this.PresionTuberiaProduccion.TabIndex = 0;
+            this.PresionTuberiaProduccion.Text = "PresionTuberiaProduccion";
             // 
-            // presionTuberiaRevestimiento
+            // PresionTuberiaRevestimiento
             // 
-            this.presionTuberiaRevestimiento.AutoSize = true;
-            this.tlpVariables.SetColumnSpan(this.presionTuberiaRevestimiento, 2);
-            this.presionTuberiaRevestimiento.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.presionTuberiaRevestimiento.Location = new System.Drawing.Point(323, 0);
-            this.presionTuberiaRevestimiento.Name = "presionTuberiaRevestimiento";
-            this.presionTuberiaRevestimiento.Size = new System.Drawing.Size(294, 20);
-            this.presionTuberiaRevestimiento.TabIndex = 3;
-            this.presionTuberiaRevestimiento.Text = "presionTuberiaRevestimiento";
+            this.PresionTuberiaRevestimiento.AutoSize = true;
+            this.tlpVariables.SetColumnSpan(this.PresionTuberiaRevestimiento, 2);
+            this.PresionTuberiaRevestimiento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PresionTuberiaRevestimiento.Location = new System.Drawing.Point(323, 0);
+            this.PresionTuberiaRevestimiento.Name = "PresionTuberiaRevestimiento";
+            this.PresionTuberiaRevestimiento.Size = new System.Drawing.Size(294, 20);
+            this.PresionTuberiaRevestimiento.TabIndex = 3;
+            this.PresionTuberiaRevestimiento.Text = "PresionTuberiaRevestimiento";
             // 
             // gravedadEspecificaGasInyeccion
             // 
@@ -153,27 +153,27 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
             this.gravedadEspecificaGasInyeccion.TabIndex = 18;
             this.gravedadEspecificaGasInyeccion.Text = "gravedadEspecificaGasInyeccion";
             // 
-            // presionDisponible
+            // PresionDisponible
             // 
-            this.presionDisponible.AutoSize = true;
-            this.tlpVariables.SetColumnSpan(this.presionDisponible, 2);
-            this.presionDisponible.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.presionDisponible.Location = new System.Drawing.Point(3, 80);
-            this.presionDisponible.Name = "presionDisponible";
-            this.presionDisponible.Size = new System.Drawing.Size(294, 20);
-            this.presionDisponible.TabIndex = 6;
-            this.presionDisponible.Text = "presionDisponible";
+            this.PresionDisponible.AutoSize = true;
+            this.tlpVariables.SetColumnSpan(this.PresionDisponible, 2);
+            this.PresionDisponible.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PresionDisponible.Location = new System.Drawing.Point(3, 80);
+            this.PresionDisponible.Name = "PresionDisponible";
+            this.PresionDisponible.Size = new System.Drawing.Size(294, 20);
+            this.PresionDisponible.TabIndex = 6;
+            this.PresionDisponible.Text = "PresionDisponible";
             // 
-            // presionLineaDescarga
+            // PresionLineaDescarga
             // 
-            this.presionLineaDescarga.AutoSize = true;
-            this.tlpVariables.SetColumnSpan(this.presionLineaDescarga, 2);
-            this.presionLineaDescarga.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.presionLineaDescarga.Location = new System.Drawing.Point(3, 40);
-            this.presionLineaDescarga.Name = "presionLineaDescarga";
-            this.presionLineaDescarga.Size = new System.Drawing.Size(294, 20);
-            this.presionLineaDescarga.TabIndex = 12;
-            this.presionLineaDescarga.Text = "presionLineaDescarga";
+            this.PresionLineaDescarga.AutoSize = true;
+            this.tlpVariables.SetColumnSpan(this.PresionLineaDescarga, 2);
+            this.PresionLineaDescarga.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PresionLineaDescarga.Location = new System.Drawing.Point(3, 40);
+            this.PresionLineaDescarga.Name = "PresionLineaDescarga";
+            this.PresionLineaDescarga.Size = new System.Drawing.Size(294, 20);
+            this.PresionLineaDescarga.TabIndex = 12;
+            this.PresionLineaDescarga.Text = "PresionLineaDescarga";
             // 
             // gastoGasInyeccion
             // 
@@ -186,16 +186,16 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
             this.gastoGasInyeccion.TabIndex = 9;
             this.gastoGasInyeccion.Text = "gastoGasInyeccion";
             // 
-            // temperaturaSuperficie
+            // TemperaturaSuperficie
             // 
-            this.temperaturaSuperficie.AutoSize = true;
-            this.tlpVariables.SetColumnSpan(this.temperaturaSuperficie, 2);
-            this.temperaturaSuperficie.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.temperaturaSuperficie.Location = new System.Drawing.Point(323, 40);
-            this.temperaturaSuperficie.Name = "temperaturaSuperficie";
-            this.temperaturaSuperficie.Size = new System.Drawing.Size(294, 20);
-            this.temperaturaSuperficie.TabIndex = 15;
-            this.temperaturaSuperficie.Text = "temperaturaSuperficie";
+            this.TemperaturaSuperficie.AutoSize = true;
+            this.tlpVariables.SetColumnSpan(this.TemperaturaSuperficie, 2);
+            this.TemperaturaSuperficie.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TemperaturaSuperficie.Location = new System.Drawing.Point(323, 40);
+            this.TemperaturaSuperficie.Name = "TemperaturaSuperficie";
+            this.TemperaturaSuperficie.Size = new System.Drawing.Size(294, 20);
+            this.TemperaturaSuperficie.TabIndex = 15;
+            this.TemperaturaSuperficie.Text = "TemperaturaSuperficie";
             // 
             // tableLayoutPanel3
             // 
@@ -289,12 +289,12 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
         private Label DatosOperativosFails;
         private Label DatosOperativos;
         private TableLayoutPanel tlpVariables;
-        private Label presionTuberiaProduccion;
-        private Label presionTuberiaRevestimiento;
+        private Label PresionTuberiaProduccion;
+        private Label PresionTuberiaRevestimiento;
         private Label gravedadEspecificaGasInyeccion;
-        private Label presionDisponible;
-        private Label presionLineaDescarga;
+        private Label PresionDisponible;
+        private Label PresionLineaDescarga;
         private Label gastoGasInyeccion;
-        private Label temperaturaSuperficie;
+        private Label TemperaturaSuperficie;
     }
 }

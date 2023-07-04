@@ -36,27 +36,27 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
             this.lbTemporizador1 = new System.Windows.Forms.Label();
             this.DatosOperativos = new System.Windows.Forms.TextBox();
             this.tlpVariables = new System.Windows.Forms.TableLayoutPanel();
-            this.presionTuberiaProduccion = new System.Windows.Forms.CheckBox();
-            this.presionTuberiaProduccionMin = new System.Windows.Forms.TextBox();
-            this.presionTuberiaProduccionMax = new System.Windows.Forms.TextBox();
-            this.presionTuberiaRevestimiento = new System.Windows.Forms.CheckBox();
-            this.presionTuberiaRevestimientoMin = new System.Windows.Forms.TextBox();
-            this.presionTuberiaRevestimientoMax = new System.Windows.Forms.TextBox();
+            this.PresionTuberiaProduccion = new System.Windows.Forms.CheckBox();
+            this.PresionTuberiaProduccionMin = new System.Windows.Forms.TextBox();
+            this.PresionTuberiaProduccionMax = new System.Windows.Forms.TextBox();
+            this.PresionTuberiaRevestimiento = new System.Windows.Forms.CheckBox();
+            this.PresionTuberiaRevestimientoMin = new System.Windows.Forms.TextBox();
+            this.PresionTuberiaRevestimientoMax = new System.Windows.Forms.TextBox();
             this.gravedadEspecificaGasInyeccion = new System.Windows.Forms.CheckBox();
             this.gravedadEspecificaGasInyeccionMin = new System.Windows.Forms.TextBox();
             this.gravedadEspecificaGasInyeccionMax = new System.Windows.Forms.TextBox();
-            this.presionDisponible = new System.Windows.Forms.CheckBox();
-            this.presionLineaDescarga = new System.Windows.Forms.CheckBox();
-            this.presionDisponibleMin = new System.Windows.Forms.TextBox();
-            this.presionLineaDescargaMin = new System.Windows.Forms.TextBox();
-            this.presionDisponibleMax = new System.Windows.Forms.TextBox();
-            this.presionLineaDescargaMax = new System.Windows.Forms.TextBox();
+            this.PresionDisponible = new System.Windows.Forms.CheckBox();
+            this.PresionLineaDescarga = new System.Windows.Forms.CheckBox();
+            this.PresionDisponibleMin = new System.Windows.Forms.TextBox();
+            this.PresionLineaDescargaMin = new System.Windows.Forms.TextBox();
+            this.PresionDisponibleMax = new System.Windows.Forms.TextBox();
+            this.PresionLineaDescargaMax = new System.Windows.Forms.TextBox();
             this.gastoGasInyeccion = new System.Windows.Forms.CheckBox();
-            this.temperaturaSuperficie = new System.Windows.Forms.CheckBox();
+            this.TemperaturaSuperficie = new System.Windows.Forms.CheckBox();
             this.gastoGasInyeccionMin = new System.Windows.Forms.TextBox();
-            this.temperaturaSuperficieMin = new System.Windows.Forms.TextBox();
+            this.TemperaturaSuperficieMin = new System.Windows.Forms.TextBox();
             this.gastoGasInyeccionMax = new System.Windows.Forms.TextBox();
-            this.temperaturaSuperficieMax = new System.Windows.Forms.TextBox();
+            this.TemperaturaSuperficieMax = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -140,27 +140,27 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
             this.tlpVariables.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpVariables.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpVariables.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpVariables.Controls.Add(this.presionTuberiaProduccion, 0, 0);
-            this.tlpVariables.Controls.Add(this.presionTuberiaProduccionMin, 0, 1);
-            this.tlpVariables.Controls.Add(this.presionTuberiaProduccionMax, 1, 1);
-            this.tlpVariables.Controls.Add(this.presionTuberiaRevestimiento, 3, 0);
-            this.tlpVariables.Controls.Add(this.presionTuberiaRevestimientoMin, 3, 1);
-            this.tlpVariables.Controls.Add(this.presionTuberiaRevestimientoMax, 4, 1);
+            this.tlpVariables.Controls.Add(this.PresionTuberiaProduccion, 0, 0);
+            this.tlpVariables.Controls.Add(this.PresionTuberiaProduccionMin, 0, 1);
+            this.tlpVariables.Controls.Add(this.PresionTuberiaProduccionMax, 1, 1);
+            this.tlpVariables.Controls.Add(this.PresionTuberiaRevestimiento, 3, 0);
+            this.tlpVariables.Controls.Add(this.PresionTuberiaRevestimientoMin, 3, 1);
+            this.tlpVariables.Controls.Add(this.PresionTuberiaRevestimientoMax, 4, 1);
             this.tlpVariables.Controls.Add(this.gravedadEspecificaGasInyeccion, 0, 9);
             this.tlpVariables.Controls.Add(this.gravedadEspecificaGasInyeccionMin, 0, 10);
             this.tlpVariables.Controls.Add(this.gravedadEspecificaGasInyeccionMax, 1, 10);
-            this.tlpVariables.Controls.Add(this.presionDisponible, 0, 6);
-            this.tlpVariables.Controls.Add(this.presionLineaDescarga, 0, 3);
-            this.tlpVariables.Controls.Add(this.presionDisponibleMin, 0, 7);
-            this.tlpVariables.Controls.Add(this.presionLineaDescargaMin, 0, 4);
-            this.tlpVariables.Controls.Add(this.presionDisponibleMax, 1, 7);
-            this.tlpVariables.Controls.Add(this.presionLineaDescargaMax, 1, 4);
+            this.tlpVariables.Controls.Add(this.PresionDisponible, 0, 6);
+            this.tlpVariables.Controls.Add(this.PresionLineaDescarga, 0, 3);
+            this.tlpVariables.Controls.Add(this.PresionDisponibleMin, 0, 7);
+            this.tlpVariables.Controls.Add(this.PresionLineaDescargaMin, 0, 4);
+            this.tlpVariables.Controls.Add(this.PresionDisponibleMax, 1, 7);
+            this.tlpVariables.Controls.Add(this.PresionLineaDescargaMax, 1, 4);
             this.tlpVariables.Controls.Add(this.gastoGasInyeccion, 3, 6);
-            this.tlpVariables.Controls.Add(this.temperaturaSuperficie, 3, 3);
+            this.tlpVariables.Controls.Add(this.TemperaturaSuperficie, 3, 3);
             this.tlpVariables.Controls.Add(this.gastoGasInyeccionMin, 3, 7);
-            this.tlpVariables.Controls.Add(this.temperaturaSuperficieMin, 3, 4);
+            this.tlpVariables.Controls.Add(this.TemperaturaSuperficieMin, 3, 4);
             this.tlpVariables.Controls.Add(this.gastoGasInyeccionMax, 4, 7);
-            this.tlpVariables.Controls.Add(this.temperaturaSuperficieMax, 4, 4);
+            this.tlpVariables.Controls.Add(this.TemperaturaSuperficieMax, 4, 4);
             this.tlpVariables.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpVariables.Location = new System.Drawing.Point(3, 3);
             this.tlpVariables.Name = "tlpVariables";
@@ -180,61 +180,61 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
             this.tlpVariables.Size = new System.Drawing.Size(544, 425);
             this.tlpVariables.TabIndex = 3;
             // 
-            // presionTuberiaProduccion
+            // PresionTuberiaProduccion
             // 
-            this.presionTuberiaProduccion.AutoSize = true;
-            this.tlpVariables.SetColumnSpan(this.presionTuberiaProduccion, 2);
-            this.presionTuberiaProduccion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.presionTuberiaProduccion.Location = new System.Drawing.Point(3, 3);
-            this.presionTuberiaProduccion.Name = "presionTuberiaProduccion";
-            this.presionTuberiaProduccion.Size = new System.Drawing.Size(256, 24);
-            this.presionTuberiaProduccion.TabIndex = 0;
-            this.presionTuberiaProduccion.Text = "presionTuberiaProduccion";
-            this.presionTuberiaProduccion.UseVisualStyleBackColor = true;
+            this.PresionTuberiaProduccion.AutoSize = true;
+            this.tlpVariables.SetColumnSpan(this.PresionTuberiaProduccion, 2);
+            this.PresionTuberiaProduccion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PresionTuberiaProduccion.Location = new System.Drawing.Point(3, 3);
+            this.PresionTuberiaProduccion.Name = "PresionTuberiaProduccion";
+            this.PresionTuberiaProduccion.Size = new System.Drawing.Size(256, 24);
+            this.PresionTuberiaProduccion.TabIndex = 0;
+            this.PresionTuberiaProduccion.Text = "PresionTuberiaProduccion";
+            this.PresionTuberiaProduccion.UseVisualStyleBackColor = true;
             // 
-            // presionTuberiaProduccionMin
+            // PresionTuberiaProduccionMin
             // 
-            this.presionTuberiaProduccionMin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.presionTuberiaProduccionMin.Location = new System.Drawing.Point(3, 33);
-            this.presionTuberiaProduccionMin.Name = "presionTuberiaProduccionMin";
-            this.presionTuberiaProduccionMin.Size = new System.Drawing.Size(125, 27);
-            this.presionTuberiaProduccionMin.TabIndex = 1;
+            this.PresionTuberiaProduccionMin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PresionTuberiaProduccionMin.Location = new System.Drawing.Point(3, 33);
+            this.PresionTuberiaProduccionMin.Name = "PresionTuberiaProduccionMin";
+            this.PresionTuberiaProduccionMin.Size = new System.Drawing.Size(125, 27);
+            this.PresionTuberiaProduccionMin.TabIndex = 1;
             // 
-            // presionTuberiaProduccionMax
+            // PresionTuberiaProduccionMax
             // 
-            this.presionTuberiaProduccionMax.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.presionTuberiaProduccionMax.Location = new System.Drawing.Point(134, 33);
-            this.presionTuberiaProduccionMax.Name = "presionTuberiaProduccionMax";
-            this.presionTuberiaProduccionMax.Size = new System.Drawing.Size(125, 27);
-            this.presionTuberiaProduccionMax.TabIndex = 2;
+            this.PresionTuberiaProduccionMax.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PresionTuberiaProduccionMax.Location = new System.Drawing.Point(134, 33);
+            this.PresionTuberiaProduccionMax.Name = "PresionTuberiaProduccionMax";
+            this.PresionTuberiaProduccionMax.Size = new System.Drawing.Size(125, 27);
+            this.PresionTuberiaProduccionMax.TabIndex = 2;
             // 
-            // presionTuberiaRevestimiento
+            // PresionTuberiaRevestimiento
             // 
-            this.presionTuberiaRevestimiento.AutoSize = true;
-            this.tlpVariables.SetColumnSpan(this.presionTuberiaRevestimiento, 2);
-            this.presionTuberiaRevestimiento.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.presionTuberiaRevestimiento.Location = new System.Drawing.Point(285, 3);
-            this.presionTuberiaRevestimiento.Name = "presionTuberiaRevestimiento";
-            this.presionTuberiaRevestimiento.Size = new System.Drawing.Size(256, 24);
-            this.presionTuberiaRevestimiento.TabIndex = 3;
-            this.presionTuberiaRevestimiento.Text = "presionTuberiaRevestimiento";
-            this.presionTuberiaRevestimiento.UseVisualStyleBackColor = true;
+            this.PresionTuberiaRevestimiento.AutoSize = true;
+            this.tlpVariables.SetColumnSpan(this.PresionTuberiaRevestimiento, 2);
+            this.PresionTuberiaRevestimiento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PresionTuberiaRevestimiento.Location = new System.Drawing.Point(285, 3);
+            this.PresionTuberiaRevestimiento.Name = "PresionTuberiaRevestimiento";
+            this.PresionTuberiaRevestimiento.Size = new System.Drawing.Size(256, 24);
+            this.PresionTuberiaRevestimiento.TabIndex = 3;
+            this.PresionTuberiaRevestimiento.Text = "PresionTuberiaRevestimiento";
+            this.PresionTuberiaRevestimiento.UseVisualStyleBackColor = true;
             // 
-            // presionTuberiaRevestimientoMin
+            // PresionTuberiaRevestimientoMin
             // 
-            this.presionTuberiaRevestimientoMin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.presionTuberiaRevestimientoMin.Location = new System.Drawing.Point(285, 33);
-            this.presionTuberiaRevestimientoMin.Name = "presionTuberiaRevestimientoMin";
-            this.presionTuberiaRevestimientoMin.Size = new System.Drawing.Size(125, 27);
-            this.presionTuberiaRevestimientoMin.TabIndex = 4;
+            this.PresionTuberiaRevestimientoMin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PresionTuberiaRevestimientoMin.Location = new System.Drawing.Point(285, 33);
+            this.PresionTuberiaRevestimientoMin.Name = "PresionTuberiaRevestimientoMin";
+            this.PresionTuberiaRevestimientoMin.Size = new System.Drawing.Size(125, 27);
+            this.PresionTuberiaRevestimientoMin.TabIndex = 4;
             // 
-            // presionTuberiaRevestimientoMax
+            // PresionTuberiaRevestimientoMax
             // 
-            this.presionTuberiaRevestimientoMax.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.presionTuberiaRevestimientoMax.Location = new System.Drawing.Point(416, 33);
-            this.presionTuberiaRevestimientoMax.Name = "presionTuberiaRevestimientoMax";
-            this.presionTuberiaRevestimientoMax.Size = new System.Drawing.Size(125, 27);
-            this.presionTuberiaRevestimientoMax.TabIndex = 5;
+            this.PresionTuberiaRevestimientoMax.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PresionTuberiaRevestimientoMax.Location = new System.Drawing.Point(416, 33);
+            this.PresionTuberiaRevestimientoMax.Name = "PresionTuberiaRevestimientoMax";
+            this.PresionTuberiaRevestimientoMax.Size = new System.Drawing.Size(125, 27);
+            this.PresionTuberiaRevestimientoMax.TabIndex = 5;
             // 
             // gravedadEspecificaGasInyeccion
             // 
@@ -264,61 +264,61 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
             this.gravedadEspecificaGasInyeccionMax.Size = new System.Drawing.Size(125, 27);
             this.gravedadEspecificaGasInyeccionMax.TabIndex = 20;
             // 
-            // presionDisponible
+            // PresionDisponible
             // 
-            this.presionDisponible.AutoSize = true;
-            this.tlpVariables.SetColumnSpan(this.presionDisponible, 2);
-            this.presionDisponible.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.presionDisponible.Location = new System.Drawing.Point(3, 169);
-            this.presionDisponible.Name = "presionDisponible";
-            this.presionDisponible.Size = new System.Drawing.Size(256, 24);
-            this.presionDisponible.TabIndex = 6;
-            this.presionDisponible.Text = "presionDisponible";
-            this.presionDisponible.UseVisualStyleBackColor = true;
+            this.PresionDisponible.AutoSize = true;
+            this.tlpVariables.SetColumnSpan(this.PresionDisponible, 2);
+            this.PresionDisponible.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PresionDisponible.Location = new System.Drawing.Point(3, 169);
+            this.PresionDisponible.Name = "PresionDisponible";
+            this.PresionDisponible.Size = new System.Drawing.Size(256, 24);
+            this.PresionDisponible.TabIndex = 6;
+            this.PresionDisponible.Text = "PresionDisponible";
+            this.PresionDisponible.UseVisualStyleBackColor = true;
             // 
-            // presionLineaDescarga
+            // PresionLineaDescarga
             // 
-            this.presionLineaDescarga.AutoSize = true;
-            this.tlpVariables.SetColumnSpan(this.presionLineaDescarga, 2);
-            this.presionLineaDescarga.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.presionLineaDescarga.Location = new System.Drawing.Point(3, 86);
-            this.presionLineaDescarga.Name = "presionLineaDescarga";
-            this.presionLineaDescarga.Size = new System.Drawing.Size(256, 24);
-            this.presionLineaDescarga.TabIndex = 12;
-            this.presionLineaDescarga.Text = "presionLineaDescarga";
-            this.presionLineaDescarga.UseVisualStyleBackColor = true;
+            this.PresionLineaDescarga.AutoSize = true;
+            this.tlpVariables.SetColumnSpan(this.PresionLineaDescarga, 2);
+            this.PresionLineaDescarga.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PresionLineaDescarga.Location = new System.Drawing.Point(3, 86);
+            this.PresionLineaDescarga.Name = "PresionLineaDescarga";
+            this.PresionLineaDescarga.Size = new System.Drawing.Size(256, 24);
+            this.PresionLineaDescarga.TabIndex = 12;
+            this.PresionLineaDescarga.Text = "PresionLineaDescarga";
+            this.PresionLineaDescarga.UseVisualStyleBackColor = true;
             // 
-            // presionDisponibleMin
+            // PresionDisponibleMin
             // 
-            this.presionDisponibleMin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.presionDisponibleMin.Location = new System.Drawing.Point(3, 199);
-            this.presionDisponibleMin.Name = "presionDisponibleMin";
-            this.presionDisponibleMin.Size = new System.Drawing.Size(125, 27);
-            this.presionDisponibleMin.TabIndex = 7;
+            this.PresionDisponibleMin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PresionDisponibleMin.Location = new System.Drawing.Point(3, 199);
+            this.PresionDisponibleMin.Name = "PresionDisponibleMin";
+            this.PresionDisponibleMin.Size = new System.Drawing.Size(125, 27);
+            this.PresionDisponibleMin.TabIndex = 7;
             // 
-            // presionLineaDescargaMin
+            // PresionLineaDescargaMin
             // 
-            this.presionLineaDescargaMin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.presionLineaDescargaMin.Location = new System.Drawing.Point(3, 116);
-            this.presionLineaDescargaMin.Name = "presionLineaDescargaMin";
-            this.presionLineaDescargaMin.Size = new System.Drawing.Size(125, 27);
-            this.presionLineaDescargaMin.TabIndex = 13;
+            this.PresionLineaDescargaMin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PresionLineaDescargaMin.Location = new System.Drawing.Point(3, 116);
+            this.PresionLineaDescargaMin.Name = "PresionLineaDescargaMin";
+            this.PresionLineaDescargaMin.Size = new System.Drawing.Size(125, 27);
+            this.PresionLineaDescargaMin.TabIndex = 13;
             // 
-            // presionDisponibleMax
+            // PresionDisponibleMax
             // 
-            this.presionDisponibleMax.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.presionDisponibleMax.Location = new System.Drawing.Point(134, 199);
-            this.presionDisponibleMax.Name = "presionDisponibleMax";
-            this.presionDisponibleMax.Size = new System.Drawing.Size(125, 27);
-            this.presionDisponibleMax.TabIndex = 8;
+            this.PresionDisponibleMax.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PresionDisponibleMax.Location = new System.Drawing.Point(134, 199);
+            this.PresionDisponibleMax.Name = "PresionDisponibleMax";
+            this.PresionDisponibleMax.Size = new System.Drawing.Size(125, 27);
+            this.PresionDisponibleMax.TabIndex = 8;
             // 
-            // presionLineaDescargaMax
+            // PresionLineaDescargaMax
             // 
-            this.presionLineaDescargaMax.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.presionLineaDescargaMax.Location = new System.Drawing.Point(134, 116);
-            this.presionLineaDescargaMax.Name = "presionLineaDescargaMax";
-            this.presionLineaDescargaMax.Size = new System.Drawing.Size(125, 27);
-            this.presionLineaDescargaMax.TabIndex = 14;
+            this.PresionLineaDescargaMax.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PresionLineaDescargaMax.Location = new System.Drawing.Point(134, 116);
+            this.PresionLineaDescargaMax.Name = "PresionLineaDescargaMax";
+            this.PresionLineaDescargaMax.Size = new System.Drawing.Size(125, 27);
+            this.PresionLineaDescargaMax.TabIndex = 14;
             // 
             // gastoGasInyeccion
             // 
@@ -332,17 +332,17 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
             this.gastoGasInyeccion.Text = "gastoGasInyeccion";
             this.gastoGasInyeccion.UseVisualStyleBackColor = true;
             // 
-            // temperaturaSuperficie
+            // TemperaturaSuperficie
             // 
-            this.temperaturaSuperficie.AutoSize = true;
-            this.tlpVariables.SetColumnSpan(this.temperaturaSuperficie, 2);
-            this.temperaturaSuperficie.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.temperaturaSuperficie.Location = new System.Drawing.Point(285, 86);
-            this.temperaturaSuperficie.Name = "temperaturaSuperficie";
-            this.temperaturaSuperficie.Size = new System.Drawing.Size(256, 24);
-            this.temperaturaSuperficie.TabIndex = 15;
-            this.temperaturaSuperficie.Text = "temperaturaSuperficie";
-            this.temperaturaSuperficie.UseVisualStyleBackColor = true;
+            this.TemperaturaSuperficie.AutoSize = true;
+            this.tlpVariables.SetColumnSpan(this.TemperaturaSuperficie, 2);
+            this.TemperaturaSuperficie.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TemperaturaSuperficie.Location = new System.Drawing.Point(285, 86);
+            this.TemperaturaSuperficie.Name = "TemperaturaSuperficie";
+            this.TemperaturaSuperficie.Size = new System.Drawing.Size(256, 24);
+            this.TemperaturaSuperficie.TabIndex = 15;
+            this.TemperaturaSuperficie.Text = "TemperaturaSuperficie";
+            this.TemperaturaSuperficie.UseVisualStyleBackColor = true;
             // 
             // gastoGasInyeccionMin
             // 
@@ -352,13 +352,13 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
             this.gastoGasInyeccionMin.Size = new System.Drawing.Size(125, 27);
             this.gastoGasInyeccionMin.TabIndex = 10;
             // 
-            // temperaturaSuperficieMin
+            // TemperaturaSuperficieMin
             // 
-            this.temperaturaSuperficieMin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.temperaturaSuperficieMin.Location = new System.Drawing.Point(285, 116);
-            this.temperaturaSuperficieMin.Name = "temperaturaSuperficieMin";
-            this.temperaturaSuperficieMin.Size = new System.Drawing.Size(125, 27);
-            this.temperaturaSuperficieMin.TabIndex = 16;
+            this.TemperaturaSuperficieMin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TemperaturaSuperficieMin.Location = new System.Drawing.Point(285, 116);
+            this.TemperaturaSuperficieMin.Name = "TemperaturaSuperficieMin";
+            this.TemperaturaSuperficieMin.Size = new System.Drawing.Size(125, 27);
+            this.TemperaturaSuperficieMin.TabIndex = 16;
             // 
             // gastoGasInyeccionMax
             // 
@@ -368,13 +368,13 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
             this.gastoGasInyeccionMax.Size = new System.Drawing.Size(125, 27);
             this.gastoGasInyeccionMax.TabIndex = 11;
             // 
-            // temperaturaSuperficieMax
+            // TemperaturaSuperficieMax
             // 
-            this.temperaturaSuperficieMax.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.temperaturaSuperficieMax.Location = new System.Drawing.Point(416, 116);
-            this.temperaturaSuperficieMax.Name = "temperaturaSuperficieMax";
-            this.temperaturaSuperficieMax.Size = new System.Drawing.Size(125, 27);
-            this.temperaturaSuperficieMax.TabIndex = 17;
+            this.TemperaturaSuperficieMax.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TemperaturaSuperficieMax.Location = new System.Drawing.Point(416, 116);
+            this.TemperaturaSuperficieMax.Name = "TemperaturaSuperficieMax";
+            this.TemperaturaSuperficieMax.Size = new System.Drawing.Size(125, 27);
+            this.TemperaturaSuperficieMax.TabIndex = 17;
             // 
             // TomaInformacion
             // 
@@ -401,26 +401,26 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
         private Label lbTemporizador1;
         private TextBox DatosOperativos;
         private TableLayoutPanel tlpVariables;
-        private CheckBox presionTuberiaProduccion;
-        private TextBox presionTuberiaProduccionMin;
-        private TextBox presionTuberiaProduccionMax;
-        private CheckBox presionTuberiaRevestimiento;
-        private TextBox presionTuberiaRevestimientoMin;
-        private TextBox presionTuberiaRevestimientoMax;
+        private CheckBox PresionTuberiaProduccion;
+        private TextBox PresionTuberiaProduccionMin;
+        private TextBox PresionTuberiaProduccionMax;
+        private CheckBox PresionTuberiaRevestimiento;
+        private TextBox PresionTuberiaRevestimientoMin;
+        private TextBox PresionTuberiaRevestimientoMax;
         private CheckBox gastoGasInyeccion;
-        private CheckBox presionLineaDescarga;
-        private CheckBox temperaturaSuperficie;
+        private CheckBox PresionLineaDescarga;
+        private CheckBox TemperaturaSuperficie;
         private TextBox gastoGasInyeccionMin;
         private TextBox gastoGasInyeccionMax;
-        private TextBox presionLineaDescargaMin;
-        private TextBox presionLineaDescargaMax;
-        private TextBox temperaturaSuperficieMin;
-        private TextBox temperaturaSuperficieMax;
+        private TextBox PresionLineaDescargaMin;
+        private TextBox PresionLineaDescargaMax;
+        private TextBox TemperaturaSuperficieMin;
+        private TextBox TemperaturaSuperficieMax;
         private CheckBox gravedadEspecificaGasInyeccion;
         private TextBox gravedadEspecificaGasInyeccionMin;
         private TextBox gravedadEspecificaGasInyeccionMax;
-        private CheckBox presionDisponible;
-        private TextBox presionDisponibleMin;
-        private TextBox presionDisponibleMax;
+        private CheckBox PresionDisponible;
+        private TextBox PresionDisponibleMin;
+        private TextBox PresionDisponibleMax;
     }
 }

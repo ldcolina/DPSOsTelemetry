@@ -21,59 +21,59 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
 
             #region DatosOperativos
 
-            #region presionTuberiaProduccion
+            #region PresionTuberiaProduccion
 
-            presionTuberiaProduccion.Checked = referencias.Range.presionTuberiaProduccion;
-            presionTuberiaProduccionMin.Text = Condicionantes.Wrote_Formating(referencias.Range.presionTuberiaProduccionMin.ToString());
-            presionTuberiaProduccionMax.Text = Condicionantes.Wrote_Formating(referencias.Range.presionTuberiaProduccionMax.ToString());
+            PresionTuberiaProduccion.Checked = referencias.Range.PresionTuberiaProduccion;
+            PresionTuberiaProduccionMin.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionTuberiaProduccionMin.ToString());
+            PresionTuberiaProduccionMax.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionTuberiaProduccionMax.ToString());
 
-            #endregion presionTuberiaProduccion
+            #endregion PresionTuberiaProduccion
 
-            #region presionTuberiaRevestimiento
+            #region PresionTuberiaRevestimiento
 
-            presionTuberiaRevestimiento.Checked = referencias.Range.presionTuberiaRevestimiento;
-            presionTuberiaRevestimientoMin.Text = Condicionantes.Wrote_Formating(referencias.Range.presionTuberiaRevestimientoMin.ToString());
-            presionTuberiaRevestimientoMax.Text = Condicionantes.Wrote_Formating(referencias.Range.presionTuberiaRevestimientoMax.ToString());
+            PresionTuberiaRevestimiento.Checked = referencias.Range.PresionTuberiaRevestimiento;
+            PresionTuberiaRevestimientoMin.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionTuberiaRevestimientoMin.ToString());
+            PresionTuberiaRevestimientoMax.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionTuberiaRevestimientoMax.ToString());
 
-            #endregion presionTuberiaRevestimiento
+            #endregion PresionTuberiaRevestimiento
 
-            #region presionLineaDescarga
+            #region PresionLineaDescarga
 
-            presionLineaDescarga.Checked = referencias.Range.presionLineaDescarga;
-            presionLineaDescargaMin.Text = Condicionantes.Wrote_Formating(referencias.Range.presionLineaDescargaMin.ToString());
-            presionLineaDescargaMax.Text = Condicionantes.Wrote_Formating(referencias.Range.presionLineaDescargaMax.ToString());
+            PresionLineaDescarga.Checked = referencias.Range.PresionLineaDescarga;
+            PresionLineaDescargaMin.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionLineaDescargaMin.ToString());
+            PresionLineaDescargaMax.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionLineaDescargaMax.ToString());
 
-            #endregion presionLineaDescarga
+            #endregion PresionLineaDescarga
 
-            #region temperaturaSuperficie
+            #region TemperaturaSuperficie
 
-            temperaturaSuperficie.Checked = referencias.Range.temperaturaSuperficie;
-            temperaturaSuperficieMin.Text = Condicionantes.Wrote_Formating(referencias.Range.temperaturaSuperficieMin.ToString());
-            temperaturaSuperficieMax.Text = Condicionantes.Wrote_Formating(referencias.Range.temperaturaSuperficieMax.ToString());
+            TemperaturaSuperficie.Checked = referencias.Range.TemperaturaSuperficie;
+            TemperaturaSuperficieMin.Text = Condicionantes.Wrote_Formating(referencias.Range.TemperaturaSuperficieMin.ToString());
+            TemperaturaSuperficieMax.Text = Condicionantes.Wrote_Formating(referencias.Range.TemperaturaSuperficieMax.ToString());
 
-            #endregion temperaturaSuperficie
+            #endregion TemperaturaSuperficie
 
-            #region presionDisponible
+            #region PresionDisponible
 
-            presionDisponible.Checked = referencias.Range.presionDisponible;
-            presionDisponibleMin.Text = Condicionantes.Wrote_Formating(referencias.Range.presionDisponibleMin.ToString());
-            presionDisponibleMax.Text = Condicionantes.Wrote_Formating(referencias.Range.presionDisponibleMax.ToString());
+            PresionDisponible.Checked = referencias.Range.PresionDisponible;
+            PresionDisponibleMin.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionDisponibleMin.ToString());
+            PresionDisponibleMax.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionDisponibleMax.ToString());
 
-            #endregion presionDisponible
+            #endregion PresionDisponible
 
             #region gastoGasInyeccion
 
-            gastoGasInyeccion.Checked = referencias.Range.gastoGasInyeccion;
-            gastoGasInyeccionMin.Text = Condicionantes.Wrote_Formating(referencias.Range.gastoGasInyeccionMin.ToString());
-            gastoGasInyeccionMax.Text = Condicionantes.Wrote_Formating(referencias.Range.gastoGasInyeccionMax.ToString());
+            gastoGasInyeccion.Checked = referencias.Range.GastoGasInyeccion;
+            gastoGasInyeccionMin.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoGasInyeccionMin.ToString());
+            gastoGasInyeccionMax.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoGasInyeccionMax.ToString());
 
             #endregion gastoGasInyeccion
 
             #region gravedadEspecificaGasInyeccion
 
-            gravedadEspecificaGasInyeccion.Checked = referencias.Range.gravedadEspecificaGasInyeccion;
-            gravedadEspecificaGasInyeccionMin.Text = Condicionantes.Wrote_Formating(referencias.Range.gravedadEspecificaGasInyeccionMin.ToString());
-            gravedadEspecificaGasInyeccionMax.Text = Condicionantes.Wrote_Formating(referencias.Range.gravedadEspecificaGasInyeccionMax.ToString());
+            gravedadEspecificaGasInyeccion.Checked = referencias.Range.GravedadEspecificaGasInyeccion;
+            gravedadEspecificaGasInyeccionMin.Text = Condicionantes.Wrote_Formating(referencias.Range.GravedadEspecificaGasInyeccionMin.ToString());
+            gravedadEspecificaGasInyeccionMax.Text = Condicionantes.Wrote_Formating(referencias.Range.GravedadEspecificaGasInyeccionMax.ToString());
 
             #endregion gravedadEspecificaGasInyeccion
 
@@ -113,49 +113,49 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
         {
             #region DatosOperativos
 
-            #region presionTuberiaProduccion
+            #region PresionTuberiaProduccion
 
-            presionTuberiaProduccion.Text = $"{Languages.Pozo.presionTuberiaProduccion} ({Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)})";
-            presionTuberiaProduccionMin.Text = Condicionantes.Wrote_Formating(presionTuberiaProduccionMin.Text);
-            presionTuberiaProduccionMax.Text = Condicionantes.Wrote_Formating(presionTuberiaProduccionMax.Text);
+            PresionTuberiaProduccion.Text = $"{Languages.Pozo.PresionTuberiaProduccion} ({Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)})";
+            PresionTuberiaProduccionMin.Text = Condicionantes.Wrote_Formating(PresionTuberiaProduccionMin.Text);
+            PresionTuberiaProduccionMax.Text = Condicionantes.Wrote_Formating(PresionTuberiaProduccionMax.Text);
 
-            #endregion presionTuberiaProduccion
+            #endregion PresionTuberiaProduccion
 
-            #region presionTuberiaRevestimiento
+            #region PresionTuberiaRevestimiento
 
-            presionTuberiaRevestimiento.Text = $"{Languages.Pozo.presionTuberiaRevestimiento} ({Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)})";
-            presionTuberiaRevestimientoMin.Text = Condicionantes.Wrote_Formating(presionTuberiaRevestimientoMin.Text);
-            presionTuberiaRevestimientoMax.Text = Condicionantes.Wrote_Formating(presionTuberiaRevestimientoMax.Text);
+            PresionTuberiaRevestimiento.Text = $"{Languages.Pozo.PresionTuberiaRevestimiento} ({Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)})";
+            PresionTuberiaRevestimientoMin.Text = Condicionantes.Wrote_Formating(PresionTuberiaRevestimientoMin.Text);
+            PresionTuberiaRevestimientoMax.Text = Condicionantes.Wrote_Formating(PresionTuberiaRevestimientoMax.Text);
 
-            #endregion presionTuberiaRevestimiento
+            #endregion PresionTuberiaRevestimiento
 
-            #region presionLineaDescarga
+            #region PresionLineaDescarga
 
-            presionLineaDescarga.Text = $"{Languages.Pozo.presionLineaDescarga} ({Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)})";
-            presionLineaDescargaMin.Text = Condicionantes.Wrote_Formating(presionLineaDescargaMin.Text);
-            presionLineaDescargaMax.Text = Condicionantes.Wrote_Formating(presionLineaDescargaMax.Text);
+            PresionLineaDescarga.Text = $"{Languages.Pozo.PresionLineaDescarga} ({Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)})";
+            PresionLineaDescargaMin.Text = Condicionantes.Wrote_Formating(PresionLineaDescargaMin.Text);
+            PresionLineaDescargaMax.Text = Condicionantes.Wrote_Formating(PresionLineaDescargaMax.Text);
 
-            #endregion presionLineaDescarga
+            #endregion PresionLineaDescarga
 
-            #region temperaturaSuperficie
+            #region TemperaturaSuperficie
 
-            temperaturaSuperficie.Text = $"{Languages.Pozo.temperaturaSuperficie} ({Configuracion.GetSigla(Referencia.Temperatura, Referencias.Unidades)})";
-            temperaturaSuperficieMin.Text = Condicionantes.Wrote_Formating(temperaturaSuperficieMin.Text);
-            temperaturaSuperficieMax.Text = Condicionantes.Wrote_Formating(temperaturaSuperficieMax.Text);
+            TemperaturaSuperficie.Text = $"{Languages.Pozo.TemperaturaSuperficie} ({Configuracion.GetSigla(Referencia.Temperatura, Referencias.Unidades)})";
+            TemperaturaSuperficieMin.Text = Condicionantes.Wrote_Formating(TemperaturaSuperficieMin.Text);
+            TemperaturaSuperficieMax.Text = Condicionantes.Wrote_Formating(TemperaturaSuperficieMax.Text);
 
-            #endregion temperaturaSuperficie
+            #endregion TemperaturaSuperficie
 
-            #region presionDisponible
+            #region PresionDisponible
 
-            presionDisponible.Text = $"{Languages.Pozo.presionDisponible} ({Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)})";
-            presionDisponibleMin.Text = Condicionantes.Wrote_Formating(presionDisponibleMin.Text);
-            presionDisponibleMax.Text = Condicionantes.Wrote_Formating(presionDisponibleMax.Text);
+            PresionDisponible.Text = $"{Languages.Pozo.PresionDisponible} ({Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)})";
+            PresionDisponibleMin.Text = Condicionantes.Wrote_Formating(PresionDisponibleMin.Text);
+            PresionDisponibleMax.Text = Condicionantes.Wrote_Formating(PresionDisponibleMax.Text);
 
-            #endregion presionDisponible
+            #endregion PresionDisponible
 
             #region gastoGasInyeccion
 
-            gastoGasInyeccion.Text = $"{Languages.Pozo.gastoGasInyeccion} ({Configuracion.GetSigla(Referencia.GastoGas, Referencias.Unidades)})";
+            gastoGasInyeccion.Text = $"{Languages.Pozo.GastoGasInyeccion} ({Configuracion.GetSigla(Referencia.GastoGas, Referencias.Unidades)})";
             gastoGasInyeccionMin.Text = Condicionantes.Wrote_Formating(gastoGasInyeccionMin.Text);
             gastoGasInyeccionMax.Text = Condicionantes.Wrote_Formating(gastoGasInyeccionMax.Text);
 
@@ -163,7 +163,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
 
             #region gravedadEspecificaGasInyeccion
 
-            gravedadEspecificaGasInyeccion.Text = $"{Languages.Pozo.gravedadEspecificaGasInyeccion} (-)";
+            gravedadEspecificaGasInyeccion.Text = $"{Languages.Pozo.GravedadEspecificaGasInyeccion} (-)";
             gravedadEspecificaGasInyeccionMin.Text = Condicionantes.Wrote_Formating(gravedadEspecificaGasInyeccionMin.Text);
             gravedadEspecificaGasInyeccionMax.Text = Condicionantes.Wrote_Formating(gravedadEspecificaGasInyeccionMax.Text);
 
@@ -171,7 +171,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
 
             #region Temporizador
 
-            lbTemporizador1.Text = $"{Languages.Pozo.Temporizador}-{Languages.Pozo.DatosOperativos} ({Siglas.Segundo})";
+            lbTemporizador1.Text = $"{Languages.Pozo.Temporizador}-{Languages.Pozo.OperativeData} ({Siglas.Segundo})";
             DatosOperativos.Text = Condicionantes.Wrote_Formating(DatosOperativos.Text);
 
             #endregion Temporizador
@@ -185,181 +185,181 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
 
             #region DatosOperativos
 
-            #region presionTuberiaProduccion
+            #region PresionTuberiaProduccion
 
-            Range.presionTuberiaProduccion = presionTuberiaProduccion.Checked;
-            Range.presionTuberiaProduccionMin = Convert.ToDecimal(presionTuberiaProduccionMin.Text);
-            Range.presionTuberiaProduccionMax = Convert.ToDecimal(presionTuberiaProduccionMax.Text);
+            Range.PresionTuberiaProduccion = PresionTuberiaProduccion.Checked;
+            Range.PresionTuberiaProduccionMin = Convert.ToDecimal(PresionTuberiaProduccionMin.Text);
+            Range.PresionTuberiaProduccionMax = Convert.ToDecimal(PresionTuberiaProduccionMax.Text);
 
-            if (Range.presionTuberiaProduccion)
+            if (Range.PresionTuberiaProduccion)
             {
                 string msn = string.Empty;
-                if (Range.presionTuberiaProduccionMin < 0)
+                if (Range.PresionTuberiaProduccionMin < 0)
                 {
                     msn = Languages.Pozo.GreaterThan;
                 }
-                if (Range.presionTuberiaProduccionMin >= Range.presionTuberiaProduccionMax)
+                if (Range.PresionTuberiaProduccionMin >= Range.PresionTuberiaProduccionMax)
                 {
                     msn = Languages.Pozo.GreaterThanValue;
                 }
 
                 if (!string.IsNullOrEmpty(msn))
                 {
-                    msn = msn.Replace("{0}", Languages.Pozo.presionTuberiaProduccion)
-                             .Replace("{1}", $"{Range.presionTuberiaProduccionMin} {Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)}")
-                             .Replace("{2}", $"{Range.presionTuberiaProduccionMax} {Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)}");
+                    msn = msn.Replace("{0}", Languages.Pozo.PresionTuberiaProduccion)
+                             .Replace("{1}", $"{Range.PresionTuberiaProduccionMin} {Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)}")
+                             .Replace("{2}", $"{Range.PresionTuberiaProduccionMax} {Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)}");
                     MessageBox.Show(msn, Languages.Pozo.Aviso, MessageBoxButtons.OK);
-                    Range.presionTuberiaProduccion = false;
+                    Range.PresionTuberiaProduccion = false;
                 }
             }
 
-            #endregion presionTuberiaProduccion
+            #endregion PresionTuberiaProduccion
 
-            #region presionTuberiaRevestimiento
+            #region PresionTuberiaRevestimiento
 
-            Range.presionTuberiaRevestimiento = presionTuberiaRevestimiento.Checked;
-            Range.presionTuberiaRevestimientoMin = Convert.ToDecimal(presionTuberiaRevestimientoMin.Text);
-            Range.presionTuberiaRevestimientoMax = Convert.ToDecimal(presionTuberiaRevestimientoMax.Text);
+            Range.PresionTuberiaRevestimiento = PresionTuberiaRevestimiento.Checked;
+            Range.PresionTuberiaRevestimientoMin = Convert.ToDecimal(PresionTuberiaRevestimientoMin.Text);
+            Range.PresionTuberiaRevestimientoMax = Convert.ToDecimal(PresionTuberiaRevestimientoMax.Text);
 
-            if (Range.presionTuberiaRevestimiento)
+            if (Range.PresionTuberiaRevestimiento)
             {
                 string msn = string.Empty;
-                if (Range.presionTuberiaRevestimientoMin < 0)
+                if (Range.PresionTuberiaRevestimientoMin < 0)
                 {
                     msn = Languages.Pozo.GreaterThan;
                 }
-                if (Range.presionTuberiaRevestimientoMin >= Range.presionTuberiaRevestimientoMax)
+                if (Range.PresionTuberiaRevestimientoMin >= Range.PresionTuberiaRevestimientoMax)
                 {
                     msn = Languages.Pozo.GreaterThanValue;
                 }
 
                 if (!string.IsNullOrEmpty(msn))
                 {
-                    msn = msn.Replace("{0}", Languages.Pozo.presionTuberiaRevestimiento)
-                             .Replace("{1}", $"{Range.presionTuberiaRevestimientoMin} {Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)}")
-                             .Replace("{2}", $"{Range.presionTuberiaRevestimientoMax} {Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)}");
+                    msn = msn.Replace("{0}", Languages.Pozo.PresionTuberiaRevestimiento)
+                             .Replace("{1}", $"{Range.PresionTuberiaRevestimientoMin} {Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)}")
+                             .Replace("{2}", $"{Range.PresionTuberiaRevestimientoMax} {Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)}");
                     MessageBox.Show(msn, Languages.Pozo.Aviso, MessageBoxButtons.OK);
-                    Range.presionTuberiaRevestimiento = false;
+                    Range.PresionTuberiaRevestimiento = false;
                 }
             }
 
-            #endregion presionTuberiaRevestimiento
+            #endregion PresionTuberiaRevestimiento
 
-            #region presionLineaDescarga
+            #region PresionLineaDescarga
 
-            Range.presionLineaDescarga = presionLineaDescarga.Checked;
-            Range.presionLineaDescargaMin = Convert.ToDecimal(presionLineaDescargaMin.Text);
-            Range.presionLineaDescargaMax = Convert.ToDecimal(presionLineaDescargaMax.Text);
+            Range.PresionLineaDescarga = PresionLineaDescarga.Checked;
+            Range.PresionLineaDescargaMin = Convert.ToDecimal(PresionLineaDescargaMin.Text);
+            Range.PresionLineaDescargaMax = Convert.ToDecimal(PresionLineaDescargaMax.Text);
 
-            if (Range.presionLineaDescarga)
+            if (Range.PresionLineaDescarga)
             {
                 string msn = string.Empty;
-                if (Range.presionLineaDescargaMin < 0)
+                if (Range.PresionLineaDescargaMin < 0)
                 {
                     msn = Languages.Pozo.GreaterThan;
                 }
-                if (Range.presionLineaDescargaMin >= Range.presionLineaDescargaMax)
+                if (Range.PresionLineaDescargaMin >= Range.PresionLineaDescargaMax)
                 {
                     msn = Languages.Pozo.GreaterThanValue;
                 }
 
                 if (!string.IsNullOrEmpty(msn))
                 {
-                    msn = msn.Replace("{0}", Languages.Pozo.presionLineaDescarga)
-                             .Replace("{1}", $"{Range.presionLineaDescargaMin} {Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)}")
-                             .Replace("{2}", $"{Range.presionLineaDescargaMax} {Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)}");
+                    msn = msn.Replace("{0}", Languages.Pozo.PresionLineaDescarga)
+                             .Replace("{1}", $"{Range.PresionLineaDescargaMin} {Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)}")
+                             .Replace("{2}", $"{Range.PresionLineaDescargaMax} {Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)}");
                     MessageBox.Show(msn, Languages.Pozo.Aviso, MessageBoxButtons.OK);
-                    Range.presionLineaDescarga = false;
+                    Range.PresionLineaDescarga = false;
                 }
             }
 
-            #endregion presionLineaDescarga
+            #endregion PresionLineaDescarga
 
-            #region temperaturaSuperficie
+            #region TemperaturaSuperficie
 
-            Range.temperaturaSuperficie = temperaturaSuperficie.Checked;
-            Range.temperaturaSuperficieMin = Convert.ToDecimal(temperaturaSuperficieMin.Text);
-            Range.temperaturaSuperficieMax = Convert.ToDecimal(temperaturaSuperficieMax.Text);
+            Range.TemperaturaSuperficie = TemperaturaSuperficie.Checked;
+            Range.TemperaturaSuperficieMin = Convert.ToDecimal(TemperaturaSuperficieMin.Text);
+            Range.TemperaturaSuperficieMax = Convert.ToDecimal(TemperaturaSuperficieMax.Text);
 
-            if (Range.temperaturaSuperficie)
+            if (Range.TemperaturaSuperficie)
             {
                 string msn = string.Empty;
-                if (Range.temperaturaSuperficieMin < 0)
+                if (Range.TemperaturaSuperficieMin < 0)
                 {
                     msn = Languages.Pozo.GreaterThan;
                 }
-                if (Range.temperaturaSuperficieMin >= Range.temperaturaSuperficieMax)
+                if (Range.TemperaturaSuperficieMin >= Range.TemperaturaSuperficieMax)
                 {
                     msn = Languages.Pozo.GreaterThanValue;
                 }
 
                 if (!string.IsNullOrEmpty(msn))
                 {
-                    msn = msn.Replace("{0}", Languages.Pozo.temperaturaSuperficie)
-                             .Replace("{1}", $"{Range.temperaturaSuperficieMin} {Configuracion.GetSigla(Referencia.Temperatura, Referencias.Unidades)}")
-                             .Replace("{2}", $"{Range.temperaturaSuperficieMax} {Configuracion.GetSigla(Referencia.Temperatura, Referencias.Unidades)}");
+                    msn = msn.Replace("{0}", Languages.Pozo.TemperaturaSuperficie)
+                             .Replace("{1}", $"{Range.TemperaturaSuperficieMin} {Configuracion.GetSigla(Referencia.Temperatura, Referencias.Unidades)}")
+                             .Replace("{2}", $"{Range.TemperaturaSuperficieMax} {Configuracion.GetSigla(Referencia.Temperatura, Referencias.Unidades)}");
                     MessageBox.Show(msn, Languages.Pozo.Aviso, MessageBoxButtons.OK);
-                    Range.temperaturaSuperficie = false;
+                    Range.TemperaturaSuperficie = false;
                 }
             }
 
-            #endregion temperaturaSuperficie
+            #endregion TemperaturaSuperficie
 
-            #region presionDisponible
+            #region PresionDisponible
 
-            Range.presionDisponible = presionDisponible.Checked;
-            Range.presionDisponibleMin = Convert.ToDecimal(presionDisponibleMin.Text);
-            Range.presionDisponibleMax = Convert.ToDecimal(presionDisponibleMax.Text);
+            Range.PresionDisponible = PresionDisponible.Checked;
+            Range.PresionDisponibleMin = Convert.ToDecimal(PresionDisponibleMin.Text);
+            Range.PresionDisponibleMax = Convert.ToDecimal(PresionDisponibleMax.Text);
 
-            if (Range.presionDisponible)
+            if (Range.PresionDisponible)
             {
                 string msn = string.Empty;
-                if (Range.presionDisponibleMin < 0)
+                if (Range.PresionDisponibleMin < 0)
                 {
                     msn = Languages.Pozo.GreaterThan;
                 }
-                if (Range.presionDisponibleMin >= Range.presionDisponibleMax)
+                if (Range.PresionDisponibleMin >= Range.PresionDisponibleMax)
                 {
                     msn = Languages.Pozo.GreaterThanValue;
                 }
 
                 if (!string.IsNullOrEmpty(msn))
                 {
-                    msn = msn.Replace("{0}", Languages.Pozo.presionDisponible)
-                             .Replace("{1}", $"{Range.presionDisponibleMin} {Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)}")
-                             .Replace("{2}", $"{Range.presionDisponibleMax} {Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)}");
+                    msn = msn.Replace("{0}", Languages.Pozo.PresionDisponible)
+                             .Replace("{1}", $"{Range.PresionDisponibleMin} {Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)}")
+                             .Replace("{2}", $"{Range.PresionDisponibleMax} {Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)}");
                     MessageBox.Show(msn, Languages.Pozo.Aviso, MessageBoxButtons.OK);
-                    Range.presionDisponible = false;
+                    Range.PresionDisponible = false;
                 }
             }
 
-            #endregion presionDisponible
+            #endregion PresionDisponible
 
             #region gastoGasInyeccion
 
-            Range.gastoGasInyeccion = gastoGasInyeccion.Checked;
-            Range.gastoGasInyeccionMin = Convert.ToDecimal(gastoGasInyeccionMin.Text);
-            Range.gastoGasInyeccionMax = Convert.ToDecimal(gastoGasInyeccionMax.Text);
+            Range.GastoGasInyeccion = gastoGasInyeccion.Checked;
+            Range.GastoGasInyeccionMin = Convert.ToDecimal(gastoGasInyeccionMin.Text);
+            Range.GastoGasInyeccionMax = Convert.ToDecimal(gastoGasInyeccionMax.Text);
 
-            if (Range.gastoGasInyeccion)
+            if (Range.GastoGasInyeccion)
             {
                 string msn = string.Empty;
-                if (Range.gastoGasInyeccionMin < 0)
+                if (Range.GastoGasInyeccionMin < 0)
                 {
                     msn = Languages.Pozo.GreaterThan;
                 }
-                if (Range.gastoGasInyeccionMin >= Range.gastoGasInyeccionMax)
+                if (Range.GastoGasInyeccionMin >= Range.GastoGasInyeccionMax)
                 {
                     msn = Languages.Pozo.GreaterThanValue;
                 }
 
                 if (!string.IsNullOrEmpty(msn))
                 {
-                    msn = msn.Replace("{0}", Languages.Pozo.gastoGasInyeccion)
-                             .Replace("{1}", $"{Range.gastoGasInyeccionMin} {Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)}")
-                             .Replace("{2}", $"{Range.gastoGasInyeccionMax} {Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)}");
+                    msn = msn.Replace("{0}", Languages.Pozo.GastoGasInyeccion)
+                             .Replace("{1}", $"{Range.GastoGasInyeccionMin} {Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)}")
+                             .Replace("{2}", $"{Range.GastoGasInyeccionMax} {Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)}");
                     MessageBox.Show(msn, Languages.Pozo.Aviso, MessageBoxButtons.OK);
-                    Range.gastoGasInyeccion = false;
+                    Range.GastoGasInyeccion = false;
                 }
             }
 
@@ -367,29 +367,29 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
 
             #region gravedadEspecificaGasInyeccion
 
-            Range.gravedadEspecificaGasInyeccion = gravedadEspecificaGasInyeccion.Checked;
-            Range.gravedadEspecificaGasInyeccionMin = Convert.ToDecimal(gravedadEspecificaGasInyeccionMin.Text);
-            Range.gravedadEspecificaGasInyeccionMax = Convert.ToDecimal(gravedadEspecificaGasInyeccionMax.Text);
+            Range.GravedadEspecificaGasInyeccion = gravedadEspecificaGasInyeccion.Checked;
+            Range.GravedadEspecificaGasInyeccionMin = Convert.ToDecimal(gravedadEspecificaGasInyeccionMin.Text);
+            Range.GravedadEspecificaGasInyeccionMax = Convert.ToDecimal(gravedadEspecificaGasInyeccionMax.Text);
 
-            if (Range.gravedadEspecificaGasInyeccion)
+            if (Range.GravedadEspecificaGasInyeccion)
             {
                 string msn = string.Empty;
-                if (Range.gravedadEspecificaGasInyeccionMin < 0)
+                if (Range.GravedadEspecificaGasInyeccionMin < 0)
                 {
                     msn = Languages.Pozo.GreaterThan;
                 }
-                if (Range.gravedadEspecificaGasInyeccionMin >= Range.gravedadEspecificaGasInyeccionMax)
+                if (Range.GravedadEspecificaGasInyeccionMin >= Range.GravedadEspecificaGasInyeccionMax)
                 {
                     msn = Languages.Pozo.GreaterThanValue;
                 }
 
                 if (!string.IsNullOrEmpty(msn))
                 {
-                    msn = msn.Replace("{0}", Languages.Pozo.gravedadEspecificaGasInyeccion)
-                             .Replace("{1}", $"{Range.gravedadEspecificaGasInyeccionMin} {Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)}")
-                             .Replace("{2}", $"{Range.gravedadEspecificaGasInyeccionMax} {Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)}");
+                    msn = msn.Replace("{0}", Languages.Pozo.GravedadEspecificaGasInyeccion)
+                             .Replace("{1}", $"{Range.GravedadEspecificaGasInyeccionMin} {Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)}")
+                             .Replace("{2}", $"{Range.GravedadEspecificaGasInyeccionMax} {Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)}");
                     MessageBox.Show(msn, Languages.Pozo.Aviso, MessageBoxButtons.OK);
-                    Range.gravedadEspecificaGasInyeccion = false;
+                    Range.GravedadEspecificaGasInyeccion = false;
                 }
             }
 

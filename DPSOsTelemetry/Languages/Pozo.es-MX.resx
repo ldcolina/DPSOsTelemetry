@@ -117,10 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="presionTuberiaRevestimiento" xml:space="preserve">
+  <data name="PresionTuberiaRevestimiento" xml:space="preserve">
     <value>Presión en tubería de revestimiento</value>
   </data>
-  <data name="presionTuberiaProduccion" xml:space="preserve">
+  <data name="PresionTuberiaProduccion" xml:space="preserve">
     <value>Presión en tubería de producción</value>
   </data>
   <data name="GreaterThanValue" xml:space="preserve">
@@ -138,43 +138,43 @@
   <data name="ErrorCarta" xml:space="preserve">
     <value>Error de archivo.\nNo se cargo ninguna carta dinagráfica.</value>
   </data>
-  <data name="presionLineaDescarga" xml:space="preserve">
+  <data name="PresionLineaDescarga" xml:space="preserve">
     <value>Presión en la línea de descarga</value>
   </data>
-  <data name="temperaturaSuperficie" xml:space="preserve">
+  <data name="TemperaturaSuperficie" xml:space="preserve">
     <value>Temperatura de superficie</value>
   </data>
-  <data name="velocidadMotor" xml:space="preserve">
+  <data name="VelocidadMotor" xml:space="preserve">
     <value>Velocidad del motor</value>
   </data>
-  <data name="velocidadUnidadBombeo" xml:space="preserve">
+  <data name="VelocidadUnidadBombeo" xml:space="preserve">
     <value>Velocidad de unidad de bombeo</value>
   </data>
-  <data name="eficienciaLlenado" xml:space="preserve">
+  <data name="EficienciaLlenado" xml:space="preserve">
     <value>Eficiencia de llenado</value>
   </data>
-  <data name="sumergenciaEfectivaBomba" xml:space="preserve">
+  <data name="SumergenciaEfectivaBomba" xml:space="preserve">
     <value>Sumergencia efectiva de la bomba</value>
   </data>
-  <data name="nivelFluidoPozoTr" xml:space="preserve">
+  <data name="NivelFluidoPozoTr" xml:space="preserve">
     <value>Nivel de fluido del pozo TR</value>
   </data>
-  <data name="nivelFluidoPozoTp" xml:space="preserve">
+  <data name="NivelFluidoPozoTp" xml:space="preserve">
     <value>Nivel de fluido del pozo TP</value>
   </data>
-  <data name="presionEntradaBomba" xml:space="preserve">
+  <data name="PresionEntradaBomba" xml:space="preserve">
     <value>Presión de entrada de la bomba</value>
   </data>
-  <data name="frecuenciaOperacionBomba" xml:space="preserve">
+  <data name="FrecuenciaOperacionBomba" xml:space="preserve">
     <value>Frecuencia de operación de la bomba</value>
   </data>
-  <data name="longitudCarrera" xml:space="preserve">
+  <data name="LongitudCarrera" xml:space="preserve">
     <value>Longitud de carrera</value>
   </data>
-  <data name="presionDisponible" xml:space="preserve">
+  <data name="PresionDisponible" xml:space="preserve">
     <value>Presión disponible</value>
   </data>
-  <data name="gastoGasInyeccion" xml:space="preserve">
+  <data name="GastoGasInyeccion" xml:space="preserve">
     <value>Gasto de gas de inyección</value>
   </data>
   <data name="EnvioCorrecto" xml:space="preserve">
@@ -189,14 +189,11 @@
   <data name="ProxActualizacion" xml:space="preserve">
     <value>Próxima actualización</value>
   </data>
-  <data name="gravedadEspecificaGasInyeccion" xml:space="preserve">
+  <data name="GravedadEspecificaGasInyeccion" xml:space="preserve">
     <value>Gravedad especifica del gas de inyección</value>
   </data>
   <data name="CartaDinagrafica" xml:space="preserve">
     <value>Carta dinagráfica</value>
-  </data>
-  <data name="DatosOperativos" xml:space="preserve">
-    <value>Datos operativos</value>
   </data>
   <data name="Eliminar" xml:space="preserve">
     <value>Eliminar</value>
@@ -206,5 +203,50 @@
   </data>
   <data name="Error" xml:space="preserve">
     <value>No se cargo ninguna carta dinagráfica.</value>
+  </data>
+  <data name="DatosManual" xml:space="preserve">
+    <value>Datos manuales</value>
+  </data>
+  <data name="OperativeData" xml:space="preserve">
+    <value>Datos operativos</value>
+  </data>
+  <data name="ProductionData" xml:space="preserve">
+    <value>Datos de producción</value>
+  </data>
+  <data name="SalinidadAgua" xml:space="preserve">
+    <value>Salinidad del agua</value>
+  </data>
+  <data name="GastoAceite" xml:space="preserve">
+    <value>Gasto de aceite</value>
+  </data>
+  <data name="GastoAgua" xml:space="preserve">
+    <value>Gasto de agua</value>
+  </data>
+  <data name="GastoGas" xml:space="preserve">
+    <value>Gasto de gas</value>
+  </data>
+  <data name="GastoLiquido" xml:space="preserve">
+    <value>Gasto líquido</value>
+  </data>
+  <data name="GastoLiquidoPruebaProduccion" xml:space="preserve">
+    <value>Gasto liquido de la prueba de producción</value>
+  </data>
+  <data name="GravedadPetroleo" xml:space="preserve">
+    <value>Gravedad del petróleo</value>
+  </data>
+  <data name="PorcentajeAguaSedimento" xml:space="preserve">
+    <value>% de agua y sedimento</value>
+  </data>
+  <data name="Emulsion" xml:space="preserve">
+    <value>Emulsión</value>
+  </data>
+  <data name="RelacionGasAceite" xml:space="preserve">
+    <value>Relación gas aceite</value>
+  </data>
+  <data name="GravedadEspecificaGasProducido" xml:space="preserve">
+    <value>Gravedad especifica del gas producido</value>
+  </data>
+  <data name="CargaSobreBarraPulida" xml:space="preserve">
+    <value>Carga sobre la barra pulida</value>
   </data>
 </root>

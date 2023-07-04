@@ -18,45 +18,45 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
 
             OTomaInformacion.CTomaBasica DatosOperativos = _Telemetria.DatosOperativos;
 
-            #region presionTuberiaProduccion
+            #region PresionTuberiaProduccion
 
-            presionTuberiaProduccion.Text = $"{Languages.Pozo.presionTuberiaProduccion}:\n{DatosOperativos.presionTuberiaProduccion.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
+            PresionTuberiaProduccion.Text = $"{Languages.Pozo.PresionTuberiaProduccion}:\n{DatosOperativos.PresionTuberiaProduccion.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
 
-            #endregion presionTuberiaProduccion
+            #endregion PresionTuberiaProduccion
 
-            #region presionTuberiaRevestimiento
+            #region PresionTuberiaRevestimiento
 
-            presionTuberiaRevestimiento.Text = $"{Languages.Pozo.presionTuberiaRevestimiento}:\n{DatosOperativos.presionTuberiaRevestimiento.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
+            PresionTuberiaRevestimiento.Text = $"{Languages.Pozo.PresionTuberiaRevestimiento}:\n{DatosOperativos.PresionTuberiaRevestimiento.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
 
-            #endregion presionTuberiaRevestimiento
+            #endregion PresionTuberiaRevestimiento
 
-            #region presionLineaDescarga
+            #region PresionLineaDescarga
 
-            presionLineaDescarga.Text = $"{Languages.Pozo.presionLineaDescarga}:\n{DatosOperativos.presionLineaDescarga.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
+            PresionLineaDescarga.Text = $"{Languages.Pozo.PresionLineaDescarga}:\n{DatosOperativos.PresionLineaDescarga.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
 
-            #endregion presionLineaDescarga
+            #endregion PresionLineaDescarga
 
-            #region temperaturaSuperficie
+            #region TemperaturaSuperficie
 
-            temperaturaSuperficie.Text = $"{Languages.Pozo.temperaturaSuperficie}:\n{DatosOperativos.temperaturaSuperficie.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Temperatura, _Telemetria.Unidades)}";
+            TemperaturaSuperficie.Text = $"{Languages.Pozo.TemperaturaSuperficie}:\n{DatosOperativos.TemperaturaSuperficie.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Temperatura, _Telemetria.Unidades)}";
 
-            #endregion temperaturaSuperficie
+            #endregion TemperaturaSuperficie
 
-            #region presionDisponible
+            #region PresionDisponible
 
-            presionDisponible.Text = $"{Languages.Pozo.presionDisponible}:\n{DatosOperativos.presionDisponible.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
+            PresionDisponible.Text = $"{Languages.Pozo.PresionDisponible}:\n{DatosOperativos.PresionDisponible.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
 
-            #endregion presionDisponible
+            #endregion PresionDisponible
 
             #region gastoGasInyeccion
 
-            gastoGasInyeccion.Text = $"{Languages.Pozo.gastoGasInyeccion}:\n{DatosOperativos.gastoGasInyeccion.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.GastoGas, _Telemetria.Unidades)}";
+            gastoGasInyeccion.Text = $"{Languages.Pozo.GastoGasInyeccion}:\n{DatosOperativos.GastoGasInyeccion.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.GastoGas, _Telemetria.Unidades)}";
 
             #endregion gastoGasInyeccion
 
             #region gravedadEspecificaGasInyeccion
 
-            gravedadEspecificaGasInyeccion.Text = $"{Languages.Pozo.gravedadEspecificaGasInyeccion}:\n{DatosOperativos.gravedadEspecificaGasInyeccion.ToString($"n{decimales}")}";
+            gravedadEspecificaGasInyeccion.Text = $"{Languages.Pozo.GravedadEspecificaGasInyeccion}:\n{DatosOperativos.GravedadEspecificaGasInyeccion.ToString($"n{decimales}")}";
 
             #endregion gravedadEspecificaGasInyeccion
 

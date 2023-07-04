@@ -14,39 +14,105 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoFluyente
 
         internal void Recargar(int decimales, ReferenciasI _Telemetria)
         {
-            #region DatosOperativos
+            #region DatosManual
 
             OTomaInformacion.CTomaBasica DatosOperativos = _Telemetria.DatosOperativos;
 
-            #region presionTuberiaProduccion
+            #region DatosOperativos
 
-            presionTuberiaProduccion.Text = $"{Languages.Pozo.presionTuberiaProduccion}:\n{DatosOperativos.presionTuberiaProduccion.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
+            tabPage3.Text = Languages.Pozo.OperativeData;
 
-            #endregion presionTuberiaProduccion
+            #region PresionTuberiaProduccion
 
-            #region presionTuberiaRevestimiento
+            PresionTuberiaProduccion.Text = $"{Languages.Pozo.PresionTuberiaProduccion}:\n{DatosOperativos.PresionTuberiaProduccion.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
 
-            presionTuberiaRevestimiento.Text = $"{Languages.Pozo.presionTuberiaRevestimiento}:\n{DatosOperativos.presionTuberiaRevestimiento.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
+            #endregion PresionTuberiaProduccion
 
-            #endregion presionTuberiaRevestimiento
+            #region PresionTuberiaRevestimiento
 
-            #region presionLineaDescarga
+            PresionTuberiaRevestimiento.Text = $"{Languages.Pozo.PresionTuberiaRevestimiento}:\n{DatosOperativos.PresionTuberiaRevestimiento.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
 
-            presionLineaDescarga.Text = $"{Languages.Pozo.presionLineaDescarga}:\n{DatosOperativos.presionLineaDescarga.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
+            #endregion PresionTuberiaRevestimiento
 
-            #endregion presionLineaDescarga
+            #region PresionLineaDescarga
 
-            #region temperaturaSuperficie
+            PresionLineaDescarga.Text = $"{Languages.Pozo.PresionLineaDescarga}:\n{DatosOperativos.PresionLineaDescarga.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
 
-            temperaturaSuperficie.Text = $"{Languages.Pozo.temperaturaSuperficie}:\n{DatosOperativos.temperaturaSuperficie.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Temperatura, _Telemetria.Unidades)}";
+            #endregion PresionLineaDescarga
 
-            #endregion temperaturaSuperficie
+            #region TemperaturaSuperficie
 
-            #region presionDisponible
+            TemperaturaSuperficie.Text = $"{Languages.Pozo.TemperaturaSuperficie}:\n{DatosOperativos.TemperaturaSuperficie.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Temperatura, _Telemetria.Unidades)}";
 
-            presionDisponible.Text = $"{Languages.Pozo.presionDisponible}:\n{DatosOperativos.presionDisponible.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
+            #endregion TemperaturaSuperficie
 
-            #endregion presionDisponible
+            #endregion DatosOperativos
+
+            #region DatosProduccion
+
+            tabPage4.Text = Languages.Pozo.ProductionData;
+
+            #region GastoLiquidoPruebaProduccion
+
+            GastoLiquidoPruebaProduccion.Text = $"{Languages.Pozo.GastoLiquidoPruebaProduccion}:\n{DatosOperativos.GastoLiquidoPruebaProduccion.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.FlujoVolumetricoLiquido, _Telemetria.Unidades)}";
+
+            #endregion GastoLiquidoPruebaProduccion
+
+            #region PorcentajeAguaSedimento
+
+            PorcentajeAguaSedimento.Text = $"{Languages.Pozo.PorcentajeAguaSedimento}:\n{DatosOperativos.PorcentajeAguaSedimento.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Porcentaje, _Telemetria.Unidades)}";
+
+            #endregion PorcentajeAguaSedimento
+
+            #region GastoAceite
+
+            GastoAceite.Text = $"{Languages.Pozo.GastoAceite}:\n{DatosOperativos.GastoAceite.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.FlujoVolumetricoLiquido, _Telemetria.Unidades)}";
+
+            #endregion GastoAceite
+
+            #region GastoGas
+
+            GastoGas.Text = $"{Languages.Pozo.GastoGas}:\n{DatosOperativos.GastoGas.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.GastoGas, _Telemetria.Unidades)}";
+
+            #endregion GastoGas
+
+            #region GastoLiquido
+
+            GastoLiquido.Text = $"{Languages.Pozo.GastoLiquido}:\n{DatosOperativos.GastoLiquido.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.FlujoVolumetricoLiquido, _Telemetria.Unidades)}";
+
+            #endregion GastoLiquido
+
+            #region RelacionGasAceite
+
+            RelacionGasAceite.Text = $"{Languages.Pozo.RelacionGasAceite}:\n{DatosOperativos.RelacionGasAceite.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.RelacionGasAceite, _Telemetria.Unidades)}";
+
+            #endregion RelacionGasAceite
+
+            #region GravedadPetroleo
+
+            GravedadPetroleo.Text = $"{Languages.Pozo.GravedadPetroleo}:\n{DatosOperativos.GravedadPetroleo.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Densidad, _Telemetria.Unidades)}";
+
+            #endregion GravedadPetroleo
+
+            #region Emulsion
+
+            Emulsion.Text = $"{Languages.Pozo.Emulsion}:\n{DatosOperativos.Emulsion.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Porcentaje, _Telemetria.Unidades)}";
+
+            #endregion Emulsion
+
+            #region SalinidadAgua
+
+            SalinidadAgua.Text = $"{Languages.Pozo.SalinidadAgua}:\n{DatosOperativos.SalinidadAgua.ToString($"n{decimales}")} ppm";
+
+            #endregion SalinidadAgua
+
+            #region GravedadEspecificaGasProducido
+
+            GravedadEspecificaGasProducido.Text = $"{Languages.Pozo.GravedadEspecificaGasProducido}:\n{DatosOperativos.GravedadEspecificaGasProducido.ToString($"n{decimales}")} -";
+
+            #endregion GravedadEspecificaGasProducido
+
+            #endregion DatosProduccion
 
             #region Temporizador
 
@@ -60,7 +126,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoFluyente
 
             #endregion Temporizador
 
-            #endregion DatosOperativos
+            #endregion DatosManual
         }
     }
 }

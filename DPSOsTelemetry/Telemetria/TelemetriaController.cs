@@ -32,27 +32,27 @@ namespace Telemetria
                     request.AddHeader("Content-Type", "application/json");
                     if (select)
                     {
-                        //client = new RestClient("https://api-dpsos-dev.entecprois.com/api/PozoTomaInformacion");
+                        client = new RestClient("https://api-dpsos-dev.entecprois.com/api/PozoTomaInformacion");
 
                         OTomaInformacion.CTomaInformacion CTomaInformacion = new OTomaInformacion.CTomaInformacion()
                         {
-                            time = DateTime.UtcNow,
-                            token = referencias.Token,
-                            pozoId = referencias.Name,
-                            datosOperativos = referencias.DatosOperativos
+                            Fecha = DateTime.UtcNow,
+                            Token = referencias.Token,
+                            PozoId = referencias.Name,
+                            DatosOperativos = referencias.DatosOperativos
                         };
                         request.AddJsonBody(CTomaInformacion);
                     }
                     else
                     {
-                        //client = new RestClient("https://api-dpsos-dev.entecprois.com/api/PozoTomaInformacion/carta-dinagrafica");
+                        client = new RestClient("https://api-dpsos-dev.entecprois.com/api/PozoTomaInformacion/carta-dinagrafica");
 
                         OCartaDinagrafica OCartaDinagrafica = new OCartaDinagrafica()
                         {
-                            time = DateTime.UtcNow,
-                            token = referencias.Token,
-                            pozoId = referencias.Name,
-                            cartaDinagrafica = referencias.CartaDinagrafica
+                            Fecha = DateTime.UtcNow,
+                            Token = referencias.Token,
+                            PozoId = referencias.Name,
+                            CartaDinagrafica = referencias.CartaDinagrafica
                         };
                         request.AddJsonBody(OCartaDinagrafica);
                     }

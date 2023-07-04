@@ -20,7 +20,7 @@ namespace DPSOsTelemetria2
 
         private readonly string file;
 
-        private readonly string version = "1.1.0.6";
+        private readonly string version = "1.1.0.7";
 
         private readonly string anio = "2023";
 
