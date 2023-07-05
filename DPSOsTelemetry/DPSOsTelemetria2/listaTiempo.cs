@@ -45,11 +45,10 @@ namespace DPSOsTelemetria2
                 dr["ActionsFails"] = _telemetria.DatosOperativosFails + _telemetria.CartaDinagraficaFails;
 
                 dr["Date1"] = _telemetria.Started.ToString("G");
-                if (_telemetria.Range.DatosOperativos.TotalMilliseconds != 0)
+                if (_telemetria.Range.DatosOperativos.TotalSeconds != 0)
                 {
-                    double miliseg = _telemetria.Range.DatosOperativos.TotalMilliseconds * _telemetria.DatosOperativosSends;
                     dr["Frequency_1"] = _telemetria.Range.DatosOperativos.TotalSeconds;
-                    dr["Date2_1"] = _telemetria.Started.AddMilliseconds(miliseg).ToString("G");
+                    dr["Date2_1"] = _telemetria.DatosOperativosTime.AddSeconds(_telemetria.Range.DatosOperativos.TotalSeconds).ToString("G");
                 }
                 else
                 {
@@ -57,11 +56,10 @@ namespace DPSOsTelemetria2
                     dr["Date2_1"] = "-";
                 }
 
-                if (_telemetria.Range.CartaDinagrafica.TotalMilliseconds != 0)
+                if (_telemetria.Range.CartaDinagrafica.TotalSeconds != 0)
                 {
-                    double miliseg = _telemetria.Range.CartaDinagrafica.TotalMilliseconds * _telemetria.CartaDinagraficaSends;
                     dr["Frequency_2"] = _telemetria.Range.CartaDinagrafica.TotalSeconds;
-                    dr["Date2_2"] = _telemetria.Started.AddMilliseconds(miliseg).ToString("G");
+                    dr["Date2_2"] = _telemetria.CartaDinagraficaTime.AddSeconds(_telemetria.Range.CartaDinagrafica.TotalSeconds).ToString("G");
                 }
                 else
                 {
@@ -107,11 +105,11 @@ namespace DPSOsTelemetria2
                 dr["Type"] = SystemWell.GetString(_telemetria.Type);
 
                 dr["Date1"] = _telemetria.Started.ToString("G");
-                if (_telemetria.Range.DatosOperativos.TotalMilliseconds != 0)
+                if (_telemetria.Range.DatosOperativos.TotalSeconds != 0)
                 {
-                    double miliseg = _telemetria.Range.DatosOperativos.TotalMilliseconds * _telemetria.DatosOperativosSends;
+                    double miliseg = _telemetria.Range.DatosOperativos.TotalSeconds * _telemetria.DatosOperativosSends;
                     dr["Frequency_1"] = _telemetria.Range.DatosOperativos.TotalSeconds;
-                    dr["Date2_1"] = _telemetria.Started.AddMilliseconds(miliseg).ToString("G");
+                    dr["Date2_1"] = _telemetria.Started.AddSeconds(miliseg).ToString("G");
                 }
                 else
                 {
@@ -119,11 +117,11 @@ namespace DPSOsTelemetria2
                     dr["Date2_1"] = "-";
                 }
 
-                if (_telemetria.Range.CartaDinagrafica.TotalMilliseconds != 0)
+                if (_telemetria.Range.CartaDinagrafica.TotalSeconds != 0)
                 {
-                    double miliseg = _telemetria.Range.CartaDinagrafica.TotalMilliseconds * _telemetria.CartaDinagraficaSends;
+                    double miliseg = _telemetria.Range.CartaDinagrafica.TotalSeconds * _telemetria.CartaDinagraficaSends;
                     dr["Frequency_2"] = _telemetria.Range.CartaDinagrafica.TotalSeconds;
-                    dr["Date2_2"] = _telemetria.Started.AddMilliseconds(miliseg).ToString("G");
+                    dr["Date2_2"] = _telemetria.Started.AddSeconds(miliseg).ToString("G");
                 }
                 else
                 {

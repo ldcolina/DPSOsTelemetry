@@ -22,6 +22,8 @@ namespace Telemetria
 
         public OCartaDinagrafica.CCartaDinagrafica CartaDinagrafica { set; get; } = new OCartaDinagrafica.CCartaDinagrafica();
 
+        public DateTime CartaDinagraficaTime { get; set; }
+
         public int CartaDinagraficaComplete { get; set; }
 
         public int CartaDinagraficaFails { get; set; }
@@ -29,6 +31,8 @@ namespace Telemetria
         public int CartaDinagraficaSends { get; set; }
 
         public OTomaInformacion.CTomaBasica DatosOperativos { set; get; } = new OTomaInformacion.CTomaBasica();
+
+        public DateTime DatosOperativosTime { get; set; }
 
         public int DatosOperativosComplete { get; set; }
 

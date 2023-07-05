@@ -20,7 +20,7 @@ namespace DPSOsTelemetria2
 
         private readonly string file;
 
-        private readonly string version = "1.1.0.7";
+        private readonly string version = "1.1.0.9";
 
         private readonly string anio = "2023";
 
@@ -137,9 +137,9 @@ namespace DPSOsTelemetria2
                 OpenForm = new Pozo(ReferenciasII)
                 {
                     MdiParent = this,
-                    Text = ReferenciasII.Name
+                    Text = ReferenciasII.Name,
+                    StartPosition = FormStartPosition.CenterScreen
                 };
-                OpenForm.StartPosition = FormStartPosition.CenterScreen;
                 OpenForm.Show();
             }
         }
@@ -225,9 +225,9 @@ namespace DPSOsTelemetria2
             Administration.Administracion_Pozo OpenForm = new Administration.Administracion_Pozo(string.Empty)
             {
                 MdiParent = this,
-                Text = Languages.Administration.Nuevo.Replace("{0}", i.ToString())
+                Text = Languages.Administration.Nuevo.Replace("{0}", i.ToString()),
+                num = i
             };
-            OpenForm.num = i;
             OpenForm.Show();
         }
 
@@ -295,30 +295,33 @@ namespace DPSOsTelemetria2
                 if (form.select == "2")
                 {
                     ReferenciasI _Telemetria = form._Telemetria;
-                    if ((_Telemetria.Range.DatosOperativos.TotalMilliseconds != 0) && (_Telemetria.Range.CartaDinagrafica.TotalMilliseconds != 0))
+                    if ((_Telemetria.Range.DatosOperativos.TotalSeconds != 0) && (_Telemetria.Range.CartaDinagrafica.TotalSeconds != 0))
                     {
-                        DateTime time1 = _Telemetria.Started.AddMilliseconds(_Telemetria.Range.DatosOperativos.TotalMilliseconds * _Telemetria.DatosOperativosSends);
-                        DateTime time2 = _Telemetria.Started.AddMilliseconds(_Telemetria.Range.CartaDinagrafica.TotalMilliseconds * _Telemetria.CartaDinagraficaSends);
+                        DateTime time1 = _Telemetria.DatosOperativosTime.AddSeconds(_Telemetria.Range.DatosOperativos.TotalSeconds);
+                        DateTime time2 = _Telemetria.CartaDinagraficaTime.AddSeconds(_Telemetria.Range.CartaDinagrafica.TotalSeconds);
                         if ((time1 <= time2 ? time1 : time2) <= DateTime.UtcNow && form.status)
+                        {
                             form.SendTelemetria();
-                        else
                             form.Refrescar();
+                        }
                     }
-                    else if (_Telemetria.Range.DatosOperativos.TotalMilliseconds != 0)
+                    else if (_Telemetria.Range.DatosOperativos.TotalSeconds != 0)
                     {
-                        DateTime time1 = _Telemetria.Started.AddMilliseconds(_Telemetria.Range.DatosOperativos.TotalMilliseconds * _Telemetria.DatosOperativosSends);
+                        DateTime time1 = _Telemetria.DatosOperativosTime.AddSeconds(_Telemetria.Range.DatosOperativos.TotalSeconds);
                         if (time1 <= DateTime.UtcNow && form.status)
+                        {
                             form.SendTelemetria();
-                        else
                             form.Refrescar();
+                        }
                     }
-                    else if (_Telemetria.Range.CartaDinagrafica.TotalMilliseconds != 0)
+                    else if (_Telemetria.Range.CartaDinagrafica.TotalSeconds != 0)
                     {
-                        DateTime time2 = _Telemetria.Started.AddMilliseconds(_Telemetria.Range.CartaDinagrafica.TotalMilliseconds * _Telemetria.CartaDinagraficaSends);
+                        DateTime time2 = _Telemetria.CartaDinagraficaTime.AddSeconds(_Telemetria.Range.CartaDinagrafica.TotalSeconds);
                         if (time2 <= DateTime.UtcNow && form.status)
+                        {
                             form.SendTelemetria();
-                        else
                             form.Refrescar();
+                        }
                     }
                     list.Add(form._Telemetria);
                 }

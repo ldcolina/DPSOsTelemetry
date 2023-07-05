@@ -1293,7 +1293,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             {
                 newLista.ForEach(val =>
                 {
-                    if (!ListCCartaDinagrafica.Exists(x => JsonConvert.SerializeObject(x) == JsonConvert.SerializeObject(val)))
+                    if (!ListCCartaDinagrafica.Exists(x => JsonConvert.SerializeObject(x.Carta) == JsonConvert.SerializeObject(val)))
                     {
                         ListCCartaDinagrafica.Add(new lista() { Carta = val });
                     }
@@ -1304,7 +1304,6 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
                     ListCCartaDinagrafica[i].index = i;
 
                 object SelectDdl = CCartaDinagraficaList.SelectedItem;
-                CCartaDinagraficaList.DataSource = null;
                 CCartaDinagraficaList.DataSource = ListCCartaDinagrafica;
                 CCartaDinagraficaList.DisplayMember = "index";
                 if (ListCCartaDinagrafica.Count > 0)
@@ -1579,7 +1578,6 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
                     ListCCartaDinagrafica[i].index = i;
 
                 object SelectDdl = CCartaDinagraficaList.SelectedItem;
-                CCartaDinagraficaList.DataSource = null;
                 CCartaDinagraficaList.DataSource = ListCCartaDinagrafica;
                 CCartaDinagraficaList.DisplayMember = "index";
                 if (ListCCartaDinagrafica.Count > 0)

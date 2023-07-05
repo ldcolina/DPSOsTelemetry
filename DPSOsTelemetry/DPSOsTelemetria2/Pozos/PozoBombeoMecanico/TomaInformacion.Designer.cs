@@ -32,8 +32,6 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.lbTemporizador1 = new System.Windows.Forms.Label();
@@ -75,16 +73,6 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.EficienciaLlenadoMin = new System.Windows.Forms.TextBox();
             this.EficienciaLlenadoMax = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.lbTemporizador2 = new System.Windows.Forms.Label();
-            this.CartaDinagrafica = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.CCartaDinagrafica = new System.Windows.Forms.CheckBox();
-            this.CCartaDinagraficaList = new System.Windows.Forms.ComboBox();
-            this.CCartaDinagraficaAgregar = new System.Windows.Forms.Button();
-            this.CCartaDinagraficaEliminar = new System.Windows.Forms.Button();
-            this.chart1 = new DevExpress.XtraCharts.ChartControl();
             this.tlpVariables2 = new System.Windows.Forms.TableLayoutPanel();
             this.GastoLiquidoPruebaProduccion = new System.Windows.Forms.CheckBox();
             this.GastoLiquidoPruebaProduccionMin = new System.Windows.Forms.TextBox();
@@ -119,20 +107,32 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.CargaSobreBarraPulida = new System.Windows.Forms.CheckBox();
             this.CargaSobreBarraPulidaMin = new System.Windows.Forms.TextBox();
             this.CargaSobreBarraPulidaMax = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbTemporizador2 = new System.Windows.Forms.Label();
+            this.CartaDinagrafica = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.CCartaDinagrafica = new System.Windows.Forms.CheckBox();
+            this.CCartaDinagraficaList = new System.Windows.Forms.ComboBox();
+            this.CCartaDinagraficaAgregar = new System.Windows.Forms.Button();
+            this.CCartaDinagraficaEliminar = new System.Windows.Forms.Button();
+            this.chart1 = new DevExpress.XtraCharts.ChartControl();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tlpVariables.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.tlpVariables2.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            this.tlpVariables2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -156,21 +156,6 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "DatosManual";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.tableLayoutPanel5);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(606, 534);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "CartaDinagrafica";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // tableLayoutPanel2
             // 
@@ -631,135 +616,6 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tabPage4.Text = "DatosProduccion";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 1;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel7, 0, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 2;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(600, 528);
-            this.tableLayoutPanel5.TabIndex = 3;
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.AutoSize = true;
-            this.tableLayoutPanel6.ColumnCount = 2;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Controls.Add(this.lbTemporizador2, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.CartaDinagrafica, 1, 0);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 497);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(594, 28);
-            this.tableLayoutPanel6.TabIndex = 4;
-            // 
-            // lbTemporizador2
-            // 
-            this.lbTemporizador2.AutoSize = true;
-            this.lbTemporizador2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbTemporizador2.Location = new System.Drawing.Point(3, 0);
-            this.lbTemporizador2.Name = "lbTemporizador2";
-            this.lbTemporizador2.Size = new System.Drawing.Size(110, 28);
-            this.lbTemporizador2.TabIndex = 0;
-            this.lbTemporizador2.Text = "lbTemporizador2";
-            this.lbTemporizador2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // CartaDinagrafica
-            // 
-            this.CartaDinagrafica.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CartaDinagrafica.Location = new System.Drawing.Point(119, 3);
-            this.CartaDinagrafica.Name = "CartaDinagrafica";
-            this.CartaDinagrafica.Size = new System.Drawing.Size(472, 22);
-            this.CartaDinagrafica.TabIndex = 0;
-            // 
-            // tableLayoutPanel7
-            // 
-            this.tableLayoutPanel7.AutoScroll = true;
-            this.tableLayoutPanel7.ColumnCount = 3;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Controls.Add(this.CCartaDinagrafica, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.CCartaDinagraficaList, 0, 1);
-            this.tableLayoutPanel7.Controls.Add(this.CCartaDinagraficaAgregar, 0, 3);
-            this.tableLayoutPanel7.Controls.Add(this.CCartaDinagraficaEliminar, 0, 4);
-            this.tableLayoutPanel7.Controls.Add(this.chart1, 2, 0);
-            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 6;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(594, 488);
-            this.tableLayoutPanel7.TabIndex = 3;
-            // 
-            // CCartaDinagrafica
-            // 
-            this.CCartaDinagrafica.AutoSize = true;
-            this.CCartaDinagrafica.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CCartaDinagrafica.Location = new System.Drawing.Point(3, 3);
-            this.CCartaDinagrafica.Name = "CCartaDinagrafica";
-            this.CCartaDinagrafica.Size = new System.Drawing.Size(194, 20);
-            this.CCartaDinagrafica.TabIndex = 0;
-            this.CCartaDinagrafica.Text = "CCartaDinagrafica";
-            this.CCartaDinagrafica.UseVisualStyleBackColor = true;
-            // 
-            // CCartaDinagraficaList
-            // 
-            this.CCartaDinagraficaList.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CCartaDinagraficaList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CCartaDinagraficaList.FormattingEnabled = true;
-            this.CCartaDinagraficaList.Location = new System.Drawing.Point(3, 29);
-            this.CCartaDinagraficaList.Name = "CCartaDinagraficaList";
-            this.CCartaDinagraficaList.Size = new System.Drawing.Size(194, 24);
-            this.CCartaDinagraficaList.TabIndex = 1;
-            // 
-            // CCartaDinagraficaAgregar
-            // 
-            this.CCartaDinagraficaAgregar.AutoSize = true;
-            this.CCartaDinagraficaAgregar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CCartaDinagraficaAgregar.Location = new System.Drawing.Point(3, 79);
-            this.CCartaDinagraficaAgregar.Name = "CCartaDinagraficaAgregar";
-            this.CCartaDinagraficaAgregar.Size = new System.Drawing.Size(194, 30);
-            this.CCartaDinagraficaAgregar.TabIndex = 2;
-            this.CCartaDinagraficaAgregar.Text = "CCartaDinagraficaAgregar";
-            this.CCartaDinagraficaAgregar.UseVisualStyleBackColor = true;
-            // 
-            // CCartaDinagraficaEliminar
-            // 
-            this.CCartaDinagraficaEliminar.AutoSize = true;
-            this.CCartaDinagraficaEliminar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CCartaDinagraficaEliminar.Location = new System.Drawing.Point(3, 115);
-            this.CCartaDinagraficaEliminar.Name = "CCartaDinagraficaEliminar";
-            this.CCartaDinagraficaEliminar.Size = new System.Drawing.Size(194, 30);
-            this.CCartaDinagraficaEliminar.TabIndex = 3;
-            this.CCartaDinagraficaEliminar.Text = "CCartaDinagraficaEliminar";
-            this.CCartaDinagraficaEliminar.UseVisualStyleBackColor = true;
-            // 
-            // chart1
-            // 
-            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chart1.Legend.Name = "Default Legend";
-            this.chart1.Location = new System.Drawing.Point(216, 3);
-            this.chart1.Name = "chart1";
-            this.tableLayoutPanel7.SetRowSpan(this.chart1, 6);
-            this.chart1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chart1.Size = new System.Drawing.Size(375, 482);
-            this.chart1.TabIndex = 4;
-            // 
             // tlpVariables2
             // 
             this.tlpVariables2.ColumnCount = 5;
@@ -1134,6 +990,154 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.CargaSobreBarraPulidaMax.Size = new System.Drawing.Size(134, 22);
             this.CargaSobreBarraPulidaMax.TabIndex = 32;
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.tableLayoutPanel5);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(606, 534);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "CartaDinagrafica";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel7, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(600, 528);
+            this.tableLayoutPanel5.TabIndex = 3;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.AutoSize = true;
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Controls.Add(this.lbTemporizador2, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.CartaDinagrafica, 1, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 497);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(594, 28);
+            this.tableLayoutPanel6.TabIndex = 4;
+            // 
+            // lbTemporizador2
+            // 
+            this.lbTemporizador2.AutoSize = true;
+            this.lbTemporizador2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbTemporizador2.Location = new System.Drawing.Point(3, 0);
+            this.lbTemporizador2.Name = "lbTemporizador2";
+            this.lbTemporizador2.Size = new System.Drawing.Size(110, 28);
+            this.lbTemporizador2.TabIndex = 0;
+            this.lbTemporizador2.Text = "lbTemporizador2";
+            this.lbTemporizador2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // CartaDinagrafica
+            // 
+            this.CartaDinagrafica.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CartaDinagrafica.Location = new System.Drawing.Point(119, 3);
+            this.CartaDinagrafica.Name = "CartaDinagrafica";
+            this.CartaDinagrafica.Size = new System.Drawing.Size(472, 22);
+            this.CartaDinagrafica.TabIndex = 0;
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.AutoScroll = true;
+            this.tableLayoutPanel7.ColumnCount = 3;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.Controls.Add(this.CCartaDinagrafica, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.CCartaDinagraficaList, 0, 1);
+            this.tableLayoutPanel7.Controls.Add(this.CCartaDinagraficaAgregar, 0, 3);
+            this.tableLayoutPanel7.Controls.Add(this.CCartaDinagraficaEliminar, 0, 4);
+            this.tableLayoutPanel7.Controls.Add(this.chart1, 2, 0);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 6;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(594, 488);
+            this.tableLayoutPanel7.TabIndex = 3;
+            // 
+            // CCartaDinagrafica
+            // 
+            this.CCartaDinagrafica.AutoSize = true;
+            this.CCartaDinagrafica.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CCartaDinagrafica.Location = new System.Drawing.Point(3, 3);
+            this.CCartaDinagrafica.Name = "CCartaDinagrafica";
+            this.CCartaDinagrafica.Size = new System.Drawing.Size(194, 20);
+            this.CCartaDinagrafica.TabIndex = 0;
+            this.CCartaDinagrafica.Text = "CCartaDinagrafica";
+            this.CCartaDinagrafica.UseVisualStyleBackColor = true;
+            this.CCartaDinagrafica.CheckedChanged += new System.EventHandler(this.CCartaDinagrafica_CheckedChanged);
+            // 
+            // CCartaDinagraficaList
+            // 
+            this.CCartaDinagraficaList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CCartaDinagraficaList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CCartaDinagraficaList.FormattingEnabled = true;
+            this.CCartaDinagraficaList.Location = new System.Drawing.Point(3, 29);
+            this.CCartaDinagraficaList.Name = "CCartaDinagraficaList";
+            this.CCartaDinagraficaList.Size = new System.Drawing.Size(194, 24);
+            this.CCartaDinagraficaList.TabIndex = 1;
+            this.CCartaDinagraficaList.SelectedIndexChanged += new System.EventHandler(this.CCartaDinagraficaList_SelectedIndexChanged);
+            // 
+            // CCartaDinagraficaAgregar
+            // 
+            this.CCartaDinagraficaAgregar.AutoSize = true;
+            this.CCartaDinagraficaAgregar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CCartaDinagraficaAgregar.Location = new System.Drawing.Point(3, 79);
+            this.CCartaDinagraficaAgregar.Name = "CCartaDinagraficaAgregar";
+            this.CCartaDinagraficaAgregar.Size = new System.Drawing.Size(194, 30);
+            this.CCartaDinagraficaAgregar.TabIndex = 2;
+            this.CCartaDinagraficaAgregar.Text = "CCartaDinagraficaAgregar";
+            this.CCartaDinagraficaAgregar.UseVisualStyleBackColor = true;
+            this.CCartaDinagraficaAgregar.Click += new System.EventHandler(this.CCartaDinagraficaAgregar_Click);
+            // 
+            // CCartaDinagraficaEliminar
+            // 
+            this.CCartaDinagraficaEliminar.AutoSize = true;
+            this.CCartaDinagraficaEliminar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CCartaDinagraficaEliminar.Location = new System.Drawing.Point(3, 115);
+            this.CCartaDinagraficaEliminar.Name = "CCartaDinagraficaEliminar";
+            this.CCartaDinagraficaEliminar.Size = new System.Drawing.Size(194, 30);
+            this.CCartaDinagraficaEliminar.TabIndex = 3;
+            this.CCartaDinagraficaEliminar.Text = "CCartaDinagraficaEliminar";
+            this.CCartaDinagraficaEliminar.UseVisualStyleBackColor = true;
+            this.CCartaDinagraficaEliminar.Click += new System.EventHandler(this.CCartaDinagraficaEliminar_Click);
+            // 
+            // chart1
+            // 
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chart1.Legend.Name = "Default Legend";
+            this.chart1.Location = new System.Drawing.Point(216, 3);
+            this.chart1.Name = "chart1";
+            this.tableLayoutPanel7.SetRowSpan(this.chart1, 6);
+            this.chart1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            this.chart1.Size = new System.Drawing.Size(375, 482);
+            this.chart1.TabIndex = 4;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // TomaInformacion
             // 
             this.Controls.Add(this.tabControl1);
@@ -1142,7 +1146,6 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.Load += new System.EventHandler(this.TomaInformacion_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -1152,6 +1155,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tlpVariables.ResumeLayout(false);
             this.tlpVariables.PerformLayout();
             this.tabPage4.ResumeLayout(false);
+            this.tlpVariables2.ResumeLayout(false);
+            this.tlpVariables2.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
@@ -1159,8 +1165,6 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            this.tlpVariables2.ResumeLayout(false);
-            this.tlpVariables2.PerformLayout();
             this.ResumeLayout(false);
 
         }

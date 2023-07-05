@@ -298,8 +298,7 @@ namespace DPSOsTelemetria2
             {
                 #region DatosOperativos
 
-                DateTime time1 = _Telemetria.Started.AddMilliseconds(_Telemetria.Range.DatosOperativos.TotalMilliseconds * _Telemetria.DatosOperativosSends);
-                if ((_Telemetria.Range.DatosOperativos.TotalMilliseconds != 0) & (time1 <= DateTime.UtcNow))
+                if ((_Telemetria.Range.DatosOperativos.TotalSeconds != 0) && (_Telemetria.DatosOperativosTime <= DateTime.UtcNow))
                 {
                     OTomaInformacion.CTomaBasica DatosOperativos = new OTomaInformacion.CTomaBasica();
 
@@ -502,14 +501,14 @@ namespace DPSOsTelemetria2
 
                         _Telemetria = await TelemetriaController.Post(_Telemetria, true);
                     }
+                    _Telemetria.DatosOperativosTime = _Telemetria.DatosOperativosTime.AddSeconds(_Telemetria.Range.DatosOperativos.TotalSeconds);
                 }
 
                 #endregion DatosOperativos
 
                 #region CartaDinagrafica
 
-                DateTime time2 = _Telemetria.Started.AddMilliseconds(_Telemetria.Range.CartaDinagrafica.TotalMilliseconds * _Telemetria.DatosOperativosSends);
-                if ((_Telemetria.Range.CartaDinagrafica.TotalMilliseconds != 0) & (time1 <= DateTime.UtcNow))
+                if ((_Telemetria.Range.CartaDinagrafica.TotalSeconds != 0) && (_Telemetria.CartaDinagraficaTime <= DateTime.UtcNow))
                 {
                     OCartaDinagrafica.CCartaDinagrafica CCartaDinagrafica = new OCartaDinagrafica.CCartaDinagrafica();
 
@@ -529,6 +528,8 @@ namespace DPSOsTelemetria2
 
                         _Telemetria = await TelemetriaController.Post(_Telemetria, false);
                     }
+
+                    _Telemetria.CartaDinagraficaTime = _Telemetria.CartaDinagraficaTime.AddSeconds(_Telemetria.Range.CartaDinagrafica.TotalSeconds);
                 }
 
                 #endregion CartaDinagrafica
@@ -606,6 +607,8 @@ namespace DPSOsTelemetria2
 
             _Telemetria = Referencias.Copy<ReferenciasII, ReferenciasI>();
             _Telemetria.Started = DateTime.UtcNow;
+            _Telemetria.DatosOperativosTime = _Telemetria.Started;
+            _Telemetria.CartaDinagraficaTime = _Telemetria.Started;
 
             panel2.Controls.Clear();
             switch (Referencias.Type)

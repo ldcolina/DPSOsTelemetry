@@ -5,5 +5,12 @@
 
 using System.Diagnostics.CodeAnalysis;
 
-[assembly: SuppressMessage("Style", "IDE1006:Estilos de nombres", Justification = "<pendiente>", Scope = "member", Target = "~M:Telemetria.List_DataTable.getObject``1(System.Data.DataRow,System.Collections.Generic.List{System.String})~``0")]
-[assembly: SuppressMessage("Style", "IDE1006:Estilos de nombres", Justification = "<pendiente>", Scope = "type", Target = "~T:Telemetria.TelemetriaController.correo")] 
+[assembly: SuppressMessage("Naming", "VSSpell001:Spell Check", Justification = "<pendiente>", Scope = "namespace", Target = "~N:Telemetria")]
+[assembly: SuppressMessage("Naming", "VSSpell001:Spell Check", Justification = "<pendiente>", Scope = "type", Target = "~T:Telemetria.OCartaDinagrafica")]
+[assembly: SuppressMessage("Naming", "VSSpell001:Spell Check", Justification = "<pendiente>", Scope = "type", Target = "~T:Telemetria.TelemetriaController")]
+[assembly: SuppressMessage("Naming", "VSSpell001:Spell Check", Justification = "<pendiente>", Scope = "member", Target = "~P:Telemetria.ReferenciasI.CartaDinagrafica")]
+[assembly: SuppressMessage("Naming", "VSSpell001:Spell Check", Justification = "<pendiente>", Scope = "member", Target = "~P:Telemetria.ReferenciasI.CartaDinagraficaTime")]
+[assembly: SuppressMessage("Naming", "VSSpell001:Spell Check", Justification = "<pendiente>", Scope = "member", Target = "~P:Telemetria.ReferenciasI.CartaDinagraficaComplete")]
+[assembly: SuppressMessage("Naming", "VSSpell001:Spell Check", Justification = "<pendiente>", Scope = "member", Target = "~P:Telemetria.ReferenciasI.CartaDinagraficaFails")]
+[assembly: SuppressMessage("Naming", "VSSpell001:Spell Check", Justification = "<pendiente>", Scope = "member", Target = "~P:Telemetria.ReferenciasI.CartaDinagraficaSends")]
+[assembly: SuppressMessage("Naming", "VSSpell001:Spell Check", Justification = "<pendiente>", Scope = "type", Target = "~T:Telemetria.TomaBasica")]

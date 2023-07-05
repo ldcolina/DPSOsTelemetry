@@ -32,7 +32,7 @@ namespace Telemetria
                     request.AddHeader("Content-Type", "application/json");
                     if (select)
                     {
-                        client = new RestClient("https://api-dpsos-dev.entecprois.com/api/PozoTomaInformacion");
+                        //client = new RestClient("https://api-dpsos-dev.entecprois.com/api/PozoTomaInformacion");
 
                         OTomaInformacion.CTomaInformacion CTomaInformacion = new OTomaInformacion.CTomaInformacion()
                         {
@@ -45,7 +45,7 @@ namespace Telemetria
                     }
                     else
                     {
-                        client = new RestClient("https://api-dpsos-dev.entecprois.com/api/PozoTomaInformacion/carta-dinagrafica");
+                        //client = new RestClient("https://api-dpsos-dev.entecprois.com/api/PozoTomaInformacion/carta-dinagrafica");
 
                         OCartaDinagrafica OCartaDinagrafica = new OCartaDinagrafica()
                         {

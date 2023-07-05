@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <UpdateUrl>https://raw.githubusercontent.com/ldcolina/DPSOsTelemetry/master/published2/</UpdateUrl>
-    <ApplicationRevision>8</ApplicationRevision>
+    <ApplicationRevision>10</ApplicationRevision>
     <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -294,6 +294,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Configuraciones\Guia.resx">
       <DependentUpon>Guia.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Configuraciones\Novedades.resx">
       <DependentUpon>Novedades.cs</DependentUpon>
@@ -336,6 +337,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pozos\PozoBombeoFluyente\TomaInformacion.resx">
       <DependentUpon>TomaInformacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Pozos\PozoBombeoJetPump\MonitoreoVirtual.resx">
       <DependentUpon>MonitoreoVirtual.cs</DependentUpon>

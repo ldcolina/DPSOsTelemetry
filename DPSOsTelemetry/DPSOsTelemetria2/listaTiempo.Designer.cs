@@ -52,7 +52,7 @@ namespace DPSOsTelemetria2
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(982, 283);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1482, 253);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // dataGridView1
@@ -72,7 +72,7 @@ namespace DPSOsTelemetria2
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(976, 247);
+            this.dataGridView1.Size = new System.Drawing.Size(1476, 217);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
@@ -80,7 +80,7 @@ namespace DPSOsTelemetria2
             // button1
             // 
             this.button1.AutoSize = true;
-            this.button1.Location = new System.Drawing.Point(885, 255);
+            this.button1.Location = new System.Drawing.Point(1385, 225);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 26);
@@ -93,9 +93,10 @@ namespace DPSOsTelemetria2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 283);
+            this.ClientSize = new System.Drawing.Size(1482, 253);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "listaTiempo";
             this.Text = "listaTiempo";
             this.Load += new System.EventHandler(this.listaTiempo_Load);
