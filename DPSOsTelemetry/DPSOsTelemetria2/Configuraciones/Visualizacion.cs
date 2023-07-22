@@ -23,16 +23,16 @@ namespace DPSOsTelemetria2.Configuraciones
 
         private void Changed(object sender, EventArgs e)
         {
-            var texto = new List<string>();
+            List<string> texto = new List<string>();
 
             try
             {
-                var Culture = new System.Globalization.CultureInfo(((Languages.ddl)ddlIdioma.SelectedItem).Value);
+                System.Globalization.CultureInfo Culture = new System.Globalization.CultureInfo(((Languages.ddl)ddlIdioma.SelectedItem).Value);
 
-                var number = "0";
+                string number = "0";
                 if (nDecimales.Value > 0)
                 {
-                    var decimales = "";
+                    string decimales = "";
 
                     while (decimales.Length < nDecimales.Value)
                         for (int i = 1; i <= 9; i++)

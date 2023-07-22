@@ -118,15 +118,38 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="String1" xml:space="preserve">
-    <value>Nueva imagen de presentación</value>
+    <value>Versión 1.0.0.0
+Creación de interfaz de simulación de pozos</value>
   </data>
   <data name="String2" xml:space="preserve">
-    <value>Incorporado el menú: Ayuda/Configuración</value>
+    <value>Versión 1.0.1.0
+Creación de pozos tipo Fluyente</value>
+  </data>
+  <data name="String5" xml:space="preserve">
+    <value>Versión 1.0.2.0
+Cambio de presentación de los formularios</value>
+  </data>
+  <data name="String6" xml:space="preserve">
+    <value>Versión 1.0.3.0
+Agregado ventana de Listas de transmisiones</value>
+  </data>
+  <data name="String7" xml:space="preserve">
+    <value>Versión 1.1.0.10
+Nueva imagen de presentación
+Incorporado el menú: Ayuda/Configuración
+Guía de uso del programa
+Mayor fluidez interactivo entre ventanas</value>
+  </data>
+  <data name="String8" xml:space="preserve">
+    <value>Versión 1.2.0.0
+Habilitado transmisión de datos operativos</value>
   </data>
   <data name="String3" xml:space="preserve">
-    <value>Guía de uso del programa</value>
+    <value>Versión 1.0.1.5
+Creación de pozos tipo Mecánico</value>
   </data>
   <data name="String4" xml:space="preserve">
-    <value>Mayor fluidez interactivo entre ventanas</value>
+    <value>Versión 1.0.1.8
+Actualizaciones habilitadas desde la nube de la aplicación de escritorio</value>
   </data>
 </root>

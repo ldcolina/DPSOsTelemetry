@@ -229,4 +229,46 @@
   <data name="CargaSobreBarraPulida" xml:space="preserve">
     <value>Load on polished bar</value>
   </data>
+  <data name="TablaHistorico" xml:space="preserve">
+    <value>Historical transmission table</value>
+  </data>
+  <data name="Corriente" xml:space="preserve">
+    <value>Power</value>
+  </data>
+  <data name="DiametroEstrangulador" xml:space="preserve">
+    <value>Choker diameter</value>
+  </data>
+  <data name="GastoInyeccionFluidoPotencia" xml:space="preserve">
+    <value>Potential Fluid Injection Spend</value>
+  </data>
+  <data name="GravedadEspecificaFluidoPotencia" xml:space="preserve">
+    <value>Specific Gravity Potential Fluid</value>
+  </data>
+  <data name="PresionAperturaCampo" xml:space="preserve">
+    <value>Opening pressure in the field</value>
+  </data>
+  <data name="TiempoCiclo" xml:space="preserve">
+    <value>Cycle time</value>
+  </data>
+  <data name="TiempoDesplazamientoTapon" xml:space="preserve">
+    <value>Stopper displacement time</value>
+  </data>
+  <data name="TiempoInyeccion" xml:space="preserve">
+    <value>Injection time</value>
+  </data>
+  <data name="TiempoRecuperacion" xml:space="preserve">
+    <value>Recovery Time</value>
+  </data>
+  <data name="Torque" xml:space="preserve">
+    <value>Torque</value>
+  </data>
+  <data name="VelocidadBomba" xml:space="preserve">
+    <value>Pump speed</value>
+  </data>
+  <data name="DatosOperativosTime" xml:space="preserve">
+    <value>Date / Time of transmission</value>
+  </data>
+  <data name="DatosOperativosResult" xml:space="preserve">
+    <value>Send status</value>
+  </data>
 </root>

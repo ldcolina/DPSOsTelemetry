@@ -118,19 +118,31 @@
   <data name="Fecha2_1" xml:space="preserve">
     <value>Upcoming transmission of operational data</value>
   </data>
-  <data name="Frecuencia_1" xml:space="preserve">
-    <value>Frequency of transmission of operational data</value>
+  <data name="Frecuencia_1b" xml:space="preserve">
+    <value>Response time of operational data (average)</value>
   </data>
   <data name="Fecha2_2" xml:space="preserve">
     <value>Next transmission of the dynocard</value>
   </data>
-  <data name="Frecuencia_2" xml:space="preserve">
-    <value>Frequency of transmission of the dynocard</value>
+  <data name="Frecuencia_2c" xml:space="preserve">
+    <value>Last response time of dynocard</value>
   </data>
   <data name="Token" xml:space="preserve">
     <value>Token</value>
   </data>
   <data name="Mostrar" xml:space="preserve">
     <value>Show well {0}</value>
+  </data>
+  <data name="Frecuencia_1a" xml:space="preserve">
+    <value>Frequency of transmission of operational data</value>
+  </data>
+  <data name="Frecuencia_2a" xml:space="preserve">
+    <value>Frequency of transmission of dynocard</value>
+  </data>
+  <data name="Frecuencia_1c" xml:space="preserve">
+    <value>Last response time of operational data</value>
+  </data>
+  <data name="Frecuencia_2b" xml:space="preserve">
+    <value>Response time of dynocard (average)</value>
   </data>
 </root>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Resources;
 using System.Windows.Forms;
 
@@ -34,27 +35,33 @@ namespace DPSOsTelemetria2.Configuraciones
             VersionNotes.Text = (select ? Languages.Setups.VersionNotes1 : Languages.Setups.VersionNotes2).Replace("{0}", Languages.DPSOsTelemetria.DPSOsTelemetry).Replace("{1}", setup.Version);
             ReleaseNotes.Text = Languages.Setups.ReleaseNotes;
 
-            List<string> mensajes = new List<string>()
-            {
-                Languages.Setups.News
-            };
-
+            List<string> mensajes = new List<string>();
             int i = 1;
             string txt = resource.GetString($"String{i}");
             while (!string.IsNullOrEmpty(txt))
             {
-                mensajes.Add($"- {txt}.");
+                mensajes.Add($"{txt}");
                 i++;
                 txt = resource.GetString($"String{i}");
             }
 
+            mensajes.Add(Languages.Setups.News);
+
             if (mensajes.Count > 1)
             {
-                mensajes.ForEach(val =>
+                for (i = mensajes.Count - 1; i >= 0; i--)
                 {
-                    txbNovedades.AppendText(val);
+                    if (i < mensajes.Count - 2)
+                    {
+                        txbNovedades.AppendText("-----------------------------------------");
+                        txbNovedades.AppendText("-----------------------------------------");
+                        txbNovedades.AppendText("-----------------------------------------");
+                        txbNovedades.AppendText("------------------------------");
+                        txbNovedades.AppendText(Environment.NewLine);
+                    }
+                    txbNovedades.AppendText(mensajes[i]);
                     txbNovedades.AppendText(Environment.NewLine);
-                });
+                }
             }
         }
     }

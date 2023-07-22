@@ -117,18 +117,54 @@ namespace Languages {
         /// <summary>
         ///   Busca una cadena traducida similar a Frequency of transmission of operational data.
         /// </summary>
-        public static string Frecuencia_1 {
+        public static string Frecuencia_1a {
             get {
-                return ResourceManager.GetString("Frecuencia_1", resourceCulture);
+                return ResourceManager.GetString("Frecuencia_1a", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Frequency of transmission of the dynocard.
+        ///   Busca una cadena traducida similar a Response time of operational data (average).
         /// </summary>
-        public static string Frecuencia_2 {
+        public static string Frecuencia_1b {
             get {
-                return ResourceManager.GetString("Frecuencia_2", resourceCulture);
+                return ResourceManager.GetString("Frecuencia_1b", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Last response time of operational data.
+        /// </summary>
+        public static string Frecuencia_1c {
+            get {
+                return ResourceManager.GetString("Frecuencia_1c", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Frequency of transmission of dynocard.
+        /// </summary>
+        public static string Frecuencia_2a {
+            get {
+                return ResourceManager.GetString("Frecuencia_2a", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Response time of dynocard (average).
+        /// </summary>
+        public static string Frecuencia_2b {
+            get {
+                return ResourceManager.GetString("Frecuencia_2b", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Last response time of dynocard.
+        /// </summary>
+        public static string Frecuencia_2c {
+            get {
+                return ResourceManager.GetString("Frecuencia_2c", resourceCulture);
             }
         }
         

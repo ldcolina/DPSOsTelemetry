@@ -271,13 +271,13 @@ namespace DPSOsTelemetria2.Administration
 
                 Text = ControlPozos.Name;
 
-                txtName.Enabled = false;
                 txtName.Text = ControlPozos.Name;
-
                 txtToken.Text = ControlPozos.Token;
 
                 ddlUnidades.SelectedItem = ((List<Languages.ddl>)ddlUnidades.DataSource).Find(val => val.Value == ControlPozos.Unidades.ToString());
+                ddlUnidades.Enabled = false;
                 ddlTipoPozo.SelectedItem = ((List<Languages.ddl>)ddlTipoPozo.DataSource).Find(val => val.Value == ControlPozos.Type.ToString());
+                ddlTipoPozo.Enabled = false;
             }
         }
 

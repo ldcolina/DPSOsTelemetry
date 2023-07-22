@@ -97,11 +97,47 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Power.
+        /// </summary>
+        public static string Corriente {
+            get {
+                return ResourceManager.GetString("Corriente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Manual data.
         /// </summary>
         public static string DatosManual {
             get {
                 return ResourceManager.GetString("DatosManual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Send status.
+        /// </summary>
+        public static string DatosOperativosResult {
+            get {
+                return ResourceManager.GetString("DatosOperativosResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Date / Time of transmission.
+        /// </summary>
+        public static string DatosOperativosTime {
+            get {
+                return ResourceManager.GetString("DatosOperativosTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Choker diameter.
+        /// </summary>
+        public static string DiametroEstrangulador {
+            get {
+                return ResourceManager.GetString("DiametroEstrangulador", resourceCulture);
             }
         }
         
@@ -223,6 +259,15 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Potential Fluid Injection Spend.
+        /// </summary>
+        public static string GastoInyeccionFluidoPotencia {
+            get {
+                return ResourceManager.GetString("GastoInyeccionFluidoPotencia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Gross Production.
         /// </summary>
         public static string GastoLiquido {
@@ -237,6 +282,15 @@ namespace Languages {
         public static string GastoLiquidoPruebaProduccion {
             get {
                 return ResourceManager.GetString("GastoLiquidoPruebaProduccion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Specific Gravity Potential Fluid.
+        /// </summary>
+        public static string GravedadEspecificaFluidoPotencia {
+            get {
+                return ResourceManager.GetString("GravedadEspecificaFluidoPotencia", resourceCulture);
             }
         }
         
@@ -331,6 +385,15 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Opening pressure in the field.
+        /// </summary>
+        public static string PresionAperturaCampo {
+            get {
+                return ResourceManager.GetString("PresionAperturaCampo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Available pressure.
         /// </summary>
         public static string PresionDisponible {
@@ -421,6 +484,15 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Historical transmission table.
+        /// </summary>
+        public static string TablaHistorico {
+            get {
+                return ResourceManager.GetString("TablaHistorico", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Surface temperature.
         /// </summary>
         public static string TemperaturaSuperficie {
@@ -435,6 +507,60 @@ namespace Languages {
         public static string Temporizador {
             get {
                 return ResourceManager.GetString("Temporizador", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cycle time.
+        /// </summary>
+        public static string TiempoCiclo {
+            get {
+                return ResourceManager.GetString("TiempoCiclo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Stopper displacement time.
+        /// </summary>
+        public static string TiempoDesplazamientoTapon {
+            get {
+                return ResourceManager.GetString("TiempoDesplazamientoTapon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Injection time.
+        /// </summary>
+        public static string TiempoInyeccion {
+            get {
+                return ResourceManager.GetString("TiempoInyeccion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Recovery Time.
+        /// </summary>
+        public static string TiempoRecuperacion {
+            get {
+                return ResourceManager.GetString("TiempoRecuperacion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Torque.
+        /// </summary>
+        public static string Torque {
+            get {
+                return ResourceManager.GetString("Torque", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Pump speed.
+        /// </summary>
+        public static string VelocidadBomba {
+            get {
+                return ResourceManager.GetString("VelocidadBomba", resourceCulture);
             }
         }
         

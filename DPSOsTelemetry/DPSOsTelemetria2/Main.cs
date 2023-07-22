@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Languages;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -20,7 +21,7 @@ namespace DPSOsTelemetria2
 
         private readonly string file;
 
-        private readonly string version = "1.1.0.9";
+        private readonly string version = "1.1.0.10";
 
         private readonly string anio = "2023";
 
@@ -49,6 +50,7 @@ namespace DPSOsTelemetria2
                 File.WriteAllText(configuracion, JsonConvert.SerializeObject(datas, Formatting.Indented));
             }
             Idiomas(datas.Idioma);
+            decimales = datas.Decimales;
 
             if (datas.Version != version)
             {
@@ -287,48 +289,54 @@ namespace DPSOsTelemetria2
         private void timer1_Tick(object sender, EventArgs e)
         {
             toolStripStatusLabel1.Text = DateTime.UtcNow.ToLocalTime().ToString("F");
-            List<ReferenciasI> list = new List<ReferenciasI>();
+            List<lt> list = new List<lt>();
             foreach (Form child in MdiChildren.Where(val => val.Name == "Pozo"))
             {
                 Pozo form = (Pozo)child;
 
+                var last = form._Telemetrias.LastOrDefault().Copy();
                 if (form.select == "2")
                 {
-                    ReferenciasI _Telemetria = form._Telemetria;
-                    if ((_Telemetria.Range.DatosOperativos.TotalSeconds != 0) && (_Telemetria.Range.CartaDinagrafica.TotalSeconds != 0))
-                    {
-                        DateTime time1 = _Telemetria.DatosOperativosTime.AddSeconds(_Telemetria.Range.DatosOperativos.TotalSeconds);
-                        DateTime time2 = _Telemetria.CartaDinagraficaTime.AddSeconds(_Telemetria.Range.CartaDinagrafica.TotalSeconds);
-                        if ((time1 <= time2 ? time1 : time2) <= DateTime.UtcNow && form.status)
-                        {
-                            form.SendTelemetria();
-                            form.Refrescar();
-                        }
-                    }
-                    else if (_Telemetria.Range.DatosOperativos.TotalSeconds != 0)
-                    {
-                        DateTime time1 = _Telemetria.DatosOperativosTime.AddSeconds(_Telemetria.Range.DatosOperativos.TotalSeconds);
-                        if (time1 <= DateTime.UtcNow && form.status)
-                        {
-                            form.SendTelemetria();
-                            form.Refrescar();
-                        }
-                    }
-                    else if (_Telemetria.Range.CartaDinagrafica.TotalSeconds != 0)
-                    {
-                        DateTime time2 = _Telemetria.CartaDinagraficaTime.AddSeconds(_Telemetria.Range.CartaDinagrafica.TotalSeconds);
-                        if (time2 <= DateTime.UtcNow && form.status)
-                        {
-                            form.SendTelemetria();
-                            form.Refrescar();
-                        }
-                    }
-                    list.Add(form._Telemetria);
+                    if (form._Telemetria.DatosOperativosTime.AddSeconds(form._Telemetria.Range.DatosOperativos.TotalSeconds) <= DateTime.UtcNow && form._Telemetria.Range.DatosOperativos.TotalSeconds != 0)
+                        form._Telemetria.DatosOperativosTime = form._Telemetria.DatosOperativosTime.AddSeconds(form._Telemetria.Range.DatosOperativos.TotalSeconds);
+
+                    if (form._Telemetria.CartaDinagraficaTime.AddSeconds(form._Telemetria.Range.CartaDinagrafica.TotalSeconds) <= DateTime.UtcNow && form._Telemetria.Range.CartaDinagrafica.TotalSeconds != 0)
+                        form._Telemetria.CartaDinagraficaTime = form._Telemetria.CartaDinagraficaTime.AddSeconds(form._Telemetria.Range.CartaDinagrafica.TotalSeconds);
+
+                    form.SendTelemetria();
+
+                    lt l = form._Telemetria.Copy<ReferenciasI, lt>();
+
+                    #region DatosOperativos
+
+                    l.DatosOperativosSends = form._Telemetrias.Where(val => val.Sent.Contains("DatosOperativos")).Count();
+                    l.DatosOperativosComplete = form._Telemetrias.Where(val => val.Sent.Contains("DatosOperativos") && val.DatosOperativosFinish && val.DatosOperativosBool).Count();
+                    l.DatosOperativosFails = form._Telemetrias.Where(val => val.Sent.Contains("DatosOperativos") && val.DatosOperativosFinish && !val.DatosOperativosBool).Count();
+
+                    l.DOPromedio = form._Telemetrias.Where(val => val.DatosOperativosFinish).Count() > 0 ? form._Telemetrias.Where(val => val.DatosOperativosFinish).Average(val => val.DatosOperativosPromedio.TotalSeconds) : 0;
+
+                    #endregion DatosOperativos
+
+                    #region CartaDinagrafica
+
+                    l.CartaDinagraficaSends = form._Telemetrias.Where(val => val.Sent.Contains("CartaDinagrafica")).Count();
+                    l.CartaDinagraficaComplete = form._Telemetrias.Where(val => val.Sent.Contains("CartaDinagrafica") && val.CartaDinagraficaFinish && val.CartaDinagraficaBool).Count();
+                    l.CartaDinagraficaFails = form._Telemetrias.Where(val => val.Sent.Contains("CartaDinagrafica") && val.CartaDinagraficaFinish && !val.CartaDinagraficaBool).Count();
+
+                    l.CDPromedio = form._Telemetrias.Where(val => val.CartaDinagraficaFinish).Count() > 0 ? form._Telemetrias.Where(val => val.CartaDinagraficaFinish).Average(val => val.CartaDinagraficaPromedio.TotalSeconds) : 0;
+
+                    #endregion CartaDinagrafica
+
+                    list.Add(l);
+
+                    if (JsonConvert.SerializeObject(last) != JsonConvert.SerializeObject(form._Telemetria))
+                        form.Refrescar();
                 }
             }
 
+            Ventanas.Enabled = MdiChildren.Length > 0;
+
             listaTiempo.Enabled = list.Count > 0;
-            Ventanas.Enabled = list.Count > 0;
             Form OpenForm = MdiChildren.Where(val => val.Name == "listaTiempo").FirstOrDefault();
             if (OpenForm != null)
                 if (listaTiempo.Enabled)
@@ -346,7 +354,7 @@ namespace DPSOsTelemetria2
 
         private void Config_Click(object sender, EventArgs e)
         {
-            var OpenForm = new Config(configuracion);
+            Config OpenForm = new Config(configuracion);
             OpenForm.ShowDialog();
 
             if (OpenForm.DialogResult == DialogResult.OK)

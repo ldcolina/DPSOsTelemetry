@@ -1,4 +1,6 @@
 ﻿using Languages;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using Telemetria;
 
@@ -12,8 +14,10 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoFluyente
             InitializeComponent();
         }
 
-        internal void Recargar(int decimales, ReferenciasI _Telemetria)
+        internal void Recargar(int decimales, List<ReferenciasI> _Telemetrias)
         {
+            var _Telemetria = _Telemetrias.LastOrDefault();
+
             #region DatosManual
 
             OTomaInformacion.CTomaBasica DatosOperativos = _Telemetria.DatosOperativos;
@@ -114,11 +118,19 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoFluyente
 
             #endregion DatosProduccion
 
+            #region TablaHistorico
+
+            tabPage1.Text = Languages.Pozo.TablaHistorico;
+
+            dgvTablaHistorico.Table(decimales, _Telemetrias);
+
+            #endregion TablaHistorico
+
             #region Temporizador
 
-            DatosOperativosSends.Text = $"{Languages.Pozo.Envio}: {_Telemetria.DatosOperativosSends}";
-            DatosOperativosComplete.Text = $"{Languages.Pozo.EnvioCorrecto}: {_Telemetria.DatosOperativosComplete}";
-            DatosOperativosFails.Text = $"{Languages.Pozo.EnvioIncorrecto}: {_Telemetria.DatosOperativosFails}";
+            DatosOperativosSends.Text = $"{Languages.Pozo.Envio}: {_Telemetrias.Where(val => val.Sent.Contains("DatosOperativos")).Count()}";
+            DatosOperativosComplete.Text = $"{Languages.Pozo.EnvioCorrecto}: {_Telemetrias.Where(val => val.Sent.Contains("DatosOperativos") && val.DatosOperativosFinish && val.DatosOperativosBool).Count()}";
+            DatosOperativosFails.Text = $"{Languages.Pozo.EnvioIncorrecto}: {_Telemetrias.Where(val => val.Sent.Contains("DatosOperativos") && val.DatosOperativosFinish && !val.DatosOperativosBool).Count()}";
             if (_Telemetria.Range.DatosOperativos.TotalSeconds != 0)
                 this.DatosOperativos.Text = $"{Languages.Pozo.ProxActualizacion}:\n{_Telemetria.DatosOperativosTime.AddSeconds(_Telemetria.Range.DatosOperativos.TotalSeconds).ToLocalTime():G}";
             else

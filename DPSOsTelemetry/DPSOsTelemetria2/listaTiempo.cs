@@ -17,14 +17,14 @@ namespace DPSOsTelemetria2
 
         private DataTable dt = new DataTable("Pozos");
 
-        private List<ReferenciasI> Last_Telemetria = new List<ReferenciasI>();
+        private List<lt> Last_Telemetria = new List<lt>();
 
         public listaTiempo()
         {
             InitializeComponent();
         }
 
-        internal void Recargar(List<ReferenciasI> _Telemetria)
+        internal void Recargar(List<lt> _Telemetria)
         {
             if (JsonConvert.SerializeObject(Last_Telemetria) == JsonConvert.SerializeObject(_Telemetria))
                 return;
@@ -33,43 +33,94 @@ namespace DPSOsTelemetria2
 
             dt.Rows.Clear();
 
-            foreach (ReferenciasI _telemetria in _Telemetria.OrderBy(val => val.Name).OrderBy(val => val.Type))
+            foreach (lt _telemetria in _Telemetria.OrderBy(val => val.Name).OrderBy(val => val.Type))
             {
                 DataRow dr = dt.NewRow();
                 dr["Name"] = _telemetria.Name;
                 dr["Type"] = SystemWell.GetString(_telemetria.Type);
                 dr["Token"] = _telemetria.Token;
+                dr["StartDate"] = _telemetria.Started.ToString("G");
 
                 dr["ActionsDone"] = _telemetria.DatosOperativosSends + _telemetria.CartaDinagraficaSends;
                 dr["ActionsClear"] = _telemetria.DatosOperativosComplete + _telemetria.CartaDinagraficaComplete;
                 dr["ActionsFails"] = _telemetria.DatosOperativosFails + _telemetria.CartaDinagraficaFails;
 
-                dr["Date1"] = _telemetria.Started.ToString("G");
                 if (_telemetria.Range.DatosOperativos.TotalSeconds != 0)
                 {
-                    dr["Frequency_1"] = _telemetria.Range.DatosOperativos.TotalSeconds;
+                    dr["Frequency_1a"] = _telemetria.Range.DatosOperativos.TotalSeconds;
+                    dr["Frequency_1b"] = _telemetria.DOPromedio;
+                    dr["Frequency_1c"] = _telemetria.DatosOperativosPromedio.TotalSeconds;
                     dr["Date2_1"] = _telemetria.DatosOperativosTime.AddSeconds(_telemetria.Range.DatosOperativos.TotalSeconds).ToString("G");
                 }
                 else
                 {
-                    dr["Frequency_1"] = "-";
+                    dr["Frequency_1a"] = "-";
+                    dr["Frequency_1b"] = "-";
+                    dr["Frequency_1c"] = "-";
                     dr["Date2_1"] = "-";
                 }
 
                 if (_telemetria.Range.CartaDinagrafica.TotalSeconds != 0)
                 {
-                    dr["Frequency_2"] = _telemetria.Range.CartaDinagrafica.TotalSeconds;
+                    dr["Frequency_2a"] = _telemetria.Range.CartaDinagrafica.TotalSeconds;
+                    dr["Frequency_2b"] = _telemetria.CDPromedio;
+                    dr["Frequency_2c"] = _telemetria.CartaDinagraficaPromedio.TotalSeconds;
                     dr["Date2_2"] = _telemetria.CartaDinagraficaTime.AddSeconds(_telemetria.Range.CartaDinagrafica.TotalSeconds).ToString("G");
                 }
                 else
                 {
-                    dr["Frequency_2"] = "-";
+                    dr["Frequency_2a"] = "-";
+                    dr["Frequency_2b"] = "-";
+                    dr["Frequency_2c"] = "-";
                     dr["Date2_2"] = "-";
                 }
                 dt.Rows.Add(dr);
             }
 
             dataGridView1.DataSource = dt;
+
+            #region Datos operativos
+
+            if (_Telemetria.Max(val => val.Range.DatosOperativos).TotalSeconds != 0)
+            {
+                dataGridView1.Columns["Frequency_1a"].HeaderText = $"{Languages.listaTiempo.Frecuencia_1a} ({Siglas.Segundo})";
+                dataGridView1.Columns["Frequency_1b"].HeaderText = $"{Languages.listaTiempo.Frecuencia_1b} ({Siglas.Segundo})";
+                dataGridView1.Columns["Frequency_1c"].HeaderText = $"{Languages.listaTiempo.Frecuencia_1c} ({Siglas.Segundo})";
+
+                dataGridView1.Columns["Date2_1"].HeaderText = Languages.listaTiempo.Fecha2_1;
+            }
+            else
+            {
+                dataGridView1.Columns["Frequency_1a"].Visible = false;
+                dataGridView1.Columns["Frequency_1b"].Visible = false;
+                dataGridView1.Columns["Frequency_1c"].Visible = false;
+
+                dataGridView1.Columns["Date2_1"].Visible = false;
+            }
+
+            #endregion Datos operativos
+
+            #region _Carta dinagráfica
+
+            if (_Telemetria.Max(val => val.Range.CartaDinagrafica).TotalSeconds != 0)
+            {
+                dataGridView1.Columns["Frequency_2a"].HeaderText = $"{Languages.listaTiempo.Frecuencia_2a} ({Siglas.Segundo})";
+                dataGridView1.Columns["Frequency_2b"].HeaderText = $"{Languages.listaTiempo.Frecuencia_2b} ({Siglas.Segundo})";
+                dataGridView1.Columns["Frequency_2c"].HeaderText = $"{Languages.listaTiempo.Frecuencia_2c} ({Siglas.Segundo})";
+
+                dataGridView1.Columns["Date2_2"].HeaderText = Languages.listaTiempo.Fecha2_2;
+            }
+            else
+            {
+                dataGridView1.Columns["Frequency_2a"].Visible = false;
+                dataGridView1.Columns["Frequency_2b"].Visible = false;
+                dataGridView1.Columns["Frequency_2c"].Visible = false;
+
+                dataGridView1.Columns["Date2_2"].Visible = false;
+            }
+
+            #endregion _Carta dinagráfica
+
             Refrescar();
         }
 
@@ -83,15 +134,27 @@ namespace DPSOsTelemetria2
 
             dataGridView1.Columns["Token"].HeaderText = Languages.listaTiempo.Token;
 
-            dataGridView1.Columns["Date1"].HeaderText = Languages.listaTiempo.Fecha1;
+            dataGridView1.Columns["StartDate"].HeaderText = Languages.listaTiempo.Fecha1;
 
-            dataGridView1.Columns["Frequency_1"].HeaderText = $"{Languages.listaTiempo.Frecuencia_1} ({Siglas.Segundo})";
+            #region Datos operativos
+
+            dataGridView1.Columns["Frequency_1a"].HeaderText = $"{Languages.listaTiempo.Frecuencia_1a} ({Siglas.Segundo})";
+            dataGridView1.Columns["Frequency_1b"].HeaderText = $"{Languages.listaTiempo.Frecuencia_1b} ({Siglas.Segundo})";
+            dataGridView1.Columns["Frequency_1c"].HeaderText = $"{Languages.listaTiempo.Frecuencia_1c} ({Siglas.Segundo})";
 
             dataGridView1.Columns["Date2_1"].HeaderText = Languages.listaTiempo.Fecha2_1;
 
-            dataGridView1.Columns["Frequency_2"].HeaderText = $"{Languages.listaTiempo.Frecuencia_2} ({Siglas.Segundo})";
+            #endregion Datos operativos
+
+            #region _Carta dinagráfica
+
+            dataGridView1.Columns["Frequency_2a"].HeaderText = $"{Languages.listaTiempo.Frecuencia_2a} ({Siglas.Segundo})";
+            dataGridView1.Columns["Frequency_2b"].HeaderText = $"{Languages.listaTiempo.Frecuencia_2b} ({Siglas.Segundo})";
+            dataGridView1.Columns["Frequency_2c"].HeaderText = $"{Languages.listaTiempo.Frecuencia_2c} ({Siglas.Segundo})";
 
             dataGridView1.Columns["Date2_2"].HeaderText = Languages.listaTiempo.Fecha2_2;
+
+            #endregion _Carta dinagráfica
 
             dataGridView1.Columns["ActionsDone"].HeaderText = Languages.listaTiempo.ActionsDone;
 
@@ -101,31 +164,37 @@ namespace DPSOsTelemetria2
 
             foreach (DataRow dr in ((DataTable)dataGridView1.DataSource).Rows)
             {
-                ReferenciasI _telemetria = Last_Telemetria.Find(val => val.Token == dr["Token"].ToString());
+                lt _telemetria = Last_Telemetria.Find(val => val.Token == dr["Token"].ToString());
                 dr["Type"] = SystemWell.GetString(_telemetria.Type);
+                dr["StartDate"] = _telemetria.Started.ToString("G");
 
-                dr["Date1"] = _telemetria.Started.ToString("G");
                 if (_telemetria.Range.DatosOperativos.TotalSeconds != 0)
                 {
-                    double miliseg = _telemetria.Range.DatosOperativos.TotalSeconds * _telemetria.DatosOperativosSends;
-                    dr["Frequency_1"] = _telemetria.Range.DatosOperativos.TotalSeconds;
-                    dr["Date2_1"] = _telemetria.Started.AddSeconds(miliseg).ToString("G");
+                    dr["Frequency_1a"] = _telemetria.Range.DatosOperativos.TotalSeconds;
+                    dr["Frequency_1b"] = _telemetria.DOPromedio;
+                    dr["Frequency_1c"] = _telemetria.DatosOperativosPromedio.TotalSeconds;
+                    dr["Date2_1"] = _telemetria.DatosOperativosTime.AddSeconds(_telemetria.Range.DatosOperativos.TotalSeconds).ToString("G");
                 }
                 else
                 {
-                    dr["Frequency_1"] = "-";
+                    dr["Frequency_1a"] = "-";
+                    dr["Frequency_1b"] = "-";
+                    dr["Frequency_1c"] = "-";
                     dr["Date2_1"] = "-";
                 }
 
                 if (_telemetria.Range.CartaDinagrafica.TotalSeconds != 0)
                 {
-                    double miliseg = _telemetria.Range.CartaDinagrafica.TotalSeconds * _telemetria.CartaDinagraficaSends;
-                    dr["Frequency_2"] = _telemetria.Range.CartaDinagrafica.TotalSeconds;
-                    dr["Date2_2"] = _telemetria.Started.AddSeconds(miliseg).ToString("G");
+                    dr["Frequency_2a"] = _telemetria.Range.CartaDinagrafica.TotalSeconds;
+                    dr["Frequency_2b"] = _telemetria.CDPromedio;
+                    dr["Frequency_2c"] = _telemetria.CartaDinagraficaPromedio.TotalSeconds;
+                    dr["Date2_2"] = _telemetria.CartaDinagraficaTime.AddSeconds(_telemetria.Range.CartaDinagrafica.TotalSeconds).ToString("G");
                 }
                 else
                 {
-                    dr["Frequency_2"] = "-";
+                    dr["Frequency_2a"] = "-";
+                    dr["Frequency_2b"] = "-";
+                    dr["Frequency_2c"] = "-";
                     dr["Date2_2"] = "-";
                 }
             }
@@ -175,14 +244,45 @@ namespace DPSOsTelemetria2
             dt.Columns.Add("Name", typeof(string));
             dt.Columns.Add("Type", typeof(string));
             dt.Columns.Add("Token", typeof(string));
-            dt.Columns.Add("Date1", typeof(string));
-            dt.Columns.Add("Frequency_1", typeof(string));
+            dt.Columns.Add("StartDate", typeof(string));
+            dt.Columns.Add("Frequency_1a", typeof(string));
+            dt.Columns.Add("Frequency_1b", typeof(string));
+            dt.Columns.Add("Frequency_1c", typeof(string));
             dt.Columns.Add("Date2_1", typeof(string));
-            dt.Columns.Add("Frequency_2", typeof(string));
+            dt.Columns.Add("Frequency_2a", typeof(string));
+            dt.Columns.Add("Frequency_2b", typeof(string));
+            dt.Columns.Add("Frequency_2c", typeof(string));
             dt.Columns.Add("Date2_2", typeof(string));
             dt.Columns.Add("ActionsDone", typeof(int));
             dt.Columns.Add("ActionsClear", typeof(int));
             dt.Columns.Add("ActionsFails", typeof(int));
         }
+    }
+
+    public class lt : ReferenciasI
+    {
+        #region DatosOperativos
+
+        public int DatosOperativosSends { get; set; }
+
+        public int DatosOperativosComplete { get; set; }
+
+        public int DatosOperativosFails { get; set; }
+
+        public double DOPromedio { get; set; }
+
+        #endregion DatosOperativos
+
+        #region DatosOperativos
+
+        public int CartaDinagraficaSends { get; set; }
+
+        public int CartaDinagraficaComplete { get; set; }
+
+        public int CartaDinagraficaFails { get; set; }
+
+        public double CDPromedio { get; set; }
+
+        #endregion DatosOperativos
     }
 }

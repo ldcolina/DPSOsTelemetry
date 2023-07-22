@@ -17,11 +17,6 @@ namespace Telemetria
         {
             return await Task.Run(async () =>
             {
-                if (select)
-                    referencias.DatosOperativosSends++;
-                else
-                    referencias.CartaDinagraficaSends++;
-
                 try
                 {
                     RestClient client = new RestClient();
@@ -32,19 +27,13 @@ namespace Telemetria
                     request.AddHeader("Content-Type", "application/json");
                     if (select)
                     {
-                        //client = new RestClient("https://api-dpsos-dev.entecprois.com/api/PozoTomaInformacion");
-
-                        OTomaInformacion.CTomaInformacion CTomaInformacion = new OTomaInformacion.CTomaInformacion()
-                        {
-                            Fecha = DateTime.UtcNow,
-                            Token = referencias.Token,
-                            PozoId = referencias.Name,
-                            DatosOperativos = referencias.DatosOperativos
-                        };
-                        request.AddJsonBody(CTomaInformacion);
+                        client = new RestClient($"https://api-dpsos-dev.entecprois.com/api/PozoTomaInformacion/telemetria?token={referencias.Token}");
+                        request.AddJsonBody(referencias.DatosOperativos);
                     }
                     else
                     {
+                        return referencias;
+
                         //client = new RestClient("https://api-dpsos-dev.entecprois.com/api/PozoTomaInformacion/carta-dinagrafica");
 
                         OCartaDinagrafica OCartaDinagrafica = new OCartaDinagrafica()
@@ -59,32 +48,22 @@ namespace Telemetria
 
                     RestResponse response = await client.ExecuteAsync(request);
 
+                    bool Success;
+                    bool.TryParse(response.Content, out Success);
+
                     if (select)
-                    {
-                        OTomaInformacion.CResult _result = JsonConvert.DeserializeObject<OTomaInformacion.CResult>(response.Content);
-
-                        if (_result.Success)
-                            referencias.DatosOperativosComplete++;
-                        else
-                            referencias.DatosOperativosFails++;
-                    }
+                        referencias.DatosOperativosBool = Success;
                     else
-                    {
-                        OCartaDinagrafica.CResult _result = JsonConvert.DeserializeObject<OCartaDinagrafica.CResult>(response.Content);
-
-                        if (_result.Success)
-                            referencias.CartaDinagraficaComplete++;
-                        else
-                            referencias.CartaDinagraficaFails++;
-                    }
+                        referencias.CartaDinagraficaBool = Success;
                 }
                 catch
                 {
-                    if (select)
-                        referencias.DatosOperativosFails++;
-                    else
-                        referencias.CartaDinagraficaFails++;
                 }
+
+                if (select)
+                    referencias.DatosOperativosFinish = true;
+                else
+                    referencias.CartaDinagraficaFinish = true;
 
                 return referencias;
             });

@@ -20,25 +20,35 @@ namespace Telemetria
     {
         public DateTime Started { get; set; }
 
-        public OCartaDinagrafica.CCartaDinagrafica CartaDinagrafica { set; get; } = new OCartaDinagrafica.CCartaDinagrafica();
+        public List<string> Sent { get; set; } = new List<string>();
 
-        public DateTime CartaDinagraficaTime { get; set; }
-
-        public int CartaDinagraficaComplete { get; set; }
-
-        public int CartaDinagraficaFails { get; set; }
-
-        public int CartaDinagraficaSends { get; set; }
+        #region OTomaInformacion
 
         public OTomaInformacion.CTomaBasica DatosOperativos { set; get; } = new OTomaInformacion.CTomaBasica();
 
         public DateTime DatosOperativosTime { get; set; }
 
-        public int DatosOperativosComplete { get; set; }
+        public bool DatosOperativosBool { get; set; }
 
-        public int DatosOperativosFails { get; set; }
+        public bool DatosOperativosFinish { get; set; }
 
-        public int DatosOperativosSends { get; set; }
+        public TimeSpan DatosOperativosPromedio { get; set; } = TimeSpan.Zero;
+
+        #endregion OTomaInformacion
+
+        #region OCartaDinagrafica
+
+        public OCartaDinagrafica.CCartaDinagrafica CartaDinagrafica { set; get; } = new OCartaDinagrafica.CCartaDinagrafica();
+
+        public DateTime CartaDinagraficaTime { get; set; }
+
+        public TimeSpan CartaDinagraficaPromedio { get; set; } = TimeSpan.Zero;
+
+        public bool CartaDinagraficaBool { get; set; }
+
+        public bool CartaDinagraficaFinish { get; set; }
+
+        #endregion OCartaDinagrafica
     }
 
     public class ReferenciasII : Referencias

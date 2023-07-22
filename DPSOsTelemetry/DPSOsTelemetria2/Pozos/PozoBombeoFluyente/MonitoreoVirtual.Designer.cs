@@ -50,18 +50,22 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoFluyente
             this.Emulsion = new System.Windows.Forms.Label();
             this.SalinidadAgua = new System.Windows.Forms.Label();
             this.GravedadEspecificaGasProducido = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.DatosOperativos = new System.Windows.Forms.Label();
             this.DatosOperativosSends = new System.Windows.Forms.Label();
             this.DatosOperativosComplete = new System.Windows.Forms.Label();
             this.DatosOperativosFails = new System.Windows.Forms.Label();
+            this.dgvTablaHistorico = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tlpVariables.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tlpVariables2.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTablaHistorico)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -84,6 +88,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoFluyente
             // 
             this.tabControl2.Controls.Add(this.tabPage3);
             this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Controls.Add(this.tabPage1);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl2.Location = new System.Drawing.Point(3, 3);
             this.tabControl2.Name = "tabControl2";
@@ -325,6 +330,17 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoFluyente
             this.GravedadEspecificaGasProducido.TabIndex = 27;
             this.GravedadEspecificaGasProducido.Text = "GravedadEspecificaGasProducido";
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.dgvTablaHistorico);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(658, 334);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.AutoSize = true;
@@ -390,6 +406,24 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoFluyente
             this.DatosOperativosFails.Text = "DatosOperativosFails";
             this.DatosOperativosFails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // dgvTablaHistorico
+            // 
+            this.dgvTablaHistorico.AllowUserToAddRows = false;
+            this.dgvTablaHistorico.AllowUserToDeleteRows = false;
+            this.dgvTablaHistorico.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvTablaHistorico.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvTablaHistorico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTablaHistorico.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTablaHistorico.Location = new System.Drawing.Point(3, 3);
+            this.dgvTablaHistorico.MultiSelect = false;
+            this.dgvTablaHistorico.Name = "dgvTablaHistorico";
+            this.dgvTablaHistorico.ReadOnly = true;
+            this.dgvTablaHistorico.RowHeadersWidth = 51;
+            this.dgvTablaHistorico.RowTemplate.Height = 24;
+            this.dgvTablaHistorico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTablaHistorico.Size = new System.Drawing.Size(652, 328);
+            this.dgvTablaHistorico.TabIndex = 1;
+            // 
             // MonitoreoVirtual
             // 
             this.Controls.Add(this.tableLayoutPanel2);
@@ -404,8 +438,10 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoFluyente
             this.tabPage4.ResumeLayout(false);
             this.tlpVariables2.ResumeLayout(false);
             this.tlpVariables2.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTablaHistorico)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -437,5 +473,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoFluyente
         private Label DatosOperativosSends;
         private Label DatosOperativosComplete;
         private Label DatosOperativosFails;
+        private TabPage tabPage1;
+        private DataGridView dgvTablaHistorico;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using DevExpress.Utils;
 using DevExpress.XtraCharts;
 using Languages;
+using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -18,8 +19,10 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             chart1.Legend.Visibility = DefaultBoolean.False;
         }
 
-        internal void Recargar(int decimales, ReferenciasI _Telemetria)
+        internal void Recargar(int decimales, List<ReferenciasI> _Telemetrias)
         {
+            var _Telemetria = _Telemetrias.LastOrDefault();
+
             #region DatosManual
 
             tabPage1.Text = Languages.Pozo.DatosManual;
@@ -169,11 +172,19 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
 
             #endregion DatosProduccion
 
+            #region TablaHistorico
+
+            tabPage5.Text = Languages.Pozo.TablaHistorico;
+
+            dgvTablaHistorico.Table(decimales, _Telemetrias);
+
+            #endregion TablaHistorico
+
             #region Temporizador
 
-            DatosOperativosSends.Text = $"{Languages.Pozo.Envio}: {_Telemetria.DatosOperativosSends}";
-            DatosOperativosComplete.Text = $"{Languages.Pozo.EnvioCorrecto}: {_Telemetria.DatosOperativosComplete}";
-            DatosOperativosFails.Text = $"{Languages.Pozo.EnvioIncorrecto}: {_Telemetria.DatosOperativosFails}";
+            DatosOperativosSends.Text = $"{Languages.Pozo.Envio}: {_Telemetrias.Where(val => val.Sent.Contains("DatosOperativos")).Count()}";
+            DatosOperativosComplete.Text = $"{Languages.Pozo.EnvioCorrecto}: {_Telemetrias.Where(val => val.Sent.Contains("DatosOperativos") && val.DatosOperativosFinish && val.DatosOperativosBool).Count()}";
+            DatosOperativosFails.Text = $"{Languages.Pozo.EnvioIncorrecto}: {_Telemetrias.Where(val => val.Sent.Contains("DatosOperativos") && val.DatosOperativosFinish && !val.DatosOperativosBool).Count()}";
             if (_Telemetria.Range.DatosOperativos.TotalSeconds != 0)
                 this.DatosOperativos.Text = $"{Languages.Pozo.ProxActualizacion}:\n{_Telemetria.DatosOperativosTime.AddSeconds(_Telemetria.Range.DatosOperativos.TotalSeconds).ToLocalTime():G}";
             else
@@ -247,13 +258,13 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
 
             #region Temporizador
 
-            CartaDinagraficaSends.Text = $"{Languages.Pozo.Envio}: {_Telemetria.CartaDinagraficaSends}";
-            CartaDinagraficaComplete.Text = $"{Languages.Pozo.EnvioCorrecto}: {_Telemetria.CartaDinagraficaComplete}";
-            CartaDinagraficaFails.Text = $"{Languages.Pozo.EnvioIncorrecto}: {_Telemetria.CartaDinagraficaFails}";
+            CartaDinagraficaSends.Text = $"{Languages.Pozo.Envio}: {_Telemetrias.Where(val => val.Sent.Contains("CartaDinagrafica")).Count()}";
+            CartaDinagraficaComplete.Text = $"{Languages.Pozo.EnvioCorrecto}: {_Telemetrias.Where(val => val.Sent.Contains("CartaDinagrafica") && val.CartaDinagraficaFinish && val.CartaDinagraficaBool).Count()}";
+            CartaDinagraficaFails.Text = $"{Languages.Pozo.EnvioIncorrecto}: {_Telemetrias.Where(val => val.Sent.Contains("CartaDinagrafica") && val.CartaDinagraficaFinish && !val.CartaDinagraficaBool).Count()}";
             if (_Telemetria.Range.CartaDinagrafica.TotalSeconds != 0)
-                CartaDinagrafica.Text = $"{Languages.Pozo.ProxActualizacion}:\n{_Telemetria.CartaDinagraficaTime.AddSeconds(_Telemetria.Range.CartaDinagrafica.TotalSeconds).ToLocalTime():G}";
+                this.CartaDinagrafica.Text = $"{Languages.Pozo.ProxActualizacion}:\n{_Telemetria.CartaDinagraficaTime.AddSeconds(_Telemetria.Range.CartaDinagrafica.TotalSeconds).ToLocalTime():G}";
             else
-                CartaDinagrafica.Text = $"{Languages.Pozo.ProxActualizacion}:\n-";
+                this.CartaDinagrafica.Text = $"{Languages.Pozo.ProxActualizacion}:\n-";
 
             #endregion Temporizador
 

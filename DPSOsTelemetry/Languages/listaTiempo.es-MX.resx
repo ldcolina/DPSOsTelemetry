@@ -138,19 +138,31 @@
   <data name="Fecha2_1" xml:space="preserve">
     <value>Próxima transmisión de los datos operativos</value>
   </data>
-  <data name="Frecuencia_1" xml:space="preserve">
-    <value>Frecuencia de transmisión de los datos operativos</value>
-  </data>
   <data name="Fecha2_2" xml:space="preserve">
     <value>Próxima transmisión de la carta dinagráfica</value>
-  </data>
-  <data name="Frecuencia_2" xml:space="preserve">
-    <value>Frecuencia de transmisión de la carta dinagráfica</value>
   </data>
   <data name="Token" xml:space="preserve">
     <value>Token</value>
   </data>
   <data name="Mostrar" xml:space="preserve">
     <value>Mostrar pozo {0}</value>
+  </data>
+  <data name="Frecuencia_1a" xml:space="preserve">
+    <value>Frecuencia de transmisión de los datos operativos</value>
+  </data>
+  <data name="Frecuencia_2a" xml:space="preserve">
+    <value>Frecuencia de transmisión de la carta dinagráfica</value>
+  </data>
+  <data name="Frecuencia_1b" xml:space="preserve">
+    <value>Tiempo de respuesta de los datos operativos (promedio)</value>
+  </data>
+  <data name="Frecuencia_2b" xml:space="preserve">
+    <value>Tiempo de respuesta de la carta dinagráfica (promedio)</value>
+  </data>
+  <data name="Frecuencia_2c" xml:space="preserve">
+    <value>Ultimo tiempo de respuesta de la carta dinagráfica</value>
+  </data>
+  <data name="Frecuencia_1c" xml:space="preserve">
+    <value>Ultimo tiempo de respuesta de los datos operativos</value>
   </data>
 </root>

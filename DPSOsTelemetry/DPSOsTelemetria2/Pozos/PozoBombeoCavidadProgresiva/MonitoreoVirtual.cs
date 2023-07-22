@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
 using Telemetria;
 
 namespace DPSOsTelemetria2.Pozos.PozoBombeoCavidadProgresiva
@@ -11,8 +13,10 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoCavidadProgresiva
             InitializeComponent();
         }
 
-        internal void Recargar(int decimales, ReferenciasI _Telemetria)
+        internal void Recargar(int decimales, List<ReferenciasI> _Telemetrias)
         {
+            var _Telemetria = _Telemetrias.LastOrDefault();
+
             #region DatosOperativos
 
             OTomaInformacion.CTomaBasica DatosOperativos = _Telemetria.DatosOperativos;
@@ -181,9 +185,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoCavidadProgresiva
 
             #region Temporizador
 
-            //DatosOperativosSends.Text = $"{Languages.Pozo.Envio}: {_Telemetria.DatosOperativosSends}";
-            //DatosOperativosComplete.Text = $"{Languages.Pozo.EnvioCorrecto}: {_Telemetria.DatosOperativosComplete}";
-            //DatosOperativosFails.Text = $"{Languages.Pozo.EnvioIncorrecto}: {_Telemetria.DatosOperativosFails}";
+            //DatosOperativosSends.Text = $"{Languages.Pozo.Envio}: {_Telemetrias.Count()}";
+            //DatosOperativosComplete.Text = $"{Languages.Pozo.EnvioCorrecto}: {_Telemetrias.Where(val=>val.DatosOperativosFinish).Count(val=>val.CartaDinagraficaBool)}";
+            //DatosOperativosFails.Text = $"{Languages.Pozo.EnvioIncorrecto}: {_Telemetrias.Where(val=>val.DatosOperativosFinish).Count(val=>!val.DatosOperativosBool)}";
             //if (_Telemetria.Range.DatosOperativos.TotalSeconds != 0)
             //this.DatosOperativos.Text = $"{Languages.Pozo.ProxActualizacion}:\n{_Telemetria.DatosOperativosTime.AddSeconds(_Telemetria.Range.DatosOperativos.TotalSeconds).ToLocalTime():G}";
             //else

@@ -281,6 +281,7 @@
     <Compile Include="Pozos\PozoBombeoNeumatico\TomaInformacion.Designer.cs">
       <DependentUpon>TomaInformacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pozos\Tabla_Historico.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Administration\Abrir_Eliminar.resx">
@@ -368,7 +369,6 @@
     <EmbeddedResource Include="Properties\Resources.es.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="DPSOsTelemetria2_TemporaryKey.pfx" />

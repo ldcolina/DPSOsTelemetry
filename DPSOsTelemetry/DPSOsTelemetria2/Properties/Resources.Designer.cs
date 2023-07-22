@@ -491,7 +491,8 @@ namespace DPSOsTelemetria2.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a New presentation image.
+        ///   Busca una cadena traducida similar a Version 1.0.0.0
+        ///Well simulation interface creation.
         /// </summary>
         internal static string String1 {
             get {
@@ -500,7 +501,8 @@ namespace DPSOsTelemetria2.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Built-in menu: Help/Settings.
+        ///   Busca una cadena traducida similar a Version 1.0.1.0
+        ///Creation of Flowing type wells.
         /// </summary>
         internal static string String2 {
             get {
@@ -509,7 +511,8 @@ namespace DPSOsTelemetria2.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Program Usage Guide.
+        ///   Busca una cadena traducida similar a Version 1.0.1.5
+        ///Creation of Mechanical type wells.
         /// </summary>
         internal static string String3 {
             get {
@@ -518,11 +521,55 @@ namespace DPSOsTelemetria2.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Greater interactive fluidity between windows.
+        ///   Busca una cadena traducida similar a Version 1.0.1.8
+        ///Desktop app cloud-enabled updates.
         /// </summary>
         internal static string String4 {
             get {
                 return ResourceManager.GetString("String4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Version 1.0.2.0
+        ///Change of form presentation.
+        /// </summary>
+        internal static string String5 {
+            get {
+                return ResourceManager.GetString("String5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Version 1.0.3.0
+        ///Added Transmission Lists window.
+        /// </summary>
+        internal static string String6 {
+            get {
+                return ResourceManager.GetString("String6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Version 1.1.0.10
+        ///New presentation image
+        ///Built-in menu: Help/Settings
+        ///Program usage guide
+        ///Greater interactive fluidity between windows.
+        /// </summary>
+        internal static string String7 {
+            get {
+                return ResourceManager.GetString("String7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Version 1.2.0.0
+        ///Operational data transmission enabled.
+        /// </summary>
+        internal static string String8 {
+            get {
+                return ResourceManager.GetString("String8", resourceCulture);
             }
         }
         

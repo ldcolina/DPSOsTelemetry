@@ -37,7 +37,7 @@ namespace DPSOsTelemetria2
             }
 
             string datos = File.ReadAllText(configuracion);
-            var Configuracion = JsonConvert.SerializeObject(newConfiguracion);
+            string Configuracion = JsonConvert.SerializeObject(newConfiguracion);
 
             if (datos != Configuracion)
             {

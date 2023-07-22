@@ -14,3 +14,4 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Naming", "VSSpell001:Spell Check", Justification = "<pendiente>", Scope = "member", Target = "~P:Telemetria.ReferenciasI.CartaDinagraficaFails")]
 [assembly: SuppressMessage("Naming", "VSSpell001:Spell Check", Justification = "<pendiente>", Scope = "member", Target = "~P:Telemetria.ReferenciasI.CartaDinagraficaSends")]
 [assembly: SuppressMessage("Naming", "VSSpell001:Spell Check", Justification = "<pendiente>", Scope = "type", Target = "~T:Telemetria.TomaBasica")]
+[assembly: SuppressMessage("Naming", "VSSpell001:Spell Check", Justification = "<pendiente>", Scope = "member", Target = "~P:Telemetria.ReferenciasI.CartaDinagraficaPromedio")]
