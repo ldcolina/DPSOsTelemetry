@@ -25,17 +25,13 @@ namespace Telemetria
                         Method = Method.Post,
                     };
                     request.AddHeader("Content-Type", "application/json");
+                    client = new RestClient($"https://api-dpsos-dev.entecprois.com/api/PozoTomaInformacion/telemetria?token={referencias.Token}");
                     if (select)
                     {
-                        client = new RestClient($"https://api-dpsos-dev.entecprois.com/api/PozoTomaInformacion/telemetria?token={referencias.Token}");
                         request.AddJsonBody(referencias.DatosOperativos);
                     }
                     else
                     {
-                        return referencias;
-
-                        //client = new RestClient("https://api-dpsos-dev.entecprois.com/api/PozoTomaInformacion/carta-dinagrafica");
-
                         OCartaDinagrafica OCartaDinagrafica = new OCartaDinagrafica()
                         {
                             Fecha = DateTime.UtcNow,

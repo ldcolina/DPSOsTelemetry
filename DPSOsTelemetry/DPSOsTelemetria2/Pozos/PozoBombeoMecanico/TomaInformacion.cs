@@ -1304,6 +1304,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
                     ListCCartaDinagrafica[i].index = i;
 
                 object SelectDdl = CCartaDinagraficaList.SelectedItem;
+                CCartaDinagraficaList.DataSource=null;
                 CCartaDinagraficaList.DataSource = ListCCartaDinagrafica;
                 CCartaDinagraficaList.DisplayMember = "index";
                 if (ListCCartaDinagrafica.Count > 0)
@@ -1361,11 +1362,20 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
                 {
                     try
                     {
-                        var Carta1 = JsonConvert.DeserializeObject<List<oDinamometrica>>(datos);
-                        Carta.Add(Carta1);
+                        var Carta1 = JsonConvert.DeserializeObject<Root>(datos);
+                        Carta.Add(Carta1.oDinamometrica);
                     }
                     catch
-                    { }
+                    {
+                        try
+                        {
+                            var Carta1 = JsonConvert.DeserializeObject<List<oDinamometrica>>(datos);
+                            Carta.Add(Carta1);
+                        }
+                        catch
+                        {
+                        }
+                    }
                 }
 
                 Carta.ForEach(val =>
@@ -1562,6 +1572,11 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             public decimal Distancia { get; set; }
 
             public decimal Fuerza { get; set; }
+        }
+
+        public class Root
+        {
+            public List<oDinamometrica> oDinamometrica { get; set; }
         }
 
         #endregion Load carta
