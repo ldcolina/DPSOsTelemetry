@@ -38,7 +38,7 @@ namespace Telemetria
 
         #region OCartaDinagrafica
 
-        public OCartaDinagrafica.CCartaDinagrafica CartaDinagrafica { set; get; } = new OCartaDinagrafica.CCartaDinagrafica();
+        public OCartaDinagrafica.CTomaCarta DatosCarta { set; get; } = new OCartaDinagrafica.CTomaCarta();
 
         public DateTime CartaDinagraficaTime { get; set; }
 
@@ -448,7 +448,7 @@ namespace Telemetria
 
         public bool CCartaDinagrafica { get; set; } = false;
 
-        public List<OCartaDinagrafica.CCartaDinagrafica> ListCCartaDinagrafica { get; set; } = new List<OCartaDinagrafica.CCartaDinagrafica>();
+        public List<OCartaDinagrafica.CTomaCarta> ListCCartaDinagrafica { get; set; } = new List<OCartaDinagrafica.CTomaCarta>();
 
         #endregion OCartaDinagrafica
 

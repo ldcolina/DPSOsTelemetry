@@ -32,14 +32,7 @@ namespace Telemetria
                     }
                     else
                     {
-                        OCartaDinagrafica OCartaDinagrafica = new OCartaDinagrafica()
-                        {
-                            Fecha = DateTime.UtcNow,
-                            Token = referencias.Token,
-                            PozoId = referencias.Name,
-                            CartaDinagrafica = referencias.CartaDinagrafica
-                        };
-                        request.AddJsonBody(OCartaDinagrafica);
+                        request.AddJsonBody(referencias.DatosCarta);
                     }
 
                     RestResponse response = await client.ExecuteAsync(request);
@@ -64,5 +57,12 @@ namespace Telemetria
                 return referencias;
             });
         }
+    }
+
+    public class CResult
+    {
+        public bool Success { set; get; } = false;
+
+        public string Message { set; get; } = "N/D";
     }
 }

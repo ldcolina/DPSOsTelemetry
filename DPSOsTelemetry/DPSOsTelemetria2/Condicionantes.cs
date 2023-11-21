@@ -7,34 +7,8 @@ namespace DPSOsTelemetria2
     {
         public static string Wrote_Formating(string texto, int decimales = 0)
         {
-            string separadorDecimal = System.Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator;
-            string separadorMiles = separadorDecimal == "." ? "," : ".";
-
-            if (!string.IsNullOrEmpty(texto))
-            {
-                int indDecimal = texto.IndexOf(separadorDecimal);
-                int indMiles = texto.IndexOf(separadorMiles);
-
-                if ((indMiles != -1) && (indMiles > indDecimal))
-                {
-                    texto = texto.Remove(indMiles, 1);
-                    texto = texto.Insert(indMiles, separadorDecimal);
-
-                    if (indDecimal != -1)
-                        texto = texto.Remove(indDecimal, 1);
-                }
-            }
-            else
-                texto = "0";
-
-            if (decimales == 0)
-            {
-                string value = Convert.ToDouble(texto).ToString();
-                if (value.Contains(separadorDecimal))
-                    decimales = value.Substring(value.IndexOf(separadorDecimal) + 1).Length;
-            }
-
-            return Convert.ToDecimal(texto).ToString($"n{decimales}");
+            decimal number = decimal.Parse(texto);
+            return number.ToString($"f{decimales}");
         }
 
         public static void Wrote_KeyPress(object sender, KeyPressEventArgs e)

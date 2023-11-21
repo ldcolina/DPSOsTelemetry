@@ -1273,7 +1273,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
 
         private class lista
         {
-            public OCartaDinagrafica.CCartaDinagrafica Carta { get; set; }
+            public OCartaDinagrafica.CTomaCarta Carta { get; set; }
 
             public int index { get; set; }
         }
@@ -1287,7 +1287,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
 
         private void CCartaDinagraficaAgregar_Click(object sender, EventArgs e)
         {
-            List<OCartaDinagrafica.CCartaDinagrafica> newLista = SeleccionarArchivo();
+            List<List<OCartaDinagrafica.CartaSuperficie>> newLista = SeleccionarArchivo();
 
             if (newLista.Count > 0)
             {
@@ -1295,7 +1295,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
                 {
                     if (!ListCCartaDinagrafica.Exists(x => JsonConvert.SerializeObject(x.Carta) == JsonConvert.SerializeObject(val)))
                     {
-                        ListCCartaDinagrafica.Add(new lista() { Carta = val });
+                        ListCCartaDinagrafica.Add(new lista() { Carta = new OCartaDinagrafica.CTomaCarta() { CartaSuperficie = val } });
                     }
                 });
 
@@ -1329,79 +1329,47 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
 
         #region Load carta
 
-        public static List<OCartaDinagrafica.CCartaDinagrafica> LeerJson(string Archivo)
+        protected List<List<OCartaDinagrafica.CartaSuperficie>> SeleccionarArchivo()
         {
-            string datos = File.ReadAllText(Archivo);
-            List<OCartaDinagrafica.CCartaDinagrafica> CartaDinagrafica = new List<OCartaDinagrafica.CCartaDinagrafica>();
+            List<List<OCartaDinagrafica.CartaSuperficie>> cartas = new List<List<OCartaDinagrafica.CartaSuperficie>>();
 
-            if (datos.Contains("SurfaceCardLoad"))
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                try
+                OpenFileDialog file = openFileDialog1;
+
+                //Empezamos a manejar el archivo
+                string archivo = file.FileName;
+                string extencion = Path.GetExtension(archivo);
+
+                switch (extencion.ToLower())
                 {
-                    CartaDinagrafica = JsonConvert.DeserializeObject<List<OCartaDinagrafica.CCartaDinagrafica>>(datos);
-                }
-                catch
-                {
-                    try
-                    {
-                        OCartaDinagrafica.CCartaDinagrafica Carta2 = JsonConvert.DeserializeObject<OCartaDinagrafica.CCartaDinagrafica>(datos);
-                        CartaDinagrafica.Add(Carta2);
-                    }
-                    catch
-                    { }
+                    case ".xls":
+                    case ".xlsx":
+                        cartas = LeerExcel(archivo);
+                        if (cartas.Count <= 0)
+                            MessageBox.Show(Languages.Pozo.ErrorCarta.Replace("\\n", "\n"), Languages.Pozo.Aviso, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Warning);
+                        break;
+
+                    case ".json":
+                        cartas = LeerJson(archivo);
+                        if (cartas.Count <= 0)
+                            MessageBox.Show(Languages.Pozo.ErrorCarta.Replace("\\n", "\n"), Languages.Pozo.Aviso, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Warning);
+                        break;
+
+                    default:
+                        MessageBox.Show(General.FileError);
+                        break;
                 }
             }
-            else if (datos.Contains("Distancia"))
-            {
-                List<List<oDinamometrica>> Carta = new List<List<oDinamometrica>>();
-                try
-                {
-                    Carta = JsonConvert.DeserializeObject<List<List<oDinamometrica>>>(datos);
-                }
-                catch
-                {
-                    try
-                    {
-                        var Carta1 = JsonConvert.DeserializeObject<Root>(datos);
-                        Carta.Add(Carta1.oDinamometrica);
-                    }
-                    catch
-                    {
-                        try
-                        {
-                            var Carta1 = JsonConvert.DeserializeObject<List<oDinamometrica>>(datos);
-                            Carta.Add(Carta1);
-                        }
-                        catch
-                        {
-                        }
-                    }
-                }
 
-                Carta.ForEach(val =>
-                {
-                    OCartaDinagrafica.CCartaDinagrafica dinagrafica = new OCartaDinagrafica.CCartaDinagrafica();
-                    val.ForEach(x =>
-                    {
-                        dinagrafica.SurfaceCardLoad.Add(x.Fuerza);
-                        dinagrafica.SurfaceCardPosition.Add(x.Distancia);
-                    });
-
-                    if (!CartaDinagrafica.Exists(x => JsonConvert.SerializeObject(x) == JsonConvert.SerializeObject(dinagrafica)))
-                        CartaDinagrafica.Add(dinagrafica);
-                });
-            }
-
-            for (int i = CartaDinagrafica.Count - 1; i >= 0; i--)
-                if (CartaDinagrafica.FindAll(val => JsonConvert.SerializeObject(val) == JsonConvert.SerializeObject(CartaDinagrafica[i])).ToList().Count > 1)
-                    CartaDinagrafica.RemoveAt(i);
-
-            return CartaDinagrafica;
+            return cartas;
         }
 
-        protected static List<OCartaDinagrafica.CCartaDinagrafica> LeerExcel(string Archivo)
+        #region Excel
+
+        protected static List<List<OCartaDinagrafica.CartaSuperficie>> LeerExcel(string Archivo)
         {
-            List<List<oDinamometrica>> Carta = new List<List<oDinamometrica>>();
+            List<List<OCartaDinagrafica.CartaSuperficie>> CartaDinagrafica = new List<List<OCartaDinagrafica.CartaSuperficie>>();
 
             Excel.Application xlApp = new Excel.Application();
             Excel.Workbook xlWorkBook = xlApp.Workbooks.Open($"{Archivo}", 0, true, 5, "", "", true,
@@ -1456,7 +1424,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
 
                     if (Position >= 0 && Load >= 0 && Position != Load)
                     {
-                        List<oDinamometrica> Dinamometrica1 = new List<oDinamometrica>();
+                        List<OCartaDinagrafica.CartaSuperficie> cartaDinagrafica = new List<OCartaDinagrafica.CartaSuperficie>();
                         for (int j = k + 1; j <= rw; j++)
                         {
                             try
@@ -1464,19 +1432,19 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
                                 decimal val1 = (decimal)(range.Cells[j, Position] as Excel.Range).Value2;
                                 decimal val2 = (decimal)(range.Cells[j, Load] as Excel.Range).Value2;
 
-                                oDinamometrica dinamometrica = new oDinamometrica()
+                                OCartaDinagrafica.CartaSuperficie Fila = new OCartaDinagrafica.CartaSuperficie()
                                 {
                                     Distancia = val1,
                                     Fuerza = val2,
                                 };
-                                Dinamometrica1.Add(dinamometrica);
+                                cartaDinagrafica.Add(Fila);
                             }
                             catch
                             {
                             }
                         }
 
-                        Carta.Add(Dinamometrica1);
+                        CartaDinagrafica.Add(cartaDinagrafica);
                     }
                     i++;
                 }
@@ -1497,19 +1465,6 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
                 releaseObject(xlApp);
             }
 
-            List<OCartaDinagrafica.CCartaDinagrafica> CartaDinagrafica = new List<OCartaDinagrafica.CCartaDinagrafica>();
-            Carta.ForEach(val =>
-            {
-                OCartaDinagrafica.CCartaDinagrafica dinagrafica = new OCartaDinagrafica.CCartaDinagrafica();
-                val.ForEach(x =>
-                  {
-                      dinagrafica.SurfaceCardLoad.Add(x.Fuerza);
-                      dinagrafica.SurfaceCardPosition.Add(x.Distancia);
-                  });
-
-                if (!CartaDinagrafica.Exists(x => JsonConvert.SerializeObject(x) == JsonConvert.SerializeObject(dinagrafica)))
-                    CartaDinagrafica.Add(dinagrafica);
-            });
             return CartaDinagrafica;
         }
 
@@ -1531,53 +1486,117 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             }
         }
 
-        protected List<OCartaDinagrafica.CCartaDinagrafica> SeleccionarArchivo()
+        #endregion Excel
+
+        #region Json
+
+        protected static List<List<OCartaDinagrafica.CartaSuperficie>> LeerJson(string Archivo)
         {
-            List<OCartaDinagrafica.CCartaDinagrafica> cartas = new List<OCartaDinagrafica.CCartaDinagrafica>();
+            List<List<OCartaDinagrafica.CartaSuperficie>> CartaDinagrafica = new List<List<OCartaDinagrafica.CartaSuperficie>>();
+            string data = File.ReadAllText(Archivo);
 
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                OpenFileDialog file = openFileDialog1;
-
-                //Empezamos a manejar el archivo
-                string archivo = file.FileName;
-                string extencion = Path.GetExtension(archivo);
-
-                switch (extencion.ToLower())
+                try
                 {
-                    case ".xls":
-                    case ".xlsx":
-                        cartas = LeerExcel(archivo);
-                        if (cartas.Count <= 0)
-                            MessageBox.Show(Languages.Pozo.ErrorCarta.Replace("\\n", "\n"), Languages.Pozo.Aviso, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Warning);
-                        break;
+                    var t1 = JsonConvert.DeserializeObject<List<OCartaDinagrafica.CartaSuperficie>>(data);
+                    CartaDinagrafica.Add(t1);
+                }
+                catch
+                {
+                }
 
-                    case ".json":
-                        cartas = LeerJson(archivo);
-                        if (cartas.Count <= 0)
-                            MessageBox.Show(Languages.Pozo.ErrorCarta.Replace("\\n", "\n"), Languages.Pozo.Aviso, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Warning);
-                        break;
-
-                    default:
-                        MessageBox.Show(General.FileError);
-                        break;
+                try
+                {
+                    var t1 = JsonConvert.DeserializeObject<List<List<OCartaDinagrafica.CartaSuperficie>>>(data);
+                    CartaDinagrafica.AddRange(t1);
+                }
+                catch
+                {
                 }
             }
 
-            return cartas;
+            {
+                // Root1
+                try
+                {
+                    var t1 = JsonConvert.DeserializeObject<Root1>(data);
+                    CartaDinagrafica.Add(t1.oDinamometrica);
+                }
+                catch
+                {
+                }
+
+                try
+                {
+                    var t1 = JsonConvert.DeserializeObject<List<Root1>>(data);
+                    CartaDinagrafica.AddRange(t1.Select(val => val.oDinamometrica));
+                }
+                catch
+                {
+                }
+            }
+
+            {
+                // Root2
+                try
+                {
+                    var t1 = JsonConvert.DeserializeObject<Root2>(data);
+                    CartaDinagrafica.Add(t1.CartaSuperficie);
+                }
+                catch
+                {
+                }
+
+                try
+                {
+                    var t1 = JsonConvert.DeserializeObject<List<Root2>>(data);
+                    CartaDinagrafica.AddRange(t1.Select(val => val.CartaSuperficie));
+                }
+                catch
+                {
+                }
+            }
+
+            {
+                // Root3
+                try
+                {
+                    var t1 = JsonConvert.DeserializeObject<Root3>(data);
+                    CartaDinagrafica.Add(t1.CartaDinagrafica);
+                }
+                catch
+                {
+                }
+
+                try
+                {
+                    var t1 = JsonConvert.DeserializeObject<List<Root3>>(data);
+                    CartaDinagrafica.AddRange(t1.Select(val => val.CartaDinagrafica));
+                }
+                catch
+                {
+                }
+            }
+
+            return CartaDinagrafica;
         }
 
-        public class oDinamometrica
+        public class Root1
         {
-            public decimal Distancia { get; set; }
-
-            public decimal Fuerza { get; set; }
+            public List<OCartaDinagrafica.CartaSuperficie> oDinamometrica { get; set; }
         }
 
-        public class Root
+        public class Root2
         {
-            public List<oDinamometrica> oDinamometrica { get; set; }
+            public List<OCartaDinagrafica.CartaSuperficie> CartaSuperficie { get; set; }
         }
+
+        public class Root3
+        {
+            public List<OCartaDinagrafica.CartaSuperficie> CartaDinagrafica { get; set; }
+        }
+
+        #endregion Json
 
         #endregion Load carta
 
@@ -1620,23 +1639,23 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
 
         private void CCartaDinagraficaList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            OCartaDinagrafica.CCartaDinagrafica CCartaDinagrafica;
+            List<OCartaDinagrafica.CartaSuperficie> CCartaDinagrafica;
             try
             {
-                CCartaDinagrafica = ListCCartaDinagrafica[((lista)CCartaDinagraficaList.SelectedItem).index].Carta;
+                CCartaDinagrafica = ListCCartaDinagrafica[((lista)CCartaDinagraficaList.SelectedItem).index].Carta.CartaSuperficie;
             }
             catch
             {
-                CCartaDinagrafica = new OCartaDinagrafica.CCartaDinagrafica();
+                CCartaDinagrafica = new List<OCartaDinagrafica.CartaSuperficie>();
             }
             DataTable dt = new DataTable(Languages.Graphics.DinamometricaFondo);
             dt.Columns.Add("X", typeof(decimal));
             dt.Columns.Add("Y", typeof(decimal));
-            if (CCartaDinagrafica.SurfaceCardPosition.Count > 0)
+            if (CCartaDinagrafica.Count > 0)
             {
-                for (int i = 0; i < CCartaDinagrafica.SurfaceCardPosition.Count; i++)
-                    dt.Rows.Add(CCartaDinagrafica.SurfaceCardPosition[i], CCartaDinagrafica.SurfaceCardLoad[i]);
-                dt.Rows.Add(CCartaDinagrafica.SurfaceCardPosition[0], CCartaDinagrafica.SurfaceCardLoad[0]);
+                for (int i = 0; i < CCartaDinagrafica.Count; i++)
+                    dt.Rows.Add(CCartaDinagrafica[i].Distancia, CCartaDinagrafica[i].Fuerza);
+                dt.Rows.Add(CCartaDinagrafica[0].Distancia, CCartaDinagrafica[0].Fuerza);
             }
 
             Series Serie = new Series(dt.TableName, ViewType.ScatterLine)
@@ -1649,10 +1668,10 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             chart1.Series.Clear();
             chart1.Series.Add(Serie);
 
-            decimal MinX = CCartaDinagrafica.SurfaceCardPosition.Count > 0 ? CCartaDinagrafica.SurfaceCardPosition.Min(val => val) : 0;
-            decimal MaxX = CCartaDinagrafica.SurfaceCardPosition.Count > 0 ? CCartaDinagrafica.SurfaceCardPosition.Max(val => val) : 0;
-            decimal MinY = CCartaDinagrafica.SurfaceCardLoad.Count > 0 ? CCartaDinagrafica.SurfaceCardLoad.Min(val => val) : 0;
-            decimal MaxY = CCartaDinagrafica.SurfaceCardLoad.Count > 0 ? CCartaDinagrafica.SurfaceCardLoad.Max(val => val) : 0;
+            decimal MinX = CCartaDinagrafica.Count > 0 ? CCartaDinagrafica.Min(val => val.Distancia) : 0;
+            decimal MaxX = CCartaDinagrafica.Count > 0 ? CCartaDinagrafica.Max(val => val.Distancia) : 0;
+            decimal MinY = CCartaDinagrafica.Count > 0 ? CCartaDinagrafica.Min(val => val.Fuerza) : 0;
+            decimal MaxY = CCartaDinagrafica.Count > 0 ? CCartaDinagrafica.Max(val => val.Fuerza) : 0;
 
             decimal area = (MaxX - MinX) / 2;
             if (area == 0)

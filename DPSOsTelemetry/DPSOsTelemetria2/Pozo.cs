@@ -310,9 +310,9 @@ namespace DPSOsTelemetria2
             if ((_Telemetria.Range.CartaDinagrafica.TotalSeconds != 0) && (_Telemetria.CartaDinagraficaTime <= DateTime.UtcNow))
             {
                 _Telemetria.Sent.Add("CartaDinagrafica");
-                _Telemetria.CartaDinagrafica = CCartaDinagrafica();
+                _Telemetria.DatosCarta = DatosCarta();
                 _Telemetrias[i].Sent = _Telemetria.Sent.Copy();
-                _Telemetrias[i].CartaDinagrafica = _Telemetria.CartaDinagrafica.Copy();
+                _Telemetrias[i].DatosCarta = _Telemetria.DatosCarta.Copy();
             }
 
             _Telemetria = await Telemetria();
@@ -599,17 +599,17 @@ namespace DPSOsTelemetria2
             return DatosOperativos;
         }
 
-        public OCartaDinagrafica.CCartaDinagrafica CCartaDinagrafica()
+        public OCartaDinagrafica.CTomaCarta DatosCarta()
         {
-            OCartaDinagrafica.CCartaDinagrafica CCartaDinagrafica = new OCartaDinagrafica.CCartaDinagrafica();
+            OCartaDinagrafica.CTomaCarta DatosCarta = new OCartaDinagrafica.CTomaCarta();
 
             if (_Telemetria.Range.CCartaDinagrafica)
             {
                 int index = new Random().Next(0, _Telemetria.Range.ListCCartaDinagrafica.Count);
-                CCartaDinagrafica = _Telemetria.Range.ListCCartaDinagrafica[index];
+                DatosCarta.CartaSuperficie = _Telemetria.Range.ListCCartaDinagrafica[index].CartaSuperficie;
             }
 
-            return CCartaDinagrafica;
+            return DatosCarta;
         }
 
         internal async Task<ReferenciasI> Telemetria()
@@ -623,7 +623,7 @@ namespace DPSOsTelemetria2
                     _Telemetria.DatosOperativosPromedio = DateTime.UtcNow - lastTime;
                 }
 
-                if (JsonConvert.SerializeObject(_Telemetria.CartaDinagrafica) != JsonConvert.SerializeObject(new OCartaDinagrafica.CCartaDinagrafica()))
+                if (JsonConvert.SerializeObject(_Telemetria.DatosCarta) != JsonConvert.SerializeObject(new OCartaDinagrafica.CTomaCarta()))
                 {
                     DateTime lastTime = _Telemetria.CartaDinagraficaTime;
                     _Telemetria = await TelemetriaController.Post(_Telemetria, false);

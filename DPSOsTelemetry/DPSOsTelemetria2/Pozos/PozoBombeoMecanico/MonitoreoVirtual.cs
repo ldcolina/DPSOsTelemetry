@@ -198,15 +198,18 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
 
             tabPage2.Text = Languages.Pozo.CartaDinagrafica;
 
-            OCartaDinagrafica.CCartaDinagrafica CCartaDinagrafica = _Telemetria.CartaDinagrafica;
+            List<OCartaDinagrafica.CartaSuperficie> CCartaDinagrafica = new List<OCartaDinagrafica.CartaSuperficie>();
+            if (_Telemetria.DatosCarta.CartaSuperficie!=null)
+                CCartaDinagrafica= _Telemetria.DatosCarta.CartaSuperficie;
+
             DataTable dt = new DataTable(Languages.Graphics.DinamometricaFondo);
             dt.Columns.Add("X", typeof(decimal));
             dt.Columns.Add("Y", typeof(decimal));
-            if (CCartaDinagrafica.SurfaceCardPosition.Count > 0)
+            if (CCartaDinagrafica.Count > 0)
             {
-                for (int i = 0; i < CCartaDinagrafica.SurfaceCardPosition.Count; i++)
-                    dt.Rows.Add(CCartaDinagrafica.SurfaceCardPosition[i], CCartaDinagrafica.SurfaceCardLoad[i]);
-                dt.Rows.Add(CCartaDinagrafica.SurfaceCardPosition[0], CCartaDinagrafica.SurfaceCardLoad[0]);
+                for (int i = 0; i < CCartaDinagrafica.Count; i++)
+                    dt.Rows.Add(CCartaDinagrafica[i].Distancia, CCartaDinagrafica[i].Fuerza);
+                dt.Rows.Add(CCartaDinagrafica[0].Distancia, CCartaDinagrafica[0].Fuerza);
             }
 
             Series Serie = new Series(dt.TableName, ViewType.ScatterLine)
@@ -219,10 +222,10 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             chart1.Series.Clear();
             chart1.Series.Add(Serie);
 
-            decimal MinX = CCartaDinagrafica.SurfaceCardPosition.Count > 0 ? CCartaDinagrafica.SurfaceCardPosition.Min(val => val) : 0;
-            decimal MaxX = CCartaDinagrafica.SurfaceCardPosition.Count > 0 ? CCartaDinagrafica.SurfaceCardPosition.Max(val => val) : 0;
-            decimal MinY = CCartaDinagrafica.SurfaceCardLoad.Count > 0 ? CCartaDinagrafica.SurfaceCardLoad.Min(val => val) : 0;
-            decimal MaxY = CCartaDinagrafica.SurfaceCardLoad.Count > 0 ? CCartaDinagrafica.SurfaceCardLoad.Max(val => val) : 0;
+            decimal MinX = CCartaDinagrafica.Count > 0 ? CCartaDinagrafica.Min(val => val.Distancia) : 0;
+            decimal MaxX = CCartaDinagrafica.Count > 0 ? CCartaDinagrafica.Max(val => val.Distancia) : 0;
+            decimal MinY = CCartaDinagrafica.Count > 0 ? CCartaDinagrafica.Min(val => val.Fuerza) : 0;
+            decimal MaxY = CCartaDinagrafica.Count > 0 ? CCartaDinagrafica.Max(val => val.Fuerza) : 0;
 
             decimal area = (MaxX - MinX) / 2;
             if (area == 0)

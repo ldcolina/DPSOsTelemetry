@@ -5,13 +5,6 @@ namespace Telemetria
 {
     public class OTomaInformacion
     {
-        public class CResult
-        {
-            public bool Success { set; get; } = false;
-
-            public string Message { set; get; } = "N/D";
-        }
-
         public class CTomaInformacion
         {
             [JsonProperty("fecha")]
