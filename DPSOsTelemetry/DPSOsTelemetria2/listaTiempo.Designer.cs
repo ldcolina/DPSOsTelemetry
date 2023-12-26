@@ -98,6 +98,7 @@ namespace DPSOsTelemetria2
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "listaTiempo";
+            this.ShowInTaskbar = false;
             this.Text = "listaTiempo";
             this.Load += new System.EventHandler(this.listaTiempo_Load);
             this.Resize += new System.EventHandler(this.listaTiempo_Resize);

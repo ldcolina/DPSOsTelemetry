@@ -431,6 +431,7 @@ namespace DPSOsTelemetria2
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(770, 529);
             this.Name = "Config";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configuración";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Config_FormClosing);

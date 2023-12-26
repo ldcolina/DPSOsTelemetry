@@ -114,6 +114,7 @@ namespace DPSOsTelemetria2
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Pozo";
+            this.ShowInTaskbar = false;
             this.Text = "Pozo";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Pozo_FormClosing);
             this.Load += new System.EventHandler(this.Pozo_Load);

@@ -66,14 +66,14 @@ namespace DPSOsTelemetria2.Administration
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(582, 403);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(582, 322);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -93,19 +93,19 @@ namespace DPSOsTelemetria2.Administration
             this.tableLayoutPanel2.Controls.Add(this.ddlTipoPozo, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 3, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(27, 128);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(27, 102);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 8;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(528, 255);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(528, 204);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // lblName
@@ -115,7 +115,7 @@ namespace DPSOsTelemetria2.Administration
             this.lblName.Location = new System.Drawing.Point(0, 0);
             this.lblName.Margin = new System.Windows.Forms.Padding(0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(50, 37);
+            this.lblName.Size = new System.Drawing.Size(44, 30);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "label1";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -123,20 +123,20 @@ namespace DPSOsTelemetria2.Administration
             // txtName
             // 
             this.txtName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtName.Location = new System.Drawing.Point(54, 5);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtName.Location = new System.Drawing.Point(48, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(242, 27);
+            this.txtName.Size = new System.Drawing.Size(248, 22);
             this.txtName.TabIndex = 0;
             // 
             // lblToken
             // 
             this.lblToken.AutoSize = true;
             this.lblToken.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblToken.Location = new System.Drawing.Point(0, 62);
+            this.lblToken.Location = new System.Drawing.Point(0, 50);
             this.lblToken.Margin = new System.Windows.Forms.Padding(0);
             this.lblToken.Name = "lblToken";
-            this.lblToken.Size = new System.Drawing.Size(50, 35);
+            this.lblToken.Size = new System.Drawing.Size(44, 28);
             this.lblToken.TabIndex = 4;
             this.lblToken.Text = "label3";
             this.lblToken.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -144,20 +144,19 @@ namespace DPSOsTelemetria2.Administration
             // txtToken
             // 
             this.txtToken.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtToken.Location = new System.Drawing.Point(53, 66);
-            this.txtToken.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtToken.Location = new System.Drawing.Point(47, 53);
             this.txtToken.Name = "txtToken";
-            this.txtToken.Size = new System.Drawing.Size(244, 27);
+            this.txtToken.Size = new System.Drawing.Size(250, 22);
             this.txtToken.TabIndex = 1;
             // 
             // lblUnidades
             // 
             this.lblUnidades.AutoSize = true;
             this.lblUnidades.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblUnidades.Location = new System.Drawing.Point(0, 185);
+            this.lblUnidades.Location = new System.Drawing.Point(0, 150);
             this.lblUnidades.Margin = new System.Windows.Forms.Padding(0);
             this.lblUnidades.Name = "lblUnidades";
-            this.lblUnidades.Size = new System.Drawing.Size(50, 38);
+            this.lblUnidades.Size = new System.Drawing.Size(44, 32);
             this.lblUnidades.TabIndex = 6;
             this.lblUnidades.Text = "label4";
             this.lblUnidades.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -166,10 +165,10 @@ namespace DPSOsTelemetria2.Administration
             // 
             this.lblTipo.AutoSize = true;
             this.lblTipo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTipo.Location = new System.Drawing.Point(0, 122);
+            this.lblTipo.Location = new System.Drawing.Point(0, 98);
             this.lblTipo.Margin = new System.Windows.Forms.Padding(0);
             this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(50, 38);
+            this.lblTipo.Size = new System.Drawing.Size(44, 32);
             this.lblTipo.TabIndex = 12;
             this.lblTipo.Text = "label4";
             this.lblTipo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -180,10 +179,10 @@ namespace DPSOsTelemetria2.Administration
             this.ddlUnidades.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ddlUnidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ddlUnidades.FormattingEnabled = true;
-            this.ddlUnidades.Location = new System.Drawing.Point(54, 190);
-            this.ddlUnidades.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ddlUnidades.Location = new System.Drawing.Point(48, 154);
+            this.ddlUnidades.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ddlUnidades.Name = "ddlUnidades";
-            this.ddlUnidades.Size = new System.Drawing.Size(242, 28);
+            this.ddlUnidades.Size = new System.Drawing.Size(248, 24);
             this.ddlUnidades.TabIndex = 3;
             // 
             // ddlTipoPozo
@@ -192,21 +191,20 @@ namespace DPSOsTelemetria2.Administration
             this.ddlTipoPozo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ddlTipoPozo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ddlTipoPozo.FormattingEnabled = true;
-            this.ddlTipoPozo.Location = new System.Drawing.Point(54, 127);
-            this.ddlTipoPozo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ddlTipoPozo.Location = new System.Drawing.Point(48, 102);
+            this.ddlTipoPozo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ddlTipoPozo.Name = "ddlTipoPozo";
-            this.ddlTipoPozo.Size = new System.Drawing.Size(242, 28);
+            this.ddlTipoPozo.Size = new System.Drawing.Size(248, 24);
             this.ddlTipoPozo.TabIndex = 2;
             this.ddlTipoPozo.SelectedValueChanged += new System.EventHandler(this.ddlTipoPozo_SelectedValueChanged);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(323, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(323, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.tableLayoutPanel2.SetRowSpan(this.pictureBox1, 8);
-            this.pictureBox1.Size = new System.Drawing.Size(202, 247);
+            this.pictureBox1.Size = new System.Drawing.Size(202, 198);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
@@ -221,7 +219,7 @@ namespace DPSOsTelemetria2.Administration
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(582, 108);
+            this.panel1.Size = new System.Drawing.Size(582, 86);
             this.panel1.TabIndex = 1;
             // 
             // tableLayoutPanel3
@@ -239,13 +237,14 @@ namespace DPSOsTelemetria2.Administration
             this.tableLayoutPanel3.Controls.Add(this.pictureBox2, 4, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(582, 108);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(582, 86);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // label1
@@ -253,9 +252,9 @@ namespace DPSOsTelemetria2.Administration
             this.label1.AutoSize = true;
             this.tableLayoutPanel3.SetColumnSpan(this.label1, 2);
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(23, 20);
+            this.label1.Location = new System.Drawing.Point(23, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 20);
+            this.label1.Size = new System.Drawing.Size(64, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
@@ -263,9 +262,9 @@ namespace DPSOsTelemetria2.Administration
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(43, 40);
+            this.label2.Location = new System.Drawing.Point(43, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 48);
+            this.label2.Size = new System.Drawing.Size(44, 38);
             this.label2.TabIndex = 1;
             this.label2.Text = "label2";
             // 
@@ -273,23 +272,25 @@ namespace DPSOsTelemetria2.Administration
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = global::DPSOsTelemetria2.Properties.Resources.oil_platform;
-            this.pictureBox2.Location = new System.Drawing.Point(497, 23);
+            this.pictureBox2.Location = new System.Drawing.Point(497, 18);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.tableLayoutPanel3.SetRowSpan(this.pictureBox2, 2);
-            this.pictureBox2.Size = new System.Drawing.Size(62, 62);
+            this.pictureBox2.Size = new System.Drawing.Size(62, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
             // Administracion_Pozo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 403);
+            this.ClientSize = new System.Drawing.Size(582, 322);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Administracion_Pozo";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Administracion_Pozo_FormClosing);
             this.Load += new System.EventHandler(this.Administracion_Pozo_Load);

@@ -174,6 +174,7 @@ namespace DPSOsTelemetria2.Configuraciones
             this.MinimizeBox = false;
             this.Name = "Novedades";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Novedades";
             this.Load += new System.EventHandler(this.Novedades_Load);

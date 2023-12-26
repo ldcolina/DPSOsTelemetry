@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-using RestSharp;
-using System;
+﻿using RestSharp;
 using System.Threading.Tasks;
 
 namespace Telemetria
