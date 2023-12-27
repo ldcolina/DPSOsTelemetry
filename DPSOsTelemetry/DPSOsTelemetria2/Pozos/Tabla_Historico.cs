@@ -1,13 +1,10 @@
-﻿using System;
+﻿using DevExpress.Utils.Extensions;
+using Languages;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Telemetria;
-using Languages;
 using System.Windows.Forms;
-using DevExpress.Utils.Extensions;
+using Telemetria;
 
 namespace DPSOsTelemetria2.Pozos
 {

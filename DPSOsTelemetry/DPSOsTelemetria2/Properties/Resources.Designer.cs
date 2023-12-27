@@ -574,6 +574,15 @@ namespace DPSOsTelemetria2.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a .
+        /// </summary>
+        internal static string String9 {
+            get {
+                return ResourceManager.GetString("String9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap tecnologia {

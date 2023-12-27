@@ -1,5 +1,4 @@
-﻿using DPSOsTelemetria2.Pozos;
-using DPSOsTelemetria2.Properties;
+﻿using DPSOsTelemetria2.Properties;
 using Languages;
 using Newtonsoft.Json;
 using System;

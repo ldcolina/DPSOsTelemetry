@@ -3,7 +3,6 @@ using System;
 using System.Linq;
 using System.Windows.Forms;
 using Telemetria;
-using static Telemetria.OCartaDinagrafica;
 
 namespace DPSOsTelemetria2.Pozos.PozoBombeoFluyente
 {
