@@ -117,7 +117,6 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.CCartaDinagraficaList = new System.Windows.Forms.ComboBox();
             this.CCartaDinagraficaAgregar = new System.Windows.Forms.Button();
             this.CCartaDinagraficaEliminar = new System.Windows.Forms.Button();
-            this.chart1 = new DevExpress.XtraCharts.ChartControl();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -132,7 +131,6 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -1062,7 +1060,6 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tableLayoutPanel7.Controls.Add(this.CCartaDinagraficaList, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.CCartaDinagraficaAgregar, 0, 3);
             this.tableLayoutPanel7.Controls.Add(this.CCartaDinagraficaEliminar, 0, 4);
-            this.tableLayoutPanel7.Controls.Add(this.chart1, 2, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
@@ -1123,17 +1120,6 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.CCartaDinagraficaEliminar.UseVisualStyleBackColor = true;
             this.CCartaDinagraficaEliminar.Click += new System.EventHandler(this.CCartaDinagraficaEliminar_Click);
             // 
-            // chart1
-            // 
-            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chart1.Legend.Name = "Default Legend";
-            this.chart1.Location = new System.Drawing.Point(216, 3);
-            this.chart1.Name = "chart1";
-            this.tableLayoutPanel7.SetRowSpan(this.chart1, 6);
-            this.chart1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chart1.Size = new System.Drawing.Size(375, 482);
-            this.chart1.TabIndex = 4;
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -1164,7 +1150,6 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             this.tableLayoutPanel6.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1259,6 +1244,5 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
         private ComboBox CCartaDinagraficaList;
         private Button CCartaDinagraficaAgregar;
         private Button CCartaDinagraficaEliminar;
-        internal DevExpress.XtraCharts.ChartControl chart1;
     }
 }

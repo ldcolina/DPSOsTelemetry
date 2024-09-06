@@ -1079,7 +1079,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
                         Range.DiametroOrificio = false;
                         Range.AjusteValvula = false;
                         Range.GravedadEspecificaGasInyeccion = false;
-                  
+
                         #region PresionDisponible
 
                         Range.PresionDisponible = PresionDisponible1.Checked;

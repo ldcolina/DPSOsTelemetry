@@ -1,6 +1,4 @@
-﻿using DevExpress.Utils;
-using DevExpress.XtraCharts;
-using Languages;
+﻿using Languages;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
@@ -16,7 +14,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
 
         {
             InitializeComponent();
-            chart1.Legend.Visibility = DefaultBoolean.False;
+            //chart1.Legend.Visibility = DefaultBoolean.False;
         }
 
         internal void Recargar(int decimales, List<ReferenciasI> _Telemetrias)
@@ -185,10 +183,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             DatosOperativosSends.Text = $"{Languages.Pozo.Envio}: {_Telemetrias.Where(val => val.Sent.Contains("DatosOperativos")).Count()}";
             DatosOperativosComplete.Text = $"{Languages.Pozo.EnvioCorrecto}: {_Telemetrias.Where(val => val.Sent.Contains("DatosOperativos") && val.DatosOperativosFinish && val.DatosOperativosBool).Count()}";
             DatosOperativosFails.Text = $"{Languages.Pozo.EnvioIncorrecto}: {_Telemetrias.Where(val => val.Sent.Contains("DatosOperativos") && val.DatosOperativosFinish && !val.DatosOperativosBool).Count()}";
-            if (_Telemetria.Range.DatosOperativos.TotalSeconds != 0)
-                this.DatosOperativos.Text = $"{Languages.Pozo.ProxActualizacion}:\n{_Telemetria.DatosOperativosTime.AddSeconds(_Telemetria.Range.DatosOperativos.TotalSeconds).ToLocalTime():G}";
-            else
-                this.DatosOperativos.Text = $"{Languages.Pozo.ProxActualizacion}:\n-";
+            this.DatosOperativos.Text =_Telemetria.Range.DatosOperativos.TotalSeconds != 0
+                ? $"{Languages.Pozo.ProxActualizacion}:\n{_Telemetria.DatosOperativosTime.AddSeconds(_Telemetria.Range.DatosOperativos.TotalSeconds).ToLocalTime():G}"
+                : $"{Languages.Pozo.ProxActualizacion}:\n-";
 
             #endregion Temporizador
 
@@ -212,15 +209,15 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
                 dt.Rows.Add(CCartaDinagrafica[0].Distancia, CCartaDinagrafica[0].Fuerza);
             }
 
-            Series Serie = new Series(dt.TableName, ViewType.ScatterLine)
-            {
-                DataSource = dt,
-                ArgumentDataMember = "X",
-            };
-            Serie.ValueDataMembers.AddRange("Y");
+            //Series Serie = new Series(dt.TableName, ViewType.ScatterLine)
+            //{
+            //    DataSource = dt,
+            //    ArgumentDataMember = "X",
+            //};
+            //Serie.ValueDataMembers.AddRange("Y");
 
-            chart1.Series.Clear();
-            chart1.Series.Add(Serie);
+            //chart1.Series.Clear();
+            //chart1.Series.Add(Serie);
 
             decimal MinX = CCartaDinagrafica.Count > 0 ? CCartaDinagrafica.Min(val => val.Distancia) : 0;
             decimal MaxX = CCartaDinagrafica.Count > 0 ? CCartaDinagrafica.Max(val => val.Distancia) : 0;
@@ -239,35 +236,34 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             MinY -= area * 1 / 16;
             MaxY += area * 1 / 16;
 
-            chart1.Legend.Visibility = DefaultBoolean.False;
+            //chart1.Legend.Visibility = DefaultBoolean.False;
 
-            XYDiagram diagram = (XYDiagram)chart1.Diagram;
-            diagram.AxisX.WholeRange.SideMarginsValue = 0;
-            diagram.AxisY.WholeRange.SideMarginsValue = 0;
-            diagram.AxisX.WholeRange.SetMinMaxValues(MinX, MaxX);
-            diagram.AxisY.WholeRange.SetMinMaxValues(MinY, MaxY);
+            //XYDiagram diagram = (XYDiagram)chart1.Diagram;
+            //diagram.AxisX.WholeRange.SideMarginsValue = 0;
+            //diagram.AxisY.WholeRange.SideMarginsValue = 0;
+            //diagram.AxisX.WholeRange.SetMinMaxValues(MinX, MaxX);
+            //diagram.AxisY.WholeRange.SetMinMaxValues(MinY, MaxY);
 
-            // Customize the appearance of the Desplazamiento (ft).
-            diagram.AxisX.Title.Text = $"{Languages.Graphics.Axis_Desplazamiento} ({Configuracion.GetSigla(Referencia.Longitud_Carta, _Telemetria.Unidades)})";
-            diagram.AxisX.Title.Visibility = DefaultBoolean.True;
-            diagram.AxisX.Title.Alignment = StringAlignment.Center;
-            diagram.AxisX.Title.EnableAntialiasing = DefaultBoolean.True;
+            //// Customize the appearance of the Desplazamiento (ft).
+            //diagram.AxisX.Title.Text = $"{Languages.Graphics.Axis_Desplazamiento} ({Configuracion.GetSigla(Referencia.Longitud_Carta, _Telemetria.Unidades)})";
+            //diagram.AxisX.Title.Visibility = DefaultBoolean.True;
+            //diagram.AxisX.Title.Alignment = StringAlignment.Center;
+            //diagram.AxisX.Title.EnableAntialiasing = DefaultBoolean.True;
 
-            // Customize the appearance of the Carga (klbf).
-            diagram.AxisY.Title.Text = $"{Languages.Graphics.Axis_Carga} ({Configuracion.GetSigla(Referencia.Fuerza, _Telemetria.Unidades)})";
-            diagram.AxisY.Title.Visibility = DefaultBoolean.True;
-            diagram.AxisY.Title.Alignment = StringAlignment.Center;
-            diagram.AxisY.Title.EnableAntialiasing = DefaultBoolean.True;
+            //// Customize the appearance of the Carga (klbf).
+            //diagram.AxisY.Title.Text = $"{Languages.Graphics.Axis_Carga} ({Configuracion.GetSigla(Referencia.Fuerza, _Telemetria.Unidades)})";
+            //diagram.AxisY.Title.Visibility = DefaultBoolean.True;
+            //diagram.AxisY.Title.Alignment = StringAlignment.Center;
+            //diagram.AxisY.Title.EnableAntialiasing = DefaultBoolean.True;
 
             #region Temporizador
 
             CartaDinagraficaSends.Text = $"{Languages.Pozo.Envio}: {_Telemetrias.Where(val => val.Sent.Contains("CartaDinagrafica")).Count()}";
             CartaDinagraficaComplete.Text = $"{Languages.Pozo.EnvioCorrecto}: {_Telemetrias.Where(val => val.Sent.Contains("CartaDinagrafica") && val.CartaDinagraficaFinish && val.CartaDinagraficaBool).Count()}";
             CartaDinagraficaFails.Text = $"{Languages.Pozo.EnvioIncorrecto}: {_Telemetrias.Where(val => val.Sent.Contains("CartaDinagrafica") && val.CartaDinagraficaFinish && !val.CartaDinagraficaBool).Count()}";
-            if (_Telemetria.Range.CartaDinagrafica.TotalSeconds != 0)
-                this.CartaDinagrafica.Text = $"{Languages.Pozo.ProxActualizacion}:\n{_Telemetria.CartaDinagraficaTime.AddSeconds(_Telemetria.Range.CartaDinagrafica.TotalSeconds).ToLocalTime():G}";
-            else
-                this.CartaDinagrafica.Text = $"{Languages.Pozo.ProxActualizacion}:\n-";
+            this.CartaDinagrafica.Text =_Telemetria.Range.CartaDinagrafica.TotalSeconds != 0
+                ? $"{Languages.Pozo.ProxActualizacion}:\n{_Telemetria.CartaDinagraficaTime.AddSeconds(_Telemetria.Range.CartaDinagrafica.TotalSeconds).ToLocalTime():G}"
+                : $"{Languages.Pozo.ProxActualizacion}:\n-";
 
             #endregion Temporizador
 

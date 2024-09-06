@@ -1,5 +1,4 @@
-﻿using DevExpress.Utils.Extensions;
-using Languages;
+﻿using Languages;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -20,7 +19,7 @@ namespace DPSOsTelemetria2.Pozos
         public static DataGridView Table(this DataGridView dt, int decimales, List<ReferenciasI> tablaHistorico)
         {
             List<_tabla> tabla = new List<_tabla>();
-            tablaHistorico.OrderByDescending(val => val.DatosOperativosTime).ForEach(val =>
+            tablaHistorico.OrderByDescending(val => val.DatosOperativosTime).ToList().ForEach(val =>
             {
                 _tabla tabla1 = val.DatosOperativos.Copy<OTomaInformacion.CTomaBasica, _tabla>();
                 if (val.DatosOperativosFinish)

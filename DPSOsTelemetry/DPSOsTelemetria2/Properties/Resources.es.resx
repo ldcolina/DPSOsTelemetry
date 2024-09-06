@@ -157,4 +157,25 @@ Actualizaciones habilitadas desde la nube de la aplicación de escritorio</value
 Cambio de versión de DevExpress
 Ajustes de textos</value>
   </data>
+  <data name="String10" xml:space="preserve">
+    <value>Versión 2.0.0.0
+Cambio de versión de DevExpress
+Ajustes de texto</value>
+  </data>
+  <data name="String11" xml:space="preserve">
+    <value>Versión 2.0.1.0
+Implementado cambios para BM</value>
+  </data>
+  <data name="String12" xml:space="preserve">
+    <value>Versión 2.0.1.0
+Implementado envíos de datos para BN</value>
+  </data>
+  <data name="String13" xml:space="preserve">
+    <value>Versión 2.0.1.0
+Implementado nuevos campos para BN</value>
+  </data>
+  <data name="String14" xml:space="preserve">
+    <value>Versión 2.0.2.7
+Eliminado DexExpress por problemas de instalaciones</value>
+  </data>
 </root>

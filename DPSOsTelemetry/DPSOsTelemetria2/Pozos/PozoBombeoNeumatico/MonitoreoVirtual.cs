@@ -245,10 +245,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
             DatosOperativosSends.Text = $"{Languages.Pozo.Envio}: {_Telemetrias.Count()}";
             DatosOperativosComplete.Text = $"{Languages.Pozo.EnvioCorrecto}: {_Telemetrias.Where(val => val.DatosOperativosFinish).Count(val => val.CartaDinagraficaBool)}";
             DatosOperativosFails.Text = $"{Languages.Pozo.EnvioIncorrecto}: {_Telemetrias.Where(val => val.DatosOperativosFinish).Count(val => !val.DatosOperativosBool)}";
-            if (_Telemetria.Range.DatosOperativos.TotalSeconds != 0)
-                this.DatosOperativos.Text = $"{Languages.Pozo.ProxActualizacion}:\n{_Telemetria.DatosOperativosTime.AddSeconds(_Telemetria.Range.DatosOperativos.TotalSeconds).ToLocalTime():G}";
-            else
-                this.DatosOperativos.Text = $"{Languages.Pozo.ProxActualizacion}:\n-";
+            this.DatosOperativos.Text =_Telemetria.Range.DatosOperativos.TotalSeconds != 0
+                ? $"{Languages.Pozo.ProxActualizacion}:\n{_Telemetria.DatosOperativosTime.AddSeconds(_Telemetria.Range.DatosOperativos.TotalSeconds).ToLocalTime():G}"
+                : $"{Languages.Pozo.ProxActualizacion}:\n-";
 
             #endregion Temporizador
 

@@ -1,6 +1,4 @@
-﻿using DevExpress.Utils;
-using DevExpress.XtraCharts;
-using Languages;
+﻿using Languages;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -286,10 +284,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
                 if (SelectDdl != null)
                 {
                     int index = ((lista)SelectDdl).index;
-                    if (0 <= index && index <= ListCCartaDinagrafica.Max(val => val.index))
-                        CCartaDinagraficaList.SelectedItem = ListCCartaDinagrafica[index];
-                    else
-                        CCartaDinagraficaList.SelectedItem = ListCCartaDinagrafica.Last();
+                    CCartaDinagraficaList.SelectedItem =0 <= index && index <= ListCCartaDinagrafica.Max(val => val.index)
+                        ? ListCCartaDinagrafica[index]
+                        : (object)ListCCartaDinagrafica.Last();
                 }
                 else
                     CCartaDinagraficaList.SelectedItem = ListCCartaDinagrafica.First();
@@ -1312,10 +1309,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
                     if (SelectDdl != null)
                     {
                         int index = ((lista)SelectDdl).index;
-                        if (0 <= index && index <= ListCCartaDinagrafica.Max(val => val.index))
-                            CCartaDinagraficaList.SelectedItem = ListCCartaDinagrafica[index];
-                        else
-                            CCartaDinagraficaList.SelectedItem = ListCCartaDinagrafica.Last();
+                        CCartaDinagraficaList.SelectedItem =0 <= index && index <= ListCCartaDinagrafica.Max(val => val.index)
+                            ? ListCCartaDinagrafica[index]
+                            : (object)ListCCartaDinagrafica.Last();
                     }
                     else
                         CCartaDinagraficaList.SelectedItem = ListCCartaDinagrafica.First();
@@ -1619,10 +1615,9 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
                     if (SelectDdl != null)
                     {
                         int index = ((lista)SelectDdl).index;
-                        if (0 <= index && index <= ListCCartaDinagrafica.Max(val => val.index))
-                            CCartaDinagraficaList.SelectedItem = ListCCartaDinagrafica[index];
-                        else
-                            CCartaDinagraficaList.SelectedItem = ListCCartaDinagrafica.Last();
+                        CCartaDinagraficaList.SelectedItem =0 <= index && index <= ListCCartaDinagrafica.Max(val => val.index)
+                            ? ListCCartaDinagrafica[index]
+                            : (object)ListCCartaDinagrafica.Last();
                     }
                     else
                         CCartaDinagraficaList.SelectedItem = ListCCartaDinagrafica.First();
@@ -1658,15 +1653,15 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
                 dt.Rows.Add(CCartaDinagrafica[0].Distancia, CCartaDinagrafica[0].Fuerza);
             }
 
-            Series Serie = new Series(dt.TableName, ViewType.ScatterLine)
-            {
-                DataSource = dt,
-                ArgumentDataMember = "X",
-            };
-            Serie.ValueDataMembers.AddRange("Y");
+            //Series Serie = new Series(dt.TableName, ViewType.ScatterLine)
+            //{
+            //    DataSource = dt,
+            //    ArgumentDataMember = "X",
+            //};
+            //Serie.ValueDataMembers.AddRange("Y");
 
-            chart1.Series.Clear();
-            chart1.Series.Add(Serie);
+            //chart1.Series.Clear();
+            //chart1.Series.Add(Serie);
 
             decimal MinX = CCartaDinagrafica.Count > 0 ? CCartaDinagrafica.Min(val => val.Distancia) : 0;
             decimal MaxX = CCartaDinagrafica.Count > 0 ? CCartaDinagrafica.Max(val => val.Distancia) : 0;
@@ -1685,25 +1680,25 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             MinY -= area * 1 / 16;
             MaxY += area * 1 / 16;
 
-            chart1.Legend.Visibility = DefaultBoolean.False;
+            //chart1.Legend.Visibility = DefaultBoolean.False;
 
-            XYDiagram diagram = (XYDiagram)chart1.Diagram;
-            diagram.AxisX.WholeRange.SideMarginsValue = 0;
-            diagram.AxisY.WholeRange.SideMarginsValue = 0;
-            diagram.AxisX.WholeRange.SetMinMaxValues(MinX, MaxX);
-            diagram.AxisY.WholeRange.SetMinMaxValues(MinY, MaxY);
+            //XYDiagram diagram = (XYDiagram)chart1.Diagram;
+            //diagram.AxisX.WholeRange.SideMarginsValue = 0;
+            //diagram.AxisY.WholeRange.SideMarginsValue = 0;
+            //diagram.AxisX.WholeRange.SetMinMaxValues(MinX, MaxX);
+            //diagram.AxisY.WholeRange.SetMinMaxValues(MinY, MaxY);
 
-            // Customize the appearance of the Desplazamiento (ft).
-            diagram.AxisX.Title.Text = $"{Languages.Graphics.Axis_Desplazamiento} ({Configuracion.GetSigla(Referencia.Longitud_Carta, Referencias.Unidades)})";
-            diagram.AxisX.Title.Visibility = DefaultBoolean.True;
-            diagram.AxisX.Title.Alignment = StringAlignment.Center;
-            diagram.AxisX.Title.EnableAntialiasing = DefaultBoolean.True;
+            //// Customize the appearance of the Desplazamiento (ft).
+            //diagram.AxisX.Title.Text = $"{Languages.Graphics.Axis_Desplazamiento} ({Configuracion.GetSigla(Referencia.Longitud_Carta, Referencias.Unidades)})";
+            //diagram.AxisX.Title.Visibility = DefaultBoolean.True;
+            //diagram.AxisX.Title.Alignment = StringAlignment.Center;
+            //diagram.AxisX.Title.EnableAntialiasing = DefaultBoolean.True;
 
-            // Customize the appearance of the Carga (klbf).
-            diagram.AxisY.Title.Text = $"{Languages.Graphics.Axis_Carga} ({Configuracion.GetSigla(Referencia.Fuerza, Referencias.Unidades)})";
-            diagram.AxisY.Title.Visibility = DefaultBoolean.True;
-            diagram.AxisY.Title.Alignment = StringAlignment.Center;
-            diagram.AxisY.Title.EnableAntialiasing = DefaultBoolean.True;
+            //// Customize the appearance of the Carga (klbf).
+            //diagram.AxisY.Title.Text = $"{Languages.Graphics.Axis_Carga} ({Configuracion.GetSigla(Referencia.Fuerza, Referencias.Unidades)})";
+            //diagram.AxisY.Title.Visibility = DefaultBoolean.True;
+            //diagram.AxisY.Title.Alignment = StringAlignment.Center;
+            //diagram.AxisY.Title.EnableAntialiasing = DefaultBoolean.True;
         }
 
         #endregion CCartaDinagrafica

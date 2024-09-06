@@ -1,4 +1,7 @@
-﻿using RestSharp;
+﻿using Newtonsoft.Json;
+using System;
+using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Telemetria
@@ -17,34 +20,40 @@ namespace Telemetria
             {
                 try
                 {
-                    RestClient client = new RestClient();
-                    RestRequest request = new RestRequest()
+                    using (HttpClient client = new HttpClient())
                     {
-                        Method = Method.Post,
-                    };
-                    request.AddHeader("Content-Type", "application/json");
-                    client = new RestClient($"https://api-dpsos-dev.entecprois.com/api/PozoTomaInformacion/telemetria?token={referencias.Token}");
-                    if (select)
-                    {
-                        request.AddJsonBody(referencias.DatosOperativos);
+                        // Definir la URL del servicio con el token
+                        var url = $"https://api-dpsos-dev.entecprois.com/api/PozoTomaInformacion/telemetria?token={referencias.Token}";
+
+                        // Seleccionar el cuerpo JSON según la condición y convertir el objeto a JSON
+                        string jsonBody = select ? JsonConvert.SerializeObject(referencias.DatosOperativos) : JsonConvert.SerializeObject(referencias.DatosCarta);
+
+                        // Crear el contenido de la solicitud
+                        var content = new StringContent(jsonBody, Encoding.UTF8, "application/json");
+
+                        // Hacer la solicitud POST
+                        HttpResponseMessage response = await client.PostAsync(url, content);
+
+                        // Verificar si la respuesta fue exitosa
+                        if (response.IsSuccessStatusCode)
+                        {
+                            // Leer el contenido de la respuesta
+                            string responseContent = await response.Content.ReadAsStringAsync();
+
+                            bool success;
+                            bool.TryParse(responseContent, out success);
+
+                            if (select)
+                                referencias.DatosOperativosBool = success;
+                            else
+                                referencias.CartaDinagraficaBool = success;
+                        }
                     }
-                    else
-                    {
-                        request.AddJsonBody(referencias.DatosCarta);
-                    }
-
-                    RestResponse response = await client.ExecuteAsync(request);
-
-                    bool Success;
-                    bool.TryParse(response.Content, out Success);
-
-                    if (select)
-                        referencias.DatosOperativosBool = Success;
-                    else
-                        referencias.CartaDinagraficaBool = Success;
                 }
-                catch
+                catch (Exception ex)
                 {
+                    // Manejo de errores opcional
+                    Console.WriteLine("Error en la solicitud: " + ex.Message);
                 }
 
                 if (select)
@@ -59,8 +68,8 @@ namespace Telemetria
 
     public class CResult
     {
-        public bool Success { set; get; } = false;
+        public bool Success { get; set; } = false;
 
-        public string Message { set; get; } = "N/D";
+        public string Message { get; set; } = "N/D";
     }
 }

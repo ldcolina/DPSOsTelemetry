@@ -501,6 +501,56 @@ namespace DPSOsTelemetria2.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Version 2.0.0.0
+        ///DevExpress version change
+        ///Text settings.
+        /// </summary>
+        internal static string String10 {
+            get {
+                return ResourceManager.GetString("String10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Version 2.0.1.0
+        ///Implemented changes for BM.
+        /// </summary>
+        internal static string String11 {
+            get {
+                return ResourceManager.GetString("String11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Version 2.0.1.0
+        ///Implemented data sends for BN.
+        /// </summary>
+        internal static string String12 {
+            get {
+                return ResourceManager.GetString("String12", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Version 2.0.1.0
+        ///Implemented new fields for BN.
+        /// </summary>
+        internal static string String13 {
+            get {
+                return ResourceManager.GetString("String13", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Version 2.0.2.7DexExpress removed due to installation issues.
+        /// </summary>
+        internal static string String14 {
+            get {
+                return ResourceManager.GetString("String14", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Version 1.0.1.0
         ///Creation of Flowing type wells.
         /// </summary>

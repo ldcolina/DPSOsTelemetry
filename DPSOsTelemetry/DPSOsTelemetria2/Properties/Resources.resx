@@ -317,4 +317,25 @@ Desktop app cloud-enabled updates</value>
 Devexpress version change
 Text settings</value>
   </data>
+  <data name="String10" xml:space="preserve">
+    <value>Version 2.0.0.0
+DevExpress version change
+Text settings</value>
+  </data>
+  <data name="String11" xml:space="preserve">
+    <value>Version 2.0.1.0
+Implemented changes for BM</value>
+  </data>
+  <data name="String12" xml:space="preserve">
+    <value>Version 2.0.1.0
+Implemented data sends for BN</value>
+  </data>
+  <data name="String13" xml:space="preserve">
+    <value>Version 2.0.1.0
+Implemented new fields for BN</value>
+  </data>
+  <data name="String14" xml:space="preserve">
+    <value>Version 2.0.2.7
+DexExpress removed due to installation issues</value>
+  </data>
 </root>
