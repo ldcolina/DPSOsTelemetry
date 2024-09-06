@@ -346,4 +346,8 @@ Created application signature</value>
     <value>Version 2.0.2.9
 Firmware update</value>
   </data>
+  <data name="String17" xml:space="preserve">
+    <value>Version 2.0.2.10
+Firmware update to 4.8</value>
+  </data>
 </root>
