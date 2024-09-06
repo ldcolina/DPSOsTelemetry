@@ -592,6 +592,16 @@ namespace DPSOsTelemetria.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Version 2.0.2.12
+        ///Updating BN Information Fields.
+        /// </summary>
+        internal static string String19 {
+            get {
+                return ResourceManager.GetString("String19", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Version 1.0.1.0
         ///Creation of Flowing type wells.
         /// </summary>

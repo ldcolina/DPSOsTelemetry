@@ -194,4 +194,8 @@ Actualización de firmware a 4.8</value>
     <value>Versión 2.0.2.11
 Habilitado ingreso de decimales en carga de datos</value>
   </data>
+  <data name="String19" xml:space="preserve">
+    <value>Version 2.0.2.12
+Actualización de campos de informacion de BN</value>
+  </data>
 </root>

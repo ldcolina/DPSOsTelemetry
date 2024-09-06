@@ -354,4 +354,8 @@ Firmware update to 4.8</value>
     <value>Version 2.0.2.11
 Enabled decimal entry in data upload</value>
   </data>
+  <data name="String19" xml:space="preserve">
+    <value>Version 2.0.2.12
+Updating BN Information Fields</value>
+  </data>
 </root>
