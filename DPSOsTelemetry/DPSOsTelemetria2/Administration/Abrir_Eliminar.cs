@@ -9,7 +9,7 @@ using System.Resources;
 using System.Windows.Forms;
 using Telemetria;
 
-namespace DPSOsTelemetria2.Administration
+namespace DPSOsTelemetria.Administration
 {
     public partial class Abrir_Eliminar : Form
     {
@@ -112,7 +112,7 @@ namespace DPSOsTelemetria2.Administration
 
         private void Abrir_Eliminar_Load(object sender, EventArgs e)
         {
-            Text = DPSOsTelemetria.Abrir_Eliminar;
+            Text = Languages.DPSOsTelemetria.Abrir_Eliminar;
             label1.Text = Languages.Administration.Buscar;
             button1.Text = Languages.Administration.Modificar;
             button2.Text = Languages.Administration.Abrir;

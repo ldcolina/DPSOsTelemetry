@@ -3,7 +3,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Telemetria;
 
-namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumaticoIntermitente
+namespace DPSOsTelemetria.Pozos.PozoBombeoNeumaticoIntermitente
 {
     public partial class TomaInformacion : UserControl
     {

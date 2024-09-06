@@ -1,7 +1,7 @@
 ﻿
 using System.Windows.Forms;
 
-namespace DPSOsTelemetria2.Administration
+namespace DPSOsTelemetria.Administration
 {
     partial class Abrir_Eliminar
     {

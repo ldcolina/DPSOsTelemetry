@@ -1,4 +1,4 @@
-﻿using DPSOsTelemetria2.Properties;
+﻿using DPSOsTelemetria.Properties;
 using Languages;
 using Newtonsoft.Json;
 using System;
@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telemetria;
 
-namespace DPSOsTelemetria2
+namespace DPSOsTelemetria
 {
     public partial class Pozo : Form
     {
@@ -45,7 +45,7 @@ namespace DPSOsTelemetria2
                 case "1": //InformationGathering
                     {
                         Text = $"{Referencias.Name} ({SystemWell.GetString(Referencias.Type)}) - {General.InformationGathering}";
-                        lblOnOff.Text = DPSOsTelemetria.Off;
+                        lblOnOff.Text = Languages.DPSOsTelemetria.Off;
 
                         RefrescarInformationGathering();
                         break;
@@ -53,7 +53,7 @@ namespace DPSOsTelemetria2
                 case "2": //VirtualMonitoring
                     {
                         Text = $"{Referencias.Name} ({SystemWell.GetString(Referencias.Type)}) - {General.VirtualMonitoring}";
-                        lblOnOff.Text = DPSOsTelemetria.On;
+                        lblOnOff.Text = Languages.DPSOsTelemetria.On;
 
                         RefrescarVirtualMonitoring();
                         break;
@@ -143,7 +143,7 @@ namespace DPSOsTelemetria2
 
         private void InformationGathering()
         {
-            lblOnOff.Text = DPSOsTelemetria.Off;
+            lblOnOff.Text = Languages.DPSOsTelemetria.Off;
             pictureBox1.Image = Resources.off_button;
 
             panel2.Controls.Clear();
@@ -770,7 +770,7 @@ namespace DPSOsTelemetria2
 
         private void VirtualMonitoring()
         {
-            lblOnOff.Text = DPSOsTelemetria.On;
+            lblOnOff.Text = Languages.DPSOsTelemetria.On;
             pictureBox1.Image = Resources.on_button;
             _Telemetrias.Clear();
 

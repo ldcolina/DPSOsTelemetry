@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using Telemetria;
 using Excel = Microsoft.Office.Interop.Excel;
 
-namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
+namespace DPSOsTelemetria.Pozos.PozoBombeoMecanico
 {
     public partial class TomaInformacion : UserControl
     {

@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumaticoIntermitente
+namespace DPSOsTelemetria.Pozos.PozoBombeoNeumaticoIntermitente
 {
     partial class TomaInformacion
     {

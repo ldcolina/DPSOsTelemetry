@@ -1,7 +1,7 @@
 ﻿
 using System.Windows.Forms;
 
-namespace DPSOsTelemetria2.Administration
+namespace DPSOsTelemetria.Administration
 {
     partial class Administracion_Pozo
     {
@@ -276,7 +276,7 @@ namespace DPSOsTelemetria2.Administration
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::DPSOsTelemetria2.Properties.Resources.oil_platform;
+            this.pictureBox2.Image = global::DPSOsTelemetria.Properties.Resources.oil_platform;
             this.pictureBox2.Location = new System.Drawing.Point(373, 15);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";

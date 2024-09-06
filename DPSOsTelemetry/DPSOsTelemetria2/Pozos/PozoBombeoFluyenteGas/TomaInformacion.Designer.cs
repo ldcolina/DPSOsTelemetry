@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace DPSOsTelemetria2.Pozos.PozoBombeoFluyenteGas
+namespace DPSOsTelemetria.Pozos.PozoBombeoFluyenteGas
 {
     partial class TomaInformacion
     {

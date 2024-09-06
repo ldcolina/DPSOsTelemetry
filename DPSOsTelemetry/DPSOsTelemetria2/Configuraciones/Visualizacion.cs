@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DPSOsTelemetria2.Configuraciones
+namespace DPSOsTelemetria.Configuraciones
 {
     public partial class Visualizacion : System.Windows.Forms.UserControl
     {

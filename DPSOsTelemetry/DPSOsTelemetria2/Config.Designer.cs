@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace DPSOsTelemetria2
+namespace DPSOsTelemetria
 {
     partial class Config
     {
@@ -178,7 +178,7 @@ namespace DPSOsTelemetria2
             // ptbVisualizacion
             // 
             this.ptbVisualizacion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ptbVisualizacion.Image = global::DPSOsTelemetria2.Properties.Resources.chat_96641;
+            this.ptbVisualizacion.Image = global::DPSOsTelemetria.Properties.Resources.chat_96641;
             this.ptbVisualizacion.Location = new System.Drawing.Point(0, 0);
             this.ptbVisualizacion.Margin = new System.Windows.Forms.Padding(0);
             this.ptbVisualizacion.Name = "ptbVisualizacion";
@@ -227,7 +227,7 @@ namespace DPSOsTelemetria2
             // ptbGuia
             // 
             this.ptbGuia.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ptbGuia.Image = global::DPSOsTelemetria2.Properties.Resources.instrucciones;
+            this.ptbGuia.Image = global::DPSOsTelemetria.Properties.Resources.instrucciones;
             this.ptbGuia.Location = new System.Drawing.Point(0, 0);
             this.ptbGuia.Margin = new System.Windows.Forms.Padding(0);
             this.ptbGuia.Name = "ptbGuia";
@@ -276,7 +276,7 @@ namespace DPSOsTelemetria2
             // ptbActualizaciones
             // 
             this.ptbActualizaciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ptbActualizaciones.Image = global::DPSOsTelemetria2.Properties.Resources.refresh;
+            this.ptbActualizaciones.Image = global::DPSOsTelemetria.Properties.Resources.refresh;
             this.ptbActualizaciones.Location = new System.Drawing.Point(0, 0);
             this.ptbActualizaciones.Margin = new System.Windows.Forms.Padding(0);
             this.ptbActualizaciones.Name = "ptbActualizaciones";

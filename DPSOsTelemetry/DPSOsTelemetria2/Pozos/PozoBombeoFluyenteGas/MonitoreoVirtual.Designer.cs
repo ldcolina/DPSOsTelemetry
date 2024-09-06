@@ -1,4 +1,4 @@
-﻿namespace DPSOsTelemetria2.Pozos.PozoBombeoFluyenteGas
+﻿namespace DPSOsTelemetria.Pozos.PozoBombeoFluyenteGas
 {
     partial class MonitoreoVirtual
     {

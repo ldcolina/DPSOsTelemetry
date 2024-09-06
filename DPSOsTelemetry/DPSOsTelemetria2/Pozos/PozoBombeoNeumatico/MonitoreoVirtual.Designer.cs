@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
+namespace DPSOsTelemetria.Pozos.PozoBombeoNeumatico
 {
     partial class MonitoreoVirtual
     {

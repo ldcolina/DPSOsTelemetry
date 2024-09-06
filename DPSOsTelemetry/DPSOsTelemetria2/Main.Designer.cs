@@ -1,7 +1,7 @@
 ﻿
 using System.Windows.Forms;
 
-namespace DPSOsTelemetria2
+namespace DPSOsTelemetria
 {
     partial class Main
     {
@@ -275,7 +275,7 @@ namespace DPSOsTelemetria2
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DPSOsTelemetria2";
+            this.Text = "DPSOsTelemetria";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Main_Load);
             this.menuStrip1.ResumeLayout(false);

@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace DPSOsTelemetria2
+namespace DPSOsTelemetria
 {
     partial class Introducction
     {
@@ -48,7 +48,7 @@ namespace DPSOsTelemetria2
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.BackgroundImage = global::DPSOsTelemetria2.Properties.Resources.istockphoto_1126282547_170667a;
+            this.tableLayoutPanel1.BackgroundImage = global::DPSOsTelemetria.Properties.Resources.istockphoto_1126282547_170667a;
             this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
@@ -104,7 +104,7 @@ namespace DPSOsTelemetria2
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::DPSOsTelemetria2.Properties.Resources.antenna_with_signal_lines_symbol_icon_icons_com_56573;
+            this.pictureBox1.Image = global::DPSOsTelemetria.Properties.Resources.antenna_with_signal_lines_symbol_icon_icons_com_56573;
             this.pictureBox1.Location = new System.Drawing.Point(411, 29);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";

@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace DPSOsTelemetria2
+namespace DPSOsTelemetria
 {
     partial class Pozo
     {

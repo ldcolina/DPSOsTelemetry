@@ -5,7 +5,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Telemetria;
 
-namespace DPSOsTelemetria2.Pozos
+namespace DPSOsTelemetria.Pozos
 {
     public static class Tabla_Historico
     {

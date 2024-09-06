@@ -6,7 +6,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Telemetria;
 
-namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
+namespace DPSOsTelemetria.Pozos.PozoBombeoMecanico
 {
     public partial class MonitoreoVirtual : UserControl
     {

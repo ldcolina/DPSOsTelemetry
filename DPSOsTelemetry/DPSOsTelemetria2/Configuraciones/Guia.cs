@@ -1,11 +1,11 @@
-﻿using DPSOsTelemetria2.Properties;
+﻿using DPSOsTelemetria.Properties;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace DPSOsTelemetria2.Configuraciones
+namespace DPSOsTelemetria.Configuraciones
 {
     public partial class Guia : UserControl
     {

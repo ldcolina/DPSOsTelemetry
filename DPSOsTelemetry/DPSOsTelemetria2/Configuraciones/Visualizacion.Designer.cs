@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace DPSOsTelemetria2.Configuraciones
+namespace DPSOsTelemetria.Configuraciones
 {
     partial class Visualizacion
     {

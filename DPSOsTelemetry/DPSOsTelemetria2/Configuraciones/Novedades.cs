@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Resources;
 using System.Windows.Forms;
 
-namespace DPSOsTelemetria2.Configuraciones
+namespace DPSOsTelemetria.Configuraciones
 {
     public partial class Novedades : Form
     {

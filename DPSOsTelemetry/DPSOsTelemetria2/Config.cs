@@ -1,4 +1,4 @@
-﻿using DPSOsTelemetria2.Configuraciones;
+﻿using DPSOsTelemetria.Configuraciones;
 using Newtonsoft.Json;
 using System;
 using System.Drawing;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace DPSOsTelemetria2
+namespace DPSOsTelemetria
 {
     public partial class Config : Form
     {

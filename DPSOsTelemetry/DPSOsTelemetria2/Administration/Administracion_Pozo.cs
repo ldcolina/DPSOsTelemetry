@@ -1,4 +1,4 @@
-﻿using DPSOsTelemetria2.Properties;
+﻿using DPSOsTelemetria.Properties;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Resources;
 using System.Windows.Forms;
 using Telemetria;
 
-namespace DPSOsTelemetria2.Administration
+namespace DPSOsTelemetria.Administration
 {
     public partial class Administracion_Pozo : Form
     {

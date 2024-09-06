@@ -338,4 +338,12 @@ Implemented new fields for BN</value>
     <value>Version 2.0.2.7
 DexExpress removed due to installation issues</value>
   </data>
+  <data name="String15" xml:space="preserve">
+    <value>Version 2.0.2.8
+Created application signature</value>
+  </data>
+  <data name="String16" xml:space="preserve">
+    <value>Version 2.0.2.9
+Firmware update</value>
+  </data>
 </root>

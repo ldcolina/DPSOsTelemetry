@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace DPSOsTelemetria2.Configuraciones
+namespace DPSOsTelemetria.Configuraciones
 {
     partial class Guia
     {
@@ -190,7 +190,7 @@ namespace DPSOsTelemetria2.Configuraciones
             // pictureBox5
             // 
             this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox5.Image = global::DPSOsTelemetria2.Properties.Resources.Transmisiones;
+            this.pictureBox5.Image = global::DPSOsTelemetria.Properties.Resources.Transmisiones;
             this.pictureBox5.Location = new System.Drawing.Point(3, 35);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox5.Name = "pictureBox5";
@@ -319,7 +319,7 @@ namespace DPSOsTelemetria2.Configuraciones
             // pictureBox3
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox3.Image = global::DPSOsTelemetria2.Properties.Resources.telemetry3;
+            this.pictureBox3.Image = global::DPSOsTelemetria.Properties.Resources.telemetry3;
             this.pictureBox3.Location = new System.Drawing.Point(3, 1173);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
@@ -374,7 +374,7 @@ namespace DPSOsTelemetria2.Configuraciones
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox2.Image = global::DPSOsTelemetria2.Properties.Resources.telemetry;
+            this.pictureBox2.Image = global::DPSOsTelemetria.Properties.Resources.telemetry;
             this.pictureBox2.Location = new System.Drawing.Point(3, 18);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
@@ -399,7 +399,7 @@ namespace DPSOsTelemetria2.Configuraciones
             // pictureBox4
             // 
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox4.Image = global::DPSOsTelemetria2.Properties.Resources.telemetry2;
+            this.pictureBox4.Image = global::DPSOsTelemetria.Properties.Resources.telemetry2;
             this.pictureBox4.Location = new System.Drawing.Point(3, 544);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
@@ -492,7 +492,7 @@ namespace DPSOsTelemetria2.Configuraciones
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = global::DPSOsTelemetria2.Properties.Resources.new_well;
+            this.pictureBox1.Image = global::DPSOsTelemetria.Properties.Resources.new_well;
             this.pictureBox1.Location = new System.Drawing.Point(3, 18);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";

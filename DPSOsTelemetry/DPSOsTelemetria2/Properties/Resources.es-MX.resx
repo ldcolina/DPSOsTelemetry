@@ -178,4 +178,12 @@ Implementado nuevos campos para BN</value>
     <value>Versión 2.0.2.7
 Eliminado DexExpress por problemas de instalaciones</value>
   </data>
+  <data name="String15" xml:space="preserve">
+    <value>Versión 2.0.2.8
+Creado firma de aplicación</value>
+  </data>
+  <data name="String16" xml:space="preserve">
+    <value>Versión 2.0.2.9
+Actualizado el firmware</value>
+  </data>
 </root>

@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Telemetria", "Telemetria\Te
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Languages", "Languages\Languages.csproj", "{F0EE9AEE-EA74-433D-9BBE-7BC0C0983444}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPSOsTelemetria2", "DPSOsTelemetria2\DPSOsTelemetria2.csproj", "{1C0CC814-6227-46EC-B44C-AD8EC8D05FAD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPSOsTelemetria", "DPSOsTelemetria2\DPSOsTelemetria.csproj", "{1C0CC814-6227-46EC-B44C-AD8EC8D05FAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

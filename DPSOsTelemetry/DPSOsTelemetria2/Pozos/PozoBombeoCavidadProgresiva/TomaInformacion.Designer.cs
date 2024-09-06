@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace DPSOsTelemetria2.Pozos.PozoBombeoCavidadProgresiva
+namespace DPSOsTelemetria.Pozos.PozoBombeoCavidadProgresiva
 {
     partial class TomaInformacion
     {

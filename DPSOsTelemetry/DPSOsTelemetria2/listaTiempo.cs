@@ -9,7 +9,7 @@ using System.Resources;
 using System.Windows.Forms;
 using Telemetria;
 
-namespace DPSOsTelemetria2
+namespace DPSOsTelemetria
 {
     public partial class listaTiempo : Form
     {
@@ -126,7 +126,7 @@ namespace DPSOsTelemetria2
 
         internal void Refrescar()
         {
-            Text = DPSOsTelemetria.listaTiempo;
+            Text = Languages.DPSOsTelemetria.listaTiempo;
 
             dataGridView1.Columns["Name"].HeaderText = Languages.listaTiempo.Nombre;
 
