@@ -261,7 +261,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoCavidadProgresiva
 
             #endregion CCartaDinagrafica
 
-            foreach (var item in tlpVariables.Controls)
+            foreach (object item in tlpVariables.Controls)
             {
                 switch (item.GetType().Name)
                 {

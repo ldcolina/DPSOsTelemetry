@@ -14,6 +14,7 @@ namespace Telemetria
         public string Type { set; get; } = "None";
 
         public string Unidades { set; get; } = "None";
+        public string MetodoQGI { set; get; } = "None";
     }
 
     public class ReferenciasI : Referencias
@@ -282,6 +283,46 @@ namespace Telemetria
 
         #endregion PresionDisponible
 
+        #region NroVuelta
+
+        public bool NroVuelta { set; get; } = false;
+
+        public decimal NroVueltaMax { set; get; } = 0;
+
+        public decimal NroVueltaMin { set; get; } = 0;
+
+        #endregion NroVuelta
+
+        #region PresionDiferencial
+
+        public bool PresionDiferencial { set; get; } = false;
+
+        public decimal PresionDiferencialMax { set; get; } = 0;
+
+        public decimal PresionDiferencialMin { set; get; } = 0;
+
+        #endregion PresionDiferencial
+
+        #region DiametroOrificio
+
+        public bool DiametroOrificio { set; get; } = false;
+
+        public decimal DiametroOrificioMax { set; get; } = 0;
+
+        public decimal DiametroOrificioMin { set; get; } = 0;
+
+        #endregion DiametroOrificio
+
+        #region AjusteValvula
+
+        public bool AjusteValvula { set; get; } = false;
+
+        public decimal AjusteValvulaMax { set; get; } = 0;
+
+        public decimal AjusteValvulaMin { set; get; } = 0;
+
+        #endregion AjusteValvula
+
         #region PresionEntradaBomba
 
         public bool PresionEntradaBomba { set; get; } = false;
@@ -361,6 +402,16 @@ namespace Telemetria
         public decimal TemperaturaSuperficieMin { set; get; } = 0;
 
         #endregion TemperaturaSuperficie
+
+        #region PresionSeparacion
+
+        public bool PresionSeparacion { set; get; } = false;
+
+        public decimal PresionSeparacionMax { set; get; } = 0;
+
+        public decimal PresionSeparacionMin { set; get; } = 0;
+
+        #endregion PresionSeparacion
 
         #region TiempoCiclo
 

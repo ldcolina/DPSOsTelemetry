@@ -55,7 +55,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoFluyente
 
             #endregion TemperaturaSuperficie
 
-            foreach (var item in tlpVariables.Controls)
+            foreach (object item in tlpVariables.Controls)
             {
                 switch (item.GetType().Name)
                 {
@@ -160,7 +160,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoFluyente
 
             #endregion GravedadEspecificaGasProducido
 
-            foreach (var item in tlpVariables2.Controls)
+            foreach (object item in tlpVariables2.Controls)
             {
                 switch (item.GetType().Name)
                 {

@@ -15,7 +15,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoFluyenteGas
 
         internal void Recargar(int decimales, List<ReferenciasI> _Telemetrias)
         {
-            var _Telemetria = _Telemetrias.LastOrDefault();
+            ReferenciasI _Telemetria = _Telemetrias.LastOrDefault();
 
             #region DatosOperativos
 

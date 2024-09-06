@@ -420,13 +420,6 @@ namespace DPSOsTelemetria2
 
             #endregion GravedadEspecificaFluidoPotencia
 
-            #region GravedadEspecificaGasInyeccion
-
-            if (_Telemetria.Range.GravedadEspecificaGasInyeccion)
-                DatosOperativos.GravedadEspecificaGasInyeccion = (decimal)new Random().NextDouble() * (_Telemetria.Range.GravedadEspecificaGasInyeccionMax - _Telemetria.Range.GravedadEspecificaGasInyeccionMin) + _Telemetria.Range.GravedadEspecificaGasInyeccionMin;
-
-            #endregion GravedadEspecificaGasInyeccion
-
             #region GravedadEspecificaGasProducido
 
             if (_Telemetria.Range.GravedadEspecificaGasProducido)
@@ -475,13 +468,6 @@ namespace DPSOsTelemetria2
                 DatosOperativos.PresionAperturaCampo = (decimal)new Random().NextDouble() * (_Telemetria.Range.PresionAperturaCampoMax - _Telemetria.Range.PresionAperturaCampoMin) + _Telemetria.Range.PresionAperturaCampoMin;
 
             #endregion PresionAperturaCampo
-
-            #region PresionDisponible
-
-            if (_Telemetria.Range.PresionDisponible)
-                DatosOperativos.PresionDisponible = (decimal)new Random().NextDouble() * (_Telemetria.Range.PresionDisponibleMax - _Telemetria.Range.PresionDisponibleMin) + _Telemetria.Range.PresionDisponibleMin;
-
-            #endregion PresionDisponible
 
             #region PresionEntradaBomba
 
@@ -539,6 +525,13 @@ namespace DPSOsTelemetria2
 
             #endregion TemperaturaSuperficie
 
+            #region PresionSeparacion
+
+            if (_Telemetria.Range.PresionSeparacion)
+                DatosOperativos.PresionSeparacion = (decimal)new Random().NextDouble() * (_Telemetria.Range.PresionSeparacionMax - _Telemetria.Range.PresionSeparacionMin) + _Telemetria.Range.PresionSeparacionMin;
+
+            #endregion PresionSeparacion
+
             #region TiempoCiclo
 
             if (_Telemetria.Range.TiempoCiclo)
@@ -594,6 +587,86 @@ namespace DPSOsTelemetria2
                 DatosOperativos.VelocidadUnidadBombeo = (decimal)new Random().NextDouble() * (_Telemetria.Range.VelocidadUnidadBombeoMax - _Telemetria.Range.VelocidadUnidadBombeoMin) + _Telemetria.Range.VelocidadUnidadBombeoMin;
 
             #endregion VelocidadUnidadBombeo
+
+            #region Metodo QGI
+
+            switch (_Telemetria.MetodoQGI)
+            {
+                case "0":
+                    {
+                        #region PresionDisponible
+
+                        if (_Telemetria.Range.PresionDisponible)
+                            DatosOperativos.QgiPresionDisponible = (decimal)new Random().NextDouble() * (_Telemetria.Range.PresionDisponibleMax - _Telemetria.Range.PresionDisponibleMin) + _Telemetria.Range.PresionDisponibleMin;
+
+                        #endregion PresionDisponible
+
+                        #region NroVuelta
+
+                        if (_Telemetria.Range.NroVuelta)
+                            DatosOperativos.QgiNroVuelta = (decimal)new Random().NextDouble() * (_Telemetria.Range.NroVueltaMax - _Telemetria.Range.NroVueltaMin) + _Telemetria.Range.NroVueltaMin;
+
+                        #endregion NroVuelta
+
+                        break;
+                    }
+                case "1":
+                    {
+                        #region PresionDisponible
+
+                        if (_Telemetria.Range.PresionDisponible)
+                            DatosOperativos.QgiPresionDisponible = (decimal)new Random().NextDouble() * (_Telemetria.Range.PresionDisponibleMax - _Telemetria.Range.PresionDisponibleMin) + _Telemetria.Range.PresionDisponibleMin;
+
+                        #endregion PresionDisponible
+
+                        #region PresionDiferencial
+
+                        if (_Telemetria.Range.PresionDiferencial)
+                            DatosOperativos.QgiPresionDiferencial = (decimal)new Random().NextDouble() * (_Telemetria.Range.PresionDiferencialMax - _Telemetria.Range.PresionDiferencialMin) + _Telemetria.Range.PresionDiferencialMin;
+
+                        #endregion PresionDiferencial
+
+                        #region DiametroOrificio
+
+                        if (_Telemetria.Range.DiametroOrificio)
+                            DatosOperativos.QgiDiametroOrificio = (decimal)new Random().NextDouble() * (_Telemetria.Range.DiametroOrificioMax - _Telemetria.Range.DiametroOrificioMin) + _Telemetria.Range.DiametroOrificioMin;
+
+                        #endregion DiametroOrificio
+
+                        break;
+                    }
+                case "2":
+                    {
+                        #region PresionDisponible
+
+                        if (_Telemetria.Range.PresionDisponible)
+                            DatosOperativos.QgiPresionDisponible = (decimal)new Random().NextDouble() * (_Telemetria.Range.PresionDisponibleMax - _Telemetria.Range.PresionDisponibleMin) + _Telemetria.Range.PresionDisponibleMin;
+
+                        #endregion PresionDisponible
+
+                        #region AjusteValvula
+
+                        if (_Telemetria.Range.AjusteValvula)
+                            DatosOperativos.QgiAjusteValvula = (decimal)new Random().NextDouble() * (_Telemetria.Range.AjusteValvulaMax - _Telemetria.Range.AjusteValvulaMin) + _Telemetria.Range.AjusteValvulaMin;
+
+                        #endregion AjusteValvula
+
+                        break;
+                    }
+                case "3":
+                    {
+                        #region GravedadEspecificaGasInyeccion
+
+                        if (_Telemetria.Range.GravedadEspecificaGasInyeccion)
+                            DatosOperativos.QgiGravedadEspecificaGasInyeccion = (decimal)new Random().NextDouble() * (_Telemetria.Range.GravedadEspecificaGasInyeccionMax - _Telemetria.Range.GravedadEspecificaGasInyeccionMin) + _Telemetria.Range.GravedadEspecificaGasInyeccionMin;
+
+                        #endregion GravedadEspecificaGasInyeccion
+
+                        break;
+                    }
+            }
+
+            #endregion Metodo QGI
 
             return DatosOperativos;
         }

@@ -41,6 +41,12 @@
 		  <AutoGen>True</AutoGen>
 		</Compile>
 
+		<Compile Update="BN.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>BN.resx</DependentUpon>
+		</Compile>
+
 		<Compile Update="DPSOsTelemetria.Designer.cs">
 		  <DependentUpon>DPSOsTelemetria.resx</DependentUpon>
 		  <DesignTime>True</DesignTime>
@@ -85,6 +91,21 @@
 		<EmbeddedResource Update="Administration.resx">
 		  <LastGenOutput>Administration.Designer.cs</LastGenOutput>
 		  <Generator>PublicResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+
+		<EmbeddedResource Update="BN.es-MX.resx">
+		  <LastGenOutput>BN.es-MX.Designer.cs</LastGenOutput>
+		  <Generator>ResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+
+		<EmbeddedResource Update="BN.es.resx">
+		  <LastGenOutput>BN.es.Designer.cs</LastGenOutput>
+		  <Generator>ResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+
+		<EmbeddedResource Update="BN.resx">
+		  <Generator>ResXFileCodeGenerator</Generator>
+		  <LastGenOutput>BN.Designer.cs</LastGenOutput>
 		</EmbeddedResource>
 
 		<EmbeddedResource Update="DPSOsTelemetria.es-MX.resx">

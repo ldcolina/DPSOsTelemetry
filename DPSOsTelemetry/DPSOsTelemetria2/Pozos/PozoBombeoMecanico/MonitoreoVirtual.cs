@@ -21,7 +21,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
 
         internal void Recargar(int decimales, List<ReferenciasI> _Telemetrias)
         {
-            var _Telemetria = _Telemetrias.LastOrDefault();
+            ReferenciasI _Telemetria = _Telemetrias.LastOrDefault();
 
             #region DatosManual
 

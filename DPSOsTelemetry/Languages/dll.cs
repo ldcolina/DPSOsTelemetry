@@ -18,6 +18,19 @@ namespace Languages
             return Lista;
         }
 
+        public static List<ddl> ddlMetodoQGI()
+        {
+            List<ddl> Lista = new List<ddl>
+            {
+                new ddl() { Value = "None", Text = General.SelectOption },
+                new ddl() { Value = "3", Text = Languages.BN.User },
+                new ddl() { Value = "0", Text = Languages.BN.ManualValveControl },
+                new ddl() { Value = "2", Text = Languages.BN.MeteringValve },
+                new ddl() { Value = "1", Text = Languages.BN.PlateOrifice },
+            };
+            return Lista;
+        }
+
         public static List<ddl> ddlTipoPozo()
         {
             List<ddl> Lista = new List<ddl>
@@ -25,9 +38,9 @@ namespace Languages
                 new ddl() { Value = "None", Text = General.SelectOption },
                 new ddl() { Value = "FL", Text = SystemWell.FL },
                 new ddl() { Value = "BM", Text = SystemWell.BM },
+                new ddl() { Value = "BN", Text = SystemWell.BN },
 
                 //new ddl() { Value = "FLG", Text = SystemWell.FLG },
-                //new ddl() { Value = "BN", Text = SystemWell.BN },
                 //new ddl() { Value = "BNI", Text = SystemWell.BNI },
                 //new ddl() { Value = "BCP", Text = SystemWell.BCP },
                 //new ddl() { Value = "BEC", Text = SystemWell.BEC },

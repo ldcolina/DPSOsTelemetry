@@ -122,7 +122,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
 
             #endregion EficienciaLlenado
 
-            foreach (var item in tlpVariables.Controls)
+            foreach (object item in tlpVariables.Controls)
             {
                 switch (item.GetType().Name)
                 {
@@ -235,7 +235,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
 
             #endregion CargaSobreBarraPulida
 
-            foreach (var item in tlpVariables2.Controls)
+            foreach (object item in tlpVariables2.Controls)
             {
                 switch (item.GetType().Name)
                 {
@@ -1498,7 +1498,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
             {
                 try
                 {
-                    var t1 = JsonConvert.DeserializeObject<List<OCartaDinagrafica.CartaSuperficie>>(data);
+                    List<OCartaDinagrafica.CartaSuperficie> t1 = JsonConvert.DeserializeObject<List<OCartaDinagrafica.CartaSuperficie>>(data);
                     CartaDinagrafica.Add(t1);
                 }
                 catch
@@ -1507,7 +1507,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
 
                 try
                 {
-                    var t1 = JsonConvert.DeserializeObject<List<List<OCartaDinagrafica.CartaSuperficie>>>(data);
+                    List<List<OCartaDinagrafica.CartaSuperficie>> t1 = JsonConvert.DeserializeObject<List<List<OCartaDinagrafica.CartaSuperficie>>>(data);
                     CartaDinagrafica.AddRange(t1);
                 }
                 catch
@@ -1519,7 +1519,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
                 // Root1
                 try
                 {
-                    var t1 = JsonConvert.DeserializeObject<Root1>(data);
+                    Root1 t1 = JsonConvert.DeserializeObject<Root1>(data);
                     CartaDinagrafica.Add(t1.oDinamometrica);
                 }
                 catch
@@ -1528,7 +1528,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
 
                 try
                 {
-                    var t1 = JsonConvert.DeserializeObject<List<Root1>>(data);
+                    List<Root1> t1 = JsonConvert.DeserializeObject<List<Root1>>(data);
                     CartaDinagrafica.AddRange(t1.Select(val => val.oDinamometrica));
                 }
                 catch
@@ -1540,7 +1540,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
                 // Root2
                 try
                 {
-                    var t1 = JsonConvert.DeserializeObject<Root2>(data);
+                    Root2 t1 = JsonConvert.DeserializeObject<Root2>(data);
                     CartaDinagrafica.Add(t1.CartaSuperficie);
                 }
                 catch
@@ -1549,7 +1549,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
 
                 try
                 {
-                    var t1 = JsonConvert.DeserializeObject<List<Root2>>(data);
+                    List<Root2> t1 = JsonConvert.DeserializeObject<List<Root2>>(data);
                     CartaDinagrafica.AddRange(t1.Select(val => val.CartaSuperficie));
                 }
                 catch
@@ -1561,7 +1561,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
                 // Root3
                 try
                 {
-                    var t1 = JsonConvert.DeserializeObject<Root3>(data);
+                    Root3 t1 = JsonConvert.DeserializeObject<Root3>(data);
                     CartaDinagrafica.Add(t1.CartaDinagrafica);
                 }
                 catch
@@ -1570,7 +1570,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoMecanico
 
                 try
                 {
-                    var t1 = JsonConvert.DeserializeObject<List<Root3>>(data);
+                    List<Root3> t1 = JsonConvert.DeserializeObject<List<Root3>>(data);
                     CartaDinagrafica.AddRange(t1.Select(val => val.CartaDinagrafica));
                 }
                 catch

@@ -151,11 +151,51 @@ namespace DPSOsTelemetria2.Pozos
 
             #endregion GravedadEspecificaFluidoPotencia
 
+            #region PresionDisponible
+
+            dt.Columns["QgiPresionDisponible"].Visible = _Telemetria.Range.PresionDisponible;
+            dt.Columns["QgiPresionDisponible"].HeaderText = Languages.Pozo.PresionDisponible;
+            dt.Columns["QgiPresionDisponible"].DefaultCellStyle.Format = $"N{decimales}";
+
+            #endregion PresionDisponible
+
+            #region NroVuelta
+
+            dt.Columns["QgiNroVuelta"].Visible = _Telemetria.Range.NroVuelta;
+            dt.Columns["QgiNroVuelta"].HeaderText = Languages.Pozo.NroVuelta;
+            dt.Columns["QgiNroVuelta"].DefaultCellStyle.Format = $"N{decimales}";
+
+            #endregion NroVuelta
+
+            #region PresionDiferencial
+
+            dt.Columns["QgiPresionDiferencial"].Visible = _Telemetria.Range.PresionDiferencial;
+            dt.Columns["QgiPresionDiferencial"].HeaderText = Languages.Pozo.PresionDiferencial;
+            dt.Columns["QgiPresionDiferencial"].DefaultCellStyle.Format = $"N{decimales}";
+
+            #endregion PresionDiferencial
+
+            #region DiametroOrificio
+
+            dt.Columns["QgiDiametroOrificio"].Visible = _Telemetria.Range.DiametroOrificio;
+            dt.Columns["QgiDiametroOrificio"].HeaderText = Languages.Pozo.DiametroOrificio;
+            dt.Columns["QgiDiametroOrificio"].DefaultCellStyle.Format = $"N{decimales}";
+
+            #endregion DiametroOrificio
+
+            #region AjusteValvula
+
+            dt.Columns["QgiAjusteValvula"].Visible = _Telemetria.Range.AjusteValvula;
+            dt.Columns["QgiAjusteValvula"].HeaderText = Languages.Pozo.AjusteValvula;
+            dt.Columns["QgiAjusteValvula"].DefaultCellStyle.Format = $"N{decimales}";
+
+            #endregion AjusteValvula
+
             #region GravedadEspecificaGasInyeccion
 
-            dt.Columns["GravedadEspecificaGasInyeccion"].Visible = _Telemetria.Range.GravedadEspecificaGasInyeccion;
-            dt.Columns["GravedadEspecificaGasInyeccion"].HeaderText = Languages.Pozo.GravedadEspecificaGasInyeccion;
-            dt.Columns["GravedadEspecificaGasInyeccion"].DefaultCellStyle.Format = $"N{decimales}";
+            dt.Columns["QgiGravedadEspecificaGasInyeccion"].Visible = _Telemetria.Range.GravedadEspecificaGasInyeccion;
+            dt.Columns["QgiGravedadEspecificaGasInyeccion"].HeaderText = Languages.Pozo.GravedadEspecificaGasInyeccion;
+            dt.Columns["QgiGravedadEspecificaGasInyeccion"].DefaultCellStyle.Format = $"N{decimales}";
 
             #endregion GravedadEspecificaGasInyeccion
 
@@ -215,14 +255,6 @@ namespace DPSOsTelemetria2.Pozos
 
             #endregion PresionAperturaCampo
 
-            #region PresionDisponible
-
-            dt.Columns["PresionDisponible"].Visible = _Telemetria.Range.PresionDisponible;
-            dt.Columns["PresionDisponible"].HeaderText = Languages.Pozo.PresionDisponible;
-            dt.Columns["PresionDisponible"].DefaultCellStyle.Format = $"N{decimales}";
-
-            #endregion PresionDisponible
-
             #region PresionEntradaBomba
 
             dt.Columns["PresionEntradaBomba"].Visible = _Telemetria.Range.PresionEntradaBomba;
@@ -254,6 +286,14 @@ namespace DPSOsTelemetria2.Pozos
             dt.Columns["PresionTuberiaRevestimiento"].DefaultCellStyle.Format = $"N{decimales}";
 
             #endregion PresionTuberiaRevestimiento
+
+            #region PresionSeparacion
+
+            dt.Columns["PresionSeparacion"].Visible = _Telemetria.Range.PresionSeparacion;
+            dt.Columns["PresionSeparacion"].HeaderText = Languages.Pozo.PresionSeparacion;
+            dt.Columns["PresionSeparacion"].DefaultCellStyle.Format = $"N{decimales}";
+
+            #endregion PresionSeparacion
 
             #region RelacionGasAceite
 

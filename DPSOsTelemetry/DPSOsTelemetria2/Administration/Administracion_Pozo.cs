@@ -45,6 +45,7 @@ namespace DPSOsTelemetria2.Administration
             lblToken.Text = Languages.Administration.Token;
             lblUnidades.Text = Languages.Administration.Unidad;
             lblTipo.Text = Languages.Administration.Tipo;
+            lblMetodoQGI.Text = Languages.Administration.MetodoQGI;
 
             int SelectDdl = ddlTipoPozo.SelectedIndex;
             List<Languages.ddl> TipoPozo = Languages.Fills.ddlTipoPozo();
@@ -71,6 +72,19 @@ namespace DPSOsTelemetria2.Administration
             {
                 ddlUnidades.SelectedItem = Sistema_Unidades.First();
             }
+
+            SelectDdl = ddlMetodoQGI.SelectedIndex;
+            List<Languages.ddl> MetodoQGI = Languages.Fills.ddlMetodoQGI();
+            ddlMetodoQGI.DataSource = MetodoQGI;
+            ddlMetodoQGI.DisplayMember = "Text";
+            try
+            {
+                ddlMetodoQGI.SelectedItem = MetodoQGI[SelectDdl];
+            }
+            catch
+            {
+                ddlMetodoQGI.SelectedItem = MetodoQGI.First();
+            }
         }
 
         internal DialogResult Guardar_Info()
@@ -82,6 +96,18 @@ namespace DPSOsTelemetria2.Administration
                 Unidades = ((Languages.ddl)ddlUnidades.SelectedItem).Value,
                 Type = ((Languages.ddl)ddlTipoPozo.SelectedItem).Value,
             };
+            if (newWell.Type=="BN")
+            {
+                string QGI = ((Languages.ddl)ddlMetodoQGI.SelectedItem).Value;
+                if (QGI=="None")
+                {
+                    MessageBox.Show(Languages.Administration.ErrorBN, Languages.DPSOsTelemetria.Aviso, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    return DialogResult.Cancel;
+                }
+
+                newWell.MetodoQGI = QGI;
+            }
             Referencias ControlPozos = !string.IsNullOrEmpty(ID) ? JsonConvert.DeserializeObject<Referencias>(File.ReadAllText(ID)) : new Referencias();
 
             if (JsonConvert.SerializeObject(ControlPozos) == JsonConvert.SerializeObject(newWell))
@@ -278,6 +304,7 @@ namespace DPSOsTelemetria2.Administration
                 ddlUnidades.Enabled = false;
                 ddlTipoPozo.SelectedItem = ((List<Languages.ddl>)ddlTipoPozo.DataSource).Find(val => val.Value == ControlPozos.Type.ToString());
                 ddlTipoPozo.Enabled = false;
+                ddlMetodoQGI.SelectedItem = ((List<Languages.ddl>)ddlMetodoQGI.DataSource).Find(val => val.Value == ControlPozos.MetodoQGI.ToString());
             }
         }
 
@@ -289,6 +316,7 @@ namespace DPSOsTelemetria2.Administration
 
         private void ddlTipoPozo_SelectedValueChanged(object sender, EventArgs e)
         {
+            ddlMetodoQGI.Enabled=false;
             switch (((Languages.ddl)ddlTipoPozo.SelectedItem).Value)
             {
                 case "FL":
@@ -306,6 +334,7 @@ namespace DPSOsTelemetria2.Administration
                 case "BN":
                     {
                         pictureBox1.Image = Resources.Neumatico;
+                        ddlMetodoQGI.Enabled=true;
                         break;
                     }
 

@@ -70,6 +70,15 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Valve adjustment.
+        /// </summary>
+        public static string AjusteValvula {
+            get {
+                return ResourceManager.GetString("AjusteValvula", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a You must make some changes to update.
         /// </summary>
         public static string Aviso {
@@ -138,6 +147,15 @@ namespace Languages {
         public static string DiametroEstrangulador {
             get {
                 return ResourceManager.GetString("DiametroEstrangulador", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Orífice diameter.
+        /// </summary>
+        public static string DiametroOrificio {
+            get {
+                return ResourceManager.GetString("DiametroOrificio", resourceCulture);
             }
         }
         
@@ -367,6 +385,15 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a No. Turn.
+        /// </summary>
+        public static string NroVuelta {
+            get {
+                return ResourceManager.GetString("NroVuelta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Operating data.
         /// </summary>
         public static string OperativeData {
@@ -394,6 +421,15 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Differencial pressure.
+        /// </summary>
+        public static string PresionDiferencial {
+            get {
+                return ResourceManager.GetString("PresionDiferencial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Available pressure.
         /// </summary>
         public static string PresionDisponible {
@@ -417,6 +453,15 @@ namespace Languages {
         public static string PresionLineaDescarga {
             get {
                 return ResourceManager.GetString("PresionLineaDescarga", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Separation pressure.
+        /// </summary>
+        public static string PresionSeparacion {
+            get {
+                return ResourceManager.GetString("PresionSeparacion", resourceCulture);
             }
         }
         

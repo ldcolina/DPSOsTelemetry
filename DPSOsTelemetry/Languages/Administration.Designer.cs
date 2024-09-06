@@ -104,7 +104,29 @@ namespace Languages {
                 return ResourceManager.GetString("Eliminar", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Busca una cadena traducida similar a You must select a QGI Method.
+        /// </summary>
+        public static string ErrorBN
+        {
+            get
+            {
+                return ResourceManager.GetString("ErrorBN", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Busca una cadena traducida similar a QGI Method.
+        /// </summary>
+        public static string MetodoQGI
+        {
+            get
+            {
+                return ResourceManager.GetString("MetodoQGI", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Busca una cadena traducida similar a There is already a well of type {0} with that name do you want to replace it?.
         /// </summary>

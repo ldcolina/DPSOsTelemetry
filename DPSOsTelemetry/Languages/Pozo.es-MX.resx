@@ -117,14 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="GreaterThanValue" xml:space="preserve">
+    <value>{0}: El valor mínimo {1} debe se menor al valor máximo {2}</value>
+  </data>
   <data name="PresionTuberiaRevestimiento" xml:space="preserve">
     <value>Presión en tubería de revestimiento</value>
   </data>
   <data name="PresionTuberiaProduccion" xml:space="preserve">
     <value>Presión en tubería de producción</value>
-  </data>
-  <data name="GreaterThanValue" xml:space="preserve">
-    <value>{0}: El valor mínimo {1} debe se menor al valor máximo {2}</value>
   </data>
   <data name="GreaterThan" xml:space="preserve">
     <value>{0}: El valor mínimo {1} debe se mayor o igual a 0</value>
@@ -279,16 +279,31 @@
   <data name="TiempoRecuperacion" xml:space="preserve">
     <value>Tiempo de recuperación</value>
   </data>
-  <data name="VelocidadBomba" xml:space="preserve">
-    <value>Velocidad de la bomba</value>
-  </data>
   <data name="Torque" xml:space="preserve">
     <value>Torque</value>
+  </data>
+  <data name="VelocidadBomba" xml:space="preserve">
+    <value>Velocidad de la bomba</value>
   </data>
   <data name="DatosOperativosTime" xml:space="preserve">
     <value>Fecha / Hora de transmisión</value>
   </data>
   <data name="DatosOperativosResult" xml:space="preserve">
     <value>Estado de envío</value>
+  </data>
+  <data name="PresionSeparacion" xml:space="preserve">
+    <value>Presión de separación</value>
+  </data>
+  <data name="AjusteValvula" xml:space="preserve">
+    <value>Ajuste de válvula</value>
+  </data>
+  <data name="NroVuelta" xml:space="preserve">
+    <value>Nro. Vuelta</value>
+  </data>
+  <data name="PresionDiferencial" xml:space="preserve">
+    <value>Presión diferencial</value>
+  </data>
+  <data name="DiametroOrificio" xml:space="preserve">
+    <value>Diámetro orificio</value>
   </data>
 </root>

@@ -123,20 +123,20 @@
   <data name="Eliminar" xml:space="preserve">
     <value>Eliminar</value>
   </data>
-  <data name="Unidad" xml:space="preserve">
-    <value>Unidad</value>
+  <data name="Nombre" xml:space="preserve">
+    <value>Nombre</value>
   </data>
   <data name="Tipo" xml:space="preserve">
     <value>Tipo</value>
   </data>
-  <data name="Nombre" xml:space="preserve">
-    <value>Nombre</value>
-  </data>
-  <data name="Sustituir" xml:space="preserve">
-    <value>¿Desea reemplazar la información actual con la almacenada?</value>
+  <data name="Unidad" xml:space="preserve">
+    <value>Unidad</value>
   </data>
   <data name="GuardadoComo" xml:space="preserve">
     <value>Ya existe un pozo de tipo {0} con ese nombre desea sustituirlo?</value>
+  </data>
+  <data name="Sustituir" xml:space="preserve">
+    <value>¿Desea reemplazar la información actual con la almacenada?</value>
   </data>
   <data name="Aviso" xml:space="preserve">
     <value>Debe realizar algún cambio para actualizar</value>
@@ -162,11 +162,11 @@
   <data name="Token" xml:space="preserve">
     <value>Token</value>
   </data>
-  <data name="GuardadoComo3" xml:space="preserve">
-    <value>Ya existe el pozo {0} con el token:{1} ({2}) desea sustituirlo?</value>
-  </data>
   <data name="GuardadoComo2" xml:space="preserve">
     <value>Ya existe el pozo con el token:{1} ({2}) desea sustituirlo?</value>
+  </data>
+  <data name="GuardadoComo3" xml:space="preserve">
+    <value>Ya existe el pozo {0} con el token:{1} ({2}) desea sustituirlo?</value>
   </data>
   <data name="GuardadoComo1" xml:space="preserve">
     <value>Ya existe el pozo con el token:{1} desea sustituirlo?</value>
@@ -176,5 +176,11 @@
   </data>
   <data name="Info" xml:space="preserve">
     <value>Introduzca la información del pozo:</value>
+  </data>
+  <data name="ErrorBN" xml:space="preserve">
+    <value>Debe seleccionar un Método de QGI</value>
+  </data>
+  <data name="MetodoQGI" xml:space="preserve">
+    <value>Método QGI</value>
   </data>
 </root>

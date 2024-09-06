@@ -55,6 +55,7 @@ namespace DPSOsTelemetria2.Administration
             dataGridView1.Columns["Type"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridView1.Columns["Date"].HeaderText = Languages.Administration.Utc_Modify;
             dataGridView1.Columns["Date"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns["MetodoQGI"].Visible = false;
             dataGridView1.Columns["Unidades"].Visible = false;
             dataGridView1.Columns["Range"].Visible = false;
         }

@@ -16,7 +16,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
 
         internal void Recargar(int decimales, List<ReferenciasI> _Telemetrias)
         {
-            var _Telemetria = _Telemetrias.LastOrDefault();
+            ReferenciasI _Telemetria = _Telemetrias.LastOrDefault();
 
             #region DatosManual
 
@@ -49,6 +49,12 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
             TemperaturaSuperficie.Text = $"{Languages.Pozo.TemperaturaSuperficie}:\n{DatosOperativos.TemperaturaSuperficie.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Temperatura, _Telemetria.Unidades)}";
 
             #endregion TemperaturaSuperficie
+
+            #region PresionSeparacion
+
+            PresionSeparacion.Text = $"{Languages.Pozo.PresionSeparacion}:\n{DatosOperativos.PresionSeparacion.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
+
+            #endregion PresionSeparacion
 
             #endregion DatosOperativos
 
@@ -115,6 +121,114 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumatico
             GravedadEspecificaGasProducido.Text = $"{Languages.Pozo.GravedadEspecificaGasProducido}:\n{DatosOperativos.GravedadEspecificaGasProducido.ToString($"n{decimales}")} -";
 
             #endregion GravedadEspecificaGasProducido
+
+            switch (_Telemetria.MetodoQGI)
+            {
+                case "0":
+                    {
+                        tlpPlateOrifice.Enabled=false;
+                        tlpPlateOrifice.AutoSize=false;
+                        tlpPlateOrifice.Height=0;
+                        tlpMeteringValve.Enabled=false;
+                        tlpMeteringValve.AutoSize=false;
+                        tlpMeteringValve.Height=0;
+                        tlpUser.Enabled=false;
+                        tlpUser.AutoSize=false;
+                        tlpUser.Height=0;
+
+                        #region PresionDisponible
+
+                        PresionDisponible1.Text = $"{Languages.Pozo.PresionDisponible}:\n{DatosOperativos.QgiPresionDisponible.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
+
+                        #endregion PresionDisponible
+
+                        #region NroVuelta
+
+                        NroVuelta.Text = $"{Languages.Pozo.NroVuelta}:\n{DatosOperativos.QgiNroVuelta.ToString($"n{decimales}")} -";
+
+                        #endregion NroVuelta
+
+                        break;
+                    }
+                case "1":
+                    {
+                        tlpManualValveControl.Enabled=false;
+                        tlpManualValveControl.AutoSize=false;
+                        tlpManualValveControl.Height=0;
+                        tlpMeteringValve.Enabled=false;
+                        tlpMeteringValve.AutoSize=false;
+                        tlpMeteringValve.Height=0;
+                        tlpUser.Enabled=false;
+                        tlpUser.AutoSize=false;
+                        tlpUser.Height=0;
+
+                        #region PresionDisponible
+
+                        PresionDisponible2.Text = $"{Languages.Pozo.PresionDisponible}:\n{DatosOperativos.QgiPresionDisponible.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
+
+                        #endregion PresionDisponible
+
+                        #region PresionDiferencial
+
+                        PresionDiferencial.Text = $"{Languages.Pozo.PresionDisponible}:\n{DatosOperativos.QgiPresionDiferencial.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
+
+                        #endregion PresionDiferencial
+
+                        #region DiametroOrificio
+
+                        DiametroOrificio.Text = $"{Languages.Pozo.DiametroOrificio}:\n{DatosOperativos.QgiDiametroOrificio.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Diametro, _Telemetria.Unidades)}";
+
+                        #endregion DiametroOrificio
+
+                        break;
+                    }
+                case "2":
+                    {
+                        tlpManualValveControl.Enabled=false;
+                        tlpManualValveControl.AutoSize=false;
+                        tlpManualValveControl.Height=0;
+                        tlpPlateOrifice.Enabled=false;
+                        tlpPlateOrifice.AutoSize=false;
+                        tlpPlateOrifice.Height=0;
+                        tlpUser.Enabled=false;
+                        tlpUser.AutoSize=false;
+                        tlpUser.Height=0;
+
+                        #region PresionDisponible
+
+                        PresionDisponible3.Text = $"{Languages.Pozo.PresionDisponible}:\n{DatosOperativos.QgiPresionDisponible.ToString($"n{decimales}")} {Configuracion.GetSigla(Referencia.Presion, _Telemetria.Unidades)}";
+
+                        #endregion PresionDisponible
+
+                        #region AjusteValvula
+
+                        AjusteValvula.Text = $"{Languages.Pozo.AjusteValvula}:\n{DatosOperativos.QgiAjusteValvula.ToString($"n{decimales}")} -";
+
+                        #endregion AjusteValvula
+
+                        break;
+                    }
+                case "3":
+                    {
+                        tlpManualValveControl.Enabled=false;
+                        tlpManualValveControl.AutoSize=false;
+                        tlpManualValveControl.Height=0;
+                        tlpPlateOrifice.Enabled=false;
+                        tlpPlateOrifice.AutoSize=false;
+                        tlpPlateOrifice.Height=0;
+                        tlpMeteringValve.Enabled=false;
+                        tlpMeteringValve.AutoSize=false;
+                        tlpMeteringValve.Height=0;
+
+                        #region GravedadEspecificaGasInyeccion
+
+                        GravedadEspecificaGasInyeccion.Text = $"{Languages.Pozo.GravedadEspecificaGasInyeccion}:\n{DatosOperativos.QgiGravedadEspecificaGasInyeccion.ToString($"n{decimales}")} -";
+
+                        #endregion GravedadEspecificaGasInyeccion
+
+                        break;
+                    }
+            }
 
             #endregion DatosProduccion
 

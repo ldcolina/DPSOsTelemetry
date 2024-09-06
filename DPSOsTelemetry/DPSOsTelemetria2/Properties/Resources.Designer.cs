@@ -574,7 +574,9 @@ namespace DPSOsTelemetria2.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a .
+        ///   Busca una cadena traducida similar a Version 1.2.1.0
+        ///Devexpress version change
+        ///Text settings.
         /// </summary>
         internal static string String9 {
             get {

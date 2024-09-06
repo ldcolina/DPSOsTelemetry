@@ -177,4 +177,10 @@
   <data name="Info" xml:space="preserve">
     <value>Enter the well information:</value>
   </data>
+  <data name="ErrorBN" xml:space="preserve">
+    <value>You must select a QGI Method</value>
+  </data>
+  <data name="MetodoQGI" xml:space="preserve">
+    <value>QGI Method</value>
+  </data>
 </root>

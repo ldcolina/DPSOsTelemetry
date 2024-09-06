@@ -261,7 +261,7 @@ namespace DPSOsTelemetria2.Pozos.PozoBombeoNeumaticoIntermitente
 
             #endregion CCartaDinagrafica
 
-            foreach (var item in tlpVariables.Controls)
+            foreach (object item in tlpVariables.Controls)
             {
                 switch (item.GetType().Name)
                 {

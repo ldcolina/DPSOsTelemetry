@@ -61,9 +61,6 @@ namespace Telemetria
             [JsonProperty("gravedadEspecificaFluidoPotencia")]
             public decimal GravedadEspecificaFluidoPotencia { set; get; } = 0;
 
-            [JsonProperty("gravedadEspecificaGasInyeccion")]
-            public decimal GravedadEspecificaGasInyeccion { set; get; } = 0;
-
             [JsonProperty("gravedadEspecificaGasProducido")]
             public decimal GravedadEspecificaGasProducido { set; get; } = 0;
 
@@ -85,8 +82,8 @@ namespace Telemetria
             [JsonProperty("presionAperturaCampo")]
             public decimal PresionAperturaCampo { set; get; } = 0;
 
-            [JsonProperty("presionDisponible")]
-            public decimal PresionDisponible { set; get; } = 0;
+            [JsonProperty("presionSeparacion")]
+            public decimal PresionSeparacion { set; get; } = 0;
 
             [JsonProperty("presionEntradaBomba")]
             public decimal PresionEntradaBomba { set; get; } = 0;
@@ -135,6 +132,24 @@ namespace Telemetria
 
             [JsonProperty("velocidadUnidadBombeo")]
             public decimal VelocidadUnidadBombeo { set; get; } = 0;
+
+            [JsonProperty("qgiPresionDisponible")]
+            public decimal QgiPresionDisponible { get; set; } = 0;
+
+            [JsonProperty("qgiNroVuelta")]
+            public decimal QgiNroVuelta { get; set; } = 0;
+
+            [JsonProperty("qgiPresionDiferencial")]
+            public decimal QgiPresionDiferencial { get; set; } = 0;
+
+            [JsonProperty("qgiDiametroOrificio")]
+            public decimal QgiDiametroOrificio { get; set; } = 0;
+
+            [JsonProperty("qgiAjusteValvula")]
+            public decimal QgiAjusteValvula { get; set; } = 0;
+
+            [JsonProperty("qgiGravedadEspecificaGasInyeccion")]
+            public decimal QgiGravedadEspecificaGasInyeccion { get; set; } = 0;
         }
     }
 }

@@ -21,9 +21,9 @@ namespace DPSOsTelemetria2
 
         private readonly string file;
 
-        private readonly string version = "1.2.1.0";
+        private readonly string version = "2.0.2.2";
 
-        private readonly string anio = "2023";
+        private readonly string anio = "2024";
 
         #endregion Directorio
 
@@ -294,7 +294,7 @@ namespace DPSOsTelemetria2
             {
                 Pozo form = (Pozo)child;
 
-                var last = form._Telemetrias.LastOrDefault().Copy();
+                ReferenciasI last = form._Telemetrias.LastOrDefault().Copy();
                 if (form.select == "2")
                 {
                     if (form._Telemetria.DatosOperativosTime.AddSeconds(form._Telemetria.Range.DatosOperativos.TotalSeconds) <= DateTime.UtcNow && form._Telemetria.Range.DatosOperativos.TotalSeconds != 0)

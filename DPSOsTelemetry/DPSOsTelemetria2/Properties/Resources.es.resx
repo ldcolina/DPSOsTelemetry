@@ -152,4 +152,9 @@ Creación de pozos tipo Mecánico</value>
     <value>Versión 1.0.1.8
 Actualizaciones habilitadas desde la nube de la aplicación de escritorio</value>
   </data>
+  <data name="String9" xml:space="preserve">
+    <value>Versión 1.2.1.0
+Cambio de versión de DevExpress
+Ajustes de textos</value>
+  </data>
 </root>
