@@ -190,4 +190,8 @@ Actualizado el firmware</value>
     <value>Versión 2.0.2.10
 Actualización de firmware a 4.8</value>
   </data>
+  <data name="String18" xml:space="preserve">
+    <value>Versión 2.0.2.11
+Habilitado ingreso de decimales en carga de datos</value>
+  </data>
 </root>

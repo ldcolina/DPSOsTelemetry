@@ -8,7 +8,7 @@ namespace DPSOsTelemetria
         public static string Wrote_Formating(string texto, int decimales = 0)
         {
             decimal number = decimal.Parse(texto);
-            return number.ToString($"f{decimales}");
+            return number.ToString($"n{decimales}");
         }
 
         public static void Wrote_KeyPress(object sender, KeyPressEventArgs e)

@@ -9,14 +9,15 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoFluyente
     public partial class TomaInformacion : UserControl
     {
         private readonly ReferenciasII Referencias;
-
+        int decimales=0;
         public TomaInformacion()
         {
             InitializeComponent();
         }
 
-        public TomaInformacion(ReferenciasII referencias) : this()
+        public TomaInformacion(int _decimales,ReferenciasII referencias) : this()
         {
+            decimales = _decimales;
             Referencias = referencias;
 
             #region DatosManual
@@ -26,32 +27,32 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoFluyente
             #region PresionTuberiaProduccion
 
             PresionTuberiaProduccion.Checked = referencias.Range.PresionTuberiaProduccion;
-            PresionTuberiaProduccionMin.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionTuberiaProduccionMin.ToString());
-            PresionTuberiaProduccionMax.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionTuberiaProduccionMax.ToString());
+            PresionTuberiaProduccionMin.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionTuberiaProduccionMin.ToString(), decimales);
+            PresionTuberiaProduccionMax.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionTuberiaProduccionMax.ToString(), decimales);
 
             #endregion PresionTuberiaProduccion
 
             #region PresionTuberiaRevestimiento
 
             PresionTuberiaRevestimiento.Checked = referencias.Range.PresionTuberiaRevestimiento;
-            PresionTuberiaRevestimientoMin.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionTuberiaRevestimientoMin.ToString());
-            PresionTuberiaRevestimientoMax.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionTuberiaRevestimientoMax.ToString());
+            PresionTuberiaRevestimientoMin.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionTuberiaRevestimientoMin.ToString(), decimales);
+            PresionTuberiaRevestimientoMax.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionTuberiaRevestimientoMax.ToString(), decimales);
 
             #endregion PresionTuberiaRevestimiento
 
             #region PresionLineaDescarga
 
             PresionLineaDescarga.Checked = referencias.Range.PresionLineaDescarga;
-            PresionLineaDescargaMin.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionLineaDescargaMin.ToString());
-            PresionLineaDescargaMax.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionLineaDescargaMax.ToString());
+            PresionLineaDescargaMin.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionLineaDescargaMin.ToString(), decimales);
+            PresionLineaDescargaMax.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionLineaDescargaMax.ToString(), decimales);
 
             #endregion PresionLineaDescarga
 
             #region TemperaturaSuperficie
 
             TemperaturaSuperficie.Checked = referencias.Range.TemperaturaSuperficie;
-            TemperaturaSuperficieMin.Text = Condicionantes.Wrote_Formating(referencias.Range.TemperaturaSuperficieMin.ToString());
-            TemperaturaSuperficieMax.Text = Condicionantes.Wrote_Formating(referencias.Range.TemperaturaSuperficieMax.ToString());
+            TemperaturaSuperficieMin.Text = Condicionantes.Wrote_Formating(referencias.Range.TemperaturaSuperficieMin.ToString(), decimales);
+            TemperaturaSuperficieMax.Text = Condicionantes.Wrote_Formating(referencias.Range.TemperaturaSuperficieMax.ToString(), decimales);
 
             #endregion TemperaturaSuperficie
 
@@ -83,80 +84,80 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoFluyente
             #region GastoLiquidoPruebaProduccion
 
             GastoLiquidoPruebaProduccion.Checked = referencias.Range.GastoLiquidoPruebaProduccion;
-            GastoLiquidoPruebaProduccionMin.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoLiquidoPruebaProduccionMin.ToString());
-            GastoLiquidoPruebaProduccionMax.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoLiquidoPruebaProduccionMax.ToString());
+            GastoLiquidoPruebaProduccionMin.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoLiquidoPruebaProduccionMin.ToString(), decimales);
+            GastoLiquidoPruebaProduccionMax.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoLiquidoPruebaProduccionMax.ToString(), decimales);
 
             #endregion GastoLiquidoPruebaProduccion
 
             #region PorcentajeAguaSedimento
 
             PorcentajeAguaSedimento.Checked = referencias.Range.PorcentajeAguaSedimento;
-            PorcentajeAguaSedimentoMin.Text = Condicionantes.Wrote_Formating(referencias.Range.PorcentajeAguaSedimentoMin.ToString());
-            PorcentajeAguaSedimentoMax.Text = Condicionantes.Wrote_Formating(referencias.Range.PorcentajeAguaSedimentoMax.ToString());
+            PorcentajeAguaSedimentoMin.Text = Condicionantes.Wrote_Formating(referencias.Range.PorcentajeAguaSedimentoMin.ToString(), decimales);
+            PorcentajeAguaSedimentoMax.Text = Condicionantes.Wrote_Formating(referencias.Range.PorcentajeAguaSedimentoMax.ToString(), decimales);
 
             #endregion PorcentajeAguaSedimento
 
             #region GastoAceite
 
             GastoAceite.Checked = referencias.Range.GastoAceite;
-            GastoAceiteMin.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoAceiteMin.ToString());
-            GastoAceiteMax.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoAceiteMax.ToString());
+            GastoAceiteMin.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoAceiteMin.ToString(), decimales);
+            GastoAceiteMax.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoAceiteMax.ToString(), decimales);
 
             #endregion GastoAceite
 
             #region GastoGas
 
             GastoGas.Checked = referencias.Range.GastoGas;
-            GastoGasMin.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoGasMin.ToString());
-            GastoGasMax.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoGasMax.ToString());
+            GastoGasMin.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoGasMin.ToString(), decimales);
+            GastoGasMax.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoGasMax.ToString(), decimales);
 
             #endregion GastoGas
 
             #region GastoLiquido
 
             GastoLiquido.Checked = referencias.Range.GastoLiquido;
-            GastoLiquidoMin.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoLiquidoMin.ToString());
-            GastoLiquidoMax.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoLiquidoMax.ToString());
+            GastoLiquidoMin.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoLiquidoMin.ToString(), decimales);
+            GastoLiquidoMax.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoLiquidoMax.ToString(), decimales);
 
             #endregion GastoLiquido
 
             #region RelacionGasAceite
 
             RelacionGasAceite.Checked = referencias.Range.RelacionGasAceite;
-            RelacionGasAceiteMin.Text = Condicionantes.Wrote_Formating(referencias.Range.RelacionGasAceiteMin.ToString());
-            RelacionGasAceiteMax.Text = Condicionantes.Wrote_Formating(referencias.Range.RelacionGasAceiteMax.ToString());
+            RelacionGasAceiteMin.Text = Condicionantes.Wrote_Formating(referencias.Range.RelacionGasAceiteMin.ToString(), decimales);
+            RelacionGasAceiteMax.Text = Condicionantes.Wrote_Formating(referencias.Range.RelacionGasAceiteMax.ToString(), decimales);
 
             #endregion RelacionGasAceite
 
             #region GravedadPetroleo
 
             GravedadPetroleo.Checked = referencias.Range.GravedadPetroleo;
-            GravedadPetroleoMin.Text = Condicionantes.Wrote_Formating(referencias.Range.GravedadPetroleoMin.ToString());
-            GravedadPetroleoMax.Text = Condicionantes.Wrote_Formating(referencias.Range.GravedadPetroleoMax.ToString());
+            GravedadPetroleoMin.Text = Condicionantes.Wrote_Formating(referencias.Range.GravedadPetroleoMin.ToString(), decimales);
+            GravedadPetroleoMax.Text = Condicionantes.Wrote_Formating(referencias.Range.GravedadPetroleoMax.ToString(), decimales);
 
             #endregion GravedadPetroleo
 
             #region Emulsion
 
             Emulsion.Checked = referencias.Range.Emulsion;
-            EmulsionMin.Text = Condicionantes.Wrote_Formating(referencias.Range.EmulsionMin.ToString());
-            EmulsionMax.Text = Condicionantes.Wrote_Formating(referencias.Range.EmulsionMax.ToString());
+            EmulsionMin.Text = Condicionantes.Wrote_Formating(referencias.Range.EmulsionMin.ToString(), decimales);
+            EmulsionMax.Text = Condicionantes.Wrote_Formating(referencias.Range.EmulsionMax.ToString(), decimales);
 
             #endregion Emulsion
 
             #region SalinidadAgua
 
             SalinidadAgua.Checked = referencias.Range.SalinidadAgua;
-            SalinidadAguaMin.Text = Condicionantes.Wrote_Formating(referencias.Range.SalinidadAguaMin.ToString());
-            SalinidadAguaMax.Text = Condicionantes.Wrote_Formating(referencias.Range.SalinidadAguaMax.ToString());
+            SalinidadAguaMin.Text = Condicionantes.Wrote_Formating(referencias.Range.SalinidadAguaMin.ToString(), decimales);
+            SalinidadAguaMax.Text = Condicionantes.Wrote_Formating(referencias.Range.SalinidadAguaMax.ToString(), decimales);
 
             #endregion SalinidadAgua
 
             #region GravedadEspecificaGasProducido
 
             GravedadEspecificaGasProducido.Checked = referencias.Range.GravedadEspecificaGasProducido;
-            GravedadEspecificaGasProducidoMin.Text = Condicionantes.Wrote_Formating(referencias.Range.GravedadEspecificaGasProducidoMin.ToString());
-            GravedadEspecificaGasProducidoMax.Text = Condicionantes.Wrote_Formating(referencias.Range.GravedadEspecificaGasProducidoMax.ToString());
+            GravedadEspecificaGasProducidoMin.Text = Condicionantes.Wrote_Formating(referencias.Range.GravedadEspecificaGasProducidoMin.ToString(), decimales);
+            GravedadEspecificaGasProducidoMax.Text = Condicionantes.Wrote_Formating(referencias.Range.GravedadEspecificaGasProducidoMax.ToString(), decimales);
 
             #endregion GravedadEspecificaGasProducido
 
@@ -194,8 +195,10 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoFluyente
             #endregion DatosManual
         }
 
-        internal void Recargar()
+        internal void Recargar(int _decimales)
         {
+            decimales = _decimales;
+
             #region DatosManual
 
             #region DatosOperativos
@@ -205,32 +208,32 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoFluyente
             #region PresionTuberiaProduccion
 
             PresionTuberiaProduccion.Text = $"{Languages.Pozo.PresionTuberiaProduccion} ({Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)})";
-            PresionTuberiaProduccionMin.Text = Condicionantes.Wrote_Formating(PresionTuberiaProduccionMin.Text);
-            PresionTuberiaProduccionMax.Text = Condicionantes.Wrote_Formating(PresionTuberiaProduccionMax.Text);
+            PresionTuberiaProduccionMin.Text = Condicionantes.Wrote_Formating(PresionTuberiaProduccionMin.Text,decimales);
+            PresionTuberiaProduccionMax.Text = Condicionantes.Wrote_Formating(PresionTuberiaProduccionMax.Text,decimales);
 
             #endregion PresionTuberiaProduccion
 
             #region PresionTuberiaRevestimiento
 
             PresionTuberiaRevestimiento.Text = $"{Languages.Pozo.PresionTuberiaRevestimiento} ({Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)})";
-            PresionTuberiaRevestimientoMin.Text = Condicionantes.Wrote_Formating(PresionTuberiaRevestimientoMin.Text);
-            PresionTuberiaRevestimientoMax.Text = Condicionantes.Wrote_Formating(PresionTuberiaRevestimientoMax.Text);
+            PresionTuberiaRevestimientoMin.Text = Condicionantes.Wrote_Formating(PresionTuberiaRevestimientoMin.Text,decimales);
+            PresionTuberiaRevestimientoMax.Text = Condicionantes.Wrote_Formating(PresionTuberiaRevestimientoMax.Text,decimales);
 
             #endregion PresionTuberiaRevestimiento
 
             #region PresionLineaDescarga
 
             PresionLineaDescarga.Text = $"{Languages.Pozo.PresionLineaDescarga} ({Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)})";
-            PresionLineaDescargaMin.Text = Condicionantes.Wrote_Formating(PresionLineaDescargaMin.Text);
-            PresionLineaDescargaMax.Text = Condicionantes.Wrote_Formating(PresionLineaDescargaMax.Text);
+            PresionLineaDescargaMin.Text = Condicionantes.Wrote_Formating(PresionLineaDescargaMin.Text,decimales);
+            PresionLineaDescargaMax.Text = Condicionantes.Wrote_Formating(PresionLineaDescargaMax.Text,decimales);
 
             #endregion PresionLineaDescarga
 
             #region TemperaturaSuperficie
 
             TemperaturaSuperficie.Text = $"{Languages.Pozo.TemperaturaSuperficie} ({Configuracion.GetSigla(Referencia.Temperatura, Referencias.Unidades)})";
-            TemperaturaSuperficieMin.Text = Condicionantes.Wrote_Formating(TemperaturaSuperficieMin.Text);
-            TemperaturaSuperficieMax.Text = Condicionantes.Wrote_Formating(TemperaturaSuperficieMax.Text);
+            TemperaturaSuperficieMin.Text = Condicionantes.Wrote_Formating(TemperaturaSuperficieMin.Text,decimales);
+            TemperaturaSuperficieMax.Text = Condicionantes.Wrote_Formating(TemperaturaSuperficieMax.Text,decimales);
 
             #endregion TemperaturaSuperficie
 
@@ -243,80 +246,80 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoFluyente
             #region GastoLiquidoPruebaProduccion
 
             GastoLiquidoPruebaProduccion.Text = $"{Languages.Pozo.GastoLiquidoPruebaProduccion} ({Configuracion.GetSigla(Referencia.FlujoVolumetricoLiquido, Referencias.Unidades)})";
-            GastoLiquidoPruebaProduccionMin.Text = Condicionantes.Wrote_Formating(GastoLiquidoPruebaProduccionMin.Text);
-            GastoLiquidoPruebaProduccionMax.Text = Condicionantes.Wrote_Formating(GastoLiquidoPruebaProduccionMax.Text);
+            GastoLiquidoPruebaProduccionMin.Text = Condicionantes.Wrote_Formating(GastoLiquidoPruebaProduccionMin.Text,decimales);
+            GastoLiquidoPruebaProduccionMax.Text = Condicionantes.Wrote_Formating(GastoLiquidoPruebaProduccionMax.Text,decimales);
 
             #endregion GastoLiquidoPruebaProduccion
 
             #region PorcentajeAguaSedimento
 
             PorcentajeAguaSedimento.Text = $"{Languages.Pozo.PorcentajeAguaSedimento} ({Configuracion.GetSigla(Referencia.Porcentaje, Referencias.Unidades)})";
-            PorcentajeAguaSedimentoMin.Text = Condicionantes.Wrote_Formating(PorcentajeAguaSedimentoMin.Text);
-            PorcentajeAguaSedimentoMax.Text = Condicionantes.Wrote_Formating(PorcentajeAguaSedimentoMax.Text);
+            PorcentajeAguaSedimentoMin.Text = Condicionantes.Wrote_Formating(PorcentajeAguaSedimentoMin.Text,decimales);
+            PorcentajeAguaSedimentoMax.Text = Condicionantes.Wrote_Formating(PorcentajeAguaSedimentoMax.Text,decimales);
 
             #endregion PorcentajeAguaSedimento
 
             #region GastoAceite
 
             GastoAceite.Text = $"{Languages.Pozo.GastoAceite} ({Configuracion.GetSigla(Referencia.FlujoVolumetricoLiquido, Referencias.Unidades)})";
-            GastoAceiteMin.Text = Condicionantes.Wrote_Formating(GastoAceiteMin.Text);
-            GastoAceiteMax.Text = Condicionantes.Wrote_Formating(GastoAceiteMax.Text);
+            GastoAceiteMin.Text = Condicionantes.Wrote_Formating(GastoAceiteMin.Text,decimales);
+            GastoAceiteMax.Text = Condicionantes.Wrote_Formating(GastoAceiteMax.Text,decimales);
 
             #endregion GastoAceite
 
             #region GastoGas
 
             GastoGas.Text = $"{Languages.Pozo.GastoGas} ({Configuracion.GetSigla(Referencia.GastoGas, Referencias.Unidades)})";
-            GastoGasMin.Text = Condicionantes.Wrote_Formating(GastoGasMin.Text);
-            GastoGasMax.Text = Condicionantes.Wrote_Formating(GastoGasMax.Text);
+            GastoGasMin.Text = Condicionantes.Wrote_Formating(GastoGasMin.Text,decimales);
+            GastoGasMax.Text = Condicionantes.Wrote_Formating(GastoGasMax.Text,decimales);
 
             #endregion GastoGas
 
             #region GastoLiquido
 
             GastoLiquido.Text = $"{Languages.Pozo.GastoLiquido} ({Configuracion.GetSigla(Referencia.FlujoVolumetricoLiquido, Referencias.Unidades)})";
-            GastoLiquidoMin.Text = Condicionantes.Wrote_Formating(GastoLiquidoMin.Text);
-            GastoLiquidoMax.Text = Condicionantes.Wrote_Formating(GastoLiquidoMax.Text);
+            GastoLiquidoMin.Text = Condicionantes.Wrote_Formating(GastoLiquidoMin.Text,decimales);
+            GastoLiquidoMax.Text = Condicionantes.Wrote_Formating(GastoLiquidoMax.Text,decimales);
 
             #endregion GastoLiquido
 
             #region RelacionGasAceite
 
             RelacionGasAceite.Text = $"{Languages.Pozo.RelacionGasAceite} ({Configuracion.GetSigla(Referencia.RelacionGasAceite, Referencias.Unidades)})";
-            RelacionGasAceiteMin.Text = Condicionantes.Wrote_Formating(RelacionGasAceiteMin.Text);
-            RelacionGasAceiteMax.Text = Condicionantes.Wrote_Formating(RelacionGasAceiteMax.Text);
+            RelacionGasAceiteMin.Text = Condicionantes.Wrote_Formating(RelacionGasAceiteMin.Text,decimales);
+            RelacionGasAceiteMax.Text = Condicionantes.Wrote_Formating(RelacionGasAceiteMax.Text,decimales);
 
             #endregion RelacionGasAceite
 
             #region GravedadPetroleo
 
             GravedadPetroleo.Text = $"{Languages.Pozo.GravedadPetroleo} ({Configuracion.GetSigla(Referencia.Densidad, Referencias.Unidades)})";
-            GravedadPetroleoMin.Text = Condicionantes.Wrote_Formating(GravedadPetroleoMin.Text);
-            GravedadPetroleoMax.Text = Condicionantes.Wrote_Formating(GravedadPetroleoMax.Text);
+            GravedadPetroleoMin.Text = Condicionantes.Wrote_Formating(GravedadPetroleoMin.Text,decimales);
+            GravedadPetroleoMax.Text = Condicionantes.Wrote_Formating(GravedadPetroleoMax.Text,decimales);
 
             #endregion GravedadPetroleo
 
             #region Emulsion
 
             Emulsion.Text = $"{Languages.Pozo.Emulsion} ({Configuracion.GetSigla(Referencia.Porcentaje, Referencias.Unidades)})";
-            EmulsionMin.Text = Condicionantes.Wrote_Formating(EmulsionMin.Text);
-            EmulsionMax.Text = Condicionantes.Wrote_Formating(EmulsionMax.Text);
+            EmulsionMin.Text = Condicionantes.Wrote_Formating(EmulsionMin.Text,decimales);
+            EmulsionMax.Text = Condicionantes.Wrote_Formating(EmulsionMax.Text,decimales);
 
             #endregion Emulsion
 
             #region SalinidadAgua
 
             SalinidadAgua.Text = $"{Languages.Pozo.SalinidadAgua} (ppm)";
-            SalinidadAguaMin.Text = Condicionantes.Wrote_Formating(SalinidadAguaMin.Text);
-            SalinidadAguaMax.Text = Condicionantes.Wrote_Formating(SalinidadAguaMax.Text);
+            SalinidadAguaMin.Text = Condicionantes.Wrote_Formating(SalinidadAguaMin.Text,decimales);
+            SalinidadAguaMax.Text = Condicionantes.Wrote_Formating(SalinidadAguaMax.Text,decimales);
 
             #endregion SalinidadAgua
 
             #region GravedadEspecificaGasProducido
 
             GravedadEspecificaGasProducido.Text = $"{Languages.Pozo.GravedadEspecificaGasProducido} (-)";
-            GravedadEspecificaGasProducidoMin.Text = Condicionantes.Wrote_Formating(GravedadEspecificaGasProducidoMin.Text);
-            GravedadEspecificaGasProducidoMax.Text = Condicionantes.Wrote_Formating(GravedadEspecificaGasProducidoMax.Text);
+            GravedadEspecificaGasProducidoMin.Text = Condicionantes.Wrote_Formating(GravedadEspecificaGasProducidoMin.Text,decimales);
+            GravedadEspecificaGasProducidoMax.Text = Condicionantes.Wrote_Formating(GravedadEspecificaGasProducidoMax.Text,decimales);
 
             #endregion GravedadEspecificaGasProducido
 
@@ -799,8 +802,8 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoFluyente
 
         private void Wrote_KeyPress(object sender, KeyPressEventArgs e) => Condicionantes.Wrote_KeyPress(sender, e);
 
-        private void Wrote_Leave(object sender, EventArgs e) => ((TextBox)sender).Text = Condicionantes.Wrote_Formating(((TextBox)sender).Text);
+        private void Wrote_Leave(object sender, EventArgs e) => ((TextBox)sender).Text = Condicionantes.Wrote_Formating(((TextBox)sender).Text,decimales);
 
-        private void TomaInformacion_Load(object sender, EventArgs e) => Recargar();
+        private void TomaInformacion_Load(object sender, EventArgs e) => Recargar(decimales);
     }
 }

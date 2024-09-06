@@ -1,0 +1,630 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="DPSOsTelemetria.exe" version="2.0.2.11" publicKeyToken="160efb2748dd6eb2" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="antenna-with-signal-lines-symbol_icon-icons.com_56573.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="DPSOsTelemetria" version="2.0.2.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="DPSOsTelemetria.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Opciones del manifiesto de Control de cuentas de usuario
+          Si quiere cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el
+          nodo requestedExecutionLevel por alguno de los siguientes.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Si desea usar la virtualización de archivos y del Registro para la
+         compatibilidad con versiones anteriores, elimine el nodo requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DPSOsTelemetria.exe" size="5821904">
+      <assemblyIdentity name="DPSOsTelemetria" version="2.0.2.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>nOk1WQ82Y8UCQLnTW52YdxQyR2dFfvCYldxo7LAapbg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\DPSOsTelemetria.resources.dll" size="5120">
+      <assemblyIdentity name="DPSOsTelemetria.resources" version="2.0.2.0" language="es" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>YMY4WI3yiA747XlcFH6be5M8MzDa3IuzInWYKq+MFCY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es-MX\DPSOsTelemetria.resources.dll" size="5120">
+      <assemblyIdentity name="DPSOsTelemetria.resources" version="2.0.2.0" language="es-MX" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Paf7sMaKVjzQdj5xHnF/ATUEr905Ldw8oBbxT4lhX3M=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Languages.dll" size="80896">
+      <assemblyIdentity name="Languages" version="2021.4.29.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>OBIJmcyaIR3jm7i7CCg86TZrES+gbQuGgCMsdG4VQIE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\Languages.resources.dll" size="28160">
+      <assemblyIdentity name="Languages.resources" version="2021.4.29.0" language="es" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>65RjPmSbg25zSBM/3EG0PUgLDZ8VpJO1YIedDtY+Cbc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es-MX\Languages.resources.dll" size="28160">
+      <assemblyIdentity name="Languages.resources" version="2021.4.29.0" language="es-MX" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>BOHdGSYTGyZF8cL6O2ZaGN9mNyDQvPmnRnA6b55C8aw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Office.Interop.Excel.dll" size="1638128">
+      <assemblyIdentity name="Microsoft.Office.Interop.Excel" version="15.0.0.0" publicKeyToken="71E9BCE111E9429C" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>1fvz9xxAymOydgG1J1wc9dwM/Rh8lyV54hAPkhWjdf4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="711952">
+      <assemblyIdentity name="Newtonsoft.Json" version="13.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>4eJ697B+7t9c5xqSVfBCKBam/FhJpIPGcU4bRyBE+p0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Telemetria.dll" size="47104">
+      <assemblyIdentity name="Telemetria" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>iBdAbrUeBhqO7kSKypnEaJBhgwIINdoz+hfSwJSXZ3s=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="antenna-with-signal-lines-symbol_icon-icons.com_56573.ico" size="67646">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>C2zmLdgozAdvjNNR/qOnZHrU3U84gxVNUxSg5vNJtVE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DPSOsTelemetria.exe.config" size="574">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xzGKYpttjNfrInvwkwwBbiC1NI0IvgDZ5FfkffV4aks=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\esp\new_well.png" size="34769">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>KdQnneQOX3/dLIeHWLmguBhMvOVBjHYPvLZIOz7U/Ks=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\esp\nuevo_pozo.png" size="39207">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>jn8GcesFSQIm63ZVN3iRD59cxY9AXNDhqmDPJb6sV30=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\esp\telemetria.png" size="31536">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ySsnHLwruloYrKyredrPBgGDFSa4olOKWZA1I1yhGsU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\esp\telemetria2.png" size="52499">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wqfnSVfK8lsLPxuJScZW1vzdLcS4KCU5l8fMaZCusX4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\esp\telemetria3.png" size="64493">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>lCFFzRVWAOBDnag/m31nos9QUcHcrs/tv5x25sih0yM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\esp\telemetry.png" size="28973">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>GGusjLXKBtFtiYWI3DhVp3HcdwZTL0eXDWy5VbeBkB8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\esp\telemetry2.png" size="47009">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1qYCf8YD2IYEUoAVAPtl1++pVsUiAl1BHLFtdP2niGo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\esp\telemetry3.png" size="57713">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>oLBaRTvSgOpzjOhU2VBj4tIMZC7YswM218rn59w8lT4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\icon\adddatabase_5668.ico" size="67646">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>w6Lmt7CzX65JMotMswNoqNyiTMvV12juNZpleqdL+Eo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\icon\antenna-with-signal-lines-symbol_icon-icons.com_56573.ico" size="67646">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>C2zmLdgozAdvjNNR/qOnZHrU3U84gxVNUxSg5vNJtVE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\icon\chat_96641.ico" size="173479">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+XWotF0XlVo14yXkfoPR/3VboTKVzEEcn0d3F9Q/mK0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\icon\configuraciones.ico" size="9959">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xJd53ukbYhf6RV3uzOo6wY9TLoaIH/0BbdbGjqM/RBE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\icon\instrucciones.ico" size="168374">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1Vtl2AnEDPMX+URMYOQH//Tu2m0m5sDroPFFMUaZjO8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\icon\inventory.ico" size="167807">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>kA/hDAzFcmlAklsiKVciGOIjrurTC0r6Vy5wmpvTNiw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\icon\magnifying-glass.ico" size="184582">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>YFmRLsffTH1p44BdoJp+qUPa8CZ78Ux+yZ35i34SXXU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\icon\off-button.ico" size="7158">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>DlHaoZth2oow+RqJf1CflhaW3rwkokFuh+tgGd+PF7c=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\icon\oil-platform.ico" size="9988">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>fnzR0qZEvXQXKi56VJoFjupMDNviMkgJoYcToUkV7Hw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\icon\on-button.ico" size="170992">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>8slMeA9Rp+n6SSMaiXYnOdqb43fXt+dzGkVB5Xljtsw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\icon\optimization_timer_icon_187421.ico" size="67646">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>lWSuJp/gV9vIbdGrtP6XhFg0VUmpR+1lTvWwh/RdHsE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\icon\refresh.ico" size="168080">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>WzA/z62jV1Lt4k69JYQxVzUbicAZAxr2vFVRY2RixL8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\icon\seo.ico" size="10669">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>39dlp6SUPcB7SbAAb+K3eVxiF3Ljb4HwF1oEbZ27xVA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\icon\tecnologia.ico" size="6626">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>0yzrhD18+qVrCtb0F6xfnttTIFj+UMv4HbUaHJ/AjrI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\ima_ico\adddatabase_5668.png" size="3888">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xDcGoVS1v+aUdJX5jePUPcya5Jy3b3upNJbc/WoTq54=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\ima_ico\antenna-with-signal-lines-symbol_icon-icons.com_56573.png" size="3263">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Qbv+v+1F1GT1gQzsBCzbBccOvQZ50GDPEc1nfQfyO84=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\ima_ico\chat_96641.png" size="11563">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>30XKy4GM5Dh0ROGUbxhQBT2YlsRblnesaORpy7IX4jc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\ima_ico\configuraciones.png" size="28309">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>CIkaXDSnknAHxzBr8JwPY010c2Z13V0SFpRVsgtTpPY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\ima_ico\instrucciones.png" size="14727">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1o52VWBIQeW0Fu5VQTOHcu7Mjnr431UgQTdyShVJuiI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\ima_ico\inventory.png" size="12412">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>tDZg1brR5CsHWw+sTTZuS6S2OcZNFRyjIwqR5EGbPVU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\ima_ico\magnifying-glass.png" size="35394">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>n46oVKSpJzOhydmgMYIoNrrj0neWMffVVqN4okJqZuM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\ima_ico\off-button.png" size="12574">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>whCHj8X3/aHg3syRHK/VTgd+DTI1DmV+f0XaHiCrlVc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\ima_ico\oil-platform.png" size="23162">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>t0Yzpr/BhDNq9M58AhN4a97Ui/Zu0kCA5ftR4i+j65Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\ima_ico\on-button.png" size="13409">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Oiuf4ZYmAAhZAbr30Pm/QMnY3EOZ5x4PAg3H+abwEcM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\ima_ico\optimization_timer_icon_187421.png" size="3798">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>9gPVm9aWz64d1C924dXtEkUm1I3J/aVI91oUoPhBVlk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\ima_ico\refresh.png" size="16185">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>eu4myAKR1w9eJg37cLV34uz9/gsd6JIItuBOKl/UaKA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\ima_ico\seo.png" size="19884">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>q2ZSmAqSXprP8vO75WhTae+q9kqmhZZJNa8Gn+wChwU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\ima_ico\tecnologia.png" size="14311">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>K4u24e4NaHIS6+BSIUUEe/qL00b5Ery4GS0vl9w9PmU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\istockphoto-1126282547-170667a.jpg" size="92351">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>MrPehrcsV/ZoCsAvq98TA4syYI9F39Cy7ke3nvhex9w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\Pozos\Cavidad Progresiva.ico" size="270398">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Xd6qgatHqbBIgiBzu0CYJX9LEJdeLv684F1BVfpeBAo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\Pozos\Cavidad Progresiva.jpg" size="152028">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1+ih2hQWnjF18pPZ9qLKFgq7rjb7L0/UwUk8YJfwppM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\Pozos\Electrocentrífugo.ico" size="270398">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>9w4R8Pxek52Tq1d6WhIFCLvWqeDzM+GfZJrrvDBdlYQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\Pozos\Electrocentrífugo.png" size="195680">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>RjO0Ao6ohVLB/vUpsZHztrUc8nNYO1LNVXA/oV6L4PE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\Pozos\Fluyente.ico" size="270398">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>KfdwC5jxPIE0UddMa+YIw4w7furRke7g8RICYFXpoQE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\Pozos\Fluyente.png" size="161971">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2cK8smAD/3bY6u7MiQi6/+ZZUfwOHynyfdUA0ZqqcqE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\Pozos\Jet Pump.ico" size="270398">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Mg5n4SVyi1DndBwvOGzIsmDZTx04oUS5E3KJrorRcQo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\Pozos\Jet Pump.png" size="177727">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ZgMaFSYBJOH1YrS51cc7Y4iQtv9XmRgCZKFuts4sJUo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\Pozos\Mecanico.ico" size="270398">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>4SDaFyvojoAaEM3fKG1nXSYp+DgvjsPB8pyrF4dpxwI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\Pozos\Mecanico.png" size="161837">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R28HTPOmSI6IqYQ0bfgjYywOte0Q2zEvLVFYskuWiGg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\Pozos\Neumatico Intermitente.ico" size="270398">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>4T7wYksXHFL5ATYz6wmjvpU+ogOb1dXMXm1w4sBgFMY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\Pozos\Neumatico Intermitente.png" size="178609">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>jewbIbYKV4YDm5R+N7bsGTeLXb/yrojuCSZ+CKqWyLk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\Pozos\Neumatico.ico" size="270398">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>4T7wYksXHFL5ATYz6wmjvpU+ogOb1dXMXm1w4sBgFMY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\Pozos\Neumatico.png" size="180808">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>OEuP6xR4oCeZZY+fLsALk+box+l7GWJvj4fgu3ccuUU=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-LDCR\lizco" issuerKeyHash="b34f83da866e1b2677e2ef50a3f4ff9935129161" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>GiBVZOifeBccPg72NKbAyXsaBoAIK9umXBrBjSeZ2Z4=</DigestValue></Reference></SignedInfo><SignatureValue>oqxg1oaS+AyATpmPwpZUN+Utvhmh6Sa7jC1vrM5CDURosKhqEQi4mYqyVrdci5JZOkhIJPW+mBYU9oj6bfI8fhuZhR3kcShAJlOqjypoWR2xv4dMasD2s9C7peQANTs758bt0JDx4wXEIJI4a34eUO12B0UVP+3BcR4n/PWgR/8=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>zQVhtvEx1ZL9bHoGeeLbjl51xMmqJfBoi6f4GJUKCC7iBHLgST3Rc1g3tNS3DQ4blSw+FMCaCgfo0mvv+YYYUqbCl0GzJ7j6ZTwD8mXKRJ6kQk881JpucUATY2t5by95D31qVQx7h4cbvmpXAYFrU2/IPdsXyHyYQLZVqGtGb9U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="9ed999278dc11a5ca6db2b0880061a7bc9c0a634f60e3e1c17789fe86455201a" Description="" Url=""><as:assemblyIdentity name="DPSOsTelemetria.exe" version="2.0.2.11" publicKeyToken="160efb2748dd6eb2" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-LDCR\lizco</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>2kNPWiCQjtuRVBNM8GUcITh1UlAb6uJYmg32m2vGbAw=</DigestValue></Reference></SignedInfo><SignatureValue>qJ27xTVtjyYI7XI2MMaGlRvjh7BkME/HwDi/G/V9u5kGIto7Su4h6KifLWLC2oWJLBk0EZ7m2bXdrGcsrlm4xyWSX1UxBOkE1O8HlMypne+EP25tfvTUqgsW4iHP1yTngXP0NyMMv6FmignZaJaY/qGtorqKsS6uQjC5bFzg8nw=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>zQVhtvEx1ZL9bHoGeeLbjl51xMmqJfBoi6f4GJUKCC7iBHLgST3Rc1g3tNS3DQ4blSw+FMCaCgfo0mvv+YYYUqbCl0GzJ7j6ZTwD8mXKRJ6kQk881JpucUATY2t5by95D31qVQx7h4cbvmpXAYFrU2/IPdsXyHyYQLZVqGtGb9U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB4TCCAUqgAwIBAgIQSwHzMXoOzJtKMMJoVOeoCzANBgkqhkiG9w0BAQsFADAvMS0wKwYDVQQDHiQARABFAFMASwBUAE8AUAAtAEwARABDAFIAXABsAGkAegBjAG8wHhcNMjQwOTA2MDUwNzM5WhcNMjUwOTA2MTEwNzM5WjAvMS0wKwYDVQQDHiQARABFAFMASwBUAE8AUAAtAEwARABDAFIAXABsAGkAegBjAG8wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAM0FYbbxMdWS/Wx6Bnni245edcTJqiXwaIun+BiVCggu4gRy4Ek90XNYN7TUtw0OG5UsPhTAmgoH6NJr7/mGGFKmwpdBsye4+mU8A/JlykSepEJPPNSabnFAE2NreW8veQ99alUMe4eHG75qVwGBa1NvyD3bF8h8mEC2VahrRm/VAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAHoY8x+GOl3DqFnCGFOU2ByOUhZoeyM+H7CZtqkvhfPTWthZqhU/2TNcjUFsEkxE5Ibc6v3BzxVBFO6EjKdbBADqKmf9oWfHxrI20OYVe7AASsbJimbU8pP0BubHu2LxObXTnK5+GZTWHtM94oshExQaW415MEfCKiRe9OkDgq/Y=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

@@ -350,4 +350,8 @@ Firmware update</value>
     <value>Version 2.0.2.10
 Firmware update to 4.8</value>
   </data>
+  <data name="String18" xml:space="preserve">
+    <value>Version 2.0.2.11
+Enabled decimal entry in data upload</value>
+  </data>
 </root>

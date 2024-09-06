@@ -152,7 +152,7 @@ namespace DPSOsTelemetria
             {
                 case "FL":
                     {
-                        Pozos.PozoBombeoFluyente.TomaInformacion TomaInformacion = new Pozos.PozoBombeoFluyente.TomaInformacion(Referencias) { Dock = DockStyle.Fill };
+                        Pozos.PozoBombeoFluyente.TomaInformacion TomaInformacion = new Pozos.PozoBombeoFluyente.TomaInformacion(Decimales,Referencias) { Dock = DockStyle.Fill };
 
                         panel2.Controls.Add(TomaInformacion);
                         break;
@@ -160,7 +160,7 @@ namespace DPSOsTelemetria
 
                 case "FLG":
                     {
-                        Pozos.PozoBombeoFluyenteGas.TomaInformacion TomaInformacion = new Pozos.PozoBombeoFluyenteGas.TomaInformacion(Referencias) { Dock = DockStyle.Fill };
+                        Pozos.PozoBombeoFluyenteGas.TomaInformacion TomaInformacion = new Pozos.PozoBombeoFluyenteGas.TomaInformacion(Decimales, Referencias) { Dock = DockStyle.Fill };
 
                         panel2.Controls.Add(TomaInformacion);
                         break;
@@ -168,7 +168,7 @@ namespace DPSOsTelemetria
 
                 case "BN":
                     {
-                        Pozos.PozoBombeoNeumatico.TomaInformacion TomaInformacion = new Pozos.PozoBombeoNeumatico.TomaInformacion(Referencias) { Dock = DockStyle.Fill };
+                        Pozos.PozoBombeoNeumatico.TomaInformacion TomaInformacion = new Pozos.PozoBombeoNeumatico.TomaInformacion(Decimales, Referencias) { Dock = DockStyle.Fill };
 
                         panel2.Controls.Add(TomaInformacion);
                         break;
@@ -176,7 +176,7 @@ namespace DPSOsTelemetria
 
                 case "BNI":
                     {
-                        Pozos.PozoBombeoNeumaticoIntermitente.TomaInformacion TomaInformacion = new Pozos.PozoBombeoNeumaticoIntermitente.TomaInformacion(Referencias) { Dock = DockStyle.Fill };
+                        Pozos.PozoBombeoNeumaticoIntermitente.TomaInformacion TomaInformacion = new Pozos.PozoBombeoNeumaticoIntermitente.TomaInformacion(Decimales, Referencias) { Dock = DockStyle.Fill };
 
                         panel2.Controls.Add(TomaInformacion);
                         break;
@@ -184,7 +184,7 @@ namespace DPSOsTelemetria
 
                 case "BM":
                     {
-                        Pozos.PozoBombeoMecanico.TomaInformacion TomaInformacion = new Pozos.PozoBombeoMecanico.TomaInformacion(Referencias) { Dock = DockStyle.Fill };
+                        Pozos.PozoBombeoMecanico.TomaInformacion TomaInformacion = new Pozos.PozoBombeoMecanico.TomaInformacion(Decimales, Referencias) { Dock = DockStyle.Fill };
 
                         panel2.Controls.Add(TomaInformacion);
                         break;
@@ -192,7 +192,7 @@ namespace DPSOsTelemetria
 
                 case "BCP":
                     {
-                        Pozos.PozoBombeoCavidadProgresiva.TomaInformacion TomaInformacion = new Pozos.PozoBombeoCavidadProgresiva.TomaInformacion(Referencias) { Dock = DockStyle.Fill };
+                        Pozos.PozoBombeoCavidadProgresiva.TomaInformacion TomaInformacion = new Pozos.PozoBombeoCavidadProgresiva.TomaInformacion(Decimales, Referencias) { Dock = DockStyle.Fill };
 
                         panel2.Controls.Add(TomaInformacion);
                         break;
@@ -200,7 +200,7 @@ namespace DPSOsTelemetria
 
                 case "BEC":
                     {
-                        Pozos.PozoBombeoElectroCentrifugo.TomaInformacion TomaInformacion = new Pozos.PozoBombeoElectroCentrifugo.TomaInformacion(Referencias) { Dock = DockStyle.Fill };
+                        Pozos.PozoBombeoElectroCentrifugo.TomaInformacion TomaInformacion = new Pozos.PozoBombeoElectroCentrifugo.TomaInformacion(Decimales, Referencias) { Dock = DockStyle.Fill };
 
                         panel2.Controls.Add(TomaInformacion);
                         break;
@@ -208,7 +208,7 @@ namespace DPSOsTelemetria
 
                 case "BJP":
                     {
-                        Pozos.PozoBombeoJetPump.TomaInformacion TomaInformacion = new Pozos.PozoBombeoJetPump.TomaInformacion(Referencias) { Dock = DockStyle.Fill };
+                        Pozos.PozoBombeoJetPump.TomaInformacion TomaInformacion = new Pozos.PozoBombeoJetPump.TomaInformacion(Decimales, Referencias) { Dock = DockStyle.Fill };
 
                         panel2.Controls.Add(TomaInformacion);
                         break;
@@ -225,56 +225,56 @@ namespace DPSOsTelemetria
                 case "FL":
                     {
                         Pozos.PozoBombeoFluyente.TomaInformacion TomaInformacion = panel2.Controls.OfType<Pozos.PozoBombeoFluyente.TomaInformacion>().FirstOrDefault();
-                        TomaInformacion.Recargar();
+                        TomaInformacion.Recargar(Decimales);
                         break;
                     }
 
                 case "FLG":
                     {
                         Pozos.PozoBombeoFluyenteGas.TomaInformacion TomaInformacion = panel2.Controls.OfType<Pozos.PozoBombeoFluyenteGas.TomaInformacion>().FirstOrDefault();
-                        TomaInformacion.Recargar();
+                        TomaInformacion.Recargar(Decimales);
                         break;
                     }
 
                 case "BN":
                     {
                         Pozos.PozoBombeoNeumatico.TomaInformacion TomaInformacion = panel2.Controls.OfType<Pozos.PozoBombeoNeumatico.TomaInformacion>().FirstOrDefault();
-                        TomaInformacion.Recargar();
+                        TomaInformacion.Recargar(Decimales);
                         break;
                     }
 
                 case "BNI":
                     {
                         Pozos.PozoBombeoNeumaticoIntermitente.TomaInformacion TomaInformacion = panel2.Controls.OfType<Pozos.PozoBombeoNeumaticoIntermitente.TomaInformacion>().FirstOrDefault();
-                        TomaInformacion.Recargar();
+                        TomaInformacion.Recargar(Decimales);
                         break;
                     }
 
                 case "BM":
                     {
                         Pozos.PozoBombeoMecanico.TomaInformacion TomaInformacion = panel2.Controls.OfType<Pozos.PozoBombeoMecanico.TomaInformacion>().FirstOrDefault();
-                        TomaInformacion.Recargar();
+                        TomaInformacion.Recargar(Decimales);
                         break;
                     }
 
                 case "BCP":
                     {
                         Pozos.PozoBombeoCavidadProgresiva.TomaInformacion TomaInformacion = panel2.Controls.OfType<Pozos.PozoBombeoCavidadProgresiva.TomaInformacion>().FirstOrDefault();
-                        TomaInformacion.Recargar();
+                        TomaInformacion.Recargar(Decimales);
                         break;
                     }
 
                 case "BEC":
                     {
                         Pozos.PozoBombeoElectroCentrifugo.TomaInformacion TomaInformacion = panel2.Controls.OfType<Pozos.PozoBombeoElectroCentrifugo.TomaInformacion>().FirstOrDefault();
-                        TomaInformacion.Recargar();
+                        TomaInformacion.Recargar(Decimales);
                         break;
                     }
 
                 case "BJP":
                     {
                         Pozos.PozoBombeoJetPump.TomaInformacion TomaInformacion = panel2.Controls.OfType<Pozos.PozoBombeoJetPump.TomaInformacion>().FirstOrDefault();
-                        TomaInformacion.Recargar();
+                        TomaInformacion.Recargar(Decimales);
                         break;
                     }
             }

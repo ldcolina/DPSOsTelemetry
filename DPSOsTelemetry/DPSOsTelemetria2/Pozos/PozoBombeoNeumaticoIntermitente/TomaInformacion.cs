@@ -8,14 +8,16 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoNeumaticoIntermitente
     public partial class TomaInformacion : UserControl
     {
         private readonly ReferenciasII Referencias;
+        int decimales = 0;
 
         public TomaInformacion()
         {
             InitializeComponent();
         }
 
-        public TomaInformacion(ReferenciasII referencias) : this()
+        public TomaInformacion(int _decimales, ReferenciasII referencias) : this()
         {
+            decimales = _decimales;
             Referencias = referencias;
 
             #region DatosOperativos
@@ -23,216 +25,216 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoNeumaticoIntermitente
             #region PresionTuberiaProduccion
 
             //PresionTuberiaProduccion.Checked = referencias.Range.PresionTuberiaProduccion;
-            //PresionTuberiaProduccionMin.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionTuberiaProduccionMin.ToString());
-            //PresionTuberiaProduccionMax.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionTuberiaProduccionMax.ToString());
+            //PresionTuberiaProduccionMin.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionTuberiaProduccionMin.ToString(), decimales);
+            //PresionTuberiaProduccionMax.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionTuberiaProduccionMax.ToString(), decimales);
 
             #endregion PresionTuberiaProduccion
 
             #region PresionTuberiaRevestimiento
 
             //PresionTuberiaRevestimiento.Checked = referencias.Range.PresionTuberiaRevestimiento;
-            //PresionTuberiaRevestimientoMin.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionTuberiaRevestimientoMin.ToString());
-            //PresionTuberiaRevestimientoMax.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionTuberiaRevestimientoMax.ToString());
+            //PresionTuberiaRevestimientoMin.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionTuberiaRevestimientoMin.ToString(), decimales);
+            //PresionTuberiaRevestimientoMax.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionTuberiaRevestimientoMax.ToString(), decimales);
 
             #endregion PresionTuberiaRevestimiento
 
             #region PresionAperturaCampo
 
             //PresionAperturaCampo.Checked = referencias.Range.PresionAperturaCampo;
-            //PresionAperturaCampoMin.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionAperturaCampoMin.ToString());
-            //PresionAperturaCampoMax.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionAperturaCampoMax.ToString());
+            //PresionAperturaCampoMin.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionAperturaCampoMin.ToString(), decimales);
+            //PresionAperturaCampoMax.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionAperturaCampoMax.ToString(), decimales);
 
             #endregion PresionAperturaCampo
 
             #region PresionLineaDescarga
 
             //PresionLineaDescarga.Checked = referencias.Range.PresionLineaDescarga;
-            //PresionLineaDescargaMin.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionLineaDescargaMin.ToString());
-            //PresionLineaDescargaMax.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionLineaDescargaMax.ToString());
+            //PresionLineaDescargaMin.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionLineaDescargaMin.ToString(), decimales);
+            //PresionLineaDescargaMax.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionLineaDescargaMax.ToString(), decimales);
 
             #endregion PresionLineaDescarga
 
             #region TemperaturaSuperficie
 
             //TemperaturaSuperficie.Checked = referencias.Range.TemperaturaSuperficie;
-            //TemperaturaSuperficieMin.Text = Condicionantes.Wrote_Formating(referencias.Range.TemperaturaSuperficieMin.ToString());
-            //TemperaturaSuperficieMax.Text = Condicionantes.Wrote_Formating(referencias.Range.TemperaturaSuperficieMax.ToString());
+            //TemperaturaSuperficieMin.Text = Condicionantes.Wrote_Formating(referencias.Range.TemperaturaSuperficieMin.ToString(), decimales);
+            //TemperaturaSuperficieMax.Text = Condicionantes.Wrote_Formating(referencias.Range.TemperaturaSuperficieMax.ToString(), decimales);
 
             #endregion TemperaturaSuperficie
 
             #region sumergenciaEfectivaBomba
 
             //sumergenciaEfectivaBomba.Checked = referencias.Range.SumergenciaEfectivaBomba;
-            //sumergenciaEfectivaBombaMin.Text = Condicionantes.Wrote_Formating(referencias.Range.SumergenciaEfectivaBombaMin.ToString());
-            //sumergenciaEfectivaBombaMax.Text = Condicionantes.Wrote_Formating(referencias.Range.SumergenciaEfectivaBombaMax.ToString());
+            //sumergenciaEfectivaBombaMin.Text = Condicionantes.Wrote_Formating(referencias.Range.SumergenciaEfectivaBombaMin.ToString(), decimales);
+            //sumergenciaEfectivaBombaMax.Text = Condicionantes.Wrote_Formating(referencias.Range.SumergenciaEfectivaBombaMax.ToString(), decimales);
 
             #endregion sumergenciaEfectivaBomba
 
             #region NivelFluidoPozoTp
 
             //NivelFluidoPozoTp.Checked = referencias.Range.NivelFluidoPozoTp;
-            //NivelFluidoPozoTpMin.Text = Condicionantes.Wrote_Formating(referencias.Range.NivelFluidoPozoTpMin.ToString());
-            //NivelFluidoPozoTpMax.Text = Condicionantes.Wrote_Formating(referencias.Range.NivelFluidoPozoTpMax.ToString());
+            //NivelFluidoPozoTpMin.Text = Condicionantes.Wrote_Formating(referencias.Range.NivelFluidoPozoTpMin.ToString(), decimales);
+            //NivelFluidoPozoTpMax.Text = Condicionantes.Wrote_Formating(referencias.Range.NivelFluidoPozoTpMax.ToString(), decimales);
 
             #endregion NivelFluidoPozoTp
 
             #region NivelFluidoPozoTr
 
             //NivelFluidoPozoTr.Checked = referencias.Range.NivelFluidoPozoTr;
-            //NivelFluidoPozoTrMin.Text = Condicionantes.Wrote_Formating(referencias.Range.NivelFluidoPozoTrMin.ToString());
-            //NivelFluidoPozoTrMax.Text = Condicionantes.Wrote_Formating(referencias.Range.NivelFluidoPozoTrMax.ToString());
+            //NivelFluidoPozoTrMin.Text = Condicionantes.Wrote_Formating(referencias.Range.NivelFluidoPozoTrMin.ToString(), decimales);
+            //NivelFluidoPozoTrMax.Text = Condicionantes.Wrote_Formating(referencias.Range.NivelFluidoPozoTrMax.ToString(), decimales);
 
             #endregion NivelFluidoPozoTr
 
             #region PresionEntradaBomba
 
             //PresionEntradaBomba.Checked = referencias.Range.PresionEntradaBomba;
-            //PresionEntradaBombaMin.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionEntradaBombaMin.ToString());
-            //PresionEntradaBombaMax.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionEntradaBombaMax.ToString());
+            //PresionEntradaBombaMin.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionEntradaBombaMin.ToString(), decimales);
+            //PresionEntradaBombaMax.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionEntradaBombaMax.ToString(), decimales);
 
             #endregion PresionEntradaBomba
 
             #region VelocidadBomba
 
             //VelocidadBomba.Checked = referencias.Range.VelocidadBomba;
-            //VelocidadBombaMin.Text = Condicionantes.Wrote_Formating(referencias.Range.VelocidadBombaMin.ToString());
-            //VelocidadBombaMax.Text = Condicionantes.Wrote_Formating(referencias.Range.VelocidadBombaMax.ToString());
+            //VelocidadBombaMin.Text = Condicionantes.Wrote_Formating(referencias.Range.VelocidadBombaMin.ToString(), decimales);
+            //VelocidadBombaMax.Text = Condicionantes.Wrote_Formating(referencias.Range.VelocidadBombaMax.ToString(), decimales);
 
             #endregion VelocidadBomba
 
             #region VelocidadUnidadBombeo
 
             //VelocidadUnidadBombeo.Checked = referencias.Range.VelocidadUnidadBombeo;
-            //VelocidadUnidadBombeoMin.Text = Condicionantes.Wrote_Formating(referencias.Range.VelocidadUnidadBombeoMin.ToString());
-            //VelocidadUnidadBombeoMax.Text = Condicionantes.Wrote_Formating(referencias.Range.VelocidadUnidadBombeoMax.ToString());
+            //VelocidadUnidadBombeoMin.Text = Condicionantes.Wrote_Formating(referencias.Range.VelocidadUnidadBombeoMin.ToString(), decimales);
+            //VelocidadUnidadBombeoMax.Text = Condicionantes.Wrote_Formating(referencias.Range.VelocidadUnidadBombeoMax.ToString(), decimales);
 
             #endregion VelocidadUnidadBombeo
 
             #region frecuenciaOperacionBomba
 
             //frecuenciaOperacionBomba.Checked = referencias.Range.FrecuenciaOperacionBomba;
-            //frecuenciaOperacionBombaMin.Text = Condicionantes.Wrote_Formating(referencias.Range.FrecuenciaOperacionBombaMin.ToString());
-            //frecuenciaOperacionBombaMax.Text = Condicionantes.Wrote_Formating(referencias.Range.FrecuenciaOperacionBombaMax.ToString());
+            //frecuenciaOperacionBombaMin.Text = Condicionantes.Wrote_Formating(referencias.Range.FrecuenciaOperacionBombaMin.ToString(), decimales);
+            //frecuenciaOperacionBombaMax.Text = Condicionantes.Wrote_Formating(referencias.Range.FrecuenciaOperacionBombaMax.ToString(), decimales);
 
             #endregion frecuenciaOperacionBomba
 
             #region VelocidadMotor
 
             //VelocidadMotor.Checked = referencias.Range.VelocidadMotor;
-            //VelocidadMotorMin.Text = Condicionantes.Wrote_Formating(referencias.Range.VelocidadMotorMin.ToString());
-            //VelocidadMotorMax.Text = Condicionantes.Wrote_Formating(referencias.Range.VelocidadMotorMax.ToString());
+            //VelocidadMotorMin.Text = Condicionantes.Wrote_Formating(referencias.Range.VelocidadMotorMin.ToString(), decimales);
+            //VelocidadMotorMax.Text = Condicionantes.Wrote_Formating(referencias.Range.VelocidadMotorMax.ToString(), decimales);
 
             #endregion VelocidadMotor
 
             #region LongitudCarrera
 
             //LongitudCarrera.Checked = referencias.Range.LongitudCarrera;
-            //LongitudCarreraMin.Text = Condicionantes.Wrote_Formating(referencias.Range.LongitudCarreraMin.ToString());
-            //LongitudCarreraMax.Text = Condicionantes.Wrote_Formating(referencias.Range.LongitudCarreraMax.ToString());
+            //LongitudCarreraMin.Text = Condicionantes.Wrote_Formating(referencias.Range.LongitudCarreraMin.ToString(), decimales);
+            //LongitudCarreraMax.Text = Condicionantes.Wrote_Formating(referencias.Range.LongitudCarreraMax.ToString(), decimales);
 
             #endregion LongitudCarrera
 
             #region PresionDisponible
 
             //PresionDisponible.Checked = referencias.Range.PresionDisponible;
-            //PresionDisponibleMin.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionDisponibleMin.ToString());
-            //PresionDisponibleMax.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionDisponibleMax.ToString());
+            //PresionDisponibleMin.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionDisponibleMin.ToString(), decimales);
+            //PresionDisponibleMax.Text = Condicionantes.Wrote_Formating(referencias.Range.PresionDisponibleMax.ToString(), decimales);
 
             #endregion PresionDisponible
 
             #region gastoInyeccionFluidoPotencia
 
             //gastoInyeccionFluidoPotencia.Checked = referencias.Range.GastoInyeccionFluidoPotencia;
-            //gastoInyeccionFluidoPotenciaMin.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoInyeccionFluidoPotenciaMin.ToString());
-            //gastoInyeccionFluidoPotenciaMax.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoInyeccionFluidoPotenciaMax.ToString());
+            //gastoInyeccionFluidoPotenciaMin.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoInyeccionFluidoPotenciaMin.ToString(), decimales);
+            //gastoInyeccionFluidoPotenciaMax.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoInyeccionFluidoPotenciaMax.ToString(), decimales);
 
             #endregion gastoInyeccionFluidoPotencia
 
             #region gravedadEspecificaFluidoPotencia
 
             //gravedadEspecificaFluidoPotencia.Checked = referencias.Range.GravedadEspecificaFluidoPotencia;
-            //gravedadEspecificaFluidoPotenciaMin.Text = Condicionantes.Wrote_Formating(referencias.Range.GravedadEspecificaFluidoPotenciaMin.ToString());
-            //gravedadEspecificaFluidoPotenciaMax.Text = Condicionantes.Wrote_Formating(referencias.Range.GravedadEspecificaFluidoPotenciaMax.ToString());
+            //gravedadEspecificaFluidoPotenciaMin.Text = Condicionantes.Wrote_Formating(referencias.Range.GravedadEspecificaFluidoPotenciaMin.ToString(), decimales);
+            //gravedadEspecificaFluidoPotenciaMax.Text = Condicionantes.Wrote_Formating(referencias.Range.GravedadEspecificaFluidoPotenciaMax.ToString(), decimales);
 
             #endregion gravedadEspecificaFluidoPotencia
 
             #region gastoGasInyeccion
 
             //gastoGasInyeccion.Checked = referencias.Range.GastoGasInyeccion;
-            //gastoGasInyeccionMin.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoGasInyeccionMin.ToString());
-            //gastoGasInyeccionMax.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoGasInyeccionMax.ToString());
+            //gastoGasInyeccionMin.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoGasInyeccionMin.ToString(), decimales);
+            //gastoGasInyeccionMax.Text = Condicionantes.Wrote_Formating(referencias.Range.GastoGasInyeccionMax.ToString(), decimales);
 
             #endregion gastoGasInyeccion
 
             #region gravedadEspecificaGasInyeccion
 
             //gravedadEspecificaGasInyeccion.Checked = referencias.Range.GravedadEspecificaGasInyeccion;
-            //gravedadEspecificaGasInyeccionMin.Text = Condicionantes.Wrote_Formating(referencias.Range.GravedadEspecificaGasInyeccionMin.ToString());
-            //gravedadEspecificaGasInyeccionMax.Text = Condicionantes.Wrote_Formating(referencias.Range.GravedadEspecificaGasInyeccionMax.ToString());
+            //gravedadEspecificaGasInyeccionMin.Text = Condicionantes.Wrote_Formating(referencias.Range.GravedadEspecificaGasInyeccionMin.ToString(), decimales);
+            //gravedadEspecificaGasInyeccionMax.Text = Condicionantes.Wrote_Formating(referencias.Range.GravedadEspecificaGasInyeccionMax.ToString(), decimales);
 
             #endregion gravedadEspecificaGasInyeccion
 
             #region torque
 
             //torque.Checked = referencias.Range.Torque;
-            //torqueMin.Text = Condicionantes.Wrote_Formating(referencias.Range.TorqueMin.ToString());
-            //torqueMax.Text = Condicionantes.Wrote_Formating(referencias.Range.TorqueMax.ToString());
+            //torqueMin.Text = Condicionantes.Wrote_Formating(referencias.Range.TorqueMin.ToString(), decimales);
+            //torqueMax.Text = Condicionantes.Wrote_Formating(referencias.Range.TorqueMax.ToString(), decimales);
 
             #endregion torque
 
             #region corriente
 
             //corriente.Checked = referencias.Range.Corriente;
-            //corrienteMin.Text = Condicionantes.Wrote_Formating(referencias.Range.CorrienteMin.ToString());
-            //corrienteMax.Text = Condicionantes.Wrote_Formating(referencias.Range.CorrienteMax.ToString());
+            //corrienteMin.Text = Condicionantes.Wrote_Formating(referencias.Range.CorrienteMin.ToString(), decimales);
+            //corrienteMax.Text = Condicionantes.Wrote_Formating(referencias.Range.CorrienteMax.ToString(), decimales);
 
             #endregion corriente
 
             #region diametroEstrangulador
 
             //diametroEstrangulador.Checked = referencias.Range.DiametroEstrangulador;
-            //diametroEstranguladorMin.Text = Condicionantes.Wrote_Formating(referencias.Range.DiametroEstranguladorMin.ToString());
-            //diametroEstranguladorMax.Text = Condicionantes.Wrote_Formating(referencias.Range.DiametroEstranguladorMax.ToString());
+            //diametroEstranguladorMin.Text = Condicionantes.Wrote_Formating(referencias.Range.DiametroEstranguladorMin.ToString(), decimales);
+            //diametroEstranguladorMax.Text = Condicionantes.Wrote_Formating(referencias.Range.DiametroEstranguladorMax.ToString(), decimales);
 
             #endregion diametroEstrangulador
 
             #region tiempoCiclo
 
             //tiempoCiclo.Checked = referencias.Range.TiempoCiclo;
-            //tiempoCicloMin.Text = Condicionantes.Wrote_Formating(referencias.Range.TiempoCicloMin.ToString());
-            //tiempoCicloMax.Text = Condicionantes.Wrote_Formating(referencias.Range.TiempoCicloMax.ToString());
+            //tiempoCicloMin.Text = Condicionantes.Wrote_Formating(referencias.Range.TiempoCicloMin.ToString(), decimales);
+            //tiempoCicloMax.Text = Condicionantes.Wrote_Formating(referencias.Range.TiempoCicloMax.ToString(), decimales);
 
             #endregion tiempoCiclo
 
             #region tiempoRecuperacion
 
             //tiempoRecuperacion.Checked = referencias.Range.TiempoRecuperacion;
-            //tiempoRecuperacionMin.Text = Condicionantes.Wrote_Formating(referencias.Range.TiempoRecuperacionMin.ToString());
-            //tiempoRecuperacionMax.Text = Condicionantes.Wrote_Formating(referencias.Range.TiempoRecuperacionMax.ToString());
+            //tiempoRecuperacionMin.Text = Condicionantes.Wrote_Formating(referencias.Range.TiempoRecuperacionMin.ToString(), decimales);
+            //tiempoRecuperacionMax.Text = Condicionantes.Wrote_Formating(referencias.Range.TiempoRecuperacionMax.ToString(), decimales);
 
             #endregion tiempoRecuperacion
 
             #region tiempoInyeccion
 
             //tiempoInyeccion.Checked = referencias.Range.TiempoInyeccion;
-            //tiempoInyeccionMin.Text = Condicionantes.Wrote_Formating(referencias.Range.TiempoInyeccionMin.ToString());
-            //tiempoInyeccionMax.Text = Condicionantes.Wrote_Formating(referencias.Range.TiempoInyeccionMax.ToString());
+            //tiempoInyeccionMin.Text = Condicionantes.Wrote_Formating(referencias.Range.TiempoInyeccionMin.ToString(), decimales);
+            //tiempoInyeccionMax.Text = Condicionantes.Wrote_Formating(referencias.Range.TiempoInyeccionMax.ToString(), decimales);
 
             #endregion tiempoInyeccion
 
             #region tiempoDesplazamientoTapon
 
             //tiempoDesplazamientoTapon.Checked = referencias.Range.TiempoDesplazamientoTapon;
-            //tiempoDesplazamientoTaponMin.Text = Condicionantes.Wrote_Formating(referencias.Range.TiempoDesplazamientoTaponMin.ToString());
-            //tiempoDesplazamientoTaponMax.Text = Condicionantes.Wrote_Formating(referencias.Range.TiempoDesplazamientoTaponMax.ToString());
+            //tiempoDesplazamientoTaponMin.Text = Condicionantes.Wrote_Formating(referencias.Range.TiempoDesplazamientoTaponMin.ToString(), decimales);
+            //tiempoDesplazamientoTaponMax.Text = Condicionantes.Wrote_Formating(referencias.Range.TiempoDesplazamientoTaponMax.ToString(), decimales);
 
             #endregion tiempoDesplazamientoTapon
 
             #region EficienciaLlenado
 
             //EficienciaLlenado.Checked = referencias.Range.EficienciaLlenado;
-            //EficienciaLlenadoMin.Text = Condicionantes.Wrote_Formating(referencias.Range.EficienciaLlenadoMin.ToString());
-            //EficienciaLlenadoMax.Text = Condicionantes.Wrote_Formating(referencias.Range.EficienciaLlenadoMax.ToString());
+            //EficienciaLlenadoMin.Text = Condicionantes.Wrote_Formating(referencias.Range.EficienciaLlenadoMin.ToString(), decimales);
+            //EficienciaLlenadoMax.Text = Condicionantes.Wrote_Formating(referencias.Range.EficienciaLlenadoMax.ToString(), decimales);
 
             #endregion EficienciaLlenado
 
@@ -283,223 +285,225 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoNeumaticoIntermitente
             }
         }
 
-        internal void Recargar()
+        internal void Recargar(int _decimales)
         {
+            decimales = _decimales;
+
             #region DatosOperativos
 
             #region PresionTuberiaProduccion
 
             //PresionTuberiaProduccion.Text = $"{Languages.Pozo.PresionTuberiaProduccion} ({ Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)})";
-            //PresionTuberiaProduccionMin.Text = Condicionantes.Wrote_Formating(PresionTuberiaProduccionMin.Text);
-            //PresionTuberiaProduccionMax.Text = Condicionantes.Wrote_Formating(PresionTuberiaProduccionMax.Text);
+            //PresionTuberiaProduccionMin.Text = Condicionantes.Wrote_Formating(PresionTuberiaProduccionMin.Text,decimales);
+            //PresionTuberiaProduccionMax.Text = Condicionantes.Wrote_Formating(PresionTuberiaProduccionMax.Text,decimales);
 
             #endregion PresionTuberiaProduccion
 
             #region PresionTuberiaRevestimiento
 
             //PresionTuberiaRevestimiento.Text = $"{Languages.Pozo.PresionTuberiaRevestimiento} ({ Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)})";
-            //PresionTuberiaRevestimientoMin.Text = Condicionantes.Wrote_Formating(PresionTuberiaRevestimientoMin.Text);
-            //PresionTuberiaRevestimientoMax.Text = Condicionantes.Wrote_Formating(PresionTuberiaRevestimientoMax.Text);
+            //PresionTuberiaRevestimientoMin.Text = Condicionantes.Wrote_Formating(PresionTuberiaRevestimientoMin.Text,decimales);
+            //PresionTuberiaRevestimientoMax.Text = Condicionantes.Wrote_Formating(PresionTuberiaRevestimientoMax.Text,decimales);
 
             #endregion PresionTuberiaRevestimiento
 
             #region PresionAperturaCampo
 
             //PresionAperturaCampo.Text = $"{Languages.Pozo.PresionAperturaCampo} ({ Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)})";
-            //PresionAperturaCampoMin.Text = Condicionantes.Wrote_Formating(PresionAperturaCampoMin.Text);
-            //PresionAperturaCampoMax.Text = Condicionantes.Wrote_Formating(PresionAperturaCampoMax.Text);
+            //PresionAperturaCampoMin.Text = Condicionantes.Wrote_Formating(PresionAperturaCampoMin.Text,decimales);
+            //PresionAperturaCampoMax.Text = Condicionantes.Wrote_Formating(PresionAperturaCampoMax.Text,decimales);
 
             #endregion PresionAperturaCampo
 
             #region PresionLineaDescarga
 
             //PresionLineaDescarga.Text = $"{Languages.Pozo.PresionLineaDescarga} ({ Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)})";
-            //PresionLineaDescargaMin.Text = Condicionantes.Wrote_Formating(PresionLineaDescargaMin.Text);
-            //PresionLineaDescargaMax.Text = Condicionantes.Wrote_Formating(PresionLineaDescargaMax.Text);
+            //PresionLineaDescargaMin.Text = Condicionantes.Wrote_Formating(PresionLineaDescargaMin.Text,decimales);
+            //PresionLineaDescargaMax.Text = Condicionantes.Wrote_Formating(PresionLineaDescargaMax.Text,decimales);
 
             #endregion PresionLineaDescarga
 
             #region TemperaturaSuperficie
 
             //TemperaturaSuperficie.Text = $"{Languages.Pozo.TemperaturaSuperficie} ({ Configuracion.GetSigla(Referencia.Temperatura, Referencias.Unidades)})";
-            //TemperaturaSuperficieMin.Text = Condicionantes.Wrote_Formating(TemperaturaSuperficieMin.Text);
-            //TemperaturaSuperficieMax.Text = Condicionantes.Wrote_Formating(TemperaturaSuperficieMax.Text);
+            //TemperaturaSuperficieMin.Text = Condicionantes.Wrote_Formating(TemperaturaSuperficieMin.Text,decimales);
+            //TemperaturaSuperficieMax.Text = Condicionantes.Wrote_Formating(TemperaturaSuperficieMax.Text,decimales);
 
             #endregion TemperaturaSuperficie
 
             #region sumergenciaEfectivaBomba
 
             //sumergenciaEfectivaBomba.Text = $"{Languages.Pozo.sumergenciaEfectivaBomba} ({ Configuracion.GetSigla(Referencia.Distancia, Referencias.Unidades)})";
-            //sumergenciaEfectivaBombaMin.Text = Condicionantes.Wrote_Formating(sumergenciaEfectivaBombaMin.Text);
-            //sumergenciaEfectivaBombaMax.Text = Condicionantes.Wrote_Formating(sumergenciaEfectivaBombaMax.Text);
+            //sumergenciaEfectivaBombaMin.Text = Condicionantes.Wrote_Formating(sumergenciaEfectivaBombaMin.Text,decimales);
+            //sumergenciaEfectivaBombaMax.Text = Condicionantes.Wrote_Formating(sumergenciaEfectivaBombaMax.Text,decimales);
 
             #endregion sumergenciaEfectivaBomba
 
             #region NivelFluidoPozoTp
 
             //NivelFluidoPozoTp.Text = $"{Languages.Pozo.NivelFluidoPozoTp} ({ Configuracion.GetSigla(Referencia.Distancia, Referencias.Unidades)})";
-            //NivelFluidoPozoTpMin.Text = Condicionantes.Wrote_Formating(NivelFluidoPozoTpMin.Text);
-            //NivelFluidoPozoTpMax.Text = Condicionantes.Wrote_Formating(NivelFluidoPozoTpMax.Text);
+            //NivelFluidoPozoTpMin.Text = Condicionantes.Wrote_Formating(NivelFluidoPozoTpMin.Text,decimales);
+            //NivelFluidoPozoTpMax.Text = Condicionantes.Wrote_Formating(NivelFluidoPozoTpMax.Text,decimales);
 
             #endregion NivelFluidoPozoTp
 
             #region NivelFluidoPozoTr
 
             //NivelFluidoPozoTr.Text = $"{Languages.Pozo.NivelFluidoPozoTr} ({ Configuracion.GetSigla(Referencia.Distancia, Referencias.Unidades)})";
-            //NivelFluidoPozoTrMin.Text = Condicionantes.Wrote_Formating(NivelFluidoPozoTrMin.Text);
-            //NivelFluidoPozoTrMax.Text = Condicionantes.Wrote_Formating(NivelFluidoPozoTrMax.Text);
+            //NivelFluidoPozoTrMin.Text = Condicionantes.Wrote_Formating(NivelFluidoPozoTrMin.Text,decimales);
+            //NivelFluidoPozoTrMax.Text = Condicionantes.Wrote_Formating(NivelFluidoPozoTrMax.Text,decimales);
 
             #endregion NivelFluidoPozoTr
 
             #region PresionEntradaBomba
 
             //PresionEntradaBomba.Text = $"{Languages.Pozo.PresionEntradaBomba} ({ Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)})";
-            //PresionEntradaBombaMin.Text = Condicionantes.Wrote_Formating(PresionEntradaBombaMin.Text);
-            //PresionEntradaBombaMax.Text = Condicionantes.Wrote_Formating(PresionEntradaBombaMax.Text);
+            //PresionEntradaBombaMin.Text = Condicionantes.Wrote_Formating(PresionEntradaBombaMin.Text,decimales);
+            //PresionEntradaBombaMax.Text = Condicionantes.Wrote_Formating(PresionEntradaBombaMax.Text,decimales);
 
             #endregion PresionEntradaBomba
 
             #region VelocidadBomba
 
             //VelocidadBomba.Text = $"{Languages.Pozo.VelocidadBomba} ({ Configuracion.GetSigla(Referencia.Velocidad, Referencias.Unidades)})";
-            //VelocidadBombaMin.Text = Condicionantes.Wrote_Formating(VelocidadBombaMin.Text);
-            //VelocidadBombaMax.Text = Condicionantes.Wrote_Formating(VelocidadBombaMax.Text);
+            //VelocidadBombaMin.Text = Condicionantes.Wrote_Formating(VelocidadBombaMin.Text,decimales);
+            //VelocidadBombaMax.Text = Condicionantes.Wrote_Formating(VelocidadBombaMax.Text,decimales);
 
             #endregion VelocidadBomba
 
             #region VelocidadUnidadBombeo
 
             //VelocidadUnidadBombeo.Text = $"{Languages.Pozo.VelocidadUnidadBombeo} ({ Configuracion.GetSigla(Referencia.Embolada, Referencias.Unidades)})";
-            //VelocidadUnidadBombeoMin.Text = Condicionantes.Wrote_Formating(VelocidadUnidadBombeoMin.Text);
-            //VelocidadUnidadBombeoMax.Text = Condicionantes.Wrote_Formating(VelocidadUnidadBombeoMax.Text);
+            //VelocidadUnidadBombeoMin.Text = Condicionantes.Wrote_Formating(VelocidadUnidadBombeoMin.Text,decimales);
+            //VelocidadUnidadBombeoMax.Text = Condicionantes.Wrote_Formating(VelocidadUnidadBombeoMax.Text,decimales);
 
             #endregion VelocidadUnidadBombeo
 
             #region frecuenciaOperacionBomba
 
             //frecuenciaOperacionBomba.Text = $"{Languages.Pozo.frecuenciaOperacionBomba} ({ Configuracion.GetSigla(Referencia.Frecuencia, Referencias.Unidades)})";
-            //frecuenciaOperacionBombaMin.Text = Condicionantes.Wrote_Formating(frecuenciaOperacionBombaMin.Text);
-            //frecuenciaOperacionBombaMax.Text = Condicionantes.Wrote_Formating(frecuenciaOperacionBombaMax.Text);
+            //frecuenciaOperacionBombaMin.Text = Condicionantes.Wrote_Formating(frecuenciaOperacionBombaMin.Text,decimales);
+            //frecuenciaOperacionBombaMax.Text = Condicionantes.Wrote_Formating(frecuenciaOperacionBombaMax.Text,decimales);
 
             #endregion frecuenciaOperacionBomba
 
             #region VelocidadMotor
 
             //VelocidadMotor.Text = $"{Languages.Pozo.VelocidadMotor} ({ Configuracion.GetSigla(Referencia.Velocidad, Referencias.Unidades)})";
-            //VelocidadMotorMin.Text = Condicionantes.Wrote_Formating(VelocidadMotorMin.Text);
-            //VelocidadMotorMax.Text = Condicionantes.Wrote_Formating(VelocidadMotorMax.Text);
+            //VelocidadMotorMin.Text = Condicionantes.Wrote_Formating(VelocidadMotorMin.Text,decimales);
+            //VelocidadMotorMax.Text = Condicionantes.Wrote_Formating(VelocidadMotorMax.Text,decimales);
 
             #endregion VelocidadMotor
 
             #region LongitudCarrera
 
             //LongitudCarrera.Text = $"{Languages.Pozo.LongitudCarrera} ({ Configuracion.GetSigla(Referencia.Distancia, Referencias.Unidades)})";
-            //LongitudCarreraMin.Text = Condicionantes.Wrote_Formating(LongitudCarreraMin.Text);
-            //LongitudCarreraMax.Text = Condicionantes.Wrote_Formating(LongitudCarreraMax.Text);
+            //LongitudCarreraMin.Text = Condicionantes.Wrote_Formating(LongitudCarreraMin.Text,decimales);
+            //LongitudCarreraMax.Text = Condicionantes.Wrote_Formating(LongitudCarreraMax.Text,decimales);
 
             #endregion LongitudCarrera
 
             #region PresionDisponible
 
             //PresionDisponible.Text = $"{Languages.Pozo.PresionDisponible} ({ Configuracion.GetSigla(Referencia.Presion, Referencias.Unidades)})";
-            //PresionDisponibleMin.Text = Condicionantes.Wrote_Formating(PresionDisponibleMin.Text);
-            //PresionDisponibleMax.Text = Condicionantes.Wrote_Formating(PresionDisponibleMax.Text);
+            //PresionDisponibleMin.Text = Condicionantes.Wrote_Formating(PresionDisponibleMin.Text,decimales);
+            //PresionDisponibleMax.Text = Condicionantes.Wrote_Formating(PresionDisponibleMax.Text,decimales);
 
             #endregion PresionDisponible
 
             #region gastoInyeccionFluidoPotencia
 
             //gastoInyeccionFluidoPotencia.Text = $"{Languages.Pozo.GastoInyeccionFluidoPotencia} ({ Configuracion.GetSigla(Referencia.GastoGas, Referencias.Unidades)})";
-            //gastoInyeccionFluidoPotenciaMin.Text = Condicionantes.Wrote_Formating(gastoInyeccionFluidoPotenciaMin.Text);
-            //gastoInyeccionFluidoPotenciaMax.Text = Condicionantes.Wrote_Formating(gastoInyeccionFluidoPotenciaMax.Text);
+            //gastoInyeccionFluidoPotenciaMin.Text = Condicionantes.Wrote_Formating(gastoInyeccionFluidoPotenciaMin.Text,decimales);
+            //gastoInyeccionFluidoPotenciaMax.Text = Condicionantes.Wrote_Formating(gastoInyeccionFluidoPotenciaMax.Text,decimales);
 
             #endregion gastoInyeccionFluidoPotencia
 
             #region gravedadEspecificaFluidoPotencia
 
             //gravedadEspecificaFluidoPotencia.Text = $"{Languages.Pozo.GravedadEspecificaFluidoPotencia} (-)";
-            //gravedadEspecificaFluidoPotenciaMin.Text = Condicionantes.Wrote_Formating(gravedadEspecificaFluidoPotenciaMin.Text);
-            //gravedadEspecificaFluidoPotenciaMax.Text = Condicionantes.Wrote_Formating(gravedadEspecificaFluidoPotenciaMax.Text);
+            //gravedadEspecificaFluidoPotenciaMin.Text = Condicionantes.Wrote_Formating(gravedadEspecificaFluidoPotenciaMin.Text,decimales);
+            //gravedadEspecificaFluidoPotenciaMax.Text = Condicionantes.Wrote_Formating(gravedadEspecificaFluidoPotenciaMax.Text,decimales);
 
             #endregion gravedadEspecificaFluidoPotencia
 
             #region gastoGasInyeccion
 
             //gastoGasInyeccion.Text = $"{Languages.Pozo.GastoGasInyeccion} ({ Configuracion.GetSigla(Referencia.GastoGas, Referencias.Unidades)})";
-            //gastoGasInyeccionMin.Text = Condicionantes.Wrote_Formating(gastoGasInyeccionMin.Text);
-            //gastoGasInyeccionMax.Text = Condicionantes.Wrote_Formating(gastoGasInyeccionMax.Text);
+            //gastoGasInyeccionMin.Text = Condicionantes.Wrote_Formating(gastoGasInyeccionMin.Text,decimales);
+            //gastoGasInyeccionMax.Text = Condicionantes.Wrote_Formating(gastoGasInyeccionMax.Text,decimales);
 
             #endregion gastoGasInyeccion
 
             #region gravedadEspecificaGasInyeccion
 
             //gravedadEspecificaGasInyeccion.Text = $"{Languages.Pozo.GravedadEspecificaGasInyeccion} (-)";
-            //gravedadEspecificaGasInyeccionMin.Text = Condicionantes.Wrote_Formating(gravedadEspecificaGasInyeccionMin.Text);
-            //gravedadEspecificaGasInyeccionMax.Text = Condicionantes.Wrote_Formating(gravedadEspecificaGasInyeccionMax.Text);
+            //gravedadEspecificaGasInyeccionMin.Text = Condicionantes.Wrote_Formating(gravedadEspecificaGasInyeccionMin.Text,decimales);
+            //gravedadEspecificaGasInyeccionMax.Text = Condicionantes.Wrote_Formating(gravedadEspecificaGasInyeccionMax.Text,decimales);
 
             #endregion gravedadEspecificaGasInyeccion
 
             #region torque
 
             //torque.Text = $"{Languages.Pozo.torque} ({ Configuracion.GetSigla(Referencia.Torque, Referencias.Unidades)})";
-            //torqueMin.Text = Condicionantes.Wrote_Formating(torqueMin.Text);
-            //torqueMax.Text = Condicionantes.Wrote_Formating(torqueMax.Text);
+            //torqueMin.Text = Condicionantes.Wrote_Formating(torqueMin.Text,decimales);
+            //torqueMax.Text = Condicionantes.Wrote_Formating(torqueMax.Text,decimales);
 
             #endregion torque
 
             #region corriente
 
             //corriente.Text = $"{Languages.Pozo.corriente} ({ Configuracion.GetSigla(Referencia.Corriente, Referencias.Unidades)})";
-            //corrienteMin.Text = Condicionantes.Wrote_Formating(corrienteMin.Text);
-            //corrienteMax.Text = Condicionantes.Wrote_Formating(corrienteMax.Text);
+            //corrienteMin.Text = Condicionantes.Wrote_Formating(corrienteMin.Text,decimales);
+            //corrienteMax.Text = Condicionantes.Wrote_Formating(corrienteMax.Text,decimales);
 
             #endregion corriente
 
             #region diametroEstrangulador
 
             //diametroEstrangulador.Text = $"{Languages.Pozo.diametroEstrangulador} ({ Configuracion.GetSigla(Referencia.Diametro, Referencias.Unidades)})";
-            //diametroEstranguladorMin.Text = Condicionantes.Wrote_Formating(diametroEstranguladorMin.Text);
-            //diametroEstranguladorMax.Text = Condicionantes.Wrote_Formating(diametroEstranguladorMax.Text);
+            //diametroEstranguladorMin.Text = Condicionantes.Wrote_Formating(diametroEstranguladorMin.Text,decimales);
+            //diametroEstranguladorMax.Text = Condicionantes.Wrote_Formating(diametroEstranguladorMax.Text,decimales);
 
             #endregion diametroEstrangulador
 
             #region tiempoCiclo
 
             //tiempoCiclo.Text = $"{Languages.Pozo.tiempoCiclo} ({ Configuracion.GetSigla(Referencia.Segundo, Referencias.Unidades)})";
-            //tiempoCicloMin.Text = Condicionantes.Wrote_Formating(tiempoCicloMin.Text);
-            //tiempoCicloMax.Text = Condicionantes.Wrote_Formating(tiempoCicloMax.Text);
+            //tiempoCicloMin.Text = Condicionantes.Wrote_Formating(tiempoCicloMin.Text,decimales);
+            //tiempoCicloMax.Text = Condicionantes.Wrote_Formating(tiempoCicloMax.Text,decimales);
 
             #endregion tiempoCiclo
 
             #region tiempoRecuperacion
 
             //tiempoRecuperacion.Text = $"{Languages.Pozo.tiempoRecuperacion} ({ Configuracion.GetSigla(Referencia.Segundo, Referencias.Unidades)})";
-            //tiempoRecuperacionMin.Text = Condicionantes.Wrote_Formating(tiempoRecuperacionMin.Text);
-            //tiempoRecuperacionMax.Text = Condicionantes.Wrote_Formating(tiempoRecuperacionMax.Text);
+            //tiempoRecuperacionMin.Text = Condicionantes.Wrote_Formating(tiempoRecuperacionMin.Text,decimales);
+            //tiempoRecuperacionMax.Text = Condicionantes.Wrote_Formating(tiempoRecuperacionMax.Text,decimales);
 
             #endregion tiempoRecuperacion
 
             #region tiempoInyeccion
 
             //tiempoInyeccion.Text = $"{Languages.Pozo.tiempoInyeccion} ({ Configuracion.GetSigla(Referencia.Segundo, Referencias.Unidades)})";
-            //tiempoInyeccionMin.Text = Condicionantes.Wrote_Formating(tiempoInyeccionMin.Text);
-            //tiempoInyeccionMax.Text = Condicionantes.Wrote_Formating(tiempoInyeccionMax.Text);
+            //tiempoInyeccionMin.Text = Condicionantes.Wrote_Formating(tiempoInyeccionMin.Text,decimales);
+            //tiempoInyeccionMax.Text = Condicionantes.Wrote_Formating(tiempoInyeccionMax.Text,decimales);
 
             #endregion tiempoInyeccion
 
             #region tiempoDesplazamientoTapon
 
             //tiempoDesplazamientoTapon.Text = $"{Languages.Pozo.tiempoDesplazamientoTapon} ({ Configuracion.GetSigla(Referencia.Segundo, Referencias.Unidades)})";
-            //tiempoDesplazamientoTaponMin.Text = Condicionantes.Wrote_Formating(tiempoDesplazamientoTaponMin.Text);
-            //tiempoDesplazamientoTaponMax.Text = Condicionantes.Wrote_Formating(tiempoDesplazamientoTaponMax.Text);
+            //tiempoDesplazamientoTaponMin.Text = Condicionantes.Wrote_Formating(tiempoDesplazamientoTaponMin.Text,decimales);
+            //tiempoDesplazamientoTaponMax.Text = Condicionantes.Wrote_Formating(tiempoDesplazamientoTaponMax.Text,decimales);
 
             #endregion tiempoDesplazamientoTapon
 
             #region EficienciaLlenado
 
             //EficienciaLlenado.Text = $"{Languages.Pozo.EficienciaLlenado} ({ Configuracion.GetSigla(Referencia.Porcentaje, Referencias.Unidades)})";
-            //EficienciaLlenadoMin.Text = Condicionantes.Wrote_Formating(EficienciaLlenadoMin.Text);
-            //EficienciaLlenadoMax.Text = Condicionantes.Wrote_Formating(EficienciaLlenadoMax.Text);
+            //EficienciaLlenadoMin.Text = Condicionantes.Wrote_Formating(EficienciaLlenadoMin.Text,decimales);
+            //EficienciaLlenadoMax.Text = Condicionantes.Wrote_Formating(EficienciaLlenadoMax.Text,decimales);
 
             #endregion EficienciaLlenado
 
@@ -1378,8 +1382,8 @@ namespace DPSOsTelemetria.Pozos.PozoBombeoNeumaticoIntermitente
 
         private void Wrote_KeyPress(object sender, KeyPressEventArgs e) => Condicionantes.Wrote_KeyPress(sender, e);
 
-        private void Wrote_Leave(object sender, EventArgs e) => ((TextBox)sender).Text = Condicionantes.Wrote_Formating(((TextBox)sender).Text);
+        private void Wrote_Leave(object sender, EventArgs e) => ((TextBox)sender).Text = Condicionantes.Wrote_Formating(((TextBox)sender).Text, decimales);
 
-        private void TomaInformacion_Load(object sender, EventArgs e) => Recargar();
+        private void TomaInformacion_Load(object sender, EventArgs e) => Recargar(decimales);
     }
 }
