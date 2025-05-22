@@ -612,6 +612,16 @@ namespace DPSOsTelemetria.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Version 2.0.2.13
+        ///Added fields for sending time and calculation response.
+        /// </summary>
+        internal static string String20 {
+            get {
+                return ResourceManager.GetString("String20", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Version 1.0.1.5
         ///Creation of Mechanical type wells.
         /// </summary>

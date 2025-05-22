@@ -358,4 +358,8 @@ Enabled decimal entry in data upload</value>
     <value>Version 2.0.2.12
 Updating BN Information Fields</value>
   </data>
+  <data name="String20" xml:space="preserve">
+    <value>Version 2.0.2.13
+Added fields for sending time and calculation response</value>
+  </data>
 </root>

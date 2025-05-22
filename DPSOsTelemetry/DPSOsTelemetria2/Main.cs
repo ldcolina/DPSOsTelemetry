@@ -328,9 +328,8 @@ namespace DPSOsTelemetria
                     #endregion CartaDinagrafica
 
                     list.Add(l);
-
-                    if (JsonConvert.SerializeObject(last) != JsonConvert.SerializeObject(form._Telemetria))
-                        form.Refrescar();
+             
+                    form.Refrescar();
                 }
             }
 

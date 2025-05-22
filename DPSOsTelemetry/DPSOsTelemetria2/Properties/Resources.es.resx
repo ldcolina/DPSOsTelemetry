@@ -202,4 +202,8 @@ Habilitado ingreso de decimales en carga de datos</value>
     <value>Version 2.0.2.12
 Actualización de campos de informacion de BN</value>
   </data>
+  <data name="String20" xml:space="preserve">
+    <value>Version 2.0.2.13
+Agregado campos para el tiempo de envío y respuesta del calculo</value>
+  </data>
 </root>

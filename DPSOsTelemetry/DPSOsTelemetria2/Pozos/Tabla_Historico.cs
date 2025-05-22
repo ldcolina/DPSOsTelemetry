@@ -12,6 +12,7 @@ namespace DPSOsTelemetria.Pozos
         public class _tabla : OTomaInformacion.CTomaBasica
         {
             public string DatosOperativosTime { get; set; }
+            public string DatosOperativosTotalSeconds { get; set; }
 
             public string DatosOperativosResult { get; set; }
         }
@@ -26,6 +27,7 @@ namespace DPSOsTelemetria.Pozos
                     tabla1.DatosOperativosResult = val.DatosOperativosBool ? Languages.Pozo.EnvioCorrecto : Languages.Pozo.EnvioIncorrecto;
 
                 tabla1.DatosOperativosTime = val.DatosOperativosTime.ToString("G");
+                tabla1.DatosOperativosTotalSeconds = val.DatosOperativosPromedio.TotalSeconds.ToString("G");
                 tabla.Add(tabla1);
             });
             dt.DataSource = tabla.ToDataTable();
@@ -39,9 +41,16 @@ namespace DPSOsTelemetria.Pozos
 
             #endregion DatosOperativosTime
 
+            #region DatosOperativosTime
+
+            dt.Columns["DatosOperativosTotalSeconds"].DisplayIndex = 1;
+            dt.Columns["DatosOperativosTotalSeconds"].HeaderText = $"{Languages.listaTiempo.Frecuencia_1c} ({Siglas.Segundo})";
+
+            #endregion DatosOperativosTime
+
             #region DatosOperativosResult
 
-            dt.Columns["DatosOperativosResult"].DisplayIndex = 1;
+            dt.Columns["DatosOperativosResult"].DisplayIndex = 2;
             dt.Columns["DatosOperativosResult"].HeaderText = Languages.Pozo.DatosOperativosResult;
 
             #endregion DatosOperativosResult
